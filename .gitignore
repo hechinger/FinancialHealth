@@ -1,0 +1,106 @@
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+
+# Local caches
+node_modules/
+.renv-cache/
+.renv_cache/
+renv/library/
+
+# Temporary and scratch files
+temp/
+tmp/
+*.tmp
+tmp_*.html
+tmp_*.json
+tmp_*.zip
+temp_*.html
+temp_*.json
+temp_*.zip
+test-results/
+outputs/
+pa11y-output.txt
+nul
+
+# Derived local extraction/download workspaces
+# Keep these caches locally so rebuilds are faster, but do not commit them.
+looker_aux/
+temp_ic2024_dict/
+ipeds/cache/
+ipeds/aux/
+ipeds/downloads/
+ipeds/year_cache/
+data_pipelines/scorecard/cache/
+data_pipelines/federal_closure/raw/
+data_pipelines/federal_closure/derived/
+ipeds/raw/
+ipeds/manifests/
+ipeds/derived/
+workbooks/*.xls
+workbooks/*.xlsx
+data_pipelines/accreditation/cache/
+data_pipelines/accreditation/*.csv
+data_pipelines/accreditation/*.xlsx
+data_pipelines/college_cuts/cache/
+data_pipelines/college_cuts/*.csv
+data_pipelines/college_cuts/*.xlsx
+# Exceptions: hand-curated source-of-truth files (committed to track changes)
+!data_pipelines/college_cuts/manual_aliases.csv
+!data_pipelines/college_cuts/supabase_manual_aliases.csv
+!data_pipelines/college_cuts/supabase_institution_unitid_mapping.csv
+!data_pipelines/college_cuts/editorial_overrides.csv
+!data_pipelines/accreditation/editorial_overrides.csv
+data_pipelines/federal_hcm/raw/
+data_pipelines/federal_hcm/*.csv
+data_pipelines/federal_composite/*.csv
+data_pipelines/grant_witness/cache/
+data_pipelines/grant_witness/grant_witness_*.csv
+data_pipelines/grant_witness/analysis/*
+!data_pipelines/grant_witness/manual_include.csv
+!data_pipelines/grant_witness/manual_match_overrides.csv
+data_pipelines/scorecard/*.csv
+!data_pipelines/scorecard/tracker_outcomes_joined.csv
+
+# OS/editor noise
+Thumbs.db
+.DS_Store
+__pycache__/
+*.pyc
+
+# Local tool/config scratch
+.opencode/
+.opencode-router/
+.secrets/
+.private_docs/
+opencode.jsonc
+debug_workbook_fixture.R
+.claude/
+AGENTS.md
+CLAUDE.md
+# Local analyst scratch - MSI/PMI side analyses (not part of the published site)
+nasa_msi_*.csv
+data/downloads/nasa_msi_*.csv
+public_research_university_federal_cuts_vulnerability_with_msi_*.csv
+data/downloads/public_research_university_federal_cuts_vulnerability_with_msi_*.csv
+pmi_script.R
+scripts/*_PMI.R
+scripts/msi_analysis.R
+
+# RStudio per-project file (per-user)
+Financial Health Tracker - For Github.Rproj
+
+# Internal audit notes - not for the public repo
+AUDIT_*.md
+tracker_copy_edit_dynamic.docx
+temp_dapip_*.json
+temp_dapip_*.html
+# Local planning docs - not for the public repo
+PRE_LAUNCH_CHECKLIST.md
+SCHOOL_SEO_IMPLEMENTATION_PLAN.md
+# Proprietary or otherwise non-public brand font binaries
+assets/Official_Fonts/
+# Local audit/diagnostic scripts
+scripts/audit_action_label_short.py
+scripts/print_action_label_audit_buckets.py

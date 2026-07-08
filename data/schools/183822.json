@@ -1,0 +1,896 @@
+{
+  "unitid": "183822",
+  "generated_at": "2026-07-08",
+  "profile": {
+    "institution_name": "Bloomfield College of Montclair State University",
+    "institution_unique_name": "Bloomfield College of Montclair State University | Bloomfield | New Jersey",
+    "state": "New Jersey",
+    "city": "Bloomfield",
+    "control_label": "Public",
+    "sector": "Public, 4-year or above",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "Suburb: Large",
+    "religious_affiliation": "Not applicable",
+    "all_programs_distance_education": "No"
+  },
+  "summary": {
+    "latest_year": 2024,
+    "enrollment_pct_change_5yr": -46.7218,
+    "sector_median_enrollment_pct_change_5yr": -4.2732,
+    "enrollment_decline_last_3_of_5": "Yes",
+    "revenue_pct_change_5yr": null,
+    "sector_median_revenue_pct_change_5yr": -1.3261,
+    "net_tuition_per_fte_change_5yr": null,
+    "sector_median_net_tuition_per_fte_change_5yr": -17.7529,
+    "staff_total_headcount_pct_change_5yr": -42.7553,
+    "sector_median_staff_total_headcount_pct_change_5yr": 0.3908,
+    "staff_instructional_headcount_pct_change_5yr": -43.4783,
+    "students_per_instructional_staff_fte": 12,
+    "sector_median_students_per_instructional_staff_fte": 16,
+    "ended_year_at_loss": null,
+    "losses_last_3_of_5": "No",
+    "loss_years_last_10": 3,
+    "tuition_dependence_pct": null,
+    "sector_median_tuition_dependence_pct": 21.2464,
+    "tuition_dependence_vs_sector_median_sentence": null,
+    "unfunded_discount_rate": null,
+    "unfunded_discount_pct_change_5yr": null,
+    "share_grad_students": 0.6205,
+    "sector_avg_share_grad_students": 20.9865,
+    "research_expense": 69000,
+    "research_expense_per_fte": 80.891,
+    "research_expense_pct_core_expenses": 0.2543,
+    "sector_research_spending_n": 548,
+    "sector_research_spending_positive_n": 522,
+    "sector_research_spending_reporting_share_pct": 95.3,
+    "sector_median_research_expense_per_fte_positive": 1080.4519,
+    "pct_international_all": 3.7229,
+    "pct_international_undergraduate": 3.7461,
+    "pct_international_graduate": 0,
+    "international_student_count_change_5yr": -20,
+    "international_enrollment_pct_change_5yr": -35.7143,
+    "international_students_sentence": "In 2024, 3.7% of students were international. That includes 3.7% of undergraduates and 0% of graduate students.",
+    "federal_loan_pct_most_recent": 89,
+    "sector_avg_federal_loan_pct_most_recent": 37.9232,
+    "grad_plus_recipients": null,
+    "grad_plus_disbursements_amt": null,
+    "grad_plus_disbursements_per_recipient": null,
+    "sector_median_grad_plus_disbursements_per_recipient": 8446.7298,
+    "federal_grants_contracts_pell_adjusted_pct_core_revenue": null,
+    "state_funding_pct_core_revenue": null,
+    "federal_grants_contracts_pell_adjusted_pct_change_5yr": null,
+    "state_funding_pct_change_5yr": null,
+    "endowment_assets_per_fte_adjusted": null,
+    "sector_median_endowment_assets_per_fte_adjusted": 12637.3807,
+    "endowment_pct_change_5yr": null,
+    "sector_median_endowment_pct_change_5yr": 19.1807,
+    "endowment_spending_current_use_pct_core_revenue": null,
+    "graduation_rate_6yr": 38,
+    "median_earnings_10yr": 61415,
+    "median_debt_completers": 22000,
+    "scorecard_data_updated": "2026-03-23",
+    "ipeds_graduation_rate_year": 2024,
+    "ipeds_graduation_rate_label": "Bachelor degree within 6 years, total"
+  },
+  "series": {
+    "revenue_total_adjusted": [
+      {
+        "year": 2014,
+        "value": 62095332.2362
+      },
+      {
+        "year": 2015,
+        "value": 62993972.887
+      },
+      {
+        "year": 2016,
+        "value": 62315470.5976
+      },
+      {
+        "year": 2017,
+        "value": 63578284.8335
+      },
+      {
+        "year": 2018,
+        "value": 58503441.3501
+      },
+      {
+        "year": 2019,
+        "value": 51425981.3107
+      },
+      {
+        "year": 2020,
+        "value": 48666145.9275
+      },
+      {
+        "year": 2021,
+        "value": 59777441.5323
+      },
+      {
+        "year": 2022,
+        "value": 37142808.7994
+      },
+      {
+        "year": 2023,
+        "value": 43905296.1628
+      }
+    ],
+    "expenses_total_adjusted": [
+      {
+        "year": 2014,
+        "value": 57377409.1824
+      },
+      {
+        "year": 2015,
+        "value": 59289485.4868
+      },
+      {
+        "year": 2016,
+        "value": 59316227.2372
+      },
+      {
+        "year": 2017,
+        "value": 58094601.3239
+      },
+      {
+        "year": 2018,
+        "value": 56072641.7324
+      },
+      {
+        "year": 2019,
+        "value": 54453741.4478
+      },
+      {
+        "year": 2020,
+        "value": 51555879.3789
+      },
+      {
+        "year": 2021,
+        "value": 57689416.7841
+      },
+      {
+        "year": 2022,
+        "value": 41877685.6918
+      },
+      {
+        "year": 2023,
+        "value": 42518741.2024
+      }
+    ],
+    "net_tuition_per_fte_adjusted": [
+      {
+        "year": 2014,
+        "value": 23868.093
+      },
+      {
+        "year": 2015,
+        "value": 24770.6025
+      },
+      {
+        "year": 2016,
+        "value": 24518.2009
+      },
+      {
+        "year": 2017,
+        "value": 23251.2274
+      },
+      {
+        "year": 2018,
+        "value": 22408.8715
+      },
+      {
+        "year": 2019,
+        "value": 20904.7293
+      },
+      {
+        "year": 2020,
+        "value": 20918.8977
+      },
+      {
+        "year": 2021,
+        "value": 19565.275
+      },
+      {
+        "year": 2022,
+        "value": 18615.3446
+      },
+      {
+        "year": 2023,
+        "value": 16537.5201
+      }
+    ],
+    "unfunded_discount_rate": [
+      {
+        "year": 2014,
+        "value": 30.0144
+      },
+      {
+        "year": 2015,
+        "value": 30.3513
+      },
+      {
+        "year": 2016,
+        "value": 32.0487
+      },
+      {
+        "year": 2017,
+        "value": 34.4136
+      },
+      {
+        "year": 2018,
+        "value": 35.4686
+      },
+      {
+        "year": 2019,
+        "value": 37.7567
+      },
+      {
+        "year": 2020,
+        "value": 37.1083
+      },
+      {
+        "year": 2021,
+        "value": 37.8664
+      },
+      {
+        "year": 2022,
+        "value": 38.0995
+      },
+      {
+        "year": 2023,
+        "value": 41.7616
+      }
+    ],
+    "enrollment_headcount_total": [
+      {
+        "year": 2014,
+        "value": 2194
+      },
+      {
+        "year": 2015,
+        "value": 2202
+      },
+      {
+        "year": 2016,
+        "value": 2187
+      },
+      {
+        "year": 2017,
+        "value": 2159
+      },
+      {
+        "year": 2018,
+        "value": 1980
+      },
+      {
+        "year": 2019,
+        "value": 1815
+      },
+      {
+        "year": 2020,
+        "value": 1737
+      },
+      {
+        "year": 2021,
+        "value": 1630
+      },
+      {
+        "year": 2022,
+        "value": 1391
+      },
+      {
+        "year": 2023,
+        "value": 1226
+      },
+      {
+        "year": 2024,
+        "value": 967
+      }
+    ],
+    "enrollment_headcount_undergrad": [
+      {
+        "year": 2014,
+        "value": 2183
+      },
+      {
+        "year": 2015,
+        "value": 2197
+      },
+      {
+        "year": 2016,
+        "value": 2185
+      },
+      {
+        "year": 2017,
+        "value": 2101
+      },
+      {
+        "year": 2018,
+        "value": 1935
+      },
+      {
+        "year": 2019,
+        "value": 1785
+      },
+      {
+        "year": 2020,
+        "value": 1721
+      },
+      {
+        "year": 2021,
+        "value": 1630
+      },
+      {
+        "year": 2022,
+        "value": 1390
+      },
+      {
+        "year": 2023,
+        "value": 1225
+      },
+      {
+        "year": 2024,
+        "value": 961
+      }
+    ],
+    "enrollment_headcount_graduate": [
+      {
+        "year": 2014,
+        "value": 11
+      },
+      {
+        "year": 2015,
+        "value": 5
+      },
+      {
+        "year": 2016,
+        "value": 2
+      },
+      {
+        "year": 2017,
+        "value": 58
+      },
+      {
+        "year": 2018,
+        "value": 45
+      },
+      {
+        "year": 2019,
+        "value": 30
+      },
+      {
+        "year": 2020,
+        "value": 16
+      },
+      {
+        "year": 2022,
+        "value": 1
+      },
+      {
+        "year": 2023,
+        "value": 1
+      },
+      {
+        "year": 2024,
+        "value": 6
+      }
+    ],
+    "enrollment_nonresident_total": [
+      {
+        "year": 2014,
+        "value": 74
+      },
+      {
+        "year": 2015,
+        "value": 75
+      },
+      {
+        "year": 2016,
+        "value": 106
+      },
+      {
+        "year": 2017,
+        "value": 118
+      },
+      {
+        "year": 2018,
+        "value": 91
+      },
+      {
+        "year": 2019,
+        "value": 56
+      },
+      {
+        "year": 2020,
+        "value": 37
+      },
+      {
+        "year": 2021,
+        "value": 32
+      },
+      {
+        "year": 2022,
+        "value": 32
+      },
+      {
+        "year": 2023,
+        "value": 46
+      },
+      {
+        "year": 2024,
+        "value": 36
+      }
+    ],
+    "enrollment_nonresident_undergrad": [
+      {
+        "year": 2014,
+        "value": 74
+      },
+      {
+        "year": 2015,
+        "value": 75
+      },
+      {
+        "year": 2016,
+        "value": 106
+      },
+      {
+        "year": 2017,
+        "value": 103
+      },
+      {
+        "year": 2018,
+        "value": 86
+      },
+      {
+        "year": 2019,
+        "value": 54
+      },
+      {
+        "year": 2020,
+        "value": 37
+      },
+      {
+        "year": 2021,
+        "value": 32
+      },
+      {
+        "year": 2022,
+        "value": 32
+      },
+      {
+        "year": 2023,
+        "value": 46
+      },
+      {
+        "year": 2024,
+        "value": 36
+      }
+    ],
+    "enrollment_nonresident_graduate": [
+      {
+        "year": 2014,
+        "value": 0
+      },
+      {
+        "year": 2015,
+        "value": 0
+      },
+      {
+        "year": 2016,
+        "value": 0
+      },
+      {
+        "year": 2017,
+        "value": 15
+      },
+      {
+        "year": 2018,
+        "value": 5
+      },
+      {
+        "year": 2019,
+        "value": 2
+      },
+      {
+        "year": 2020,
+        "value": 0
+      },
+      {
+        "year": 2022,
+        "value": 0
+      },
+      {
+        "year": 2023,
+        "value": 0
+      },
+      {
+        "year": 2024,
+        "value": 0
+      }
+    ],
+    "staff_headcount_total": [
+      {
+        "year": 2014,
+        "value": 467
+      },
+      {
+        "year": 2015,
+        "value": 473
+      },
+      {
+        "year": 2016,
+        "value": 477
+      },
+      {
+        "year": 2017,
+        "value": 445
+      },
+      {
+        "year": 2018,
+        "value": 442
+      },
+      {
+        "year": 2019,
+        "value": 421
+      },
+      {
+        "year": 2020,
+        "value": 374
+      },
+      {
+        "year": 2021,
+        "value": 368
+      },
+      {
+        "year": 2022,
+        "value": 328
+      },
+      {
+        "year": 2023,
+        "value": 269
+      },
+      {
+        "year": 2024,
+        "value": 241
+      }
+    ],
+    "staff_headcount_instructional": [
+      {
+        "year": 2014,
+        "value": 214
+      },
+      {
+        "year": 2015,
+        "value": 201
+      },
+      {
+        "year": 2016,
+        "value": 221
+      },
+      {
+        "year": 2017,
+        "value": 208
+      },
+      {
+        "year": 2018,
+        "value": 210
+      },
+      {
+        "year": 2019,
+        "value": 184
+      },
+      {
+        "year": 2020,
+        "value": 180
+      },
+      {
+        "year": 2021,
+        "value": 178
+      },
+      {
+        "year": 2022,
+        "value": 153
+      },
+      {
+        "year": 2023,
+        "value": 129
+      },
+      {
+        "year": 2024,
+        "value": 104
+      }
+    ],
+    "endowment_value_adjusted": [
+      {
+        "year": 2014,
+        "value": 16480644.4017
+      },
+      {
+        "year": 2015,
+        "value": 17287930.357
+      },
+      {
+        "year": 2016,
+        "value": 16474813.4366
+      },
+      {
+        "year": 2017,
+        "value": 18432684.0384
+      },
+      {
+        "year": 2018,
+        "value": 18905160.4611
+      },
+      {
+        "year": 2019,
+        "value": 17491206.223
+      },
+      {
+        "year": 2020,
+        "value": 17222689.7785
+      },
+      {
+        "year": 2021,
+        "value": 19702836.5363
+      },
+      {
+        "year": 2022,
+        "value": 15899480.5912
+      },
+      {
+        "year": 2023,
+        "value": 15945601.8422
+      }
+    ],
+    "endowment_spending_current_use": [
+      {
+        "year": 2020,
+        "value": 2123996
+      },
+      {
+        "year": 2021,
+        "value": 1088481
+      },
+      {
+        "year": 2022,
+        "value": 529729
+      },
+      {
+        "year": 2023,
+        "value": 637652
+      }
+    ],
+    "endowment_spending_current_use_adjusted": [
+      {
+        "year": 2020,
+        "value": 2574365.7775
+      },
+      {
+        "year": 2021,
+        "value": 1260082.3575
+      },
+      {
+        "year": 2022,
+        "value": 567802.2254
+      },
+      {
+        "year": 2023,
+        "value": 656459.1576
+      }
+    ],
+    "endowment_spending_current_use_pct_core_revenue": [
+      {
+        "year": 2020,
+        "value": 0.0644
+      },
+      {
+        "year": 2021,
+        "value": 0.023
+      },
+      {
+        "year": 2022,
+        "value": 0.0184
+      },
+      {
+        "year": 2023,
+        "value": 0.0174
+      }
+    ],
+    "federal_grants_contracts_pell_adjusted_adjusted": [
+      {
+        "year": 2014,
+        "value": 2617480.3998
+      },
+      {
+        "year": 2015,
+        "value": 1794982.3583
+      },
+      {
+        "year": 2016,
+        "value": 1928131.2292
+      },
+      {
+        "year": 2017,
+        "value": 1678273.2624
+      },
+      {
+        "year": 2018,
+        "value": 2465917.8149
+      },
+      {
+        "year": 2019,
+        "value": 1467565.4289
+      },
+      {
+        "year": 2020,
+        "value": 3038314.8762
+      },
+      {
+        "year": 2021,
+        "value": 18896835.1266
+      },
+      {
+        "year": 2022,
+        "value": 6943086.4571
+      },
+      {
+        "year": 2023,
+        "value": 1801759.3139
+      }
+    ],
+    "state_funding_adjusted": [
+      {
+        "year": 2014,
+        "value": 0
+      },
+      {
+        "year": 2015,
+        "value": 0
+      },
+      {
+        "year": 2016,
+        "value": 0
+      },
+      {
+        "year": 2017,
+        "value": 0
+      },
+      {
+        "year": 2018,
+        "value": 0
+      },
+      {
+        "year": 2019,
+        "value": 0
+      },
+      {
+        "year": 2020,
+        "value": 0
+      },
+      {
+        "year": 2021,
+        "value": 0
+      },
+      {
+        "year": 2022,
+        "value": 0
+      },
+      {
+        "year": 2023,
+        "value": 13375191.131
+      }
+    ]
+  },
+  "latest_status": {
+    "accreditors": "MSCHE",
+    "action_labels": "Approved Teach-Out Agreement with Montclair State University; Loss of accreditation or Preaccreditation: Other; Merger with Montclair State University effective 6/30/2023; Placed on Probation for insufficient evidence of compliance with Standard V (Educational Effectiveness Assessment) and Standard VI (Planning, Resources, and Institutional Improvement) and Requirements of Affiliation 8, 9, 10, and 11",
+    "active_actions": "adverse_action; probation",
+    "has_active_warning": false,
+    "has_active_warning_or_notice": false,
+    "has_active_adverse_action": true,
+    "latest_action_date": "2024-08-22",
+    "latest_action_year": "2024",
+    "action_count": 4
+  },
+  "actions": [
+    {
+      "accreditor": "MSCHE",
+      "action_type": "adverse_action",
+      "action_label": "Loss of Accreditation or Preaccreditation: Other",
+      "action_label_short": "Loss of accreditation or Preaccreditation: Other",
+      "action_scope": null,
+      "action_status": "active",
+      "action_date": "2024-08-22",
+      "action_year": "2024",
+      "notes": "Loss of Accreditation or Preaccreditation: Other | Accreditation ceased effective June 30, 2024. As of July 1, 2024, the institution is no longer accredited by the Middle States Commission on Higher Education.",
+      "source_url": "https://ope.ed.gov/dapip/#/institution-profile/127839",
+      "source_title": "DAPIP Institutional Accreditation Action",
+      "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/127839",
+      "source_page_modified": null,
+      "display_action": true,
+      "public_table_strategy": "dapip_backed_keep",
+      "hybrid_candidate": false,
+      "hybrid_reason": null,
+      "has_financial_profile": true,
+      "is_primary_tracker": true
+    },
+    {
+      "accreditor": "MSCHE",
+      "action_type": "adverse_action",
+      "action_label": "To acknowledge receipt of the teach-out plan and teach-out agreement. To approve the teach-out agreement with Montclair State University, Montclair, NY and to note that student records, programs, and services will transfer from Bloomfield College to Montclair State University. The purpose of the teach-out is to provide for the equitable treatment of students to complete their education or transfer to a new institution as a result of the transaction. To require that the institution complete and submit for approval, due August 15, 2023, an updated teach-out plan that must include: (1) signed teach-out agreements, including any documentation supporting the agreements, to cover all academic programs; (2) evidence that required notifications to all relevant stakeholders have taken place; (3) evidence that the institution has notified students of any additional charges; (4) evidence that communications regarding student records has occurred; and (5) evidence that financial aid counseling has been conducted (Teach-Out Plan and Agreements Policy and Procedures). To note that Bloomfield College's accreditation will cease on June 30, 2024. To note that Montclair State University, Upper Montclair, NJ has been designated as the repository of all Bloomfield College student records. To require notification when student records have been transferred to Montclair State University by email to [email protected]. To note the action for Montclair State University on June 22, 2023.",
+      "action_label_short": "Approved Teach-Out Agreement with Montclair State University",
+      "action_scope": null,
+      "action_status": null,
+      "action_date": "2023-06-21",
+      "action_year": "2023",
+      "notes": null,
+      "source_url": "https://www.msche.org/institution/0204/",
+      "source_title": "MSCHE Statement of Accreditation Status - Bloomfield College",
+      "source_page_url": "https://www.msche.org/institution/0204/",
+      "source_page_modified": null,
+      "display_action": true,
+      "public_table_strategy": null,
+      "hybrid_candidate": false,
+      "hybrid_reason": null,
+      "has_financial_profile": true,
+      "is_primary_tracker": true
+    },
+    {
+      "accreditor": "MSCHE",
+      "action_type": "other",
+      "action_label": "Grant Substantive Change: Ownership",
+      "action_label_short": "Merger with Montclair State University effective 6/30/2023",
+      "action_scope": null,
+      "action_status": null,
+      "action_date": "2023-06-21",
+      "action_year": "2023",
+      "notes": null,
+      "source_url": "https://ope.ed.gov/dapip/#/institution-profile/127839",
+      "source_title": "DAPIP Institutional Accreditation Action",
+      "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/127839",
+      "source_page_modified": null,
+      "display_action": true,
+      "public_table_strategy": null,
+      "hybrid_candidate": false,
+      "hybrid_reason": null,
+      "has_financial_profile": true,
+      "is_primary_tracker": true
+    },
+    {
+      "accreditor": "MSCHE",
+      "action_type": "probation",
+      "action_label": "To place the institution on probation and note that the institution’s accreditation is in jeopardy because of insufficient evidence that the institution is currently in compliance with Standard V (Educational Effectiveness Assessment); Standard VI (Planning, Resources, and Institutional Improvement); and Requirements of Affiliation 8, 9, 10, and 11.",
+      "action_label_short": "Placed on Probation for insufficient evidence of compliance with Standard V (Educational Effectiveness Assessment) and Standard VI (Planning, Resources, and Institutional Improvement) and Requirements of Affiliation 8, 9, 10, and 11",
+      "action_scope": null,
+      "action_status": "active",
+      "action_date": "2022-06-23",
+      "action_year": "2022",
+      "notes": "Probation or Equivalent or a More Severe Status: Probation",
+      "source_url": "https://ope.ed.gov/dapip/#/institution-profile/127839",
+      "source_title": "DAPIP Institutional Accreditation Action",
+      "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/127839",
+      "source_page_modified": null,
+      "display_action": true,
+      "public_table_strategy": "dapip_backed_keep",
+      "hybrid_candidate": false,
+      "hybrid_reason": null,
+      "has_financial_profile": true,
+      "is_primary_tracker": true
+    }
+  ],
+  "sources": [
+    {
+      "accreditor": "MSCHE",
+      "source_title": "DAPIP Institutional Accreditation Action",
+      "source_url": "https://ope.ed.gov/dapip/#/institution-profile/127839",
+      "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/127839"
+    },
+    {
+      "accreditor": "MSCHE",
+      "source_title": "MSCHE Statement of Accreditation Status - Bloomfield College",
+      "source_url": "https://www.msche.org/institution/0204/",
+      "source_page_url": "https://www.msche.org/institution/0204/"
+    }
+  ]
+}

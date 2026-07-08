@@ -1,0 +1,902 @@
+{
+  "unitid": "163578",
+  "generated_at": "2026-07-08",
+  "profile": {
+    "institution_name": "Notre Dame of Maryland University",
+    "institution_unique_name": "Notre Dame of Maryland University | Baltimore | Maryland",
+    "state": "Maryland",
+    "city": "Baltimore",
+    "control_label": "Private not-for-profit",
+    "sector": "Private not-for-profit, 4-year or above",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "City: Large",
+    "religious_affiliation": "Roman Catholic",
+    "all_programs_distance_education": "No"
+  },
+  "summary": {
+    "latest_year": 2024,
+    "enrollment_pct_change_5yr": -13.2423,
+    "sector_median_enrollment_pct_change_5yr": -3.7344,
+    "enrollment_decline_last_3_of_5": "Yes",
+    "revenue_pct_change_5yr": 20.3035,
+    "sector_median_revenue_pct_change_5yr": -0.5117,
+    "net_tuition_per_fte_change_5yr": -43.2332,
+    "sector_median_net_tuition_per_fte_change_5yr": -17.816,
+    "staff_total_headcount_pct_change_5yr": 3.75,
+    "sector_median_staff_total_headcount_pct_change_5yr": -1.7263,
+    "staff_instructional_headcount_pct_change_5yr": 12.4352,
+    "students_per_instructional_staff_fte": 9,
+    "sector_median_students_per_instructional_staff_fte": 12,
+    "ended_year_at_loss": "No",
+    "losses_last_3_of_5": "No",
+    "loss_years_last_10": 4,
+    "tuition_dependence_pct": 34.0889,
+    "sector_median_tuition_dependence_pct": 44.8638,
+    "tuition_dependence_vs_sector_median_sentence": "This college got 34.0% of its revenue from net tuition in 2024, below the median of 45% for private not-for-profit colleges.",
+    "unfunded_discount_rate": 0,
+    "unfunded_discount_pct_change_5yr": null,
+    "share_grad_students": 55.7833,
+    "sector_avg_share_grad_students": 29.1503,
+    "research_expense": 0,
+    "research_expense_per_fte": 0,
+    "research_expense_pct_core_expenses": 0,
+    "sector_research_spending_n": 1148,
+    "sector_research_spending_positive_n": 401,
+    "sector_research_spending_reporting_share_pct": 34.9,
+    "sector_median_research_expense_per_fte_positive": 585.5059,
+    "pct_international_all": 3.7701,
+    "pct_international_undergraduate": 7.202,
+    "pct_international_graduate": 1.0499,
+    "international_student_count_change_5yr": 76,
+    "international_enrollment_pct_change_5yr": 281.4815,
+    "international_students_sentence": "In 2024, 3.8% of students were international. That includes 7.2% of undergraduates and 1% of graduate students.",
+    "federal_loan_pct_most_recent": 49,
+    "sector_avg_federal_loan_pct_most_recent": 46.041,
+    "grad_plus_recipients": 189,
+    "grad_plus_disbursements_amt": 2482557,
+    "grad_plus_disbursements_per_recipient": 13135.2222,
+    "sector_median_grad_plus_disbursements_per_recipient": 11428,
+    "federal_grants_contracts_pell_adjusted_pct_core_revenue": 6.1776,
+    "state_funding_pct_core_revenue": 5.3927,
+    "federal_grants_contracts_pell_adjusted_pct_change_5yr": 1887.9739,
+    "state_funding_pct_change_5yr": 47.2894,
+    "endowment_assets_per_fte_adjusted": 34528.2874,
+    "sector_median_endowment_assets_per_fte_adjusted": 37427.0318,
+    "endowment_pct_change_5yr": 16.3711,
+    "sector_median_endowment_pct_change_5yr": 7.7657,
+    "endowment_spending_current_use_pct_core_revenue": 0.0606,
+    "graduation_rate_6yr": 50,
+    "median_earnings_10yr": 65344,
+    "median_debt_completers": 22666,
+    "scorecard_data_updated": "2026-03-23",
+    "ipeds_graduation_rate_year": 2024,
+    "ipeds_graduation_rate_label": "Bachelor degree within 6 years, total"
+  },
+  "series": {
+    "revenue_total_adjusted": [
+      {
+        "year": 2014,
+        "value": 67381510.514
+      },
+      {
+        "year": 2015,
+        "value": 57780094.4922
+      },
+      {
+        "year": 2016,
+        "value": 57613672.3379
+      },
+      {
+        "year": 2017,
+        "value": 62732161.4812
+      },
+      {
+        "year": 2018,
+        "value": 54696121.3284
+      },
+      {
+        "year": 2019,
+        "value": 52976861.9254
+      },
+      {
+        "year": 2020,
+        "value": 65162951.6684
+      },
+      {
+        "year": 2021,
+        "value": 61430852.411
+      },
+      {
+        "year": 2022,
+        "value": 59958795.5404
+      },
+      {
+        "year": 2023,
+        "value": 48529823.0596
+      },
+      {
+        "year": 2024,
+        "value": 63733043
+      }
+    ],
+    "expenses_total_adjusted": [
+      {
+        "year": 2014,
+        "value": 59340602.2984
+      },
+      {
+        "year": 2015,
+        "value": 63340892.0072
+      },
+      {
+        "year": 2016,
+        "value": 60451893.3748
+      },
+      {
+        "year": 2017,
+        "value": 62095635.925
+      },
+      {
+        "year": 2018,
+        "value": 58774586.7627
+      },
+      {
+        "year": 2019,
+        "value": 54153042.6082
+      },
+      {
+        "year": 2020,
+        "value": 51796343.0487
+      },
+      {
+        "year": 2021,
+        "value": 47188612.3912
+      },
+      {
+        "year": 2022,
+        "value": 48204968.2338
+      },
+      {
+        "year": 2023,
+        "value": 45686291.6043
+      },
+      {
+        "year": 2024,
+        "value": 45666707
+      }
+    ],
+    "net_tuition_per_fte_adjusted": [
+      {
+        "year": 2014,
+        "value": 23999.8581
+      },
+      {
+        "year": 2015,
+        "value": 22319.4241
+      },
+      {
+        "year": 2016,
+        "value": 27773.3655
+      },
+      {
+        "year": 2017,
+        "value": 26948.9208
+      },
+      {
+        "year": 2018,
+        "value": 25614.6889
+      },
+      {
+        "year": 2019,
+        "value": 25228.8642
+      },
+      {
+        "year": 2020,
+        "value": 25728.429
+      },
+      {
+        "year": 2021,
+        "value": 20925.502
+      },
+      {
+        "year": 2022,
+        "value": 18418.0568
+      },
+      {
+        "year": 2023,
+        "value": 17719.1875
+      },
+      {
+        "year": 2024,
+        "value": 14321.6078
+      }
+    ],
+    "unfunded_discount_rate": [
+      {
+        "year": 2014,
+        "value": 0
+      },
+      {
+        "year": 2015,
+        "value": 0
+      },
+      {
+        "year": 2016,
+        "value": 0
+      },
+      {
+        "year": 2017,
+        "value": 0
+      },
+      {
+        "year": 2018,
+        "value": 0
+      },
+      {
+        "year": 2019,
+        "value": 0
+      },
+      {
+        "year": 2020,
+        "value": 0
+      },
+      {
+        "year": 2021,
+        "value": 0
+      },
+      {
+        "year": 2022,
+        "value": 0
+      },
+      {
+        "year": 2023,
+        "value": 0
+      },
+      {
+        "year": 2024,
+        "value": 0
+      }
+    ],
+    "enrollment_headcount_total": [
+      {
+        "year": 2014,
+        "value": 3945
+      },
+      {
+        "year": 2015,
+        "value": 3579
+      },
+      {
+        "year": 2016,
+        "value": 3561
+      },
+      {
+        "year": 2017,
+        "value": 3391
+      },
+      {
+        "year": 2018,
+        "value": 3242
+      },
+      {
+        "year": 2019,
+        "value": 3149
+      },
+      {
+        "year": 2020,
+        "value": 3127
+      },
+      {
+        "year": 2021,
+        "value": 3105
+      },
+      {
+        "year": 2022,
+        "value": 2921
+      },
+      {
+        "year": 2023,
+        "value": 2781
+      },
+      {
+        "year": 2024,
+        "value": 2732
+      }
+    ],
+    "enrollment_headcount_undergrad": [
+      {
+        "year": 2014,
+        "value": 1506
+      },
+      {
+        "year": 2015,
+        "value": 1531
+      },
+      {
+        "year": 2016,
+        "value": 1391
+      },
+      {
+        "year": 2017,
+        "value": 1001
+      },
+      {
+        "year": 2018,
+        "value": 937
+      },
+      {
+        "year": 2019,
+        "value": 1045
+      },
+      {
+        "year": 2020,
+        "value": 1021
+      },
+      {
+        "year": 2021,
+        "value": 1074
+      },
+      {
+        "year": 2022,
+        "value": 1171
+      },
+      {
+        "year": 2023,
+        "value": 1185
+      },
+      {
+        "year": 2024,
+        "value": 1208
+      }
+    ],
+    "enrollment_headcount_graduate": [
+      {
+        "year": 2014,
+        "value": 2439
+      },
+      {
+        "year": 2015,
+        "value": 2048
+      },
+      {
+        "year": 2016,
+        "value": 2170
+      },
+      {
+        "year": 2017,
+        "value": 2390
+      },
+      {
+        "year": 2018,
+        "value": 2305
+      },
+      {
+        "year": 2019,
+        "value": 2104
+      },
+      {
+        "year": 2020,
+        "value": 2106
+      },
+      {
+        "year": 2021,
+        "value": 2031
+      },
+      {
+        "year": 2022,
+        "value": 1750
+      },
+      {
+        "year": 2023,
+        "value": 1596
+      },
+      {
+        "year": 2024,
+        "value": 1524
+      }
+    ],
+    "enrollment_nonresident_total": [
+      {
+        "year": 2014,
+        "value": 22
+      },
+      {
+        "year": 2015,
+        "value": 25
+      },
+      {
+        "year": 2016,
+        "value": 44
+      },
+      {
+        "year": 2017,
+        "value": 35
+      },
+      {
+        "year": 2018,
+        "value": 23
+      },
+      {
+        "year": 2019,
+        "value": 27
+      },
+      {
+        "year": 2020,
+        "value": 31
+      },
+      {
+        "year": 2021,
+        "value": 27
+      },
+      {
+        "year": 2022,
+        "value": 18
+      },
+      {
+        "year": 2023,
+        "value": 23
+      },
+      {
+        "year": 2024,
+        "value": 103
+      }
+    ],
+    "enrollment_nonresident_undergrad": [
+      {
+        "year": 2014,
+        "value": 16
+      },
+      {
+        "year": 2015,
+        "value": 16
+      },
+      {
+        "year": 2016,
+        "value": 25
+      },
+      {
+        "year": 2017,
+        "value": 16
+      },
+      {
+        "year": 2018,
+        "value": 12
+      },
+      {
+        "year": 2019,
+        "value": 17
+      },
+      {
+        "year": 2020,
+        "value": 16
+      },
+      {
+        "year": 2021,
+        "value": 15
+      },
+      {
+        "year": 2022,
+        "value": 8
+      },
+      {
+        "year": 2023,
+        "value": 15
+      },
+      {
+        "year": 2024,
+        "value": 87
+      }
+    ],
+    "enrollment_nonresident_graduate": [
+      {
+        "year": 2014,
+        "value": 6
+      },
+      {
+        "year": 2015,
+        "value": 9
+      },
+      {
+        "year": 2016,
+        "value": 19
+      },
+      {
+        "year": 2017,
+        "value": 19
+      },
+      {
+        "year": 2018,
+        "value": 11
+      },
+      {
+        "year": 2019,
+        "value": 10
+      },
+      {
+        "year": 2020,
+        "value": 15
+      },
+      {
+        "year": 2021,
+        "value": 12
+      },
+      {
+        "year": 2022,
+        "value": 10
+      },
+      {
+        "year": 2023,
+        "value": 8
+      },
+      {
+        "year": 2024,
+        "value": 16
+      }
+    ],
+    "staff_headcount_total": [
+      {
+        "year": 2014,
+        "value": 517
+      },
+      {
+        "year": 2015,
+        "value": 475
+      },
+      {
+        "year": 2016,
+        "value": 432
+      },
+      {
+        "year": 2017,
+        "value": 441
+      },
+      {
+        "year": 2018,
+        "value": 433
+      },
+      {
+        "year": 2019,
+        "value": 400
+      },
+      {
+        "year": 2020,
+        "value": 373
+      },
+      {
+        "year": 2021,
+        "value": 410
+      },
+      {
+        "year": 2022,
+        "value": 410
+      },
+      {
+        "year": 2023,
+        "value": 452
+      },
+      {
+        "year": 2024,
+        "value": 415
+      }
+    ],
+    "staff_headcount_instructional": [
+      {
+        "year": 2014,
+        "value": 272
+      },
+      {
+        "year": 2015,
+        "value": 242
+      },
+      {
+        "year": 2016,
+        "value": 245
+      },
+      {
+        "year": 2017,
+        "value": 246
+      },
+      {
+        "year": 2018,
+        "value": 237
+      },
+      {
+        "year": 2019,
+        "value": 193
+      },
+      {
+        "year": 2020,
+        "value": 190
+      },
+      {
+        "year": 2021,
+        "value": 217
+      },
+      {
+        "year": 2022,
+        "value": 227
+      },
+      {
+        "year": 2023,
+        "value": 264
+      },
+      {
+        "year": 2024,
+        "value": 217
+      }
+    ],
+    "endowment_value_adjusted": [
+      {
+        "year": 2014,
+        "value": 51651100.8671
+      },
+      {
+        "year": 2015,
+        "value": 52017979.9936
+      },
+      {
+        "year": 2016,
+        "value": 44415435.767
+      },
+      {
+        "year": 2017,
+        "value": 44224336.437
+      },
+      {
+        "year": 2018,
+        "value": 45113762.919
+      },
+      {
+        "year": 2019,
+        "value": 45010677.6417
+      },
+      {
+        "year": 2020,
+        "value": 44745471.5795
+      },
+      {
+        "year": 2021,
+        "value": 59861446.5597
+      },
+      {
+        "year": 2022,
+        "value": 52866415.3928
+      },
+      {
+        "year": 2023,
+        "value": 49428564.4567
+      },
+      {
+        "year": 2024,
+        "value": 52379412
+      }
+    ],
+    "endowment_spending_current_use": [
+      {
+        "year": 2020,
+        "value": 2343694
+      },
+      {
+        "year": 2021,
+        "value": 2864925
+      },
+      {
+        "year": 2022,
+        "value": 2666608
+      },
+      {
+        "year": 2023,
+        "value": 2749056
+      },
+      {
+        "year": 2024,
+        "value": 3523728
+      }
+    ],
+    "endowment_spending_current_use_adjusted": [
+      {
+        "year": 2020,
+        "value": 2840648.3
+      },
+      {
+        "year": 2021,
+        "value": 3316586.5532
+      },
+      {
+        "year": 2022,
+        "value": 2858265.1823
+      },
+      {
+        "year": 2023,
+        "value": 2830137.7332
+      },
+      {
+        "year": 2024,
+        "value": 3523728
+      }
+    ],
+    "endowment_spending_current_use_pct_core_revenue": [
+      {
+        "year": 2020,
+        "value": 0.0469
+      },
+      {
+        "year": 2021,
+        "value": 0.0557
+      },
+      {
+        "year": 2022,
+        "value": 0.0507
+      },
+      {
+        "year": 2023,
+        "value": 0.0634
+      },
+      {
+        "year": 2024,
+        "value": 0.0606
+      }
+    ],
+    "federal_grants_contracts_pell_adjusted_adjusted": [
+      {
+        "year": 2014,
+        "value": 386035.8577
+      },
+      {
+        "year": 2015,
+        "value": 369024.0059
+      },
+      {
+        "year": 2016,
+        "value": 337646.2986
+      },
+      {
+        "year": 2017,
+        "value": 483051.882
+      },
+      {
+        "year": 2018,
+        "value": 543315.1894
+      },
+      {
+        "year": 2019,
+        "value": 180717.4627
+      },
+      {
+        "year": 2020,
+        "value": 159186.7652
+      },
+      {
+        "year": 2021,
+        "value": 918.0181
+      },
+      {
+        "year": 2022,
+        "value": 175459.1829
+      },
+      {
+        "year": 2023,
+        "value": 6206406.7986
+      },
+      {
+        "year": 2024,
+        "value": 3592616
+      }
+    ],
+    "state_funding_adjusted": [
+      {
+        "year": 2014,
+        "value": 1883148.9947
+      },
+      {
+        "year": 2015,
+        "value": 1932299.4643
+      },
+      {
+        "year": 2016,
+        "value": 1946129.9176
+      },
+      {
+        "year": 2017,
+        "value": 2015567.0013
+      },
+      {
+        "year": 2018,
+        "value": 1972890.1551
+      },
+      {
+        "year": 2019,
+        "value": 2129241.526
+      },
+      {
+        "year": 2020,
+        "value": 2249161.1959
+      },
+      {
+        "year": 2021,
+        "value": 2133077.0964
+      },
+      {
+        "year": 2022,
+        "value": 2829573.2851
+      },
+      {
+        "year": 2023,
+        "value": 3426530.011
+      },
+      {
+        "year": 2024,
+        "value": 3136148
+      }
+    ]
+  },
+  "latest_status": {
+    "accreditors": "MSCHE",
+    "action_labels": "Merger of Maryland University of Integrative Health with Notre Dame of Maryland University (effective February 1, 2024); Non-Compliance Warning",
+    "active_actions": "warning",
+    "has_active_warning": true,
+    "has_active_warning_or_notice": true,
+    "has_active_adverse_action": false,
+    "latest_action_date": "2026-07-06",
+    "latest_action_year": "2026",
+    "action_count": 2
+  },
+  "actions": [
+    {
+      "accreditor": "MSCHE",
+      "action_type": "warning",
+      "action_label": "Non-Compliance Warning",
+      "action_label_short": "Non-Compliance Warning",
+      "action_scope": null,
+      "action_status": "active",
+      "action_date": "2026-07-06",
+      "action_year": "2026",
+      "notes": "Non-Compliance Warning",
+      "source_url": "https://msche.box.com/shared/static/xaw39ju2vhyqyc0c4pqnhc0qy7un3nop.pdf",
+      "source_title": "Non-Compliance and Adverse Actions by Status - Middle States Commission on Higher Education",
+      "source_page_url": "https://msche.box.com/shared/static/xaw39ju2vhyqyc0c4pqnhc0qy7un3nop.pdf",
+      "source_page_modified": "2026-07-06",
+      "display_action": true,
+      "public_table_strategy": "scraper_backed_keep",
+      "hybrid_candidate": false,
+      "hybrid_reason": null,
+      "has_financial_profile": true,
+      "is_primary_tracker": true
+    },
+    {
+      "accreditor": "MSCHE",
+      "action_type": "other",
+      "action_label": "To acknowledge receipt of the complex substantive change request. To include the change in legal status, form of control, and ownership within the institution's scope of accreditation, effective February 1, 2024. To note the complex substantive change request includes the merger of Maryland University of Integrative Health with Notre Dame of Maryland University, effective, February 1, 2024, the anticipated date of the transaction. To require notification of the date of the closing of the transaction within five calendar days of the transaction by email to [email protected] or, if there is a subsequent delay in the anticipated date of the closing of the transaction, to require immediate notification to the Commission of the revised anticipated transaction date. To note that Notre Dame of Maryland University is the surviving institution. To note that the surviving institution is responsible for ensuring the submission of all required reports and information on behalf of the integrated institution. To note the Maryland University of Integrative Health will maintain accreditation for the sole purpose of implementing the teach-out plan and agreements and effectuating the change in ownership process with the United States Department of Education per the United States Department of Education's Updated Guidance and Procedures for Changes in Ownership, dated September 15, 2022 (Electronic Announcement ID: GENERAL-22-70). To note the action for Maryland University of Integrative Health on January 25, 2024. To note that the main campus of Maryland University of Integrative Health at 7750 Montpelier Road, Laurel, MD 20723 will become an additional location included within the scope of accreditation of Notre Dame of Maryland University. To require immediate notification when 7750 Montpelier Road, Laurel, MD 20723 becomes an additional location of Notre Dame of Maryland University by email to [email protected]. To note that the Commission may rescind this action if instruction does not commence within one calendar year from the date of this action. To request a complex substantive change supplemental information report, due July 1, 2024, providing (1) the updated status of the complex substantive change (Substantive Change Policy and Complex Substantive Change Procedures); (2) written evidence of review, including but not limited to, approval of the transaction from all outstanding required licensing, regulatory, or other legal entities as necessary, including the United States Department of Education and the Maryland Higher Education Commission (Standard II); and, (3) written evidence of the institution's updated Eligibility and Certification Approval Report (ECAR) reflecting the inclusion of the additional location. To direct a prompt Commission liaison guidance visit to discuss the Commission's expectations including post-transaction requirements. To direct a complex substantive change site visit to the main campus at 4701 N. Charles Street, Baltimore, MD 21210 and the additional location at 7750 Montpelier Road, Laurel, MD 20723 as soon as practicable but no later than six months after the anticipated date of the transaction, February 1, 2024. To remind the institution of its obligation to inform the Commission about any and all developments relevant to this action. To note the Commission may rescind this action if any development reveals additional information that might have affected the Commission's decision or the complex substantive change is not implemented within one year of this action. To direct the institution to conduct a new comprehensive evaluation in accordance with Commission policy and procedures and federal regulation 34 CFR § 602.22(h). To note that the institution is currently in self-study in anticipation of an evaluation visit in 2025-2026.",
+      "action_label_short": "Merger of Maryland University of Integrative Health with Notre Dame of Maryland University (effective February 1, 2024)",
+      "action_scope": null,
+      "action_status": null,
+      "action_date": "2024-01-25",
+      "action_year": "2024",
+      "notes": null,
+      "source_url": "https://www.msche.org/institution/0157/",
+      "source_title": "MSCHE Statement of Accreditation Status - Notre Dame of Maryland University",
+      "source_page_url": "https://www.msche.org/institution/0157/",
+      "source_page_modified": null,
+      "display_action": true,
+      "public_table_strategy": null,
+      "hybrid_candidate": false,
+      "hybrid_reason": null,
+      "has_financial_profile": true,
+      "is_primary_tracker": true
+    }
+  ],
+  "sources": [
+    {
+      "accreditor": "MSCHE",
+      "source_title": "Non-Compliance and Adverse Actions by Status - Middle States Commission on Higher Education",
+      "source_url": "https://msche.box.com/shared/static/xaw39ju2vhyqyc0c4pqnhc0qy7un3nop.pdf",
+      "source_page_url": "https://msche.box.com/shared/static/xaw39ju2vhyqyc0c4pqnhc0qy7un3nop.pdf"
+    },
+    {
+      "accreditor": "MSCHE",
+      "source_title": "MSCHE Statement of Accreditation Status - Notre Dame of Maryland University",
+      "source_url": "https://www.msche.org/institution/0157/",
+      "source_page_url": "https://www.msche.org/institution/0157/"
+    }
+  ]
+}

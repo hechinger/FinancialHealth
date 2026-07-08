@@ -1,0 +1,134 @@
+#!/bin/bash
+# Pre-commit syntax + truncation guard.
+#
+# Cowork-on-Windows write semantics occasionally truncate a file mid-line near
+# the end (mid-Edit-tool flush, killed Rscript holding a file handle, session
+# ending mid-write). Truncated R / JS / JSON files always parse-fail. Catching
+# them here means a corrupted file never lands on a remote.
+#
+# This version batches parse checks per language to avoid spawning a fresh
+# interpreter per file. With ~1900 staged JSON files, the per-file loop took
+# 2-3 minutes; the batched loop takes seconds.
+#
+# To skip in genuine emergencies: git commit --no-verify
+set -e
+
+fail() { echo "PRE-COMMIT FAIL: $1"; exit 1; }
+
+CHANGED=$(git diff --cached --name-only --diff-filter=ACM)
+[ -z "$CHANGED" ] && { echo "pre-commit: OK (no staged changes)"; exit 0; }
+
+filter_existing() {
+  local pattern=$1
+  printf '%s\n' "$CHANGED" | grep -E "$pattern" 2>/dev/null | while IFS= read -r f; do
+    [ -f "$f" ] && printf '%s\n' "$f"
+  done
+}
+
+if command -v Rscript >/dev/null 2>&1; then
+  R_FILES=$(filter_existing '\.[Rr]$')
+  if [ -n "$R_FILES" ]; then
+    while IFS= read -r f; do
+      [ -z "$f" ] && continue
+      Rscript --vanilla -e "tryCatch(invisible(parse(file = '$f')), error = function(e) { cat(conditionMessage(e), '\n', file = stderr()); quit(status = 1L) })" \
+        || fail "R parse failed: $f"
+    done <<< "$R_FILES"
+  fi
+fi
+
+if command -v node >/dev/null 2>&1; then
+  JS_FILES=$(filter_existing '\.(js|mjs|cjs)$')
+  if [ -n "$JS_FILES" ]; then
+    while IFS= read -r f; do
+      [ -z "$f" ] && continue
+      node --check "$f" || fail "JS parse failed: $f"
+    done <<< "$JS_FILES"
+  fi
+fi
+
+if command -v python >/dev/null 2>&1; then
+  PY=python
+elif command -v python3 >/dev/null 2>&1; then
+  PY=python3
+else
+  PY=
+fi
+
+if [ -n "$PY" ]; then
+  JSON_FILES=$(filter_existing '\.json$')
+  if [ -n "$JSON_FILES" ]; then
+    printf '%s\n' "$JSON_FILES" | "$PY" -c '
+import json, sys
+failed = 0
+for line in sys.stdin:
+    path = line.rstrip("\r\n")
+    if not path:
+        continue
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            json.load(f)
+    except Exception as e:
+        print(f"JSON parse failed: {path}: {e}", file=sys.stderr)
+        failed += 1
+sys.exit(1 if failed else 0)
+' || fail "JSON parse failed (see stderr above)"
+  fi
+fi
+
+if [ -n "$PY" ]; then
+  YAML_FILES=$(filter_existing '\.ya?ml$')
+  if [ -n "$YAML_FILES" ]; then
+    printf '%s\n' "$YAML_FILES" | "$PY" -c '
+import yaml, sys
+failed = 0
+for line in sys.stdin:
+    path = line.rstrip("\r\n")
+    if not path:
+        continue
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            yaml.safe_load(f)
+    except Exception as e:
+        print(f"YAML parse failed: {path}: {e}", file=sys.stderr)
+        failed += 1
+sys.exit(1 if failed else 0)
+' || fail "YAML parse failed (see stderr above)"
+  fi
+fi
+
+# File-integrity check: null bytes + trailing newline.
+# Cowork-on-Windows Edit tool can leave trailing null bytes after content.
+# Parsers tolerate them; the previous bash tail-based check was defeated
+# because bash command substitution strips null bytes silently. Python here.
+if [ -n "$PY" ]; then
+  INTEGRITY_FILES=$(filter_existing '\.(R|r|js|mjs|cjs|json|ya?ml|html|css|md|py|toml|sh)$')
+  if [ -n "$INTEGRITY_FILES" ]; then
+    printf '%s\n' "$INTEGRITY_FILES" | "$PY" -c '
+import sys
+failed = 0
+for line in sys.stdin:
+    path = line.rstrip("\r\n")
+    if not path:
+        continue
+    try:
+        with open(path, "rb") as f:
+            data = f.read()
+    except Exception as e:
+        print(f"read failed: {path}: {e}", file=sys.stderr)
+        failed += 1
+        continue
+    if b"\x00" in data:
+        n = data.count(b"\x00")
+        trail = len(data) - len(data.rstrip(b"\x00"))
+        print(f"null bytes detected: {path}  nulls={n} trailing={trail}", file=sys.stderr)
+        failed += 1
+        continue
+    if data and not data.endswith(b"\n"):
+        print(f"no trailing newline: {path}", file=sys.stderr)
+        failed += 1
+sys.exit(1 if failed else 0)
+' || fail "File integrity check failed (see stderr above)"
+  fi
+fi
+
+echo "pre-commit: OK"

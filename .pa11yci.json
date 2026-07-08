@@ -1,0 +1,42 @@
+{
+  "defaults": {
+    "standard": "WCAG2AA",
+    "chromeLaunchConfig": {
+      "args": ["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage"]
+    }
+  },
+  "urls": [
+    {
+      "url": "http://localhost:8000/index.html",
+      "name": "Homepage"
+    },
+    {
+      "url": "http://localhost:8000/cuts.html",
+      "name": "College Cuts"
+    },
+    {
+      "url": "http://localhost:8000/research.html",
+      "name": "Research Funding Cuts"
+    },
+    {
+      "url": "http://localhost:8000/accreditation.html",
+      "name": "Accreditation"
+    },
+    {
+      "url": "http://localhost:8000/school.html?unitid=222178",
+      "name": "School Detail Page"
+    },
+    {
+      "url": "http://localhost:8000/cuts.html?unitid=101709",
+      "name": "College Cuts Detail Page"
+    },
+    {
+      "url": "http://localhost:8000/research.html?unitid=100654",
+      "name": "Research Detail Page"
+    },
+    {
+      "url": "http://localhost:8000/accreditation.html?unitid=104717",
+      "name": "Accreditation Detail Page"
+    }
+  ]
+}

@@ -1,0 +1,950 @@
+{
+  "unitid": "190114",
+  "generated_at": "2026-07-08",
+  "profile": {
+    "institution_name": "Metropolitan College of New York",
+    "institution_unique_name": "Metropolitan College of New York | New York | New York",
+    "state": "New York",
+    "city": "New York",
+    "control_label": "Private not-for-profit",
+    "sector": "Private not-for-profit, 4-year or above",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "City: Large",
+    "religious_affiliation": "Not applicable",
+    "all_programs_distance_education": "No"
+  },
+  "summary": {
+    "latest_year": 2024,
+    "enrollment_pct_change_5yr": -35.5068,
+    "sector_median_enrollment_pct_change_5yr": -3.7344,
+    "enrollment_decline_last_3_of_5": "Yes",
+    "revenue_pct_change_5yr": -47.3105,
+    "sector_median_revenue_pct_change_5yr": -0.5117,
+    "net_tuition_per_fte_change_5yr": 1.1821,
+    "sector_median_net_tuition_per_fte_change_5yr": -17.816,
+    "staff_total_headcount_pct_change_5yr": -42.3333,
+    "sector_median_staff_total_headcount_pct_change_5yr": -1.7263,
+    "staff_instructional_headcount_pct_change_5yr": -50.4505,
+    "students_per_instructional_staff_fte": 12,
+    "sector_median_students_per_instructional_staff_fte": 12,
+    "ended_year_at_loss": "Yes",
+    "losses_last_3_of_5": "No",
+    "loss_years_last_10": 3,
+    "tuition_dependence_pct": 82.8929,
+    "sector_median_tuition_dependence_pct": 44.8638,
+    "tuition_dependence_vs_sector_median_sentence": "This college got 83.0% of its revenue from net tuition in 2024, above the median of 45% for private not-for-profit colleges.",
+    "unfunded_discount_rate": 9.7153,
+    "unfunded_discount_pct_change_5yr": -19.8956,
+    "share_grad_students": 36.9369,
+    "sector_avg_share_grad_students": 29.1503,
+    "research_expense": 0,
+    "research_expense_per_fte": 0,
+    "research_expense_pct_core_expenses": 0,
+    "sector_research_spending_n": 1148,
+    "sector_research_spending_positive_n": 401,
+    "sector_research_spending_reporting_share_pct": 34.9,
+    "sector_median_research_expense_per_fte_positive": 585.5059,
+    "pct_international_all": 6.1061,
+    "pct_international_undergraduate": 3.8095,
+    "pct_international_graduate": 10.0271,
+    "international_student_count_change_5yr": -8,
+    "international_enrollment_pct_change_5yr": -11.5942,
+    "international_students_sentence": "In 2024, 6.1% of students were international. That includes 3.8% of undergraduates and 10% of graduate students.",
+    "federal_loan_pct_most_recent": 71,
+    "sector_avg_federal_loan_pct_most_recent": 46.041,
+    "grad_plus_recipients": 9,
+    "grad_plus_disbursements_amt": 89924,
+    "grad_plus_disbursements_per_recipient": 9991.5556,
+    "sector_median_grad_plus_disbursements_per_recipient": 11428,
+    "federal_grants_contracts_pell_adjusted_pct_core_revenue": 3.334,
+    "state_funding_pct_core_revenue": 0.3597,
+    "federal_grants_contracts_pell_adjusted_pct_change_5yr": -64.2584,
+    "state_funding_pct_change_5yr": -47.7862,
+    "endowment_assets_per_fte_adjusted": 1215.8844,
+    "sector_median_endowment_assets_per_fte_adjusted": 37427.0318,
+    "endowment_pct_change_5yr": 4.6788,
+    "sector_median_endowment_pct_change_5yr": 7.7657,
+    "endowment_spending_current_use_pct_core_revenue": 0,
+    "graduation_rate_6yr": 43,
+    "median_earnings_10yr": 46236,
+    "median_debt_completers": 27688,
+    "scorecard_data_updated": "2026-03-23",
+    "ipeds_graduation_rate_year": 2024,
+    "ipeds_graduation_rate_label": "Bachelor degree within 6 years, total"
+  },
+  "series": {
+    "revenue_total_adjusted": [
+      {
+        "year": 2014,
+        "value": 40160359.6593
+      },
+      {
+        "year": 2015,
+        "value": 36656237.2364
+      },
+      {
+        "year": 2016,
+        "value": 35831421.9623
+      },
+      {
+        "year": 2017,
+        "value": 35029087.0341
+      },
+      {
+        "year": 2018,
+        "value": 35831218.3739
+      },
+      {
+        "year": 2019,
+        "value": 33703904.3419
+      },
+      {
+        "year": 2020,
+        "value": 35122974.7528
+      },
+      {
+        "year": 2021,
+        "value": 32039628.5996
+      },
+      {
+        "year": 2022,
+        "value": 28745205.6542
+      },
+      {
+        "year": 2023,
+        "value": 23017076.3058
+      },
+      {
+        "year": 2024,
+        "value": 17758406
+      }
+    ],
+    "expenses_total_adjusted": [
+      {
+        "year": 2014,
+        "value": 34891589.9974
+      },
+      {
+        "year": 2015,
+        "value": 36620020.0052
+      },
+      {
+        "year": 2016,
+        "value": 35176676.7023
+      },
+      {
+        "year": 2017,
+        "value": 34101018.3172
+      },
+      {
+        "year": 2018,
+        "value": 34668038.0203
+      },
+      {
+        "year": 2019,
+        "value": 34671841.2317
+      },
+      {
+        "year": 2020,
+        "value": 33091528.4686
+      },
+      {
+        "year": 2021,
+        "value": 30017683.7932
+      },
+      {
+        "year": 2022,
+        "value": 28230552.2527
+      },
+      {
+        "year": 2023,
+        "value": 25780295.8741
+      },
+      {
+        "year": 2024,
+        "value": 24029873
+      }
+    ],
+    "net_tuition_per_fte_adjusted": [
+      {
+        "year": 2014,
+        "value": 18933.6119
+      },
+      {
+        "year": 2015,
+        "value": 18255.8428
+      },
+      {
+        "year": 2016,
+        "value": 19588.6063
+      },
+      {
+        "year": 2017,
+        "value": 21532.9714
+      },
+      {
+        "year": 2018,
+        "value": 19190.802
+      },
+      {
+        "year": 2019,
+        "value": 19793.8683
+      },
+      {
+        "year": 2020,
+        "value": 19932.5015
+      },
+      {
+        "year": 2021,
+        "value": 24881.5871
+      },
+      {
+        "year": 2022,
+        "value": 25279.4252
+      },
+      {
+        "year": 2023,
+        "value": 21632.6341
+      },
+      {
+        "year": 2024,
+        "value": 20027.8435
+      }
+    ],
+    "unfunded_discount_rate": [
+      {
+        "year": 2014,
+        "value": 13.4635
+      },
+      {
+        "year": 2015,
+        "value": 13.3001
+      },
+      {
+        "year": 2016,
+        "value": 12.7037
+      },
+      {
+        "year": 2017,
+        "value": 11.18
+      },
+      {
+        "year": 2018,
+        "value": 12.2221
+      },
+      {
+        "year": 2019,
+        "value": 12.1283
+      },
+      {
+        "year": 2020,
+        "value": 11.6997
+      },
+      {
+        "year": 2021,
+        "value": 7.1187
+      },
+      {
+        "year": 2022,
+        "value": 13.5778
+      },
+      {
+        "year": 2023,
+        "value": 10.595
+      },
+      {
+        "year": 2024,
+        "value": 9.7153
+      }
+    ],
+    "enrollment_headcount_total": [
+      {
+        "year": 2014,
+        "value": 1689
+      },
+      {
+        "year": 2015,
+        "value": 1731
+      },
+      {
+        "year": 2016,
+        "value": 1673
+      },
+      {
+        "year": 2017,
+        "value": 1600
+      },
+      {
+        "year": 2018,
+        "value": 1679
+      },
+      {
+        "year": 2019,
+        "value": 1549
+      },
+      {
+        "year": 2020,
+        "value": 1487
+      },
+      {
+        "year": 2021,
+        "value": 1325
+      },
+      {
+        "year": 2022,
+        "value": 978
+      },
+      {
+        "year": 2023,
+        "value": 921
+      },
+      {
+        "year": 2024,
+        "value": 999
+      }
+    ],
+    "enrollment_headcount_undergrad": [
+      {
+        "year": 2014,
+        "value": 1186
+      },
+      {
+        "year": 2015,
+        "value": 1191
+      },
+      {
+        "year": 2016,
+        "value": 1065
+      },
+      {
+        "year": 2017,
+        "value": 1011
+      },
+      {
+        "year": 2018,
+        "value": 1127
+      },
+      {
+        "year": 2019,
+        "value": 1044
+      },
+      {
+        "year": 2020,
+        "value": 966
+      },
+      {
+        "year": 2021,
+        "value": 825
+      },
+      {
+        "year": 2022,
+        "value": 605
+      },
+      {
+        "year": 2023,
+        "value": 629
+      },
+      {
+        "year": 2024,
+        "value": 630
+      }
+    ],
+    "enrollment_headcount_graduate": [
+      {
+        "year": 2014,
+        "value": 503
+      },
+      {
+        "year": 2015,
+        "value": 540
+      },
+      {
+        "year": 2016,
+        "value": 608
+      },
+      {
+        "year": 2017,
+        "value": 589
+      },
+      {
+        "year": 2018,
+        "value": 552
+      },
+      {
+        "year": 2019,
+        "value": 505
+      },
+      {
+        "year": 2020,
+        "value": 521
+      },
+      {
+        "year": 2021,
+        "value": 500
+      },
+      {
+        "year": 2022,
+        "value": 373
+      },
+      {
+        "year": 2023,
+        "value": 292
+      },
+      {
+        "year": 2024,
+        "value": 369
+      }
+    ],
+    "enrollment_nonresident_total": [
+      {
+        "year": 2014,
+        "value": 75
+      },
+      {
+        "year": 2015,
+        "value": 56
+      },
+      {
+        "year": 2016,
+        "value": 71
+      },
+      {
+        "year": 2017,
+        "value": 69
+      },
+      {
+        "year": 2018,
+        "value": 72
+      },
+      {
+        "year": 2019,
+        "value": 69
+      },
+      {
+        "year": 2020,
+        "value": 77
+      },
+      {
+        "year": 2021,
+        "value": 43
+      },
+      {
+        "year": 2022,
+        "value": 28
+      },
+      {
+        "year": 2023,
+        "value": 52
+      },
+      {
+        "year": 2024,
+        "value": 61
+      }
+    ],
+    "enrollment_nonresident_undergrad": [
+      {
+        "year": 2014,
+        "value": 29
+      },
+      {
+        "year": 2015,
+        "value": 25
+      },
+      {
+        "year": 2016,
+        "value": 25
+      },
+      {
+        "year": 2017,
+        "value": 21
+      },
+      {
+        "year": 2018,
+        "value": 17
+      },
+      {
+        "year": 2019,
+        "value": 25
+      },
+      {
+        "year": 2020,
+        "value": 22
+      },
+      {
+        "year": 2021,
+        "value": 10
+      },
+      {
+        "year": 2022,
+        "value": 6
+      },
+      {
+        "year": 2023,
+        "value": 24
+      },
+      {
+        "year": 2024,
+        "value": 24
+      }
+    ],
+    "enrollment_nonresident_graduate": [
+      {
+        "year": 2014,
+        "value": 46
+      },
+      {
+        "year": 2015,
+        "value": 31
+      },
+      {
+        "year": 2016,
+        "value": 46
+      },
+      {
+        "year": 2017,
+        "value": 48
+      },
+      {
+        "year": 2018,
+        "value": 55
+      },
+      {
+        "year": 2019,
+        "value": 44
+      },
+      {
+        "year": 2020,
+        "value": 55
+      },
+      {
+        "year": 2021,
+        "value": 33
+      },
+      {
+        "year": 2022,
+        "value": 22
+      },
+      {
+        "year": 2023,
+        "value": 28
+      },
+      {
+        "year": 2024,
+        "value": 37
+      }
+    ],
+    "staff_headcount_total": [
+      {
+        "year": 2014,
+        "value": 360
+      },
+      {
+        "year": 2015,
+        "value": 352
+      },
+      {
+        "year": 2016,
+        "value": 342
+      },
+      {
+        "year": 2017,
+        "value": 341
+      },
+      {
+        "year": 2018,
+        "value": 321
+      },
+      {
+        "year": 2019,
+        "value": 300
+      },
+      {
+        "year": 2020,
+        "value": 235
+      },
+      {
+        "year": 2021,
+        "value": 231
+      },
+      {
+        "year": 2022,
+        "value": 206
+      },
+      {
+        "year": 2023,
+        "value": 192
+      },
+      {
+        "year": 2024,
+        "value": 173
+      }
+    ],
+    "staff_headcount_instructional": [
+      {
+        "year": 2014,
+        "value": 259
+      },
+      {
+        "year": 2015,
+        "value": 256
+      },
+      {
+        "year": 2016,
+        "value": 249
+      },
+      {
+        "year": 2017,
+        "value": 253
+      },
+      {
+        "year": 2018,
+        "value": 239
+      },
+      {
+        "year": 2019,
+        "value": 222
+      },
+      {
+        "year": 2020,
+        "value": 149
+      },
+      {
+        "year": 2021,
+        "value": 147
+      },
+      {
+        "year": 2022,
+        "value": 136
+      },
+      {
+        "year": 2023,
+        "value": 124
+      },
+      {
+        "year": 2024,
+        "value": 110
+      }
+    ],
+    "endowment_value_adjusted": [
+      {
+        "year": 2014,
+        "value": 917486.2626
+      },
+      {
+        "year": 2015,
+        "value": 918350.6632
+      },
+      {
+        "year": 2016,
+        "value": 909334.3621
+      },
+      {
+        "year": 2017,
+        "value": 890430.3879
+      },
+      {
+        "year": 2018,
+        "value": 869200.3675
+      },
+      {
+        "year": 2019,
+        "value": 853730.9625
+      },
+      {
+        "year": 2020,
+        "value": 972249.1248
+      },
+      {
+        "year": 2021,
+        "value": 1012460.565
+      },
+      {
+        "year": 2022,
+        "value": 937817.081
+      },
+      {
+        "year": 2023,
+        "value": 919873.8285
+      },
+      {
+        "year": 2024,
+        "value": 893675
+      }
+    ],
+    "endowment_spending_current_use": [
+      {
+        "year": 2020,
+        "value": 0
+      },
+      {
+        "year": 2021,
+        "value": 0
+      },
+      {
+        "year": 2022,
+        "value": 0
+      },
+      {
+        "year": 2023,
+        "value": 0
+      },
+      {
+        "year": 2024,
+        "value": 0
+      }
+    ],
+    "endowment_spending_current_use_adjusted": [
+      {
+        "year": 2020,
+        "value": 0
+      },
+      {
+        "year": 2021,
+        "value": 0
+      },
+      {
+        "year": 2022,
+        "value": 0
+      },
+      {
+        "year": 2023,
+        "value": 0
+      },
+      {
+        "year": 2024,
+        "value": 0
+      }
+    ],
+    "endowment_spending_current_use_pct_core_revenue": [
+      {
+        "year": 2020,
+        "value": 0
+      },
+      {
+        "year": 2021,
+        "value": 0
+      },
+      {
+        "year": 2022,
+        "value": 0
+      },
+      {
+        "year": 2023,
+        "value": 0
+      },
+      {
+        "year": 2024,
+        "value": 0
+      }
+    ],
+    "federal_grants_contracts_pell_adjusted_adjusted": [
+      {
+        "year": 2014,
+        "value": 238293.1831
+      },
+      {
+        "year": 2015,
+        "value": 194404.4091
+      },
+      {
+        "year": 2016,
+        "value": 0
+      },
+      {
+        "year": 2017,
+        "value": 0
+      },
+      {
+        "year": 2018,
+        "value": 1280980.9685
+      },
+      {
+        "year": 2019,
+        "value": 1656493.9196
+      },
+      {
+        "year": 2020,
+        "value": 1840871.3477
+      },
+      {
+        "year": 2021,
+        "value": 1721787.6023
+      },
+      {
+        "year": 2022,
+        "value": 7929456.1705
+      },
+      {
+        "year": 2023,
+        "value": 9733867.4102
+      },
+      {
+        "year": 2024,
+        "value": 592058
+      }
+    ],
+    "state_funding_adjusted": [
+      {
+        "year": 2014,
+        "value": 66499.3755
+      },
+      {
+        "year": 2015,
+        "value": 136447.5748
+      },
+      {
+        "year": 2016,
+        "value": 131839.6414
+      },
+      {
+        "year": 2017,
+        "value": 131029.6562
+      },
+      {
+        "year": 2018,
+        "value": 133725.728
+      },
+      {
+        "year": 2019,
+        "value": 122333.5198
+      },
+      {
+        "year": 2020,
+        "value": 110270.0872
+      },
+      {
+        "year": 2021,
+        "value": 1163817.7939
+      },
+      {
+        "year": 2022,
+        "value": 125617.0872
+      },
+      {
+        "year": 2023,
+        "value": 86588.7143
+      },
+      {
+        "year": 2024,
+        "value": 63875
+      }
+    ]
+  },
+  "latest_status": {
+    "accreditors": "MSCHE",
+    "action_labels": "Approved Teach-Out Plan and Agreements; Continued Show Cause because of insufficient evidence of compliance with Standard VI (Planning, Resources, and Institutional Improvement); Non-Compliance Warning; Required to Show Cause because of insufficient evidence of compliance with Standard VI (Planning, Resources, and Institutional Improvement)",
+    "active_actions": "adverse_action; show_cause; warning",
+    "has_active_warning": true,
+    "has_active_warning_or_notice": true,
+    "has_active_adverse_action": true,
+    "latest_action_date": "2026-07-06",
+    "latest_action_year": "2026",
+    "action_count": 4
+  },
+  "actions": [
+    {
+      "accreditor": "MSCHE",
+      "action_type": "warning",
+      "action_label": "Non-Compliance Warning",
+      "action_label_short": "Non-Compliance Warning",
+      "action_scope": null,
+      "action_status": "active",
+      "action_date": "2026-07-06",
+      "action_year": "2026",
+      "notes": "Non-Compliance Warning",
+      "source_url": "https://msche.box.com/shared/static/w6ujdy96h23fqoo08dal7lt4ipi1ces5.pdf",
+      "source_title": "Non-Compliance and Adverse Actions by Status - Middle States Commission on Higher Education",
+      "source_page_url": "https://msche.box.com/shared/static/w6ujdy96h23fqoo08dal7lt4ipi1ces5.pdf",
+      "source_page_modified": "2026-07-06",
+      "display_action": true,
+      "public_table_strategy": "scraper_backed_keep",
+      "hybrid_candidate": false,
+      "hybrid_reason": null,
+      "has_financial_profile": true,
+      "is_primary_tracker": true
+    },
+    {
+      "accreditor": "MSCHE",
+      "action_type": "adverse_action",
+      "action_label": "To approve the teach-out plan and signed teach-out agreements, requested by the Commission action of June 26, 2025, and the updated teach-out plan received on November 16, 2025. To approve the teach-out agreements with 1 Adelphi University, Garden City, NY 2 Berkeley College-New York, New York, NY 3 Borough of Manhattan Community College of the City University of New York, New York, NY 4 Bronx Community College of the City University of New York, Bronx, NY 5 Brooklyn College of the City University of New York, Brooklyn, NY 6 D'Youville University, Buffalo, NY 7 Excelsior University, Albany, NY 8 Hunter College of the City University of New York, New York, NY 9 Lehman College of the City University of New York, Bronx, NY 10 Mercy University, Dobbs Ferry, NY 11 Monroe University, Bronx, NY 12 St. Joseph's University, Brooklyn, NY 13 Stella and Charles Guttman Community College of the City University of New York, New York, NY 14 Touro University, New York, NY and 15 University of Mount Saint Vincent, Riverdale, NY.",
+      "action_label_short": "Approved Teach-Out Plan and Agreements",
+      "action_scope": null,
+      "action_status": "active",
+      "action_date": "2025-12-05",
+      "action_year": "2025",
+      "notes": "To approve the teach-out plan and signed teach-out agreements, requested by the Commission action of June 26, 2025, and the updated teach-out plan received on November 16, 2025. To approve the teach-out agreements with 1 Adelphi University, Garden City, NY 2 Berkeley College-New York, New York, NY 3 Borough of Manhattan Community College of the City University of New York, New York, NY 4 Bronx Community College of the City University of New York, Bronx, NY 5 Brooklyn College of the City University of New York, Brooklyn, NY 6 D'Youville University, Buffalo, NY 7 Excelsior University, Albany, NY 8 Hunter College of the City University of New York, New York, NY 9 Lehman College of the City University of New York, Bronx, NY 10 Mercy University, Dobbs Ferry, NY 11 Monroe University, Bronx, NY 12 St. Joseph's University, Brooklyn, NY 13 Stella and Charles Guttman Community College of the City University of New York, New York, NY 14 Touro University, New York, NY and 15 University of Mount Saint Vincent, Riverdale, NY.",
+      "source_url": "https://www.msche.org/institution/0706/",
+      "source_title": "MSCHE Statement of Accreditation Status - Metropolitan College of New York",
+      "source_page_url": "https://www.msche.org/institution/0706/",
+      "source_page_modified": "2026-06-30",
+      "display_action": true,
+      "public_table_strategy": "scraper_backed_keep",
+      "hybrid_candidate": false,
+      "hybrid_reason": null,
+      "has_financial_profile": true,
+      "is_primary_tracker": true
+    },
+    {
+      "accreditor": "MSCHE",
+      "action_type": "show_cause",
+      "action_label": "Gibbs President Metropolitan College of New York 60 West Street New York, NY 10006 NOTIFICATION OF NON-COMPLIANCE SHOW CAUSE ACTION Dear Dr.",
+      "action_label_short": "Continued Show Cause because of insufficient evidence of compliance with Standard VI (Planning, Resources, and Institutional Improvement)",
+      "action_scope": null,
+      "action_status": "active",
+      "action_date": "2025-11-20",
+      "action_year": "2025",
+      "notes": "Probation or Equivalent or a More Severe Status: Show Cause",
+      "source_url": "https://ope.ed.gov/dapip/#/institution-profile/129899",
+      "source_title": "DAPIP Institutional Accreditation Action",
+      "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/129899",
+      "source_page_modified": null,
+      "display_action": true,
+      "public_table_strategy": "dapip_backed_keep",
+      "hybrid_candidate": false,
+      "hybrid_reason": null,
+      "has_financial_profile": true,
+      "is_primary_tracker": true
+    },
+    {
+      "accreditor": "MSCHE",
+      "action_type": "show_cause",
+      "action_label": "To require the institution to show cause, by September 2, 2025, to demonstrate why its accreditation should not be withdrawn because of insufficient evidence that the institution is in compliance with Standard VI (Planning, Resources, and Institutional Improvement).",
+      "action_label_short": "Required to Show Cause because of insufficient evidence of compliance with Standard VI (Planning, Resources, and Institutional Improvement)",
+      "action_scope": null,
+      "action_status": "active",
+      "action_date": "2025-06-26",
+      "action_year": "2025",
+      "notes": "Probation or Equivalent or a More Severe Status: Show Cause",
+      "source_url": "https://ope.ed.gov/dapip/#/institution-profile/129899",
+      "source_title": "DAPIP Institutional Accreditation Action",
+      "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/129899",
+      "source_page_modified": null,
+      "display_action": true,
+      "public_table_strategy": "dapip_backed_keep",
+      "hybrid_candidate": false,
+      "hybrid_reason": null,
+      "has_financial_profile": true,
+      "is_primary_tracker": true
+    }
+  ],
+  "sources": [
+    {
+      "accreditor": "MSCHE",
+      "source_title": "Non-Compliance and Adverse Actions by Status - Middle States Commission on Higher Education",
+      "source_url": "https://msche.box.com/shared/static/w6ujdy96h23fqoo08dal7lt4ipi1ces5.pdf",
+      "source_page_url": "https://msche.box.com/shared/static/w6ujdy96h23fqoo08dal7lt4ipi1ces5.pdf"
+    },
+    {
+      "accreditor": "MSCHE",
+      "source_title": "MSCHE Statement of Accreditation Status - Metropolitan College of New York",
+      "source_url": "https://www.msche.org/institution/0706/",
+      "source_page_url": "https://www.msche.org/institution/0706/"
+    },
+    {
+      "accreditor": "MSCHE",
+      "source_title": "DAPIP Institutional Accreditation Action",
+      "source_url": "https://ope.ed.gov/dapip/#/institution-profile/129899",
+      "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/129899"
+    }
+  ]
+}

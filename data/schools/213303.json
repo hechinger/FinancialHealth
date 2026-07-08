@@ -1,0 +1,940 @@
+{
+  "unitid": "213303",
+  "generated_at": "2026-07-08",
+  "profile": {
+    "institution_name": "Keystone College",
+    "institution_unique_name": "Keystone College | La Plume | Pennsylvania",
+    "state": "Pennsylvania",
+    "city": "La Plume",
+    "control_label": "Private not-for-profit",
+    "sector": "Private not-for-profit, 4-year or above",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "Suburb: Large",
+    "religious_affiliation": "Not applicable",
+    "all_programs_distance_education": "No"
+  },
+  "summary": {
+    "latest_year": 2024,
+    "enrollment_pct_change_5yr": -3.2196,
+    "sector_median_enrollment_pct_change_5yr": -3.7344,
+    "enrollment_decline_last_3_of_5": "Yes",
+    "revenue_pct_change_5yr": -34.6802,
+    "sector_median_revenue_pct_change_5yr": -0.5117,
+    "net_tuition_per_fte_change_5yr": -28.1507,
+    "sector_median_net_tuition_per_fte_change_5yr": -17.816,
+    "staff_total_headcount_pct_change_5yr": -31.6265,
+    "sector_median_staff_total_headcount_pct_change_5yr": -1.7263,
+    "staff_instructional_headcount_pct_change_5yr": -32.7869,
+    "students_per_instructional_staff_fte": 12,
+    "sector_median_students_per_instructional_staff_fte": 12,
+    "ended_year_at_loss": "Yes",
+    "losses_last_3_of_5": "Yes",
+    "loss_years_last_10": 7,
+    "tuition_dependence_pct": 53.8012,
+    "sector_median_tuition_dependence_pct": 44.8638,
+    "tuition_dependence_vs_sector_median_sentence": "This college got 54.0% of its revenue from net tuition in 2024, above the median of 45% for private not-for-profit colleges.",
+    "unfunded_discount_rate": 28.6102,
+    "unfunded_discount_pct_change_5yr": -31.8395,
+    "share_grad_students": 5.6107,
+    "sector_avg_share_grad_students": 29.1503,
+    "research_expense": 0,
+    "research_expense_per_fte": 0,
+    "research_expense_pct_core_expenses": 0,
+    "sector_research_spending_n": 1148,
+    "sector_research_spending_positive_n": 401,
+    "sector_research_spending_reporting_share_pct": 34.9,
+    "sector_median_research_expense_per_fte_positive": 585.5059,
+    "pct_international_all": 0.5958,
+    "pct_international_undergraduate": 0.5786,
+    "pct_international_graduate": 0.885,
+    "international_student_count_change_5yr": 10,
+    "international_enrollment_pct_change_5yr": 500,
+    "international_students_sentence": "In 2024, 0.6% of students were international. That includes 0.6% of undergraduates and 0.9% of graduate students.",
+    "federal_loan_pct_most_recent": 85,
+    "sector_avg_federal_loan_pct_most_recent": 46.041,
+    "grad_plus_recipients": 1,
+    "grad_plus_disbursements_amt": 4188,
+    "grad_plus_disbursements_per_recipient": 4188,
+    "sector_median_grad_plus_disbursements_per_recipient": 11428,
+    "federal_grants_contracts_pell_adjusted_pct_core_revenue": 0,
+    "state_funding_pct_core_revenue": 0,
+    "federal_grants_contracts_pell_adjusted_pct_change_5yr": -100,
+    "state_funding_pct_change_5yr": null,
+    "endowment_assets_per_fte_adjusted": 5514.2052,
+    "sector_median_endowment_assets_per_fte_adjusted": 37427.0318,
+    "endowment_pct_change_5yr": -24.6956,
+    "sector_median_endowment_pct_change_5yr": 7.7657,
+    "endowment_spending_current_use_pct_core_revenue": 0.0007,
+    "graduation_rate_6yr": 35,
+    "median_earnings_10yr": 44976,
+    "median_debt_completers": 26000,
+    "scorecard_data_updated": "2026-03-23",
+    "ipeds_graduation_rate_year": 2024,
+    "ipeds_graduation_rate_label": "Bachelor degree within 6 years, total"
+  },
+  "series": {
+    "revenue_total_adjusted": [
+      {
+        "year": 2014,
+        "value": 37190852.3479
+      },
+      {
+        "year": 2015,
+        "value": 33890668.8163
+      },
+      {
+        "year": 2016,
+        "value": 34495635.9218
+      },
+      {
+        "year": 2017,
+        "value": 35262801.4637
+      },
+      {
+        "year": 2018,
+        "value": 33182947.5207
+      },
+      {
+        "year": 2019,
+        "value": 31179770.2826
+      },
+      {
+        "year": 2020,
+        "value": 33641160.2333
+      },
+      {
+        "year": 2021,
+        "value": 32768381.0398
+      },
+      {
+        "year": 2022,
+        "value": 27760033.223
+      },
+      {
+        "year": 2023,
+        "value": 24209267.8727
+      },
+      {
+        "year": 2024,
+        "value": 20366575
+      }
+    ],
+    "expenses_total_adjusted": [
+      {
+        "year": 2014,
+        "value": 35962824.0987
+      },
+      {
+        "year": 2015,
+        "value": 36024835.8349
+      },
+      {
+        "year": 2016,
+        "value": 34786711.2186
+      },
+      {
+        "year": 2017,
+        "value": 34408858.9216
+      },
+      {
+        "year": 2018,
+        "value": 34728607.9162
+      },
+      {
+        "year": 2019,
+        "value": 33892283.1404
+      },
+      {
+        "year": 2020,
+        "value": 33614591.1285
+      },
+      {
+        "year": 2021,
+        "value": 29763837.3052
+      },
+      {
+        "year": 2022,
+        "value": 29529540.1649
+      },
+      {
+        "year": 2023,
+        "value": 25595471.7755
+      },
+      {
+        "year": 2024,
+        "value": 26283686
+      }
+    ],
+    "net_tuition_per_fte_adjusted": [
+      {
+        "year": 2014,
+        "value": 14780.9256
+      },
+      {
+        "year": 2015,
+        "value": 15908.398
+      },
+      {
+        "year": 2016,
+        "value": 17708.9254
+      },
+      {
+        "year": 2017,
+        "value": 17305.2118
+      },
+      {
+        "year": 2018,
+        "value": 17074.5487
+      },
+      {
+        "year": 2019,
+        "value": 13665.438
+      },
+      {
+        "year": 2020,
+        "value": 11526.6466
+      },
+      {
+        "year": 2021,
+        "value": 11010.4777
+      },
+      {
+        "year": 2022,
+        "value": 10892.4402
+      },
+      {
+        "year": 2023,
+        "value": 10389.1337
+      },
+      {
+        "year": 2024,
+        "value": 9818.5224
+      }
+    ],
+    "unfunded_discount_rate": [
+      {
+        "year": 2014,
+        "value": 36.9984
+      },
+      {
+        "year": 2015,
+        "value": 38.9369
+      },
+      {
+        "year": 2016,
+        "value": 38.1127
+      },
+      {
+        "year": 2017,
+        "value": 39.5963
+      },
+      {
+        "year": 2018,
+        "value": 41.8483
+      },
+      {
+        "year": 2019,
+        "value": 41.9747
+      },
+      {
+        "year": 2020,
+        "value": 45.4565
+      },
+      {
+        "year": 2021,
+        "value": 21.9602
+      },
+      {
+        "year": 2022,
+        "value": 23.9066
+      },
+      {
+        "year": 2023,
+        "value": 24.1268
+      },
+      {
+        "year": 2024,
+        "value": 28.6102
+      }
+    ],
+    "enrollment_headcount_total": [
+      {
+        "year": 2014,
+        "value": 2424
+      },
+      {
+        "year": 2015,
+        "value": 2139
+      },
+      {
+        "year": 2016,
+        "value": 1733
+      },
+      {
+        "year": 2017,
+        "value": 1896
+      },
+      {
+        "year": 2018,
+        "value": 1749
+      },
+      {
+        "year": 2019,
+        "value": 2081
+      },
+      {
+        "year": 2020,
+        "value": 2618
+      },
+      {
+        "year": 2021,
+        "value": 2365
+      },
+      {
+        "year": 2022,
+        "value": 2094
+      },
+      {
+        "year": 2023,
+        "value": 1974
+      },
+      {
+        "year": 2024,
+        "value": 2014
+      }
+    ],
+    "enrollment_headcount_undergrad": [
+      {
+        "year": 2014,
+        "value": 2400
+      },
+      {
+        "year": 2015,
+        "value": 2098
+      },
+      {
+        "year": 2016,
+        "value": 1658
+      },
+      {
+        "year": 2017,
+        "value": 1790
+      },
+      {
+        "year": 2018,
+        "value": 1648
+      },
+      {
+        "year": 2019,
+        "value": 1946
+      },
+      {
+        "year": 2020,
+        "value": 2490
+      },
+      {
+        "year": 2021,
+        "value": 2251
+      },
+      {
+        "year": 2022,
+        "value": 1978
+      },
+      {
+        "year": 2023,
+        "value": 1848
+      },
+      {
+        "year": 2024,
+        "value": 1901
+      }
+    ],
+    "enrollment_headcount_graduate": [
+      {
+        "year": 2014,
+        "value": 24
+      },
+      {
+        "year": 2015,
+        "value": 41
+      },
+      {
+        "year": 2016,
+        "value": 75
+      },
+      {
+        "year": 2017,
+        "value": 106
+      },
+      {
+        "year": 2018,
+        "value": 101
+      },
+      {
+        "year": 2019,
+        "value": 135
+      },
+      {
+        "year": 2020,
+        "value": 128
+      },
+      {
+        "year": 2021,
+        "value": 114
+      },
+      {
+        "year": 2022,
+        "value": 116
+      },
+      {
+        "year": 2023,
+        "value": 126
+      },
+      {
+        "year": 2024,
+        "value": 113
+      }
+    ],
+    "enrollment_nonresident_total": [
+      {
+        "year": 2014,
+        "value": 5
+      },
+      {
+        "year": 2015,
+        "value": 9
+      },
+      {
+        "year": 2016,
+        "value": 4
+      },
+      {
+        "year": 2017,
+        "value": 2
+      },
+      {
+        "year": 2018,
+        "value": 4
+      },
+      {
+        "year": 2019,
+        "value": 2
+      },
+      {
+        "year": 2020,
+        "value": 1
+      },
+      {
+        "year": 2021,
+        "value": 6
+      },
+      {
+        "year": 2022,
+        "value": 8
+      },
+      {
+        "year": 2023,
+        "value": 7
+      },
+      {
+        "year": 2024,
+        "value": 12
+      }
+    ],
+    "enrollment_nonresident_undergrad": [
+      {
+        "year": 2014,
+        "value": 5
+      },
+      {
+        "year": 2015,
+        "value": 9
+      },
+      {
+        "year": 2016,
+        "value": 4
+      },
+      {
+        "year": 2017,
+        "value": 2
+      },
+      {
+        "year": 2018,
+        "value": 4
+      },
+      {
+        "year": 2019,
+        "value": 2
+      },
+      {
+        "year": 2020,
+        "value": 1
+      },
+      {
+        "year": 2021,
+        "value": 6
+      },
+      {
+        "year": 2022,
+        "value": 8
+      },
+      {
+        "year": 2023,
+        "value": 7
+      },
+      {
+        "year": 2024,
+        "value": 11
+      }
+    ],
+    "enrollment_nonresident_graduate": [
+      {
+        "year": 2014,
+        "value": 0
+      },
+      {
+        "year": 2015,
+        "value": 0
+      },
+      {
+        "year": 2016,
+        "value": 0
+      },
+      {
+        "year": 2017,
+        "value": 0
+      },
+      {
+        "year": 2018,
+        "value": 0
+      },
+      {
+        "year": 2019,
+        "value": 0
+      },
+      {
+        "year": 2020,
+        "value": 0
+      },
+      {
+        "year": 2021,
+        "value": 0
+      },
+      {
+        "year": 2022,
+        "value": 0
+      },
+      {
+        "year": 2023,
+        "value": 0
+      },
+      {
+        "year": 2024,
+        "value": 1
+      }
+    ],
+    "staff_headcount_total": [
+      {
+        "year": 2014,
+        "value": 472
+      },
+      {
+        "year": 2015,
+        "value": 425
+      },
+      {
+        "year": 2016,
+        "value": 412
+      },
+      {
+        "year": 2017,
+        "value": 388
+      },
+      {
+        "year": 2018,
+        "value": 346
+      },
+      {
+        "year": 2019,
+        "value": 332
+      },
+      {
+        "year": 2020,
+        "value": 324
+      },
+      {
+        "year": 2021,
+        "value": 274
+      },
+      {
+        "year": 2022,
+        "value": 272
+      },
+      {
+        "year": 2023,
+        "value": 251
+      },
+      {
+        "year": 2024,
+        "value": 227
+      }
+    ],
+    "staff_headcount_instructional": [
+      {
+        "year": 2014,
+        "value": 249
+      },
+      {
+        "year": 2015,
+        "value": 235
+      },
+      {
+        "year": 2016,
+        "value": 221
+      },
+      {
+        "year": 2017,
+        "value": 213
+      },
+      {
+        "year": 2018,
+        "value": 188
+      },
+      {
+        "year": 2019,
+        "value": 183
+      },
+      {
+        "year": 2020,
+        "value": 194
+      },
+      {
+        "year": 2021,
+        "value": 153
+      },
+      {
+        "year": 2022,
+        "value": 153
+      },
+      {
+        "year": 2023,
+        "value": 133
+      },
+      {
+        "year": 2024,
+        "value": 123
+      }
+    ],
+    "endowment_value_adjusted": [
+      {
+        "year": 2015,
+        "value": 10280909.2513
+      },
+      {
+        "year": 2016,
+        "value": 9788651.6065
+      },
+      {
+        "year": 2017,
+        "value": 9935919.9119
+      },
+      {
+        "year": 2018,
+        "value": 10107180.0802
+      },
+      {
+        "year": 2019,
+        "value": 8171969.1855
+      },
+      {
+        "year": 2020,
+        "value": 4367191.9031
+      },
+      {
+        "year": 2021,
+        "value": 3367355.3878
+      },
+      {
+        "year": 2022,
+        "value": 4862316.1638
+      },
+      {
+        "year": 2023,
+        "value": 4732389.0831
+      },
+      {
+        "year": 2024,
+        "value": 6153853
+      }
+    ],
+    "endowment_spending_current_use": [
+      {
+        "year": 2020,
+        "value": 3056989
+      },
+      {
+        "year": 2021,
+        "value": 694398
+      },
+      {
+        "year": 2022,
+        "value": 250603
+      },
+      {
+        "year": 2023,
+        "value": 241588
+      },
+      {
+        "year": 2024,
+        "value": 11403
+      }
+    ],
+    "endowment_spending_current_use_adjusted": [
+      {
+        "year": 2020,
+        "value": 3705189.5878
+      },
+      {
+        "year": 2021,
+        "value": 803871.3297
+      },
+      {
+        "year": 2022,
+        "value": 268614.5956
+      },
+      {
+        "year": 2023,
+        "value": 248713.491
+      },
+      {
+        "year": 2024,
+        "value": 11403
+      }
+    ],
+    "endowment_spending_current_use_pct_core_revenue": [
+      {
+        "year": 2020,
+        "value": 0.1311
+      },
+      {
+        "year": 2021,
+        "value": 0.028
+      },
+      {
+        "year": 2022,
+        "value": 0.0106
+      },
+      {
+        "year": 2023,
+        "value": 0.0125
+      },
+      {
+        "year": 2024,
+        "value": 0.0007
+      }
+    ],
+    "federal_grants_contracts_pell_adjusted_adjusted": [
+      {
+        "year": 2014,
+        "value": 370604.2288
+      },
+      {
+        "year": 2015,
+        "value": 358948.2967
+      },
+      {
+        "year": 2016,
+        "value": 296830.015
+      },
+      {
+        "year": 2017,
+        "value": 146840.8001
+      },
+      {
+        "year": 2018,
+        "value": 532208.3349
+      },
+      {
+        "year": 2019,
+        "value": 328976.0888
+      },
+      {
+        "year": 2020,
+        "value": 3400250.2967
+      },
+      {
+        "year": 2021,
+        "value": 5192558.3709
+      },
+      {
+        "year": 2022,
+        "value": 2476089.9272
+      },
+      {
+        "year": 2023,
+        "value": 133109.5068
+      },
+      {
+        "year": 2024,
+        "value": 0
+      }
+    ],
+    "state_funding_adjusted": [
+      {
+        "year": 2014,
+        "value": 0
+      },
+      {
+        "year": 2015,
+        "value": 0
+      },
+      {
+        "year": 2016,
+        "value": 0
+      },
+      {
+        "year": 2017,
+        "value": 0
+      },
+      {
+        "year": 2018,
+        "value": 0
+      },
+      {
+        "year": 2019,
+        "value": 0
+      },
+      {
+        "year": 2020,
+        "value": 0
+      },
+      {
+        "year": 2021,
+        "value": 0
+      },
+      {
+        "year": 2022,
+        "value": 0
+      },
+      {
+        "year": 2023,
+        "value": 0
+      },
+      {
+        "year": 2024,
+        "value": 0
+      }
+    ]
+  },
+  "latest_status": {
+    "accreditors": "MSCHE",
+    "action_labels": "Adverse action to withdraw accreditation reconsidered with new financial information. Institution placed on show cause status.; Adverse Action to withdraw accreditation subject to appeal. Institution remains accredited pending the appeal. The accreditation cease date will be set as appropriate based on final disposition of the appeal.; Merger of Keystone College into Keystone College, LLC, with Washington Institute for Education and Research (WIER) as the sole member, effective May 30, 2025, (effective May 30, 2025); Placed on Show Cause status because institutions fails to meet agency standards for initial or renewed accreditation",
+    "active_actions": "show_cause",
+    "has_active_warning": false,
+    "has_active_warning_or_notice": false,
+    "has_active_adverse_action": false,
+    "latest_action_date": "2025-05-29",
+    "latest_action_year": "2025",
+    "action_count": 4
+  },
+  "actions": [
+    {
+      "accreditor": "MSCHE",
+      "action_type": "show_cause",
+      "action_label": "To acknowledge receipt of the complex substantive change request. To include the change in legal status, form of control, and ownership within the institution's scope of accreditation, effective May 30, 2025. To note the complex substantive change request includes the merger of Keystone College into Keystone College, LLC, with Washington Institute for Education and Research (WIER) as the sole member, effective May 30, 2025, the anticipated date of the transaction. To require notification of the date of the closing of the transaction within five calendar days of the transaction by email to [email protected], or, if there is a subsequent delay in the anticipated date of the closing of the transaction, to require immediate notification to the Commission of the revised anticipated transaction date. To note the institution will maintain its accreditation following the transaction. To note that written evidence of required approvals has been provided by the Pennsylvania Department of Education. To request a complex substantive change supplemental information report, due September 2, 2025, providing (1) the updated status of the complex substantive change; (2) written evidence of review, including but not limited to, approval of the transaction from all outstanding required licensing, regulatory, or other legal entities as necessary, including but not limited to the Pennsylvania Office of Attorney General and the United States Department of Education(Standard II); (3) evidence of a comprehensive financial planning process, multi-year budget, annual independent audit verifying financial viability and internal controls, and documented funding base adequate to support the educational purposes and ensure financial stability that includes a financial development plan and resources from any related entities (Standard VI); (4) planning that integrates goals for institutional effectiveness and improvement, including overall institutional improvement and the results of institutional assessments as related to the complex substantive change transaction and efforts to expand international recruitment (Standard VI); (5) an update on the status of recruiting and hiring a qualified Chief Financial Officer (Standard VI); (6) evidence of the status of the institution's membership in the National Council for State Authorization Reciprocity Agreements and compliance with all membership requirements (Standard VI); (7) evidence of the implementation of a written conflict of interest policy designed to ensure the impartiality of the governing body (Standard VII); and (8) a clearly articulated and transparent governance structure that outlines roles, responsibilities, and accountability for inclusive decision making by each constituency, including the institution's legally constituted governing body and any related entities, including any updates to Keystone College Guide to Governance and Policy (Standard VII) (Fourteenth Edition and Evidence Expectations by Standard Guidelines). To direct a complex substantive change site visit as soon as practicable but no later than six months after May 30, 2025, the anticipated date of the transaction. To note the complex substantive change site visit will occur at the same time as the show cause visit. To direct a prompt Commission liaison guidance visit to discuss the Commission's expectations including post-transaction requirements. To note the Commission reserves the right to rescind this action if any developments reveal additional information that might have affected the Commission's decision and/or the complex substantive change is not implemented within one calendar year from the anticipated date of the transaction. To remind the institution and the related entity of their responsibility for disclosing, documenting, and explaining all significant matters and relationships involving related entities that may impact its compliance including but not limited to governance, independence and autonomy, management and administration, and financial viability and stability (Related Entities Policy and Procedures). To note the Commission's action of February 27, 2025, requiring the institution to show cause why its accreditation should not be withdrawn. The date of the next evaluation will be determined upon reaffirmation of accreditation.",
+      "action_label_short": "Merger of Keystone College into Keystone College, LLC, with Washington Institute for Education and Research (WIER) as the sole member, effective May 30, 2025, (effective May 30, 2025)",
+      "action_scope": null,
+      "action_status": null,
+      "action_date": "2025-05-29",
+      "action_year": "2025",
+      "notes": null,
+      "source_url": "https://www.msche.org/institution/0513/",
+      "source_title": "MSCHE Statement of Accreditation Status - Keystone College",
+      "source_page_url": "https://www.msche.org/institution/0513/",
+      "source_page_modified": null,
+      "display_action": true,
+      "public_table_strategy": null,
+      "hybrid_candidate": false,
+      "hybrid_reason": null,
+      "has_financial_profile": true,
+      "is_primary_tracker": true
+    },
+    {
+      "accreditor": "MSCHE",
+      "action_type": "show_cause",
+      "action_label": "Pullo: Notification of Non-Compliance Action On behalf of the Middle States Commission on Higher Education, I am writing to inform you that on February 27, 2025, the Commission acted as follows: To acknowledge receipt of the request by the institution on February 4, 2025, for the Commission to reconsider the adverse action to withdraw accreditation and to reconsider the conditions set during appeal.",
+      "action_label_short": "Adverse action to withdraw accreditation reconsidered with new financial information. Institution placed on show cause status.",
+      "action_scope": null,
+      "action_status": "active",
+      "action_date": "2025-02-27",
+      "action_year": "2025",
+      "notes": "Probation or Equivalent or a More Severe Status: Show Cause | Adverse action to withdraw accreditation reconsidered with new financial information. Institution placed on show cause status.",
+      "source_url": "https://ope.ed.gov/dapip/#/institution-profile/139922",
+      "source_title": "DAPIP Institutional Accreditation Action",
+      "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/139922",
+      "source_page_modified": null,
+      "display_action": true,
+      "public_table_strategy": "dapip_backed_keep",
+      "hybrid_candidate": false,
+      "hybrid_reason": null,
+      "has_financial_profile": true,
+      "is_primary_tracker": true
+    },
+    {
+      "accreditor": "MSCHE",
+      "action_type": "adverse_action",
+      "action_label": "To approve the teach-out plan and teach-out agreements, requested by the Commission action of April 4, 2024, and to direct its implementation. To require an updated teach-out plan and teach-out agreements, due December 6, 2024, based on the adverse action to withdraw accreditation.",
+      "action_label_short": "Adverse Action to withdraw accreditation subject to appeal. Institution remains accredited pending the appeal. The accreditation cease date will be set as appropriate based on final disposition of the appeal.",
+      "action_scope": null,
+      "action_status": null,
+      "action_date": "2024-11-21",
+      "action_year": "2024",
+      "notes": null,
+      "source_url": "https://www.msche.org/institution/0513/",
+      "source_title": "MSCHE Statement of Accreditation Status - Keystone College",
+      "source_page_url": "https://www.msche.org/institution/0513/",
+      "source_page_modified": null,
+      "display_action": true,
+      "public_table_strategy": null,
+      "hybrid_candidate": false,
+      "hybrid_reason": null,
+      "has_financial_profile": true,
+      "is_primary_tracker": true
+    },
+    {
+      "accreditor": "MSCHE",
+      "action_type": "show_cause",
+      "action_label": "Probation or Equivalent or a More Severe Status: Show Cause",
+      "action_label_short": "Placed on Show Cause status because institutions fails to meet agency standards for initial or renewed accreditation",
+      "action_scope": null,
+      "action_status": "active",
+      "action_date": "2024-04-25",
+      "action_year": "2024",
+      "notes": "Probation or Equivalent or a More Severe Status: Show Cause",
+      "source_url": "https://ope.ed.gov/dapip/#/institution-profile/139922",
+      "source_title": "DAPIP Institutional Accreditation Action",
+      "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/139922",
+      "source_page_modified": null,
+      "display_action": true,
+      "public_table_strategy": "dapip_backed_keep",
+      "hybrid_candidate": false,
+      "hybrid_reason": null,
+      "has_financial_profile": true,
+      "is_primary_tracker": true
+    }
+  ],
+  "sources": [
+    {
+      "accreditor": "MSCHE",
+      "source_title": "MSCHE Statement of Accreditation Status - Keystone College",
+      "source_url": "https://www.msche.org/institution/0513/",
+      "source_page_url": "https://www.msche.org/institution/0513/"
+    },
+    {
+      "accreditor": "MSCHE",
+      "source_title": "DAPIP Institutional Accreditation Action",
+      "source_url": "https://ope.ed.gov/dapip/#/institution-profile/139922",
+      "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/139922"
+    }
+  ]
+}

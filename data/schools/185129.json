@@ -1,0 +1,875 @@
+{
+  "unitid": "185129",
+  "generated_at": "2026-07-08",
+  "profile": {
+    "institution_name": "New Jersey City University",
+    "institution_unique_name": "New Jersey City University | Jersey City | New Jersey",
+    "state": "New Jersey",
+    "city": "Jersey City",
+    "control_label": "Public",
+    "sector": "Public, 4-year or above",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "City: Large",
+    "religious_affiliation": "Not applicable",
+    "all_programs_distance_education": "No"
+  },
+  "summary": {
+    "latest_year": 2024,
+    "enrollment_pct_change_5yr": -26.7329,
+    "sector_median_enrollment_pct_change_5yr": -4.2732,
+    "enrollment_decline_last_3_of_5": "Yes",
+    "revenue_pct_change_5yr": -24.9589,
+    "sector_median_revenue_pct_change_5yr": -1.3261,
+    "net_tuition_per_fte_change_5yr": -8.0771,
+    "sector_median_net_tuition_per_fte_change_5yr": -17.7529,
+    "staff_total_headcount_pct_change_5yr": -25.1032,
+    "sector_median_staff_total_headcount_pct_change_5yr": 0.3908,
+    "staff_instructional_headcount_pct_change_5yr": -29.2289,
+    "students_per_instructional_staff_fte": 13,
+    "sector_median_students_per_instructional_staff_fte": 16,
+    "ended_year_at_loss": "No",
+    "losses_last_3_of_5": "No",
+    "loss_years_last_10": 5,
+    "tuition_dependence_pct": 29.6259,
+    "sector_median_tuition_dependence_pct": 21.2464,
+    "tuition_dependence_vs_sector_median_sentence": "This college got 30.0% of its revenue from net tuition in 2024, above the median of 21% for public colleges.",
+    "unfunded_discount_rate": 47.6397,
+    "unfunded_discount_pct_change_5yr": 6.7242,
+    "share_grad_students": 31.0788,
+    "sector_avg_share_grad_students": 20.9865,
+    "research_expense": 20063,
+    "research_expense_per_fte": 4.2238,
+    "research_expense_pct_core_expenses": 0.0144,
+    "sector_research_spending_n": 548,
+    "sector_research_spending_positive_n": 522,
+    "sector_research_spending_reporting_share_pct": 95.3,
+    "sector_median_research_expense_per_fte_positive": 1080.4519,
+    "pct_international_all": 2.3687,
+    "pct_international_undergraduate": 2.1118,
+    "pct_international_graduate": 2.9385,
+    "international_student_count_change_5yr": -6,
+    "international_enrollment_pct_change_5yr": -3.4884,
+    "international_students_sentence": "In 2024, 2.4% of students were international. That includes 2.1% of undergraduates and 2.9% of graduate students.",
+    "federal_loan_pct_most_recent": 28,
+    "sector_avg_federal_loan_pct_most_recent": 37.9232,
+    "grad_plus_recipients": 21,
+    "grad_plus_disbursements_amt": 191216,
+    "grad_plus_disbursements_per_recipient": 9105.5238,
+    "sector_median_grad_plus_disbursements_per_recipient": 8446.7298,
+    "federal_grants_contracts_pell_adjusted_pct_core_revenue": 2.6849,
+    "state_funding_pct_core_revenue": 41.8471,
+    "federal_grants_contracts_pell_adjusted_pct_change_5yr": -15.1961,
+    "state_funding_pct_change_5yr": -11.9339,
+    "endowment_assets_per_fte_adjusted": 3893.2636,
+    "sector_median_endowment_assets_per_fte_adjusted": 12637.3807,
+    "endowment_pct_change_5yr": 14.3521,
+    "sector_median_endowment_pct_change_5yr": 19.1807,
+    "endowment_spending_current_use_pct_core_revenue": 0.0039,
+    "graduation_rate_6yr": 34,
+    "median_earnings_10yr": 52745,
+    "median_debt_completers": 18500,
+    "scorecard_data_updated": "2026-03-23",
+    "ipeds_graduation_rate_year": 2024,
+    "ipeds_graduation_rate_label": "Bachelor degree within 6 years, total"
+  },
+  "series": {
+    "revenue_total_adjusted": [
+      {
+        "year": 2014,
+        "value": 200701967.0797
+      },
+      {
+        "year": 2015,
+        "value": 206358165.3284
+      },
+      {
+        "year": 2016,
+        "value": 209052688.2265
+      },
+      {
+        "year": 2017,
+        "value": 219873257.0413
+      },
+      {
+        "year": 2018,
+        "value": 211174205.0635
+      },
+      {
+        "year": 2019,
+        "value": 198402242.8178
+      },
+      {
+        "year": 2020,
+        "value": 187535065.4605
+      },
+      {
+        "year": 2021,
+        "value": 196651812.3784
+      },
+      {
+        "year": 2022,
+        "value": 173173303.2531
+      },
+      {
+        "year": 2023,
+        "value": 160354237.8657
+      },
+      {
+        "year": 2024,
+        "value": 148883297
+      }
+    ],
+    "expenses_total_adjusted": [
+      {
+        "year": 2014,
+        "value": 192799648.0361
+      },
+      {
+        "year": 2015,
+        "value": 212363494.4494
+      },
+      {
+        "year": 2016,
+        "value": 216775031.3224
+      },
+      {
+        "year": 2017,
+        "value": 216533496.8197
+      },
+      {
+        "year": 2018,
+        "value": 228193911.086
+      },
+      {
+        "year": 2019,
+        "value": 218713927.3463
+      },
+      {
+        "year": 2020,
+        "value": 211150070.2195
+      },
+      {
+        "year": 2021,
+        "value": 189387168.9717
+      },
+      {
+        "year": 2022,
+        "value": 172698685.3809
+      },
+      {
+        "year": 2023,
+        "value": 152834909.6635
+      },
+      {
+        "year": 2024,
+        "value": 141773603
+      }
+    ],
+    "net_tuition_per_fte_adjusted": [
+      {
+        "year": 2014,
+        "value": 10702.2923
+      },
+      {
+        "year": 2015,
+        "value": 10804.872
+      },
+      {
+        "year": 2016,
+        "value": 10893.9768
+      },
+      {
+        "year": 2017,
+        "value": 10285.836
+      },
+      {
+        "year": 2018,
+        "value": 9435.1729
+      },
+      {
+        "year": 2019,
+        "value": 10101.8354
+      },
+      {
+        "year": 2020,
+        "value": 10488.6816
+      },
+      {
+        "year": 2021,
+        "value": 9860.2868
+      },
+      {
+        "year": 2022,
+        "value": 9252.1223
+      },
+      {
+        "year": 2023,
+        "value": 8586.7911
+      },
+      {
+        "year": 2024,
+        "value": 9285.8971
+      }
+    ],
+    "unfunded_discount_rate": [
+      {
+        "year": 2014,
+        "value": 36.5108
+      },
+      {
+        "year": 2015,
+        "value": 37.3379
+      },
+      {
+        "year": 2016,
+        "value": 38.0637
+      },
+      {
+        "year": 2017,
+        "value": 40.8011
+      },
+      {
+        "year": 2018,
+        "value": 45.5467
+      },
+      {
+        "year": 2019,
+        "value": 44.6381
+      },
+      {
+        "year": 2020,
+        "value": 44.1542
+      },
+      {
+        "year": 2021,
+        "value": 44.8214
+      },
+      {
+        "year": 2022,
+        "value": 47.3581
+      },
+      {
+        "year": 2023,
+        "value": 51.0306
+      },
+      {
+        "year": 2024,
+        "value": 47.6397
+      }
+    ],
+    "enrollment_headcount_total": [
+      {
+        "year": 2014,
+        "value": 10286
+      },
+      {
+        "year": 2015,
+        "value": 10172
+      },
+      {
+        "year": 2016,
+        "value": 10062
+      },
+      {
+        "year": 2017,
+        "value": 10146
+      },
+      {
+        "year": 2018,
+        "value": 9883
+      },
+      {
+        "year": 2019,
+        "value": 9565
+      },
+      {
+        "year": 2020,
+        "value": 9320
+      },
+      {
+        "year": 2021,
+        "value": 8981
+      },
+      {
+        "year": 2022,
+        "value": 8313
+      },
+      {
+        "year": 2023,
+        "value": 7694
+      },
+      {
+        "year": 2024,
+        "value": 7008
+      }
+    ],
+    "enrollment_headcount_undergrad": [
+      {
+        "year": 2014,
+        "value": 7505
+      },
+      {
+        "year": 2015,
+        "value": 7423
+      },
+      {
+        "year": 2016,
+        "value": 7469
+      },
+      {
+        "year": 2017,
+        "value": 7664
+      },
+      {
+        "year": 2018,
+        "value": 7528
+      },
+      {
+        "year": 2019,
+        "value": 7218
+      },
+      {
+        "year": 2020,
+        "value": 7017
+      },
+      {
+        "year": 2021,
+        "value": 6656
+      },
+      {
+        "year": 2022,
+        "value": 6043
+      },
+      {
+        "year": 2023,
+        "value": 5445
+      },
+      {
+        "year": 2024,
+        "value": 4830
+      }
+    ],
+    "enrollment_headcount_graduate": [
+      {
+        "year": 2014,
+        "value": 2781
+      },
+      {
+        "year": 2015,
+        "value": 2749
+      },
+      {
+        "year": 2016,
+        "value": 2593
+      },
+      {
+        "year": 2017,
+        "value": 2482
+      },
+      {
+        "year": 2018,
+        "value": 2355
+      },
+      {
+        "year": 2019,
+        "value": 2347
+      },
+      {
+        "year": 2020,
+        "value": 2303
+      },
+      {
+        "year": 2021,
+        "value": 2325
+      },
+      {
+        "year": 2022,
+        "value": 2270
+      },
+      {
+        "year": 2023,
+        "value": 2249
+      },
+      {
+        "year": 2024,
+        "value": 2178
+      }
+    ],
+    "enrollment_nonresident_total": [
+      {
+        "year": 2014,
+        "value": 132
+      },
+      {
+        "year": 2015,
+        "value": 258
+      },
+      {
+        "year": 2016,
+        "value": 460
+      },
+      {
+        "year": 2017,
+        "value": 584
+      },
+      {
+        "year": 2018,
+        "value": 613
+      },
+      {
+        "year": 2019,
+        "value": 172
+      },
+      {
+        "year": 2020,
+        "value": 225
+      },
+      {
+        "year": 2021,
+        "value": 143
+      },
+      {
+        "year": 2022,
+        "value": 149
+      },
+      {
+        "year": 2023,
+        "value": 201
+      },
+      {
+        "year": 2024,
+        "value": 166
+      }
+    ],
+    "enrollment_nonresident_undergrad": [
+      {
+        "year": 2014,
+        "value": 57
+      },
+      {
+        "year": 2015,
+        "value": 162
+      },
+      {
+        "year": 2016,
+        "value": 320
+      },
+      {
+        "year": 2017,
+        "value": 472
+      },
+      {
+        "year": 2018,
+        "value": 525
+      },
+      {
+        "year": 2019,
+        "value": 116
+      },
+      {
+        "year": 2020,
+        "value": 159
+      },
+      {
+        "year": 2021,
+        "value": 74
+      },
+      {
+        "year": 2022,
+        "value": 91
+      },
+      {
+        "year": 2023,
+        "value": 126
+      },
+      {
+        "year": 2024,
+        "value": 102
+      }
+    ],
+    "enrollment_nonresident_graduate": [
+      {
+        "year": 2014,
+        "value": 75
+      },
+      {
+        "year": 2015,
+        "value": 96
+      },
+      {
+        "year": 2016,
+        "value": 140
+      },
+      {
+        "year": 2017,
+        "value": 112
+      },
+      {
+        "year": 2018,
+        "value": 88
+      },
+      {
+        "year": 2019,
+        "value": 56
+      },
+      {
+        "year": 2020,
+        "value": 66
+      },
+      {
+        "year": 2021,
+        "value": 69
+      },
+      {
+        "year": 2022,
+        "value": 58
+      },
+      {
+        "year": 2023,
+        "value": 75
+      },
+      {
+        "year": 2024,
+        "value": 64
+      }
+    ],
+    "staff_headcount_total": [
+      {
+        "year": 2014,
+        "value": 1519
+      },
+      {
+        "year": 2015,
+        "value": 1495
+      },
+      {
+        "year": 2016,
+        "value": 1536
+      },
+      {
+        "year": 2017,
+        "value": 1499
+      },
+      {
+        "year": 2018,
+        "value": 1477
+      },
+      {
+        "year": 2019,
+        "value": 1454
+      },
+      {
+        "year": 2020,
+        "value": 1321
+      },
+      {
+        "year": 2021,
+        "value": 1298
+      },
+      {
+        "year": 2022,
+        "value": 1097
+      },
+      {
+        "year": 2023,
+        "value": 1036
+      },
+      {
+        "year": 2024,
+        "value": 1089
+      }
+    ],
+    "staff_headcount_instructional": [
+      {
+        "year": 2014,
+        "value": 781
+      },
+      {
+        "year": 2015,
+        "value": 809
+      },
+      {
+        "year": 2016,
+        "value": 847
+      },
+      {
+        "year": 2017,
+        "value": 832
+      },
+      {
+        "year": 2018,
+        "value": 815
+      },
+      {
+        "year": 2019,
+        "value": 804
+      },
+      {
+        "year": 2020,
+        "value": 708
+      },
+      {
+        "year": 2021,
+        "value": 701
+      },
+      {
+        "year": 2022,
+        "value": 585
+      },
+      {
+        "year": 2023,
+        "value": 544
+      },
+      {
+        "year": 2024,
+        "value": 569
+      }
+    ],
+    "endowment_value_adjusted": [
+      {
+        "year": 2014,
+        "value": 10496249.1825
+      },
+      {
+        "year": 2015,
+        "value": 11679442.299
+      },
+      {
+        "year": 2016,
+        "value": 14379243.824
+      },
+      {
+        "year": 2017,
+        "value": 15093163.1275
+      },
+      {
+        "year": 2018,
+        "value": 15608253.5556
+      },
+      {
+        "year": 2019,
+        "value": 16171976.7206
+      },
+      {
+        "year": 2020,
+        "value": 16671799.9175
+      },
+      {
+        "year": 2021,
+        "value": 19533553.064
+      },
+      {
+        "year": 2022,
+        "value": 16414987.2036
+      },
+      {
+        "year": 2023,
+        "value": 16984690.0917
+      },
+      {
+        "year": 2024,
+        "value": 18493002
+      }
+    ],
+    "endowment_spending_current_use": [
+      {
+        "year": 2020,
+        "value": 338756
+      },
+      {
+        "year": 2021,
+        "value": 317699
+      },
+      {
+        "year": 2022,
+        "value": 362788
+      },
+      {
+        "year": 2023,
+        "value": 266941
+      },
+      {
+        "year": 2024,
+        "value": 566594
+      }
+    ],
+    "endowment_spending_current_use_adjusted": [
+      {
+        "year": 2020,
+        "value": 410585.4499
+      },
+      {
+        "year": 2021,
+        "value": 367784.9268
+      },
+      {
+        "year": 2022,
+        "value": 388862.6708
+      },
+      {
+        "year": 2023,
+        "value": 274814.2623
+      },
+      {
+        "year": 2024,
+        "value": 566594
+      }
+    ],
+    "endowment_spending_current_use_pct_core_revenue": [
+      {
+        "year": 2020,
+        "value": 0.0022
+      },
+      {
+        "year": 2021,
+        "value": 0.0019
+      },
+      {
+        "year": 2022,
+        "value": 0.0023
+      },
+      {
+        "year": 2023,
+        "value": 0.0018
+      },
+      {
+        "year": 2024,
+        "value": 0.0039
+      }
+    ],
+    "federal_grants_contracts_pell_adjusted_adjusted": [
+      {
+        "year": 2014,
+        "value": 8463430.8785
+      },
+      {
+        "year": 2015,
+        "value": 8536173.09
+      },
+      {
+        "year": 2016,
+        "value": 7119122.3655
+      },
+      {
+        "year": 2017,
+        "value": 5270958.0376
+      },
+      {
+        "year": 2018,
+        "value": 4224045.053
+      },
+      {
+        "year": 2019,
+        "value": 4631417.343
+      },
+      {
+        "year": 2020,
+        "value": 4749387.7659
+      },
+      {
+        "year": 2021,
+        "value": 4156622.9358
+      },
+      {
+        "year": 2022,
+        "value": 3979219.2726
+      },
+      {
+        "year": 2023,
+        "value": 3889957.9407
+      },
+      {
+        "year": 2024,
+        "value": 3927623
+      }
+    ],
+    "state_funding_adjusted": [
+      {
+        "year": 2014,
+        "value": 63716490.7052
+      },
+      {
+        "year": 2015,
+        "value": 67313217.5118
+      },
+      {
+        "year": 2016,
+        "value": 65030248.1571
+      },
+      {
+        "year": 2017,
+        "value": 61918058.4147
+      },
+      {
+        "year": 2018,
+        "value": 76842828.0649
+      },
+      {
+        "year": 2019,
+        "value": 69512986.45
+      },
+      {
+        "year": 2020,
+        "value": 55500579.9739
+      },
+      {
+        "year": 2021,
+        "value": 56177440.8978
+      },
+      {
+        "year": 2022,
+        "value": 56443911.6621
+      },
+      {
+        "year": 2023,
+        "value": 55807384.7989
+      },
+      {
+        "year": 2024,
+        "value": 61217343
+      }
+    ]
+  },
+  "latest_status": {
+    "accreditors": "MSCHE",
+    "action_labels": "Merger of New Jersey City University with Kean University (effective July 1, 2026)",
+    "active_actions": null,
+    "has_active_warning": false,
+    "has_active_warning_or_notice": false,
+    "has_active_adverse_action": false,
+    "latest_action_date": "2026-04-23",
+    "latest_action_year": "2026",
+    "action_count": 1
+  },
+  "actions": [
+    {
+      "accreditor": "MSCHE",
+      "action_type": "adverse_action",
+      "action_label": "To acknowledge receipt of the complex substantive change request. To include the change in legal status, form of control, and ownership within the institution's scope of accreditation, effective July 1, 2026, the anticipated date of the transaction. To note the complex substantive change request includes the merger of New Jersey City University with Kean University, effective July 1, 2026, the anticipated date of the transaction. To note that the accreditation cease date will be determined after the United States Department of Education (USDE) has approved the merger application. To note that Kean University is the surviving institution. To require notification of the date of the closing of the transaction within five calendar days of the transaction, or immediate notification if there is any delay of the date of the closing of the transaction, by email to [email protected]. To note New Jersey City University will maintain accreditation for the sole purpose of implementing the teach-out plan and agreements and to effectuate the change in ownership process with the United States Department of Education per the United States Department of Education's Updated Guidance and Procedures for Changes in Ownership, dated September 15, 2022 (Electronic Announcement ID: GENERAL-22-70). To note that written documentation of review or approval from the following agency has been received: the New Jersey Office of the Secretary of Higher Education (OSHE) and the New Jersey State Legislature. To request a complex substantive change supplemental information report, due August 17, 2026 providing: (1) the updated status of the implementation of the complex substantive change (Complex Substantive Change Policy and Procedures); (2) an update on the date New Jersey City University's degree granting authority will cease (Requirement of Affiliation 1); and (3) written evidence of review, including but not limited to, approval from all required licensing, regulatory, or other legal entities as necessary, including but not limited to: the United States Department of Education (Standard II). To remind the institution of its obligation to immediately inform the Commission about any and all developments relevant to this action. To note that the Commission reserves the right to rescind this action if any developments reveal additional information that might have affected the Commission's decision and/or the requested substantive change is not implemented within one calendar year from the date of this action. To note the Commission action for Kean University on April 23, 2026.",
+      "action_label_short": "Merger of New Jersey City University with Kean University (effective July 1, 2026)",
+      "action_scope": null,
+      "action_status": null,
+      "action_date": "2026-04-23",
+      "action_year": "2026",
+      "notes": null,
+      "source_url": "https://www.msche.org/institution/0220/",
+      "source_title": "MSCHE Statement of Accreditation Status - New Jersey City University",
+      "source_page_url": "https://www.msche.org/institution/0220/",
+      "source_page_modified": null,
+      "display_action": true,
+      "public_table_strategy": null,
+      "hybrid_candidate": false,
+      "hybrid_reason": null,
+      "has_financial_profile": true,
+      "is_primary_tracker": true
+    }
+  ],
+  "sources": [
+    {
+      "accreditor": "MSCHE",
+      "source_title": "MSCHE Statement of Accreditation Status - New Jersey City University",
+      "source_url": "https://www.msche.org/institution/0220/",
+      "source_page_url": "https://www.msche.org/institution/0220/"
+    }
+  ]
+}

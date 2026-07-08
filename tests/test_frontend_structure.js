@@ -1,0 +1,336 @@
+/**
+ * Frontend structure smoke tests.
+ * Checks that each HTML file contains the required structural elements
+ * (skip links, main landmark, masthead, nav tabs, data containers).
+ *
+ * Run with: node tests/test_frontend_structure.js
+ */
+
+const fs = require("fs");
+const path = require("path");
+
+const ROOT = path.resolve(__dirname, "..");
+
+const PAGES = [
+  {
+    name: "Homepage (index.html)",
+    file: "index.html",
+    checks: [
+      { pattern: /<a[^>]+href="#main"[^>]*class="skip-link"/, message: 'Skip-to-main link targeting "#main"' },
+      { pattern: /<main[^>]+id="main"/, message: '<main id="main">' },
+      // Editorial Calm renamed the masthead element to .site-masthead.
+      // Accept either the new or legacy class so the assertion documents
+      // intent without churn whenever the wordmark layer is touched.
+      { pattern: /class="(?:site-masthead|masthead)"/, message: "Masthead element" },
+      { pattern: /class="top-tabs"[^>]*aria-label="Sections"/, message: 'Top nav with aria-label="Sections"' },
+      // Logo: legacy <img class="nav-logo"> OR the new H tile
+      // <span class="logo"> that lives inside .wordmark and renders the
+      // glyph via CSS ::after pseudo-content.
+      { pattern: /(class="nav-logo-link"[\s\S]*assets\/hechinger-logo-yellow\.jpg|class="wordmark"[\s\S]*class="logo")/, message: "Hechinger logo in top nav" },
+      { pattern: /<a[^>]+href="index\.html"[^>]*aria-current="page"[^>]*>Tracker Home<\/a>/, message: "Home nav tab with aria-current" },
+      { pattern: /<a[^>]+href="school\.html"[^>]*>Finances<\/a>/, message: "Finances nav tab" },
+      { pattern: /<a[^>]+href="cuts\.html"[^>]*>College Cuts<\/a>/, message: "College Cuts nav tab" },
+      { pattern: /<a[^>]+href="accreditation\.html"[^>]*>Accreditation<\/a>/, message: "Accreditation nav tab" },
+      { pattern: /<a[^>]+href="research\.html"[^>]*>Research Funding Cuts<\/a>/, message: "Research nav tab" },
+      // Editorial Calm moved the index hero h1 inside the .hero-split
+      // and gave it class="serif". Match either treatment so the
+      // landing page still has a real top-level heading.
+      { pattern: /<h1[^>]*class="(?:masthead-title|serif)"[^>]*>College Financial Health Tracker<\/h1>/, message: "Index landing h1" },
+      { pattern: /class="[^"]*\bsearch-panel\b[^"]*"/, message: "Search panel" },
+      { pattern: /id="school-search"/, message: "Search input" },
+      { pattern: /id="search-results"/, message: "Search results container" },
+      { pattern: /role="listbox"/, message: 'Search results role="listbox"' },
+    ],
+  },
+  {
+    name: "College Cuts (cuts.html)",
+    file: "cuts.html",
+    checks: [
+      { pattern: /<a[^>]+href="#main"[^>]*class="skip-link"/, message: 'Skip-to-main link targeting "#main"' },
+      { pattern: /<main[^>]+id="main"/, message: '<main id="main">' },
+      { pattern: /class="(?:site-masthead|masthead)"/, message: "Masthead element" },
+      { pattern: /class="top-tabs"[^>]*aria-label="Sections"/, message: 'Top nav with aria-label="Sections"' },
+      { pattern: /(class="nav-logo-link"[\s\S]*assets\/hechinger-logo-yellow\.jpg|class="wordmark"[\s\S]*class="logo")/, message: "Hechinger logo in top nav" },
+      { pattern: /<a[^>]+href="index\.html"[^>]*>Tracker Home<\/a>/, message: "Home nav tab" },
+      { pattern: /<a[^>]+class="top-tab is-active"[^>]+href="cuts\.html"[^>]+aria-current="page"[^>]*>College Cuts<\/a>/, message: "Active College Cuts tab with aria-current" },
+      { pattern: /id="cuts-list"[^>]*aria-live="polite"/, message: 'cuts-list with aria-live="polite"' },
+      { pattern: /id="cuts-search-results"/, message: "Cuts autocomplete results container" },
+      // Editorial Calm dropped the legacy .masthead-title decorative
+      // duplicate from cuts/accred/research/school in favor of a real
+      // page-specific h1 in the hero. Accept the legacy treatment OR
+      // a serif h1 in the .hero-solo-center landing block.
+      { pattern: /(class="masthead-title"[^>]*>College Financial Health Tracker<\/div>|class="hero-solo-center"[\s\S]*<h1[^>]*class="serif"[^>]*>College Cuts<\/h1>)/, message: "Page heading" },
+    ],
+  },
+  {
+    name: "Research Funding (research.html)",
+    file: "research.html",
+    checks: [
+      { pattern: /<a[^>]+href="#main"[^>]*class="skip-link"/, message: 'Skip-to-main link targeting "#main"' },
+      { pattern: /<main[^>]+id="main"/, message: '<main id="main">' },
+      { pattern: /class="(?:site-masthead|masthead)"/, message: "Masthead element" },
+      { pattern: /class="top-tabs"[^>]*aria-label="Sections"/, message: 'Top nav with aria-label="Sections"' },
+      { pattern: /(class="nav-logo-link"[\s\S]*assets\/hechinger-logo-yellow\.jpg|class="wordmark"[\s\S]*class="logo")/, message: "Hechinger logo in top nav" },
+      { pattern: /<a[^>]+href="index\.html"[^>]*>Tracker Home<\/a>/, message: "Home nav tab" },
+      { pattern: /<a[^>]+class="top-tab is-active"[^>]+href="research\.html"[^>]+aria-current="page"[^>]*>Research Funding Cuts<\/a>/, message: "Active Research nav tab with aria-current" },
+      { pattern: /id="research-list"[^>]*aria-live="polite"/, message: 'research-list with aria-live="polite"' },
+      { pattern: /id="research-other-list"[^>]*aria-live="polite"/, message: 'research-other-list with aria-live="polite"' },
+      { pattern: /id="research-state-summary"[^>]*aria-live="polite"/, message: 'research-state-summary with aria-live="polite"' },
+      { pattern: /id="research-filter"/, message: "Research filter input" },
+      { pattern: /id="research-search-results"/, message: "Research autocomplete results container" },
+      { pattern: /id="research-other-search-results"/, message: "Research other-table autocomplete results container" },
+      { pattern: /class="table-filter-label"[^>]+for="research-filter"/, message: 'Visible label for research-filter' },
+      { pattern: /(class="masthead-title"[^>]*>College Financial Health Tracker<\/div>|class="hero-solo-center"[\s\S]*<h1[^>]*class="serif"[^>]*>Research Funding Cuts<\/h1>)/, message: "Page heading" },
+    ],
+  },
+  {
+    name: "Accreditation (accreditation.html)",
+    file: "accreditation.html",
+    checks: [
+      { pattern: /<a[^>]+href="#main"[^>]*class="skip-link"/, message: 'Skip-to-main link targeting "#main"' },
+      { pattern: /<main[^>]+id="main"/, message: '<main id="main">' },
+      { pattern: /class="(?:site-masthead|masthead)"/, message: "Masthead element" },
+      { pattern: /class="top-tabs"[^>]*aria-label="Sections"/, message: 'Top nav with aria-label="Sections"' },
+      { pattern: /(class="nav-logo-link"[\s\S]*assets\/hechinger-logo-yellow\.jpg|class="wordmark"[\s\S]*class="logo")/, message: "Hechinger logo in top nav" },
+      { pattern: /<a[^>]+href="index\.html"[^>]*>Tracker Home<\/a>/, message: "Home nav tab" },
+      { pattern: /<a[^>]+class="top-tab is-active"[^>]+href="accreditation\.html"[^>]+aria-current="page"[^>]*>Accreditation<\/a>/, message: "Active Accreditation tab with aria-current" },
+      { pattern: /id="accreditation-status"[^>]*aria-live="polite"/, message: 'accreditation-status with aria-live="polite"' },
+      { pattern: /id="accreditation-filter"/, message: "Primary accreditation filter input" },
+      { pattern: /id="accreditation-search-results"/, message: "Accreditation autocomplete results container" },
+      { pattern: /class="table-filter-label"[^>]+for="accreditation-filter"/, message: 'Visible label for accreditation-filter' },
+      { pattern: /(class="masthead-title"[^>]*>College Financial Health Tracker<\/div>|class="hero-solo-center"[\s\S]*<h1[^>]*class="serif"[^>]*>Accreditation<\/h1>)/, message: "Page heading" },
+    ],
+  },
+  {
+    name: "School Detail (school.html)",
+    file: "school.html",
+    checks: [
+      { pattern: /<a[^>]+href="#main"[^>]*class="skip-link"/, message: 'Skip-to-main link targeting "#main"' },
+      { pattern: /<main[^>]+id="main"/, message: '<main id="main">' },
+      { pattern: /class="(?:site-masthead|masthead)"/, message: "Masthead element" },
+      { pattern: /class="top-tabs"[^>]*aria-label="Sections"/, message: 'Top nav with aria-label="Sections"' },
+      { pattern: /(class="nav-logo-link"[\s\S]*assets\/hechinger-logo-yellow\.jpg|class="wordmark"[\s\S]*class="logo")/, message: "Hechinger logo in top nav" },
+      { pattern: /<a[^>]+href="index\.html"[^>]*>Tracker Home<\/a>/, message: "Home nav tab" },
+      { pattern: /<a[^>]+href="school\.html"[^>]+aria-current="page"[^>]*>Finances<\/a>/, message: "Finances nav tab with aria-current" },
+      { pattern: /role="listbox"/, message: 'Search results role="listbox"' },
+      { pattern: /id="school-profile-mast"[^>]*class="[^"]*\bschool-mast\b[^"]*\bis-hidden\b[^"]*"[^>]*aria-hidden="true"/, message: "School profile mast starts hidden until a school is selected" },
+      // school.html no longer uses .masthead-title — the institution
+      // name lives in <h1 id="school-name"> inside .school-mast and is
+      // populated by school.js. Accept the legacy decorative title or
+      // the new editorial school-mast heading.
+      { pattern: /(class="masthead-title"[^>]*>College Financial Health Tracker<\/div>|class="[^"]*\bschool-mast\b[^"]*"[\s\S]*<h1[^>]+id="school-name")/, message: "School heading" },
+      { pattern: /id="share-school-profile"/, message: "Share profile button" },
+      { pattern: /id="share-school-status"[^>]*aria-live="polite"/, message: "Share status live region" },
+      // Editorial Calm renamed the first financial section from
+      // "Financial Trends" to "Revenue Trends" and split out separate
+      // sections for net tuition revenue, tuition dependence, and
+      // graduate students. Accept either heading.
+      { pattern: /<h2[^>]+class="section-title"[^>]*>(?:Financial Trends|Revenue Trends|Revenue trends)<\/h2>/, message: "Revenue / Financial Trends h2" },
+      { pattern: /<h2[^>]+class="section-title"[^>]*>Enrollment<\/h2>/, message: "Enrollment h2" },
+      { pattern: /<h2[^>]+class="section-title"[^>]*>Staffing<\/h2>/, message: "Staffing h2" },
+      { pattern: /<h2[^>]+class="section-title"[^>]*>Endowment<\/h2>/, message: "Endowment h2" },
+      { pattern: /(<h2[^>]+class="section-title"[^>]*>State aid<\/h2>|<h2[^>]+id="aid-section-title"[^>]*class="section-title"[^>]*>Want details about state aid\?<\/h2>)/, message: "State aid heading" },
+      { pattern: /<h2[^>]+class="section-title"[^>]*>Looking for more financial details\?<\/h2>/, message: "More financial details heading" },
+      { pattern: /<p class="guide-sample-mini-chart-title">Endowment value<span class="sub">Adjusted for inflation<\/span><\/p>/, message: "Example University guide endowment chart" },
+      { pattern: /guide-callout-right guide-callout-row-1">This box is red because net tuition revenue fell by more than 10%\.<\/article>/, message: "Example University top-right callout matches net tuition box" },
+      { pattern: /guide-callout-left guide-callout-row-2">This chart shows enrollment falling by more than 10% over time\.<\/article>/, message: "Example University middle-left callout matches enrollment chart" },
+      { pattern: /guide-callout-right guide-callout-row-2">This chart shows the endowment growing by more than 10% over time\.<\/article>/, message: "Example University middle-right callout matches endowment chart" },
+    ],
+  },
+  {
+    name: "Methodology (methodology.html)",
+    file: "methodology.html",
+    checks: [
+      { pattern: /<a[^>]+href="#main"[^>]*class="skip-link"/, message: 'Skip-to-main link targeting "#main"' },
+      { pattern: /<main[^>]+id="main"/, message: '<main id="main">' },
+      { pattern: /class="(?:site-masthead|masthead)"/, message: "Masthead element" },
+      { pattern: /class="top-tabs"[^>]*aria-label="Sections"/, message: 'Top nav with aria-label="Sections"' },
+      { pattern: /(class="nav-logo-link"[\s\S]*assets\/hechinger-logo-yellow\.jpg|class="wordmark"[\s\S]*class="logo")/, message: "Hechinger logo in top nav" },
+      { pattern: /<a[^>]+href="index\.html"[^>]*>Tracker Home<\/a>/, message: "Home nav tab" },
+      { pattern: /<a[^>]+class="top-tab is-active"[^>]+href="methodology\.html"[^>]+aria-current="page"[^>]*>Methodology<\/a>/, message: "Active Methodology tab with aria-current" },
+      { pattern: /class="hero-solo-center"[\s\S]*<h1[^>]*class="serif"[^>]*>Methodology<\/h1>/, message: "Page heading" },
+      { pattern: /id="methodology-jump-links"[^>]*aria-label="Methodology sections"/, message: "Methodology jump-links nav" },
+      { pattern: /<a[^>]+href="#methodology-geography"[^>]*>Geography &amp; Outcomes<\/a>/, message: "Methodology nav link for Geography & Outcomes" },
+      { pattern: /<a[^>]+href="#methodology-enrollment"[^>]*>Enrollment &amp; Staffing<\/a>/, message: "Methodology nav link for Enrollment & Staffing" },
+      { pattern: /<section[^>]+id="methodology-geography"[\s\S]*<h2[^>]+class="section-title"[^>]*>Geography and outcomes<\/h2>/, message: "Geography and outcomes section heading" },
+      { pattern: /<section[^>]+id="methodology-enrollment"[\s\S]*<h2[^>]+class="section-title"[^>]*>Enrollment &amp; Staffing<\/h2>/, message: "Enrollment & Staffing section heading" },
+      { pattern: /<a[^>]+class="download-button"[^>]+href="data\/downloads\/full_dataset\.csv"[^>]*download[^>]*>Download all the federal higher ed data we analyzed<\/a>/, message: "Methodology full dataset download button" },
+    ],
+  },
+];
+
+const CSP_FONT_PAGES = [
+  ...PAGES.map((page) => page.file),
+  "404.html"
+];
+
+// CSS smoke tests: check styles.css contains required patterns
+const CSS_CHECKS = [
+  { pattern: /\.sr-only/, message: ".sr-only utility class" },
+  { pattern: /\.table-filter-label/, message: ".table-filter-label class" },
+  { pattern: /\.table-filter-select/, message: ".table-filter-select class" },
+  { pattern: /\.table-filter-menu/, message: ".table-filter-menu class" },
+  { pattern: /\.table-filter-option/, message: ".table-filter-option class" },
+  { pattern: /\.top-tab:focus-visible/, message: ".top-tab:focus-visible" },
+  { pattern: /\.result-item:focus-visible/, message: ".result-item:focus-visible" },
+  { pattern: /\.pagination-button:focus-visible/, message: ".pagination-button:focus-visible" },
+  { pattern: /\.sort-button:focus-visible/, message: ".sort-button:focus-visible" },
+  { pattern: /\.filter-button:focus-visible/, message: ".filter-button:focus-visible" },
+  { pattern: /\.table-search-autocomplete/, message: ".table-search-autocomplete class" },
+  { pattern: /\.skip-link/, message: ".skip-link class" },
+  { pattern: /--status-blue-dark:/, message: "--status-blue-dark CSS variable" },
+  { pattern: /@media\s*\(max-width:\s*720px\)\s*\{[\s\S]*body\[data-search-source="cuts"\]\s+\.hero-solo-center,\s*body\[data-search-source="accreditation"\]\s+\.hero-solo-center,\s*body\[data-search-source="research"\]\s+\.hero-solo-center\s*\{[\s\S]*margin-bottom:\s*32px;/, message: "Landing pages mobile hero gap reduced" },
+  { pattern: /@media\s*\(max-width:\s*720px\)\s*\{[\s\S]*body\[data-search-page="methodology\.html"\]\s+\.section-block\s*\{\s*scroll-margin-top:\s*340px;/, message: "Methodology mobile section anchor offset" },
+  // Editorial Calm split the search box into a separate
+  // .search-input-wrap inside .search-panel; the visible focus
+  // treatment lives on the wrap now (gold border + soft yellow
+  // glow). Accept either selector.
+  { pattern: /(\.search-panel:focus-within|\.search-input-wrap:focus-within)/, message: "Search box visible focus indicator" },
+  { pattern: /\.guide-jump-links a\.is-active\s*\{[\s\S]*border-bottom-color:\s*var\(--hechinger-yellow\)/, message: "Guide sticky-nav active underline uses yellow" },
+  { pattern: /https:\/\/hechingerreport\.org\/wp-content\/hechinger-fonts\//, message: "Remote Hechinger font URLs" },
+  { pattern: (content) => !content.includes("assets/Official_Fonts"), message: "No repo-bundled Official_Fonts references remain in styles.css" },
+];
+
+let passed = 0;
+let failed = 0;
+const failures = [];
+
+function check(name, pattern, content, message) {
+  const passedCheck = typeof pattern === "function" ? pattern(content) : pattern.test(content);
+  if (passedCheck) {
+    console.log(`  PASS: ${message}`);
+    passed++;
+  } else {
+    console.log(`  FAIL: ${message}`);
+    failures.push(`${name}: ${message}`);
+    failed++;
+  }
+}
+
+console.log("=== Frontend Structure Smoke Tests ===\n");
+
+// HTML page tests
+for (const page of PAGES) {
+  console.log(`\n${page.name}:`);
+  const filePath = path.join(ROOT, page.file);
+  if (!fs.existsSync(filePath)) {
+    console.log(`  FAIL: File not found: ${page.file}`);
+    failures.push(`${page.name}: File not found`);
+    failed++;
+    continue;
+  }
+  const content = fs.readFileSync(filePath, "utf8");
+  for (const { pattern, message } of page.checks) {
+    check(page.name, pattern, content, message);
+  }
+}
+
+console.log("\n\nCSP font-src checks:");
+for (const file of CSP_FONT_PAGES) {
+  const filePath = path.join(ROOT, file);
+  if (!fs.existsSync(filePath)) continue;
+  const content = fs.readFileSync(filePath, "utf8");
+  check(
+    file,
+    /font-src 'self' https:\/\/hechingerreport\.org;/,
+    content,
+    "CSP allows hechingerreport.org in font-src"
+  );
+}
+
+// CSS tests
+console.log("\n\nstyles.css:");
+const cssPath = path.join(ROOT, "styles.css");
+if (!fs.existsSync(cssPath)) {
+  console.log("  FAIL: styles.css not found");
+  failures.push("styles.css: File not found");
+  failed++;
+} else {
+  const cssContent = fs.readFileSync(cssPath, "utf8");
+  for (const { pattern, message } of CSS_CHECKS) {
+    check("styles.css", pattern, cssContent, message);
+  }
+}
+
+// JS smoke: ensure key functions exist in app.js
+console.log("\n\njs/app.js:");
+const appJsPath = path.join(ROOT, "js", "app.js");
+if (fs.existsSync(appJsPath)) {
+  const appJs = fs.readFileSync(appJsPath, "utf8");
+  check("app.js", /setAttribute\("role", "listbox"\)/, appJs, 'Search results role="listbox" set via setAttribute');
+  check("app.js", /setAttribute\("role", "combobox"\)/, appJs, 'Search input role="combobox" set via setAttribute');
+  check("app.js", /aria-expanded/, appJs, "search input aria-expanded state");
+  check("app.js", /aria-activedescendant/, appJs, "search input aria-activedescendant state");
+  check("app.js", /syncTabs/, appJs, "shared tab synchronization helper");
+  check("app.js", /isPrimaryTrackerInstitution/, appJs, "shared primary tracker classification helper");
+  check("app.js", /normalizeSearchText/, appJs, "shared diacritic-normalized search helper");
+  check("app.js", /renderRelatedInstitutionLinks/, appJs, "shared related institution links helper");
+  check("app.js", /renderSchoolLinkCell/, appJs, "structured school link table cell helper");
+  check("app.js", /renderExternalLinkCell/, appJs, "structured external link table cell helper");
+  check("app.js", /ariaLabel/, appJs, "accessible table label support");
+  check("app.js", /setActiveOption/, appJs, "combobox active option helper");
+  check("app.js", /aria-selected/, appJs, "search active option aria-selected state");
+  check("app.js", /initStickySectionNav\("guide-jump-links"\)/, appJs, "school guide sticky-nav initialization");
+  check("app.js", /initStickySectionNav\("methodology-jump-links"\)/, appJs, "methodology sticky-nav initialization");
+  check("app.js", /ArrowDown/, appJs, "arrow key navigation: ArrowDown handler");
+  check("app.js", /Escape/, appJs, "Escape key closes results");
+  check("app.js", /aria-label.*search result/, appJs, "aria-label on search results container");
+  check("app.js", /Search is temporarily unavailable/, appJs, "user-visible search load failure message");
+  check("app.js", /downloadRowsCsv/, appJs, "shared CSV download helper");
+  check("app.js", /setDataCardVisible/, appJs, "shared data-card visibility helper");
+  check("app.js", /initSearch/, appJs, "initSearch function");
+} else {
+  console.log("  FAIL: js/app.js not found");
+  failures.push("app.js: File not found");
+  failed++;
+}
+
+console.log("\n\njs/school.js:");
+const schoolJsPath = path.join(ROOT, "js", "school.js");
+if (fs.existsSync(schoolJsPath)) {
+  const schoolJs = fs.readFileSync(schoolJsPath, "utf8");
+  check("school.js", /function setSectionVisibility/, schoolJs, "school section visibility helper");
+  check("school.js", /setAttribute\("aria-hidden", "true"\)/, schoolJs, "school hidden sections set aria-hidden");
+  check("school.js", /removeAttribute\("aria-hidden"\)/, schoolJs, "school visible sections remove aria-hidden");
+  check("school.js", /navigator\.share/, schoolJs, "native profile share helper");
+  check("school.js", /mailto:\?subject=/, schoolJs, "profile share email fallback");
+} else {
+  console.log("  FAIL: js/school.js not found");
+  failures.push("school.js: File not found");
+  failed++;
+}
+
+console.log("\n\njs/accreditation.js:");
+const accreditationJsPath = path.join(ROOT, "js", "accreditation.js");
+if (fs.existsSync(accreditationJsPath)) {
+  const accreditationJs = fs.readFileSync(accreditationJsPath, "utf8");
+  check("accreditation.js", /function showLoadError/, accreditationJs, "user-visible accreditation load failure handler");
+  check("accreditation.js", /Accreditation actions could not be loaded/, accreditationJs, "accreditation load failure message");
+  check("accreditation.js", /init\(\)\.catch\(showLoadError\)/, accreditationJs, "accreditation init uses visible error handler");
+} else {
+  console.log("  FAIL: js/accreditation.js not found");
+  failures.push("accreditation.js: File not found");
+  failed++;
+}
+
+console.log("\n\njs/cuts.js:");
+const cutsJsPath = path.join(ROOT, "js", "cuts.js");
+if (fs.existsSync(cutsJsPath)) {
+  const cutsJs = fs.readFileSync(cutsJsPath, "utf8");
+  check("cuts.js", /cuts-category-filter-button/, cutsJs, "cuts header filter button id");
+  check("cuts.js", /cuts-category-filter-menu/, cutsJs, "cuts header filter menu id");
+  check("cuts.js", /Filter by type of cuts/, cutsJs, "cuts header filter accessible label");
+  check("cuts.js", /table-header-filter-wrap/, cutsJs, "cuts header filter wrapper");
+} else {
+  console.log("  FAIL: js/cuts.js not found");
+  failures.push("cuts.js: File not found");
+  failed++;
+}
+
+// Summary
+console.log(`\n\n=== Results: ${passed} passed, ${failed} failed ===`);
+if (failed > 0) {
+  console.log("\nFailures:");
+  for (const f of failures) console.log(`  - ${f}`);
+  process.exit(1);
+}

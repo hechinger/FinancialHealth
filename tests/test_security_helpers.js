@@ -1,0 +1,443 @@
+/**
+ * Regression tests for frontend HTML/URL helper contracts.
+ *
+ * Run with: node tests/test_security_helpers.js
+ */
+
+const fs = require("fs");
+const path = require("path");
+const vm = require("vm");
+
+const ROOT = path.resolve(__dirname, "..");
+const APP_SRC = fs.readFileSync(path.join(ROOT, "js", "app.js"), "utf8");
+const SCHOOL_SRC = fs.readFileSync(path.join(ROOT, "js", "school.js"), "utf8");
+
+function escapeHtml(value) {
+  return String(value ?? "")
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;");
+}
+
+function createTestElement(tagName) {
+  const attributes = {};
+  return {
+    _textContent: "",
+    setAttribute(name, value) {
+      attributes[name] = String(value);
+    },
+    get textContent() {
+      return this._textContent;
+    },
+    set textContent(value) {
+      this._textContent = String(value ?? "");
+    },
+    get outerHTML() {
+      const attrText = Object.entries(attributes)
+        .map(([name, value]) => ` ${name}="${escapeHtml(value)}"`)
+        .join("");
+      return `<${tagName}${attrText}>${escapeHtml(this._textContent)}</${tagName}>`;
+    },
+    click() {},
+    remove() {}
+  };
+}
+
+function loadTrackerApp() {
+  const context = {
+    console: { error() {} },
+    URL,
+    URLSearchParams,
+    Blob: function Blob() {},
+    setTimeout,
+    fetch: async () => ({ ok: true, json: async () => [] }),
+    document: {
+      body: { dataset: {} },
+      getElementById: () => null,
+      createElement: createTestElement
+    },
+    window: {
+      location: { origin: "https://tracker.test", search: "" },
+      TrackerApp: {}
+    }
+  };
+  context.global = context;
+  vm.runInNewContext(APP_SRC, context, { filename: "js/app.js" });
+  return context.window.TrackerApp;
+}
+
+function loadSchoolHelpers() {
+  const helperSource = SCHOOL_SRC.split("async function init()")[0];
+  const elements = new Map();
+  const context = {
+    console,
+    URLSearchParams,
+    window: { TrackerApp: {} },
+    document: {
+      getElementById(id) {
+        if (!elements.has(id)) {
+          const attrs = {};
+          elements.set(id, {
+            className: "",
+            attrs,
+            classList: {
+              toggle(name, state) {
+                const classes = new Set(String(elements.get(id).className || "").split(/\s+/).filter(Boolean));
+                if (state) classes.add(name);
+                else classes.delete(name);
+                elements.get(id).className = Array.from(classes).join(" ");
+              }
+            },
+            setAttribute(name, value) {
+              attrs[name] = String(value);
+            },
+            removeAttribute(name) {
+              delete attrs[name];
+            }
+          });
+        }
+        return elements.get(id);
+      }
+    }
+  };
+  vm.runInNewContext(helperSource, context, { filename: "js/school.js" });
+  return { context, elements };
+}
+
+function assert(condition, message) {
+  if (!condition) throw new Error(message);
+}
+
+let passed = 0;
+let failed = 0;
+
+function run(name, fn) {
+  try {
+    fn();
+    console.log(`  PASS: ${name}`);
+    passed++;
+  } catch (error) {
+    console.log(`  FAIL: ${name}: ${error.message}`);
+    failed++;
+  }
+}
+
+console.log("\n=== Frontend Security Helper Tests ===\n");
+
+const app = loadTrackerApp();
+
+run("safeUrl accepts https URLs and normalizes them", () => {
+  assert(app.safeUrl("https://example.edu/path?q=1") === "https://example.edu/path?q=1", "Expected https URL to pass");
+});
+
+run("safeUrl rejects executable and non-web URL schemes", () => {
+  assert(app.safeUrl("javascript:alert(1)") === "", "Expected javascript: URL to be rejected");
+  assert(app.safeUrl("data:text/html,<script>alert(1)</script>") === "", "Expected data: URL to be rejected");
+  assert(app.safeUrl("ftp://example.edu/file") === "", "Expected ftp: URL to be rejected");
+});
+
+run("safeUrl rejects relative URLs for external-link contexts", () => {
+  assert(app.safeUrl("/foo") === "", "Expected root-relative URL to be rejected");
+  assert(app.safeUrl("foo/bar") === "", "Expected path-relative URL to be rejected");
+  assert(app.safeUrl("//example.edu/path") === "", "Expected protocol-relative URL to be rejected");
+});
+
+run("renderExternalLink omits links for relative URLs", () => {
+  assert(app.renderExternalLink("/foo", "Source") === "", "Expected root-relative source link to be omitted");
+  assert(app.renderExternalLink("foo/bar", "Source") === "", "Expected path-relative source link to be omitted");
+});
+
+run("renderExternalLink escapes label text and href attribute context", () => {
+  const html = app.renderExternalLink(
+    'https://example.edu/" onmouseover="alert(1)',
+    '<img src=x onerror="alert(1)">'
+  );
+  assert(html.includes('href="https://example.edu/%22%20onmouseover=%22alert(1)"'), "Expected URL serialization inside one href");
+  assert(!html.includes('" onmouseover="'), "Expected no injected onmouseover attribute");
+  assert(!html.includes("<img"), "Expected label HTML to be escaped");
+  assert(html.includes("&lt;img"), "Expected escaped label text");
+});
+
+run("csvEscape neutralizes spreadsheet formula prefixes before quoting", () => {
+  assert(app.csvEscape("=1+1") === "'=1+1", "Expected leading equals to be prefixed");
+  assert(app.csvEscape("+SUM(A1:A2)") === "'+SUM(A1:A2)", "Expected leading plus to be prefixed");
+  assert(app.csvEscape("-10") === "'-10", "Expected leading minus to be prefixed");
+  assert(app.csvEscape("@cmd") === "'@cmd", "Expected leading at-sign to be prefixed");
+  assert(app.csvEscape('=1,"x"') === `"'=1,""x"""`, "Expected dangerous formulas to stay quoted after sanitization");
+  assert(app.csvEscape("safe value") === "safe value", "Expected safe values to remain unchanged");
+});
+
+run("renderPaginationButtons marks only the current page", () => {
+  const html = app.renderPaginationButtons({ currentPage: 2, totalPages: 3 });
+  const currentMatches = html.match(/aria-current="page"/g) || [];
+  assert(currentMatches.length === 1, "Expected exactly one aria-current marker");
+  assert(html.includes('aria-label="Current page, page 2"'), "Expected current page label");
+  assert(html.includes('aria-label="Go to page 3"'), "Expected target page label");
+});
+
+run("paginateItems clamps pages and returns the current slice", () => {
+  const page = app.paginateItems(["a", "b", "c", "d", "e"], 99, 2);
+  assert(page.totalPages === 3, "Expected three total pages");
+  assert(page.currentPage === 3, "Expected current page to clamp to last page");
+  assert(page.start === 4, "Expected final page start offset");
+  assert(page.pageItems.length === 1 && page.pageItems[0] === "e", "Expected final page slice");
+});
+
+run("compareDateDesc sorts actual dates chronologically", () => {
+  assert(app.compareDateDesc("2025-12-07", "2025-06-12") < 0, "Expected newer ISO date to sort first");
+  assert(app.compareDateDesc("June 2025", "October 2024") < 0, "Expected newer month-year date to sort first");
+  assert(app.compareDateDesc("2025", "2024") < 0, "Expected newer year to sort first");
+});
+
+run("search normalization matches diacritics and primary tracker flag is explicit", () => {
+  assert(app.normalizeSearchText("São José") === "sao jose", "Expected diacritics to normalize for search");
+  assert(app.tokenizeSearch("São-José!").join("|") === "sao|jose", "Expected normalized search tokens");
+  assert(app.filterByInstitution([{ institution_name: "São José University" }], "Sao Jose").length === 1, "Expected table filter to normalize diacritics");
+  assert(app.isPrimaryTrackerInstitution({ is_primary_tracker: true }) === true, "Expected true flag to pass");
+  assert(app.isPrimaryTrackerInstitution({ category: "Primarily baccalaureate or above" }) === false, "Expected category text alone not to pass");
+});
+
+run("school visibility and yes/no helpers handle non-string values", () => {
+  const { context, elements } = loadSchoolHelpers();
+  assert(context.yesNoClass(true) === "negative", "Expected boolean true to be treated like Yes");
+  assert(context.yesNoClass(1) === "negative", "Expected numeric 1 to be treated like Yes");
+  assert(context.yesNoClass(false) === "positive", "Expected boolean false to be treated like No");
+  assert(context.yesNoClass(0) === "positive", "Expected numeric 0 to be treated like No");
+
+  context.setSectionVisibility("sample-section", false);
+  assert(elements.get("sample-section").className.includes("is-hidden"), "Expected hidden class");
+  assert(elements.get("sample-section").attrs["aria-hidden"] === "true", "Expected aria-hidden when hidden");
+  context.setSectionVisibility("sample-section", true);
+  assert(!elements.get("sample-section").className.includes("is-hidden"), "Expected hidden class to be removed");
+  assert(!("aria-hidden" in elements.get("sample-section").attrs), "Expected aria-hidden to be removed when shown");
+});
+
+run("school trend comparison copy restores a/an before percentage changes", () => {
+  const { context } = loadSchoolHelpers();
+  const onePercentLine = context.buildSectorComparisonLine(-1, { control_label: "Public" });
+  assert(Array.isArray(onePercentLine), "Expected comparison line array");
+  assert(onePercentLine[0] === "That compares to ", "Expected comparison prefix");
+  assert(onePercentLine[1] === "a ", "Expected 'a' before 1% decline");
+  assert(onePercentLine[2] && onePercentLine[2].strong === "1% decline", "Expected strong 1% decline segment");
+
+  const eightPercentLine = context.buildSectorComparisonLine(-8, { control_label: "Public" });
+  assert(eightPercentLine[1] === "an ", "Expected 'an' before 8% decline");
+  assert(eightPercentLine[2] && eightPercentLine[2].strong === "8% decline", "Expected strong 8% decline segment");
+});
+
+run("school CSV download omits grad plus rows when no campus-level grad plus data exists", () => {
+  const { context } = loadSchoolHelpers();
+  let download = null;
+  context.window.TrackerApp.downloadRowsCsv = (filename, headers, rows) => {
+    download = { filename, headers, rows };
+  };
+
+  context.downloadSchoolCsv({
+    profile: { institution_name: "Example University" },
+    summary: {
+      latest_year: 2024,
+      grad_plus_recipients: null,
+      grad_plus_disbursements_amt: null,
+      grad_plus_disbursements_per_recipient: null,
+      sector_median_grad_plus_disbursements_per_recipient: 12345
+    },
+    series: {}
+  });
+
+  assert(download && Array.isArray(download.rows), "Expected school CSV download payload");
+  const summaryFields = download.rows
+    .filter((row) => row[0] === "summary")
+    .map((row) => row[1]);
+  assert(summaryFields.includes("latest_year"), "Expected non-Grad-PLUS summary rows to remain");
+  assert(!summaryFields.includes("grad_plus_recipients"), "Expected blank grad plus recipients row to be omitted");
+  assert(!summaryFields.includes("grad_plus_disbursements_amt"), "Expected blank grad plus amount row to be omitted");
+  assert(!summaryFields.includes("grad_plus_disbursements_per_recipient"), "Expected blank grad plus per-recipient row to be omitted");
+  assert(!summaryFields.includes("sector_median_grad_plus_disbursements_per_recipient"), "Expected sector median grad plus row to be omitted when campus data is suppressed");
+});
+
+run("setupPaginatedTable renders filtered rows and downloads the full sorted set", () => {
+  const listeners = {};
+  const searchInput = {
+    value: "",
+    dataset: {},
+    addEventListener(type, handler) {
+      listeners[type] = handler;
+    }
+  };
+  const downloadButton = {
+    hidden: null,
+    classList: {
+      toggle(name, state) {
+        if (name === "is-hidden") downloadButton.hidden = state;
+      }
+    },
+    onclick: null
+  };
+  const container = {
+    innerHTML: "",
+    querySelector: () => null,
+    querySelectorAll: () => []
+  };
+  let downloadedRows = null;
+
+  app.setupPaginatedTable({
+    container,
+    items: [
+      { name: "Beta", score: 2 },
+      { name: "Alpha", score: 3 },
+      { name: "Gamma", score: 1 }
+    ],
+    pageSize: 2,
+    searchInput,
+    initialSortState: { key: "score", direction: "desc" },
+    filterItems: (rows, term) => rows.filter((row) => row.name.toLowerCase().includes(term.toLowerCase())),
+    sortItems: (rows, sortState) => [...rows].sort((a, b) => sortState.direction === "desc" ? b.score - a.score : a.score - b.score),
+    renderPage: (rows, page, size) => {
+      const state = app.paginateItems(rows, page, size);
+      return state.pageItems.map((row) => row.name).join(",");
+    },
+    downloadButton,
+    downloadRows: (rows) => {
+      downloadedRows = rows.map((row) => row.name);
+    }
+  });
+
+  assert(container.innerHTML === "Alpha,Beta", "Expected first page to use supplied sort and page size");
+  assert(downloadButton.hidden === false, "Expected download button to be shown for non-empty pages");
+  downloadButton.onclick();
+  // setupPaginatedTable now passes the full filtered + sorted list to
+  // downloadRows (not just the current page). Three items in the
+  // fixture, sorted desc by score: Alpha (3), Beta (2), Gamma (1).
+  assert(
+    downloadedRows.join(",") === "Alpha,Beta,Gamma",
+    "Expected download to receive the full sorted set, not just the current page"
+  );
+
+  searchInput.value = "ga";
+  listeners.input();
+  assert(container.innerHTML === "Gamma", "Expected search input to filter and reset table render");
+  // After filtering, the download payload should narrow to the
+  // matching rows (still cross-page, but the filter is what scopes
+  // it).
+  downloadButton.onclick();
+  assert(
+    downloadedRows.join(",") === "Gamma",
+    "Expected download after filter to receive only matching sorted rows"
+  );
+});
+
+run("renderSortableHeader puts aria-sort on the active table header only", () => {
+  const active = app.renderSortableHeader("funding", { key: "funding", direction: "desc" }, "Funding cut");
+  const inactive = app.renderSortableHeader("state", { key: "funding", direction: "desc" }, "State");
+  assert(active.includes("<th aria-sort=\"descending\">"), "Expected active header to expose descending sort");
+  assert(!inactive.includes("aria-sort="), "Expected inactive header to omit aria-sort");
+  assert(active.includes('data-sort-key="funding"'), "Expected sort key data attribute");
+});
+
+run("renderHistoryTable escapes table metadata while rendering structured link cells", () => {
+  assert(typeof app.renderHtmlCell === "undefined", "Raw HTML table-cell bypass should not be exposed");
+  const html = app.renderHistoryTable({
+    caption: '<script>alert("caption")</script>',
+    ariaLabel: '<img src=x onerror="alert(1)">',
+    tableClass: 'history-table" onclick="alert(1)',
+    headers: ["<th>Institution</th>", app.renderSortableHeader("date", { key: "date", direction: "desc" }, "Date")],
+    rows: [[
+      "<b>Bad cell</b>",
+      app.renderSchoolLinkCell("123", "Test U", "school.html"),
+      app.renderExternalLinkCell("https://example.edu", "Source")
+    ]]
+  });
+  assert(html.includes("&lt;script&gt;alert(&quot;caption&quot;)&lt;/script&gt;"), "Expected caption text to be escaped");
+  assert(html.includes('aria-label="&lt;img src=x onerror=&quot;alert(1)&quot;&gt;"'), "Expected table aria-label to be escaped");
+  assert(!html.includes('" onclick="'), "Expected table class to stay inside one escaped attribute");
+  assert(html.includes("&lt;b&gt;Bad cell&lt;/b&gt;"), "Expected primitive cell values to be escaped by default");
+  assert(!html.includes("<b>Bad cell</b>"), "Expected primitive cell HTML not to render");
+  assert(html.includes("<th>Institution</th>"), "Expected caller-provided header HTML to render");
+  assert(html.includes('href="school.html?unitid=123"'), "Expected safe link cell HTML to render");
+  assert(html.includes('href="https://example.edu/"'), "Expected safe external link cell HTML to render");
+});
+
+run("renderRelatedInstitutionLinks only includes indexed related pages", () => {
+  const unmatched = app.renderRelatedInstitutionLinks({
+    unitid: "research-example-college--ca",
+    financialUnitid: "",
+    current: "research",
+    relatedIndexes: {
+      cuts: {},
+      accreditation: {},
+      research: {}
+    }
+  });
+  assert(!unmatched.includes("cuts.html?unitid=research-"), "Expected no guessed cuts link for research-only id");
+  assert(!unmatched.includes("school.html?unitid=research-"), "Expected no guessed finance link for research-only id");
+
+  const matched = app.renderRelatedInstitutionLinks({
+    unitid: "100654",
+    financialUnitid: "100654",
+    hasFinancialProfile: true,
+    current: "research",
+    relatedIndexes: {
+      cuts: {
+        "100654": { unitid: "100654", cut_count: 2 }
+      },
+      accreditation: {
+        "100654": { unitid: "100654", action_count: 1 }
+      },
+      research: {}
+    }
+  });
+  assert(matched.includes("school.html?unitid=100654"), "Expected matched finance link");
+  assert(matched.includes("cuts.html?unitid=100654"), "Expected matched cuts link");
+  assert(matched.includes("accreditation.html?unitid=100654"), "Expected matched accreditation link");
+  assert(!matched.includes("research.html?unitid=100654"), "Expected current page link to stay hidden");
+
+  const missingSidePage = app.renderRelatedInstitutionLinks({
+    unitid: "185262",
+    financialUnitid: "185262",
+    current: "accreditation",
+    relatedIndexes: {
+      cuts: {},
+      accreditation: {
+        "185262": { unitid: "185262", action_count: 1 }
+      },
+      research: {
+        "185262": { unitid: "185262", total_disrupted_grants: 2 }
+      }
+    }
+  });
+  assert(!missingSidePage.includes("school.html?unitid=185262"), "Expected no finances link without a matched primary tracker profile");
+  assert(!missingSidePage.includes("cuts.html?unitid=185262"), "Expected no cuts link when cuts index has no record");
+  assert(missingSidePage.includes("research.html?unitid=185262"), "Expected research link when research index has a record");
+
+  const matchedFinanceProfile = app.renderRelatedInstitutionLinks({
+    unitid: "185262",
+    financialUnitid: "185262",
+    hasFinancialProfile: true,
+    current: "accreditation",
+    relatedIndexes: {
+      cuts: {},
+      accreditation: {
+        "185262": { unitid: "185262", action_count: 1 }
+      },
+      research: {}
+    }
+  });
+  assert(matchedFinanceProfile.includes("school.html?unitid=185262"), "Expected finances link when a primary tracker profile exists");
+});
+
+run("renderSchoolLink escapes labels at the helper boundary", () => {
+  const html = app.renderSchoolLink("123", '<svg onload="alert(1)">Bad U</svg>', "school.html");
+  assert(html.includes('href="school.html?unitid=123"'), "Expected school link");
+  assert(!html.includes("<svg"), "Expected label markup to be escaped");
+  assert(!html.includes('" onload="'), "Expected no injected onload attribute");
+  assert(html.includes("&lt;svg"), "Expected escaped label in link text");
+});
+
+run("school.js avoids direct innerHTML sinks for JSON-backed narrative text", () => {
+  assert(!/\binnerHTML\b/.test(SCHOOL_SRC), "Expected school.js to avoid innerHTML assignments");
+});
+
+console.log(`\n=== Results: ${passed} passed, ${failed} failed ===`);
+if (failed > 0) process.exit(1);
