@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; font-src 'self' https://hechingerreport.org; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <title>College Financial Health Tracker: Closures, Budget, Cuts &amp; Accreditation Data</title>
+  <meta name="description" content="Track financial health at U.S. four-year colleges: closures, financial and enrollment data, layoffs, program cuts, accreditation warnings, and research-funding losses, school by school.">
+  <meta name="author" content="The Hechinger Report, Marina Villeneuve">
+  <meta name="news-keywords" content="college cuts, college layoffs, college closures, college shutting down, higher education budget cuts">
+  <link rel="canonical" href="https://financialtracker.hechingerreport.org/cuts.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Hechinger Report">
+  <meta property="og:title" content="College Financial Health Tracker: Closures, Budget, Cuts &amp; Accreditation Data">
+  <meta property="og:description" content="Track financial health at U.S. four-year colleges: closures, financial and enrollment data, layoffs, program cuts, accreditation warnings, and research-funding losses, school by school.">
+  <meta property="og:url" content="https://financialtracker.hechingerreport.org/cuts.html">
+  <meta property="og:image" content="https://financialtracker.hechingerreport.org/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="College Financial Health Tracker by The Hechinger Report">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@hechingerreport">
+  <meta name="twitter:creator" content="@hechingerreport">
+  <meta name="twitter:title" content="College Financial Health Tracker: Closures, Budget, Cuts &amp; Accreditation Data">
+  <meta name="twitter:description" content="Track financial health at U.S. four-year colleges: closures, financial and enrollment data, layoffs, program cuts, accreditation warnings, and research-funding losses, school by school.">
+  <meta name="twitter:image" content="https://financialtracker.hechingerreport.org/assets/og-image.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+</head>
+<body data-search-page="cuts.html" data-search-source="cuts">
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <div class="page">
+    <header class="site-masthead">
+      <a class="wordmark" href="https://hechingerreport.org/" target="_blank" rel="noopener noreferrer" aria-label="The Hechinger Report (opens in new tab)">
+        <span class="logo"></span>
+        <span class="wm-text">The Hechinger Report</span>
+      </a>
+      <div class="help-btn-wrap">
+        <button class="help-btn" type="button" aria-label="Questions about this tracker? Email us at editor@hechingerreport.org">?</button>
+        <span class="help-tooltip" role="tooltip">Questions about this tracker? Email us <a href="mailto:editor@hechingerreport.org">here</a>.</span>
+      </div>
+    </header>
+    <nav class="top-tabs" aria-label="Sections">
+      <a class="top-tab" id="tab-home" href="index.html">Tracker Home</a>
+      <a class="top-tab" id="tab-finances" href="school.html">Finances</a>
+      <a class="top-tab is-active" id="tab-cuts" href="cuts.html" aria-current="page">College Cuts</a>
+      <a class="top-tab" id="tab-accreditation" href="accreditation.html">Accreditation</a>
+      <a class="top-tab" id="tab-research" href="research.html">Research Funding Cuts</a>
+      <a class="top-tab" id="tab-methodology" href="methodology.html">Methodology</a>
+    </nav>
+    <main id="main" class="main-wrap">
+
+    <section id="cuts-landing-hero" class="hero-solo-center">
+      <h1 class="serif">College Cuts</h1>
+      <p class="lede lede-intro">Cuts may reflect ongoing financial challenges at an institution, but may also be a result of federal research cuts or state anti-DEI initiatives.</p>
+      <p class="lede">Data includes cuts, such as staff layoffs and program closures, collected by <a href="https://www.college-cuts.com/" target="_blank" rel="noopener" aria-label="CollegeCuts Tracker (opens in new tab)">CollegeCuts Tracker</a> and The Hechinger Report.</p>
+      <p class="lede">Have you heard of a cut at your university? <a href="https://www.college-cuts.com/" target="_blank" rel="noopener" aria-label="Submit information about cuts (opens in new tab)">Submit information about cuts here</a> if you'd like to help grow our database.</p>
+      <p class="data-as-of" id="cuts-data-as-of" aria-live="polite" hidden></p>
+    </section>
+
+    <div id="cuts-institution-mast" class="is-hidden">
+      <figure class="quad-banner school-quad-banner" aria-hidden="true">
+        <img src="assets/college-financial-health-school.png" alt="" loading="lazy">
+      </figure>
+      <section class="school-mast">
+        <div class="eyebrow">College Cuts &middot; Institution Profile</div>
+        <h1 id="cuts-school-name">College cuts</h1>
+        <p id="cuts-school-meta" class="meta"></p>
+      </section>
+    </div>
+
+    <section class="data-card">
+      <h2 id="cuts-section-title">College program or staffing cuts</h2>
+      <p id="cuts-table-intro" class="section-copy">Click on a college below to learn more about the institution&rsquo;s history of cuts, including additional details about reductions and links to sources.</p>
+      <div class="table-toolbar">
+        <div class="table-toolbar-actions table-toolbar-actions--stack">
+          <div class="table-toolbar-row">
+            <button id="cuts-table-download" class="download-button" type="button">Download all college cuts data</button>
+          </div>
+          <div class="table-toolbar-row">
+            <label class="table-filter-label" for="cuts-filter">Institution:</label>
+            <div class="table-search-autocomplete" data-search-instance data-search-mode="filter">
+              <input id="cuts-filter" class="table-filter-input" type="search" data-search-input aria-label="Filter by institution" placeholder="Filter by institution" autocomplete="off">
+              <div id="cuts-search-results" class="results table-search-results" data-search-results role="listbox" aria-label="Search results"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="cuts-list" aria-live="polite"></div>
+    </section>
+
+    <footer class="pg-foot">
+      <span class="sig"><span class="sq"></span> The Hechinger Report</span>
+      <span>Source: IPEDS · ED Composite · HCM2 · Grant Witness</span>
+    </footer>
+    </main>
+  </div>
+  <script src="js/app.js"></script>
+  <script src="js/cuts.js"></script>
+</body>
+</html>

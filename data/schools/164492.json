@@ -1,0 +1,977 @@
+{
+  "unitid": "164492",
+  "generated_at": "2026-07-08",
+  "profile": {
+    "institution_name": "Anna Maria College",
+    "institution_unique_name": "Anna Maria College | Paxton | Massachusetts",
+    "state": "Massachusetts",
+    "city": "Paxton",
+    "control_label": "Private not-for-profit",
+    "sector": "Private not-for-profit, 4-year or above",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "Rural: Fringe",
+    "religious_affiliation": "Roman Catholic",
+    "all_programs_distance_education": "No"
+  },
+  "summary": {
+    "latest_year": 2024,
+    "enrollment_pct_change_5yr": -3.9096,
+    "sector_median_enrollment_pct_change_5yr": -3.7344,
+    "enrollment_decline_last_3_of_5": "No",
+    "revenue_pct_change_5yr": -10.3047,
+    "sector_median_revenue_pct_change_5yr": -0.5117,
+    "net_tuition_per_fte_change_5yr": -30.1506,
+    "sector_median_net_tuition_per_fte_change_5yr": -17.816,
+    "staff_total_headcount_pct_change_5yr": -10.241,
+    "sector_median_staff_total_headcount_pct_change_5yr": -1.7263,
+    "staff_instructional_headcount_pct_change_5yr": -17.1717,
+    "students_per_instructional_staff_fte": 12,
+    "sector_median_students_per_instructional_staff_fte": 12,
+    "ended_year_at_loss": "Yes",
+    "losses_last_3_of_5": "Yes",
+    "loss_years_last_10": 5,
+    "tuition_dependence_pct": 44.0943,
+    "sector_median_tuition_dependence_pct": 44.8638,
+    "tuition_dependence_vs_sector_median_sentence": "This college got 44.0% of its revenue from net tuition in 2024, below the median of 45% for private not-for-profit colleges.",
+    "unfunded_discount_rate": 62.4634,
+    "unfunded_discount_pct_change_5yr": 13.3484,
+    "share_grad_students": 29.3071,
+    "sector_avg_share_grad_students": 29.1503,
+    "research_expense": 0,
+    "research_expense_per_fte": 0,
+    "research_expense_pct_core_expenses": 0,
+    "sector_research_spending_n": 1148,
+    "sector_research_spending_positive_n": 401,
+    "sector_research_spending_reporting_share_pct": 34.9,
+    "sector_median_research_expense_per_fte_positive": 585.5059,
+    "pct_international_all": 7.1837,
+    "pct_international_undergraduate": 8.4532,
+    "pct_international_graduate": 4.1215,
+    "international_student_count_change_5yr": 111,
+    "international_enrollment_pct_change_5yr": 5550,
+    "international_students_sentence": "In 2024, 7.2% of students were international. That includes 8.5% of undergraduates and 4.1% of graduate students.",
+    "federal_loan_pct_most_recent": 65,
+    "sector_avg_federal_loan_pct_most_recent": 46.041,
+    "grad_plus_recipients": 4,
+    "grad_plus_disbursements_amt": 19284,
+    "grad_plus_disbursements_per_recipient": 4821,
+    "sector_median_grad_plus_disbursements_per_recipient": 11428,
+    "federal_grants_contracts_pell_adjusted_pct_core_revenue": 0,
+    "state_funding_pct_core_revenue": 0,
+    "federal_grants_contracts_pell_adjusted_pct_change_5yr": null,
+    "state_funding_pct_change_5yr": null,
+    "endowment_assets_per_fte_adjusted": 1354.6821,
+    "sector_median_endowment_assets_per_fte_adjusted": 37427.0318,
+    "endowment_pct_change_5yr": -77.6456,
+    "sector_median_endowment_pct_change_5yr": 7.7657,
+    "endowment_spending_current_use_pct_core_revenue": 0.0058,
+    "graduation_rate_6yr": 46,
+    "median_earnings_10yr": 46651,
+    "median_debt_completers": 25000,
+    "scorecard_data_updated": "2026-03-23",
+    "ipeds_graduation_rate_year": 2024,
+    "ipeds_graduation_rate_label": "Bachelor degree within 6 years, total"
+  },
+  "series": {
+    "revenue_total_adjusted": [
+      {
+        "year": 2014,
+        "value": 34450323.0599
+      },
+      {
+        "year": 2015,
+        "value": 33714057.3711
+      },
+      {
+        "year": 2016,
+        "value": 34289192.7559
+      },
+      {
+        "year": 2017,
+        "value": 32038501.6246
+      },
+      {
+        "year": 2018,
+        "value": 33110423.7961
+      },
+      {
+        "year": 2019,
+        "value": 32704565.0553
+      },
+      {
+        "year": 2020,
+        "value": 31546204.3227
+      },
+      {
+        "year": 2021,
+        "value": 38357262.7779
+      },
+      {
+        "year": 2022,
+        "value": 33618770.0535
+      },
+      {
+        "year": 2023,
+        "value": 29015062.9944
+      },
+      {
+        "year": 2024,
+        "value": 29334451
+      }
+    ],
+    "expenses_total_adjusted": [
+      {
+        "year": 2014,
+        "value": 32617762.1407
+      },
+      {
+        "year": 2015,
+        "value": 32600316.3007
+      },
+      {
+        "year": 2016,
+        "value": 32327523.9227
+      },
+      {
+        "year": 2017,
+        "value": 31773944.2666
+      },
+      {
+        "year": 2018,
+        "value": 32445737.7084
+      },
+      {
+        "year": 2019,
+        "value": 33483613.9451
+      },
+      {
+        "year": 2020,
+        "value": 33485295.6667
+      },
+      {
+        "year": 2021,
+        "value": 33821494.875
+      },
+      {
+        "year": 2022,
+        "value": 34389319.2053
+      },
+      {
+        "year": 2023,
+        "value": 32484522.9215
+      },
+      {
+        "year": 2024,
+        "value": 32721432
+      }
+    ],
+    "net_tuition_per_fte_adjusted": [
+      {
+        "year": 2014,
+        "value": 20023.5363
+      },
+      {
+        "year": 2015,
+        "value": 20660.5262
+      },
+      {
+        "year": 2016,
+        "value": 19731.403
+      },
+      {
+        "year": 2017,
+        "value": 18959.2509
+      },
+      {
+        "year": 2018,
+        "value": 18142.1204
+      },
+      {
+        "year": 2019,
+        "value": 16445.9482
+      },
+      {
+        "year": 2020,
+        "value": 14913.8056
+      },
+      {
+        "year": 2021,
+        "value": 14647.4002
+      },
+      {
+        "year": 2022,
+        "value": 13399.2743
+      },
+      {
+        "year": 2023,
+        "value": 11946.9939
+      },
+      {
+        "year": 2024,
+        "value": 11487.3979
+      }
+    ],
+    "unfunded_discount_rate": [
+      {
+        "year": 2014,
+        "value": 39.7418
+      },
+      {
+        "year": 2015,
+        "value": 40.6798
+      },
+      {
+        "year": 2016,
+        "value": 44.4524
+      },
+      {
+        "year": 2017,
+        "value": 47.4581
+      },
+      {
+        "year": 2018,
+        "value": 51.1899
+      },
+      {
+        "year": 2019,
+        "value": 55.1074
+      },
+      {
+        "year": 2020,
+        "value": 57.9104
+      },
+      {
+        "year": 2021,
+        "value": 56.254
+      },
+      {
+        "year": 2022,
+        "value": 56.6617
+      },
+      {
+        "year": 2023,
+        "value": 60.2988
+      },
+      {
+        "year": 2024,
+        "value": 62.4634
+      }
+    ],
+    "enrollment_headcount_total": [
+      {
+        "year": 2014,
+        "value": 1839
+      },
+      {
+        "year": 2015,
+        "value": 1790
+      },
+      {
+        "year": 2016,
+        "value": 1747
+      },
+      {
+        "year": 2017,
+        "value": 1657
+      },
+      {
+        "year": 2018,
+        "value": 1662
+      },
+      {
+        "year": 2019,
+        "value": 1637
+      },
+      {
+        "year": 2020,
+        "value": 1705
+      },
+      {
+        "year": 2021,
+        "value": 1793
+      },
+      {
+        "year": 2022,
+        "value": 1842
+      },
+      {
+        "year": 2023,
+        "value": 1676
+      },
+      {
+        "year": 2024,
+        "value": 1573
+      }
+    ],
+    "enrollment_headcount_undergrad": [
+      {
+        "year": 2014,
+        "value": 1305
+      },
+      {
+        "year": 2015,
+        "value": 1311
+      },
+      {
+        "year": 2016,
+        "value": 1291
+      },
+      {
+        "year": 2017,
+        "value": 1221
+      },
+      {
+        "year": 2018,
+        "value": 1213
+      },
+      {
+        "year": 2019,
+        "value": 1209
+      },
+      {
+        "year": 2020,
+        "value": 1244
+      },
+      {
+        "year": 2021,
+        "value": 1220
+      },
+      {
+        "year": 2022,
+        "value": 1280
+      },
+      {
+        "year": 2023,
+        "value": 1211
+      },
+      {
+        "year": 2024,
+        "value": 1112
+      }
+    ],
+    "enrollment_headcount_graduate": [
+      {
+        "year": 2014,
+        "value": 534
+      },
+      {
+        "year": 2015,
+        "value": 479
+      },
+      {
+        "year": 2016,
+        "value": 456
+      },
+      {
+        "year": 2017,
+        "value": 436
+      },
+      {
+        "year": 2018,
+        "value": 449
+      },
+      {
+        "year": 2019,
+        "value": 428
+      },
+      {
+        "year": 2020,
+        "value": 461
+      },
+      {
+        "year": 2021,
+        "value": 573
+      },
+      {
+        "year": 2022,
+        "value": 562
+      },
+      {
+        "year": 2023,
+        "value": 465
+      },
+      {
+        "year": 2024,
+        "value": 461
+      }
+    ],
+    "enrollment_nonresident_total": [
+      {
+        "year": 2014,
+        "value": 4
+      },
+      {
+        "year": 2015,
+        "value": 7
+      },
+      {
+        "year": 2016,
+        "value": 4
+      },
+      {
+        "year": 2017,
+        "value": 4
+      },
+      {
+        "year": 2018,
+        "value": 2
+      },
+      {
+        "year": 2019,
+        "value": 2
+      },
+      {
+        "year": 2020,
+        "value": 37
+      },
+      {
+        "year": 2021,
+        "value": 38
+      },
+      {
+        "year": 2022,
+        "value": 68
+      },
+      {
+        "year": 2023,
+        "value": 96
+      },
+      {
+        "year": 2024,
+        "value": 113
+      }
+    ],
+    "enrollment_nonresident_undergrad": [
+      {
+        "year": 2014,
+        "value": 3
+      },
+      {
+        "year": 2015,
+        "value": 6
+      },
+      {
+        "year": 2016,
+        "value": 4
+      },
+      {
+        "year": 2017,
+        "value": 4
+      },
+      {
+        "year": 2018,
+        "value": 2
+      },
+      {
+        "year": 2019,
+        "value": 2
+      },
+      {
+        "year": 2020,
+        "value": 29
+      },
+      {
+        "year": 2021,
+        "value": 34
+      },
+      {
+        "year": 2022,
+        "value": 63
+      },
+      {
+        "year": 2023,
+        "value": 84
+      },
+      {
+        "year": 2024,
+        "value": 94
+      }
+    ],
+    "enrollment_nonresident_graduate": [
+      {
+        "year": 2014,
+        "value": 1
+      },
+      {
+        "year": 2015,
+        "value": 1
+      },
+      {
+        "year": 2016,
+        "value": 0
+      },
+      {
+        "year": 2017,
+        "value": 0
+      },
+      {
+        "year": 2018,
+        "value": 0
+      },
+      {
+        "year": 2019,
+        "value": 0
+      },
+      {
+        "year": 2020,
+        "value": 8
+      },
+      {
+        "year": 2021,
+        "value": 4
+      },
+      {
+        "year": 2022,
+        "value": 5
+      },
+      {
+        "year": 2023,
+        "value": 12
+      },
+      {
+        "year": 2024,
+        "value": 19
+      }
+    ],
+    "staff_headcount_total": [
+      {
+        "year": 2014,
+        "value": 313
+      },
+      {
+        "year": 2015,
+        "value": 312
+      },
+      {
+        "year": 2016,
+        "value": 317
+      },
+      {
+        "year": 2017,
+        "value": 326
+      },
+      {
+        "year": 2018,
+        "value": 311
+      },
+      {
+        "year": 2019,
+        "value": 332
+      },
+      {
+        "year": 2020,
+        "value": 314
+      },
+      {
+        "year": 2021,
+        "value": 334
+      },
+      {
+        "year": 2022,
+        "value": 300
+      },
+      {
+        "year": 2023,
+        "value": 286
+      },
+      {
+        "year": 2024,
+        "value": 298
+      }
+    ],
+    "staff_headcount_instructional": [
+      {
+        "year": 2014,
+        "value": 182
+      },
+      {
+        "year": 2015,
+        "value": 186
+      },
+      {
+        "year": 2016,
+        "value": 197
+      },
+      {
+        "year": 2017,
+        "value": 212
+      },
+      {
+        "year": 2018,
+        "value": 197
+      },
+      {
+        "year": 2019,
+        "value": 198
+      },
+      {
+        "year": 2020,
+        "value": 187
+      },
+      {
+        "year": 2021,
+        "value": 195
+      },
+      {
+        "year": 2022,
+        "value": 174
+      },
+      {
+        "year": 2023,
+        "value": 164
+      },
+      {
+        "year": 2024,
+        "value": 164
+      }
+    ],
+    "endowment_value_adjusted": [
+      {
+        "year": 2014,
+        "value": 4685259.0418
+      },
+      {
+        "year": 2015,
+        "value": 5646583.3178
+      },
+      {
+        "year": 2016,
+        "value": 5978518.3842
+      },
+      {
+        "year": 2017,
+        "value": 6103760.6132
+      },
+      {
+        "year": 2018,
+        "value": 6437079.8673
+      },
+      {
+        "year": 2019,
+        "value": 6823574.092
+      },
+      {
+        "year": 2020,
+        "value": 7299410.9541
+      },
+      {
+        "year": 2021,
+        "value": 8323536.2414
+      },
+      {
+        "year": 2022,
+        "value": 6239735.169
+      },
+      {
+        "year": 2023,
+        "value": 1451660.1858
+      },
+      {
+        "year": 2024,
+        "value": 1525372
+      }
+    ],
+    "endowment_spending_current_use": [
+      {
+        "year": 2020,
+        "value": 261271
+      },
+      {
+        "year": 2021,
+        "value": 310518
+      },
+      {
+        "year": 2022,
+        "value": 368902
+      },
+      {
+        "year": 2023,
+        "value": 1499908
+      },
+      {
+        "year": 2024,
+        "value": 131138
+      }
+    ],
+    "endowment_spending_current_use_adjusted": [
+      {
+        "year": 2020,
+        "value": 316670.6157
+      },
+      {
+        "year": 2021,
+        "value": 359471.8268
+      },
+      {
+        "year": 2022,
+        "value": 395416.1025
+      },
+      {
+        "year": 2023,
+        "value": 1544146.8734
+      },
+      {
+        "year": 2024,
+        "value": 131138
+      }
+    ],
+    "endowment_spending_current_use_pct_core_revenue": [
+      {
+        "year": 2020,
+        "value": 0.0126
+      },
+      {
+        "year": 2021,
+        "value": 0.0108
+      },
+      {
+        "year": 2022,
+        "value": 0.0143
+      },
+      {
+        "year": 2023,
+        "value": 0.0677
+      },
+      {
+        "year": 2024,
+        "value": 0.0058
+      }
+    ],
+    "federal_grants_contracts_pell_adjusted_adjusted": [
+      {
+        "year": 2014,
+        "value": 0
+      },
+      {
+        "year": 2015,
+        "value": 0
+      },
+      {
+        "year": 2016,
+        "value": 0
+      },
+      {
+        "year": 2017,
+        "value": 0
+      },
+      {
+        "year": 2018,
+        "value": 0
+      },
+      {
+        "year": 2019,
+        "value": 0
+      },
+      {
+        "year": 2020,
+        "value": 0
+      },
+      {
+        "year": 2021,
+        "value": 0
+      },
+      {
+        "year": 2022,
+        "value": 0
+      },
+      {
+        "year": 2023,
+        "value": 0
+      },
+      {
+        "year": 2024,
+        "value": 0
+      }
+    ],
+    "state_funding_adjusted": [
+      {
+        "year": 2014,
+        "value": 0
+      },
+      {
+        "year": 2015,
+        "value": 0
+      },
+      {
+        "year": 2016,
+        "value": 0
+      },
+      {
+        "year": 2017,
+        "value": 0
+      },
+      {
+        "year": 2018,
+        "value": 0
+      },
+      {
+        "year": 2019,
+        "value": 0
+      },
+      {
+        "year": 2020,
+        "value": 0
+      },
+      {
+        "year": 2021,
+        "value": 0
+      },
+      {
+        "year": 2022,
+        "value": 0
+      },
+      {
+        "year": 2023,
+        "value": 0
+      },
+      {
+        "year": 2024,
+        "value": 0
+      }
+    ]
+  },
+  "latest_status": {
+    "accreditors": "NECHE",
+    "action_labels": "Accepted Teach Out Plan; Accepted Voluntary Withdrawal of accreditation; Anna Maria College announced that its Board of Trustees had voted to cease academic operations at the end of the Spring 2026 semester.; Received a notation because the Commission found that the College is in danger of not meeting the Commission’s Standard on Institutional Resources; Voluntarily Surrendered Accreditation",
+    "active_actions": "adverse_action; notice",
+    "has_active_warning": false,
+    "has_active_warning_or_notice": true,
+    "has_active_adverse_action": true,
+    "latest_action_date": "2026-06-04",
+    "latest_action_year": "2026",
+    "action_count": 5
+  },
+  "actions": [
+    {
+      "accreditor": "NECHE",
+      "action_type": "adverse_action",
+      "action_label": "Accepted Teach Out Plan",
+      "action_label_short": "Accepted Teach Out Plan",
+      "action_scope": null,
+      "action_status": "active",
+      "action_date": "2026-06-04",
+      "action_year": "2026",
+      "notes": "Anna Maria College, Paxton, MA",
+      "source_url": "https://www.neche.org/recent-commission-actions/",
+      "source_title": "Recent Commission Actions - New England Commission Higher Education",
+      "source_page_url": "https://www.neche.org/recent-commission-actions/",
+      "source_page_modified": "2026-06-25",
+      "display_action": true,
+      "public_table_strategy": "scraper_backed_keep",
+      "hybrid_candidate": false,
+      "hybrid_reason": null,
+      "has_financial_profile": true,
+      "is_primary_tracker": true
+    },
+    {
+      "accreditor": "NECHE",
+      "action_type": "notice",
+      "action_label": "On April 23, 2026, Anna Maria College announced that its Board of Trustees had voted on April 22, 2026 to cease academic operations at the end of the Spring 2026 semester.",
+      "action_label_short": "Anna Maria College announced that its Board of Trustees had voted to cease academic operations at the end of the Spring 2026 semester.",
+      "action_scope": null,
+      "action_status": "active",
+      "action_date": "2026-04-27",
+      "action_year": "2026",
+      "notes": "Joint Statement by Anna Maria College and the Commission April 2026",
+      "source_url": "https://www.neche.org/commission-statements/joint-statement-by-anna-maria-college-and-the-commission-april-2026/",
+      "source_title": "Joint Statement by Anna Maria College and the Commission April 2026",
+      "source_page_url": "https://www.neche.org/commission-statements/joint-statement-by-anna-maria-college-and-the-commission-april-2026/",
+      "source_page_modified": "2026-04-27",
+      "display_action": true,
+      "public_table_strategy": "scraper_backed_keep",
+      "hybrid_candidate": false,
+      "hybrid_reason": null,
+      "has_financial_profile": true,
+      "is_primary_tracker": true
+    },
+    {
+      "accreditor": "NECHE",
+      "action_type": "adverse_action",
+      "action_label": "Voluntary Withdrawal Received",
+      "action_label_short": "Voluntarily Surrendered Accreditation",
+      "action_scope": null,
+      "action_status": "active",
+      "action_date": "2026-04-24",
+      "action_year": "2026",
+      "notes": "Voluntary Withdrawal Received | Anticipated closure date and accreditation withdrawal effective date of December 31, 2026",
+      "source_url": "https://ope.ed.gov/dapip/#/institution-profile/120607",
+      "source_title": "DAPIP Institutional Accreditation Action",
+      "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/120607",
+      "source_page_modified": null,
+      "display_action": true,
+      "public_table_strategy": "dapip_backed_keep",
+      "hybrid_candidate": false,
+      "hybrid_reason": null,
+      "has_financial_profile": true,
+      "is_primary_tracker": true
+    },
+    {
+      "accreditor": "NECHE",
+      "action_type": "adverse_action",
+      "action_label": "Accepted Voluntary Withdrawal of Accreditation",
+      "action_label_short": "Accepted Voluntary Withdrawal of accreditation",
+      "action_scope": null,
+      "action_status": null,
+      "action_date": "2026-04-24",
+      "action_year": "2026",
+      "notes": null,
+      "source_url": "https://www.neche.org/recent-commission-actions/",
+      "source_title": "Recent Commission Actions - New England Commission Higher Education",
+      "source_page_url": "https://www.neche.org/recent-commission-actions/",
+      "source_page_modified": null,
+      "display_action": true,
+      "public_table_strategy": null,
+      "hybrid_candidate": false,
+      "hybrid_reason": null,
+      "has_financial_profile": true,
+      "is_primary_tracker": true
+    },
+    {
+      "accreditor": "NECHE",
+      "action_type": "notice",
+      "action_label": "At its meeting on March 6, 2025, the New England Commission of Higher Education (NECHE) issued Anna Maria College a Notation because the Commission found that the College is in danger of not meeting the Commission’s Standard on Institutional Resources, specifically whether the…",
+      "action_label_short": "Received a notation because the Commission found that the College is in danger of not meeting the Commission’s Standard on Institutional Resources",
+      "action_scope": null,
+      "action_status": "active",
+      "action_date": "2025-03-21",
+      "action_year": "2025",
+      "notes": "Joint Statement by Anna Maria College and the Commission March 21, 2025",
+      "source_url": "https://www.neche.org/commission-statements/joint-statement-by-anna-maria-college-and-the-commission-march-21-2025/",
+      "source_title": "Joint Statement by Anna Maria College and the Commission March 21, 2025",
+      "source_page_url": "https://www.neche.org/commission-statements/joint-statement-by-anna-maria-college-and-the-commission-march-21-2025/",
+      "source_page_modified": "2025-03-21",
+      "display_action": true,
+      "public_table_strategy": "scraper_backed_keep",
+      "hybrid_candidate": false,
+      "hybrid_reason": null,
+      "has_financial_profile": true,
+      "is_primary_tracker": true
+    }
+  ],
+  "sources": [
+    {
+      "accreditor": "NECHE",
+      "source_title": "Recent Commission Actions - New England Commission Higher Education",
+      "source_url": "https://www.neche.org/recent-commission-actions/",
+      "source_page_url": "https://www.neche.org/recent-commission-actions/"
+    },
+    {
+      "accreditor": "NECHE",
+      "source_title": "Joint Statement by Anna Maria College and the Commission April 2026",
+      "source_url": "https://www.neche.org/commission-statements/joint-statement-by-anna-maria-college-and-the-commission-april-2026/",
+      "source_page_url": "https://www.neche.org/commission-statements/joint-statement-by-anna-maria-college-and-the-commission-april-2026/"
+    },
+    {
+      "accreditor": "NECHE",
+      "source_title": "DAPIP Institutional Accreditation Action",
+      "source_url": "https://ope.ed.gov/dapip/#/institution-profile/120607",
+      "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/120607"
+    },
+    {
+      "accreditor": "NECHE",
+      "source_title": "Joint Statement by Anna Maria College and the Commission March 21, 2025",
+      "source_url": "https://www.neche.org/commission-statements/joint-statement-by-anna-maria-college-and-the-commission-march-21-2025/",
+      "source_page_url": "https://www.neche.org/commission-statements/joint-statement-by-anna-maria-college-and-the-commission-march-21-2025/"
+    }
+  ]
+}

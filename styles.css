@@ -1,0 +1,4869 @@
+/* ---------- Hechinger-hosted brand fonts ---------- */
+@font-face {
+  font-family: "National";
+  src:
+    local("National Book"), local("National-Book"), local("National 2 Book"),
+    local("National Regular"), local("National-Regular"),
+    url("https://hechingerreport.org/wp-content/hechinger-fonts/NationalWeb-Book.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "National";
+  src:
+    local("National Book Italic"), local("National-BookItalic"), local("National 2 Book Italic"),
+    local("National Regular Italic"), local("National-RegularItalic"),
+    url("https://hechingerreport.org/wp-content/hechinger-fonts/NationalWeb-BookItalic.woff") format("woff");
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "National";
+  src:
+    local("National Semibold"), local("National-Semibold"),
+    /* The main site does not currently publish a semibold webfont, so
+       reuse bold as the closest served match. */
+    url("https://hechingerreport.org/wp-content/hechinger-fonts/NationalWeb-Bold.woff") format("woff");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "National";
+  src:
+    local("National Bold"), local("National-Bold"), local("National 2 Bold"),
+    url("https://hechingerreport.org/wp-content/hechinger-fonts/NationalWeb-Bold.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "National";
+  src:
+    local("National Black"), local("National-Black"), local("National 2 Black"),
+    url("https://hechingerreport.org/wp-content/hechinger-fonts/NationalWeb-Black.woff") format("woff");
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "National";
+  src:
+    local("National Black Italic"), local("National-BlackItalic"),
+    /* The main site does not currently publish a black italic webfont, so
+       reuse bold italic as the closest served match. */
+    url("https://hechingerreport.org/wp-content/hechinger-fonts/NationalWeb-BoldItalic.woff") format("woff");
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+}
+
+/* Tiempos stays sparing: superheads, blockquotes, and the home-page title. */
+@font-face {
+  font-family: "Tiempos Text";
+  src:
+    local("Tiempos Text Regular"),
+    local("TiemposText-Regular"),
+    url("https://hechingerreport.org/wp-content/hechinger-fonts/TiemposTextWeb-Regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Tiempos Text";
+  src:
+    local("Tiempos Text Regular Italic"),
+    local("TiemposText-RegularItalic"),
+    url("https://hechingerreport.org/wp-content/hechinger-fonts/TiemposTextWeb-RegularItalic.woff") format("woff");
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Tiempos Headline";
+  src:
+    local("Tiempos Headline Black"),
+    local("TiemposHeadline-Black"),
+    url("https://hechingerreport.org/wp-content/hechinger-fonts/TiemposHeadlineWeb-Black.woff") format("woff");
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Tiempos Headline";
+  src:
+    local("Tiempos Headline Black Italic"),
+    local("TiemposHeadline-BlackItalic"),
+    url("https://hechingerreport.org/wp-content/hechinger-fonts/TiemposHeadlineWeb-BlackItalic.woff") format("woff");
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+}
+
+:root {
+  /* National carries the interface; Tiempos is reserved for select accents. */
+  --font-body: "National", sans-serif;
+  --font-display: "National", sans-serif;
+  --font-ui: "National", sans-serif;
+  --font-accent-text: "Tiempos Text", serif;
+  --font-accent-display: "Tiempos Headline", serif;
+  --font-mono: "National", sans-serif;
+
+  /* Editorial palette. Outer paper is the warm tan around the page;
+     paper-page is the cream the layout sits on; cards stay white. */
+  --bg: #e4ddcc;
+  --paper-page: #faf7f0;
+  --paper: #ffffff;
+  --paper-2: #f3efe4;
+  --paper-3: #e7e1d2;
+
+  /* Inks: 4-step ramp matches the design (h1 → muted captions). */
+  --ink: #17150f;
+  --ink-2: #3a342a;
+  --ink-3: #5f5748;
+  --ink-4: #8a8271;
+  --muted: #3f3f46;
+
+  /* Hairlines used for separators and card borders. */
+  --line: #d8d1bf;
+  --line-2: #b9b09a;
+
+  /* Hechinger yellow + gold scale. --yellow / --gold preserved for
+     existing rules; the -soft / -pale / -gold tokens are new. */
+  --yellow: #ffcc33;
+  --yellow-soft: #ffe28a;
+  --gold: #ffcc33;
+  --hechinger-yellow: #ffcc33;
+  --hechinger-yellow-soft: #ffe7a3;
+  --hechinger-yellow-pale: #fff5d6;
+  --hechinger-gold: #ffcc33;
+  /* --hechinger-gold-deep is for any GOLD TEXT (eyebrow labels, the
+     related-card heading) — the lighter --hechinger-gold doesn't meet
+     WCAG AA against --paper-page. Decorative borders / underlines /
+     the intro-bar background continue to use --hechinger-gold since
+     contrast doesn't apply to non-text. */
+  --hechinger-gold-deep: #7a5818;
+
+  /* Colorblind-safe pos/neg pair (saturated blue / saturated brick).
+     Used for metric-strip fills and chart series. */
+  --pos: #1d4ea3;
+  --pos-deep: #153d82;
+  --neg: #b0342a;
+  --neg-deep: #8f281f;
+
+  /* Focus ring + status legacy tokens (kept for existing components). */
+  --focus: #0066cc;
+  --cyan: #00aeef;
+  --cyan-dark: #008fc5;
+  --status-blue: #005ab5;
+  --status-blue-dark: #00478f;
+  --status-orange: #dc3220;
+  --status-orange-dark: #b52618;
+  --line-blue: #005ab5;
+  --line-red: #dc3220;
+  --line-green: #009e73;
+  --line-orange: #e69f00;
+  --line-purple: #cc79a7;
+
+  --border: #dedede;
+  --grid: #d7d7d7;
+  --space-1: 12px;
+  --space-2: 24px;
+  --space-3: 24px;
+  --space-4: 24px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  /* 22px base so editorial copy reads comfortably at 100% zoom for
+     older readers on desktop without forcing browser zoom. */
+  font-size: 22px;
+  line-height: 1.6;
+  color: var(--ink);
+  /* Body matches .page so the cream paper bleeds to the viewport edges
+     instead of showing a tan band on either side of the 1040px content
+     column. The .page max-width still holds the content layout — only
+     the visible background is full-bleed. */
+  background: var(--paper-page);
+}
+
+::selection {
+  background: var(--hechinger-yellow);
+  color: var(--ink);
+}
+
+/* Skip-to-content link — visible only on keyboard focus.
+   Uses fixed positioning so it doesn't disturb the page flow. */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 8px;
+  padding: 10px 18px;
+  background: var(--ink);
+  color: var(--paper-page);
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: 9999;
+  transition: top 0.1s;
+}
+
+.skip-link:focus {
+  top: 8px;
+}
+
+/* Screen-reader-only utility: visually hidden but accessible to AT */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* The previous .table-filter-label rule that lived here was an
+   earlier muted/.88rem treatment; the editorial-calm uppercase Inter
+   version lower in the file (next to the .table-toolbar block)
+   supersedes it, so the older rule has been removed to satisfy
+   stylelint's no-duplicate-selectors. */
+
+/* ---------- Page shell ----------
+   ProPublica-style centered container: max-width 1280px (close to
+   their --p-col-size--14 ≈ 78rem / 1248px from the propublica.org
+   grid system). On wider viewports cream paper extends past the
+   page on both sides — the body bg matches --paper-page so there's
+   no visible boundary, the content just stops scaling out at the
+   max-width. Footer flows naturally after content; no sticky-footer
+   flex chain (that left a gap above the footer). */
+.page {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 0 32px;
+  background: var(--paper-page);
+  color: var(--ink);
+  position: relative;
+}
+
+/* ---------- Site masthead (logo + wordmark, top of page) ----------
+   The wordmark anchor wraps both the H tile and the text so the whole
+   block is one tab stop. */
+.site-masthead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* Side padding matches the .main-wrap clamp() so the wordmark/
+     logo and body content share the same viewport-scaled inset. */
+  padding: 22px clamp(20px, 3vw, 32px);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-masthead .wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 100%;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.site-masthead .wordmark:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.site-masthead .logo {
+  width: 54px;
+  height: 54px;
+  flex: 0 0 54px;
+  display: block;
+  background: center / contain no-repeat url("assets/HRect Hechinger Logo Square.png");
+}
+
+/* Keep the logo span empty in the DOM so the parent wordmark anchor's
+   aria-label remains the only announced label; the visible mark now
+   comes from the square logo asset. */
+.site-masthead .logo::after {
+  content: none;
+}
+
+.site-masthead .wm-text {
+  width: clamp(176px, 27vw, 224px);
+  aspect-ratio: 404 / 57;
+  flex: 0 1 clamp(176px, 27vw, 224px);
+  display: block;
+  background: left center / contain no-repeat url("assets/Full Logo Hechinger Transparent-Text-Only.PNG");
+  overflow: hidden;
+  white-space: nowrap;
+  text-indent: 101%;
+}
+
+/* ---------- Help button (? circle, top-right of masthead) ---------- */
+.help-btn-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* Transparent bridge fills the 8px gap between button and tooltip so
+   :hover stays active as the cursor moves from button to tooltip link. */
+.help-btn-wrap::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 8px;
+}
+
+.help-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.help-btn:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+}
+
+.help-tooltip {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: var(--ink);
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.5;
+  padding: 8px 12px;
+  border-radius: 6px;
+  display: none;
+  white-space: normal;
+  max-width: 260px;
+  z-index: 100;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+}
+
+.help-tooltip a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.help-btn-wrap:hover .help-tooltip,
+.help-btn-wrap:focus-within .help-tooltip {
+  display: block;
+}
+
+.site-masthead .help-btn-wrap .help-tooltip {
+  width: max-content;
+  max-width: calc(100vw - 40px);
+  white-space: nowrap;
+}
+
+/* ---------- Tool guide link (red pill, "New to this tool?") ---------- */
+.tool-guide-link {
+  display: inline-block;
+  padding: 1px 8px 3px;
+  border-radius: 4px;
+  background: var(--neg);
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.tool-guide-link:hover,
+.tool-guide-link:focus-visible {
+  opacity: 0.88;
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* ---------- School guide link section (bottom of school profile) ---------- */
+.school-guide-link-wrap {
+  padding: 16px clamp(20px, 3vw, 32px);
+  text-align: center;
+}
+
+.school-guide-link-wrap .tool-guide-link {
+  padding: 12px 28px;
+  border-radius: 999px;
+  background: var(--yellow);
+  color: #000 !important;
+  -webkit-text-fill-color: #000;
+  font-family: var(--font-body);
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.1;
+  text-decoration: none;
+}
+
+.school-guide-link-wrap .tool-guide-link:hover,
+.school-guide-link-wrap .tool-guide-link:focus-visible,
+.school-guide-link-wrap .tool-guide-link:visited {
+  color: #000 !important;
+  -webkit-text-fill-color: #000;
+  text-decoration: none;
+  opacity: 0.92;
+}
+
+/* ---------- EMMA bond-rating search link ---------- */
+.emma-search-link {
+  display: inline-block;
+  margin: 4px auto 16px;
+  padding: 8px 20px 10px;
+  border-radius: 4px;
+  background: var(--ink);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: opacity 0.15s ease;
+}
+
+.emma-search-link:hover,
+.emma-search-link:focus-visible {
+  opacity: 0.82;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Flex row holding the Search EMMA button + its ? help button */
+.emma-link-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 4px auto 16px;
+}
+
+.emma-link-row .emma-search-link {
+  margin: 0;
+}
+
+/* Center the tooltip below the ? button (masthead uses right: 0;
+   here the button sits mid-page so center it instead) */
+.emma-help-wrap .help-tooltip {
+  right: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 340px;
+}
+
+/* ---------- Top tabs (editorial-calm underlined links) ----------
+   Replaces the previous yellow-pill button row. Active tab is marked
+   with a gold underline and bold weight; aria-current="page" is the
+   source of truth so styling stays in sync with state. */
+.top-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  /* Side padding matches site-masthead and main-wrap clamp(). */
+  padding: 0 clamp(20px, 3vw, 32px);
+  border-bottom: 1px solid var(--line);
+  margin: 0;
+  background: transparent;
+  /* Distribute the six tabs across the full row width on desktop —
+     "Finances" sits flush left, "Methodology" flush right, and the
+     extra space spreads between the inner four. Replaces the
+     previous left-packed flex-start that left a big empty band on
+     the right of the row. */
+  justify-content: space-between;
+}
+
+.top-tab {
+  display: inline-flex;
+  align-items: center;
+  padding: 18px 16px;
+  min-height: 52px;
+  margin-bottom: -1px;
+  font-family: var(--font-accent-display);
+  font-weight: 900;
+  font-size: 20px;
+  letter-spacing: 0;
+  color: var(--ink-2);
+  text-decoration: none;
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  box-shadow: none;
+  line-height: 1.2;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  transform: none;
+}
+
+.top-tab:hover {
+  color: var(--ink);
+  background: transparent;
+  border-color: transparent;
+  transform: none;
+}
+
+.top-tab:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 2px;
+  background: transparent;
+  border-bottom-color: transparent;
+  transform: none;
+}
+
+.top-tab[aria-current="page"],
+.top-tab.is-active {
+  color: var(--ink);
+  background: transparent;
+  border-bottom-color: var(--hechinger-gold);
+  font-weight: 600;
+  box-shadow: none;
+  transform: none;
+}
+
+/* ---------- Main wrap (content gutter inside .page) ----------
+   Modest side gutter inside the 1280px page; scales down on smaller
+   screens via clamp() but caps at 32px on desktop so the content
+   uses most of the page width. */
+.main-wrap {
+  padding: 40px clamp(20px, 3vw, 32px) 0;
+}
+
+/* ---------- Homepage A2 layout ----------
+   Scopes the A2 redesign to index.html only so the other pages keep
+   the existing masthead, tab row, and landing-page treatments. */
+.home-page {
+  background: var(--paper-page);
+}
+
+.home-page .page {
+  padding-bottom: 32px;
+}
+
+.home-guide-btn {
+  text-decoration: none;
+}
+
+.home-page .top-tabs {
+  justify-content: space-between;
+}
+
+.home-page .top-tab {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.home-page .top-tab[aria-current="page"],
+.home-page .top-tab.is-active {
+  border-bottom-color: var(--hechinger-gold);
+  font-weight: 600;
+}
+
+.home-page .main-wrap {
+  max-width: none;
+}
+
+.home-page-main {
+  display: block;
+}
+
+.home-hero {
+  text-align: center;
+  max-width: 100%;
+}
+
+.home-page .home-hero h1 {
+  max-width: none;
+  width: 100%;
+  margin: 0 auto 24px;
+  display: block;
+  font-size: 60px;
+  line-height: 0.98;
+  letter-spacing: -0.01em;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.home-search-panel {
+  max-width: 860px;
+  margin: 36px auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.home-page .search-helper-link {
+  margin: 0;
+  text-align: center;
+}
+
+.home-page .tool-guide-link {
+  padding: 12px 28px;
+  border-radius: 999px;
+  background: var(--yellow);
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000;
+  font-family: var(--font-body);
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.1;
+  text-decoration: none;
+}
+
+.home-page .tool-guide-link:hover,
+.home-page .tool-guide-link:focus-visible {
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000;
+  text-decoration: none;
+  opacity: 0.92;
+}
+
+.home-page .search-input-wrap {
+  width: 100%;
+  padding: 0 22px;
+  border: 1.5px solid var(--ink);
+  border-radius: 0;
+  background: var(--paper);
+}
+
+.home-page .search-input-wrap:focus-within {
+  border-color: var(--ink);
+  box-shadow: 0 0 0 3px var(--yellow-soft);
+}
+
+.home-page .search-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 14px;
+  color: var(--ink);
+}
+
+.home-page .search {
+  padding: 18px 0;
+  font-size: 21px;
+  color: var(--ink);
+}
+
+.home-page .search::placeholder {
+  color: #8c887a;
+  opacity: 1;
+}
+
+.home-page .results {
+  width: 100%;
+  margin-top: 0;
+}
+
+.home-rule {
+  height: 1px;
+  margin: 52px 0 48px;
+  border: 0;
+  background: var(--line);
+}
+
+.home-story-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.home-story-copy {
+  min-width: 0;
+  padding-left: 36px;
+}
+
+.home-story-copy p {
+  margin: 0 0 20px;
+  font-family: var(--font-body);
+  font-size: 27px;
+  line-height: 1.48;
+  color: var(--ink-2);
+  text-wrap: pretty;
+}
+
+.home-story-intro {
+  font-family: var(--font-accent-text);
+  font-size: 32px !important;
+  line-height: 1.35;
+  color: var(--ink) !important;
+}
+
+.home-illustration {
+  margin: 0;
+  display: grid;
+  grid-template-rows: auto auto;
+  align-self: start;
+}
+
+.home-illustration-frame {
+  border: 0;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  overflow: hidden;
+}
+
+.home-illustration-frame img {
+  display: block;
+  width: 108%;
+  height: auto;
+  max-width: none;
+  object-fit: contain;
+  object-position: center;
+  transform: none;
+  margin: -4px auto;
+}
+
+.home-page .pg-foot {
+  margin-top: 72px;
+  padding-top: 36px;
+  border-top: 1px solid var(--line);
+  text-align: center;
+}
+
+.home-page .pg-foot > * {
+  display: block;
+}
+
+.home-page .pg-foot > * + * {
+  margin-top: 0;
+  margin-left: 0;
+}
+
+.home-page .pg-foot .site-nav-copyright {
+  gap: 28px;
+}
+
+.home-page .pg-foot .ftr-info-msg {
+  max-width: 760px;
+  font-family: var(--font-body);
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--ink-2);
+}
+
+.home-page .pg-foot .ftr-nav-items {
+  gap: 10px 34px;
+}
+
+.home-page .pg-foot .ftr-nav-link {
+  font-family: var(--font-body);
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--ink);
+}
+
+@media (max-width: 1100px) {
+  .home-page .top-tabs {
+    justify-content: space-between;
+  }
+
+  .home-page .main-wrap {
+    max-width: none;
+  }
+
+  .home-hero h1 {
+    font-size: 56px;
+    white-space: normal;
+  }
+
+  .home-page .home-hero h1 {
+    white-space: normal;
+  }
+
+  .home-story-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .home-illustration {
+    max-width: 420px;
+  }
+
+  .home-story-copy {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .home-page .top-tabs {
+    justify-content: flex-start;
+  }
+
+  .home-page .top-tab {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  .home-page .main-wrap {
+    max-width: none;
+  }
+
+  .home-hero h1 {
+    font-size: clamp(40px, 11vw, 52px);
+    line-height: 1.02;
+  }
+
+  .home-search-panel {
+    margin-top: 28px;
+    gap: 14px;
+  }
+
+  .home-page .tool-guide-link {
+    font-size: 18px;
+    padding: 10px 22px;
+  }
+
+  .home-page .search-input-wrap {
+    padding: 0 16px;
+  }
+
+  .home-page .search {
+    padding: 16px 0;
+    font-size: 18px;
+  }
+
+  .home-rule {
+    margin: 36px 0 32px;
+  }
+
+  .home-illustration-frame {
+    padding: 0;
+  }
+
+  .home-story-copy p {
+    font-size: 23px;
+  }
+
+  .home-story-intro {
+    font-size: 28px !important;
+  }
+
+  .home-page .pg-foot {
+    margin-top: 48px;
+    padding-top: 28px;
+  }
+
+  .home-page .pg-foot .ftr-info-msg,
+  .home-page .pg-foot .ftr-nav-link {
+    font-size: 18px;
+  }
+}
+
+/* ---------- Page footer ----------
+   Sits naturally at end of content and uses the site's existing paper
+   background rather than a separate dark band. */
+.pg-foot {
+  margin: 40px 0 0;
+  padding: 28px 0 0;
+  border-top: 1px solid var(--line);
+  color: var(--ink);
+  text-align: left;
+}
+
+.pg-foot > * {
+  display: block;
+}
+
+.pg-foot > * + * {
+  margin-top: 8px;
+}
+
+.pg-foot .ftr-bottom {
+  width: 100%;
+}
+
+.pg-foot .ftr-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px 40px;
+  align-items: start;
+}
+
+.pg-foot .ftr-column {
+  display: grid;
+  gap: 16px;
+  align-content: start;
+}
+
+.pg-foot .ftr-column--left {
+  justify-items: start;
+  text-align: left;
+}
+
+.pg-foot .ftr-column--right {
+  justify-items: end;
+  text-align: right;
+}
+
+.pg-foot .ftr-info-msg {
+  margin: 0;
+  max-width: 68ch;
+  font-family: var(--font-body);
+  font-style: normal;
+  font-size: 19px;
+  line-height: 1.55;
+  color: var(--ink-2);
+  text-align: right;
+}
+
+.pg-foot .ftr-site-nav {
+  width: auto;
+}
+
+.pg-foot .ftr-nav-items {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.pg-foot .ftr-nav-item {
+  margin: 0;
+}
+
+.pg-foot .ftr-nav-link {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.pg-foot .ftr-credit-kicker {
+  margin: 0;
+  font-family: var(--font-ui);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  text-align: left;
+}
+
+.pg-foot .ftr-credit-kicker--right {
+  text-align: right;
+}
+
+.pg-foot .ftr-credit-summary,
+.pg-foot .ftr-credit-meta,
+.pg-foot .ftr-credit-illustration,
+.pg-foot .ftr-credit-updated {
+  margin: 0;
+  max-width: 38ch;
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--ink-2);
+  text-align: left;
+}
+
+.pg-foot .ftr-credit-summary {
+  font-size: 22px;
+  color: var(--ink);
+}
+
+.pg-foot .ftr-credit-illustration {
+  font-size: 16px;
+  color: var(--ink-3);
+}
+
+.pg-foot .ftr-credit-updated {
+  font-family: var(--font-ui);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+/* ---------- Editorial hero blocks ----------
+   Two layouts:
+   - .hero-split: index.html only — H1 + lede on the left, cartoon SVG on
+     the right (1fr / 360px grid). Collapses to single column on mobile.
+   - .hero-solo-center: cuts/accreditation/research/methodology — H1 and
+     lede paragraphs centered on the page midline, no callout. */
+.hero-split {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 56px;
+  align-items: center;
+  margin: 8px 0 44px;
+}
+
+.hero-solo {
+  margin: 8px 0 44px;
+  max-width: 780px;
+}
+
+.hero-solo-center {
+  margin: 8px auto 44px;
+  max-width: none;
+  width: 100%;
+  text-align: center;
+}
+
+.hero-text {
+  min-width: 0;
+}
+
+/* Display H1s use National Black Italic per brand guidance. */
+.hero-split h1,
+.hero-solo h1,
+.hero-solo-center h1,
+h1.serif {
+  font-family: var(--font-display);
+  font-size: 56px;
+  line-height: 1.05;
+  font-style: italic;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  margin: 0 0 24px;
+  color: var(--ink);
+  max-width: 14ch;
+}
+
+#home-title {
+  font-family: var(--font-accent-display);
+  font-style: normal;
+  font-weight: 900;
+  letter-spacing: -0.025em;
+}
+
+.hero-solo h1 {
+  max-width: 18ch;
+}
+
+/* Centered hero forces full-width text alignment so neither the H1 nor
+   the lede inherits a narrower max-width from .ec h1 / .ec .lede style. */
+.hero-solo-center h1 {
+  max-width: none;
+  width: 100%;
+  margin: 0 auto 24px;
+  text-align: center;
+}
+
+.hero-solo-center .lede {
+  max-width: 62ch;
+  margin: 0 auto 14px;
+  text-align: center;
+}
+
+.hero-solo-center .lede:last-child {
+  margin-bottom: 0;
+}
+
+/* Short explanatory intro copy uses National Book Italic. */
+.lede {
+  font-family: var(--font-body);
+  font-size: 22px;
+  line-height: 1.55;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--ink-2);
+  max-width: 52ch;
+  margin: 0 0 18px;
+}
+
+body[data-search-source="cuts"] .hero-solo-center .lede,
+body[data-search-source="accreditation"] .hero-solo-center .lede,
+body[data-search-source="research"] .hero-solo-center .lede {
+  font-style: normal;
+  text-align: left;
+}
+
+body[data-search-source="cuts"] .hero-solo-center .lede.lede-intro,
+body[data-search-source="accreditation"] .hero-solo-center .lede.lede-intro,
+body[data-search-source="research"] .hero-solo-center .lede.lede-intro {
+  font-style: italic;
+  text-align: center;
+}
+
+.lede strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.lede a {
+  color: var(--pos-deep);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Solid-color decorative panel on the homepage hero (right column).
+   Sized to the same 360 × 420 box that previously held the cartoon
+   college SVG so the hero column geometry doesn't shift. */
+.banner {
+  position: relative;
+  width: 360px;
+  height: 420px;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #ffcc33;
+  border: 1px solid var(--line);
+  margin: 0;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.img-credit {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--ink-3);
+  text-align: center;
+  margin-top: 6px;
+}
+
+.illustration-credit {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--ink-3);
+  text-align: center;
+  padding: 0 clamp(20px, 3vw, 32px) 8px;
+}
+
+.banner.short {
+  height: 280px;
+}
+
+/* Hidden timestamp line emitted by the JS for cuts/accred/research data
+   "as of" notes. Now styled to fit under the centered lede instead of
+   inside the old gold-bar callout box. Uses --ink-3 (not --ink-4) so
+   the small italic text meets WCAG AA contrast against cream paper. */
+.data-as-of {
+  font-family: var(--font-ui);
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 700;
+  color: var(--ink-3);
+  letter-spacing: 0.02em;
+  margin: 6px auto 0;
+}
+
+/* ---------- .intro-callout (Methodology editorial editor's-note only) ----------
+   Originally used as the gold-bar paragraph block on every landing page.
+   The four landing pages (cuts/accred/research/methodology) have moved
+   their intro copy into .hero-solo-center; this block is now reserved
+   for the methodology page's editor's note (gold vertical bar + white
+   box) and any future single-purpose callout. */
+.intro-callout {
+  display: grid;
+  grid-template-columns: 4px 1fr;
+  gap: 20px;
+  margin: 28px auto 40px;
+  max-width: 880px;
+  align-items: stretch;
+}
+
+.intro-bar {
+  background: var(--hechinger-gold);
+  border-radius: 2px;
+}
+
+.intro-box {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 24px 32px;
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--ink-2);
+  box-shadow: none;
+}
+
+.intro-box p {
+  margin: 0 0 12px;
+}
+
+.intro-box p:last-child {
+  margin-bottom: 0;
+}
+
+.intro-box a {
+  color: var(--pos-deep);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.intro-box .data-as-of {
+  margin-top: 14px;
+}
+
+/* ---------- Search panel ----------
+   The .search-panel itself is now just a transparent layout
+   container — the visible bordered box is .search-input-wrap below.
+   This way the "Search by institution" label sits in muted uppercase
+   ABOVE the search box (not inside a card with the input). */
+.search-panel {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  margin: 8px auto var(--space-3);
+  max-width: 980px;
+  position: relative;
+}
+
+.school-search-wrap {
+  display: block;
+}
+
+.school-search-summary {
+  display: none;
+  max-width: 780px;
+  margin: 0 auto 10px;
+  cursor: pointer;
+  list-style: none;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 8px 12px;
+  text-align: center;
+  min-height: 18px;
+}
+
+.school-search-summary::-webkit-details-marker {
+  display: none;
+}
+
+.school-search-summary::before {
+  content: "▾";
+  font-size: 1.1rem;
+  line-height: 1;
+  color: #333;
+}
+
+.school-search-wrap[open] .school-search-summary::before {
+  content: "▴";
+}
+
+/* "SEARCH BY INSTITUTION" label sits above the input box — uppercase
+   muted Inter, not bold serif. */
+.search-label {
+  display: block;
+  margin: 0 0 14px;
+  font-family: var(--font-ui);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+/* The bordered, rounded box that visually contains the icon + input.
+   Border highlights gold on focus-within so the whole control reads
+   as a single focusable element. */
+.search-input-wrap {
+  display: flex;
+  align-items: center;
+  background: var(--paper);
+  border: 1.5px solid var(--line-2);
+  border-radius: 6px;
+  padding: 0 18px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.search-input-wrap:focus-within {
+  border-color: var(--hechinger-gold);
+  box-shadow: 0 0 0 3px var(--hechinger-yellow-soft);
+}
+
+.search-icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  color: var(--ink-3);
+  margin-right: 14px;
+}
+
+.search {
+  flex: 1;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  padding: 18px 0;
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-style: italic;
+  color: var(--ink);
+}
+
+.search::placeholder {
+  color: var(--ink-3);
+  opacity: 0.7;
+  font-style: italic;
+}
+
+.search:focus-visible {
+  outline: 0;
+}
+
+.results {
+  margin-top: 12px;
+  display: none;
+}
+
+.results.has-results {
+  display: block;
+  max-height: min(420px, 60vh);
+  overflow-y: auto;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--paper);
+  box-shadow: 0 12px 28px rgba(25, 31, 56, 0.12);
+  scrollbar-gutter: stable;
+}
+
+.result-section + .result-section {
+  border-top: 1px solid var(--line);
+}
+
+.result-section-title {
+  padding: 14px 18px 8px;
+  font-family: var(--font-ui);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.result-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.35;
+  text-align: left;
+  text-decoration: none;
+  color: var(--ink);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  padding: 14px 18px;
+  cursor: pointer;
+}
+
+.result-item + .result-item {
+  border-top: 1px solid var(--line);
+}
+
+.result-item-label {
+  font-size: 1.05rem;
+  line-height: 1.35;
+}
+
+.result-item-meta {
+  font-family: var(--font-ui);
+  font-size: 0.92rem;
+  line-height: 1.35;
+  color: var(--ink-3);
+}
+
+.result-item.is-state .result-item-label {
+  font-weight: 700;
+}
+
+.result-item:hover {
+  background: #fff8db;
+}
+
+.result-item[aria-selected="true"] {
+  background: #fff8db;
+}
+
+.result-item:focus-visible {
+  outline: 2px solid var(--status-blue);
+  outline-offset: -2px;
+  background: #fff8db;
+}
+
+.result-item.is-empty {
+  padding: 16px 18px;
+  cursor: default;
+}
+
+.result-item.is-empty:hover {
+  background: transparent;
+}
+
+/* ---------- School Guide Landing State ----------
+   Used only on school.html when no unitid is selected. */
+.guide-only {
+  display: block;
+}
+
+.guide-hero {
+  max-width: 860px;
+  margin: 28px auto 22px;
+  padding: 0 0 8px;
+}
+
+.guide-top-banner {
+  margin-top: 0;
+  margin-bottom: 28px;
+}
+
+.guide-hero-copy {
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.guide-hero .serif {
+  max-width: none;
+  width: 100%;
+  margin: 0 0 18px;
+  text-align: center;
+}
+
+.guide-deck {
+  margin: 0 auto 14px;
+  max-width: 760px;
+  font-family: var(--font-body);
+  font-size: 32px;
+  line-height: 1.35;
+  color: var(--ink);
+  font-style: italic;
+}
+
+.guide-support {
+  margin: 0 auto 16px;
+  max-width: 760px;
+  font-family: var(--font-body);
+  font-size: 21px;
+  line-height: 1.5;
+  color: var(--ink-2);
+}
+
+.guide-body {
+  margin: 0 auto 12px;
+  max-width: 760px;
+  font-family: var(--font-body);
+  font-size: 21px;
+  line-height: 1.62;
+  color: var(--ink-2);
+  text-align: center;
+}
+
+.guide-point-list {
+  display: inline-block;
+  max-width: 760px;
+  margin: 0 auto 12px;
+  padding-left: 28px;
+  text-align: left;
+}
+
+.guide-point-list .guide-body {
+  margin: 0 0 14px;
+  text-align: left;
+}
+
+.guide-inline-red {
+  display: inline-block;
+  padding: 1px 8px 3px;
+  border-radius: 4px;
+  background: var(--neg);
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.guide-inline-gold {
+  display: inline-block;
+  padding: 1px 8px 3px;
+  border-radius: 4px;
+  background: var(--hechinger-gold);
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.guide-inline-red-warning {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.guide-inline-warning-tooltip {
+  position: relative;
+}
+
+.guide-inline-warning-tooltip:hover .warning-sign-tooltip,
+.guide-inline-warning-tooltip:focus .warning-sign-tooltip,
+.guide-inline-warning-tooltip:focus-within .warning-sign-tooltip {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.guide-warning-icon {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='%23f7d54a'/%3E%3Ccircle cx='32' cy='32' r='22' fill='none' stroke='%23111' stroke-width='2'/%3E%3Crect x='28.5' y='17' width='7' height='24' rx='3.5' fill='%23111'/%3E%3Ccircle cx='32' cy='47.5' r='3.5' fill='%23111'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.guide-learn-more {
+  margin-top: 18px;
+  text-align: center;
+}
+
+.guide-intro {
+  border-top: 1px solid var(--line);
+  padding-top: 20px;
+}
+
+.guide-subhead {
+  margin: 18px 0 18px;
+  font-family: var(--font-display);
+  font-size: 46px;
+  line-height: 1.12;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  text-align: center;
+}
+
+.guide-subhead::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: var(--hechinger-gold);
+  margin: 10px auto 0;
+}
+
+.guide-bullet-list {
+  display: inline-block;
+  max-width: 560px;
+  margin: 10px auto 0;
+  padding-left: 22px;
+  text-align: left;
+  font-family: var(--font-body);
+  font-size: 21px;
+  line-height: 1.62;
+  color: var(--ink-2);
+}
+
+.guide-bullet-list a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--hechinger-gold);
+}
+
+.guide-bullet-list a:hover {
+  color: var(--hechinger-gold-deep);
+}
+
+.guide-bullet-list li + li {
+  margin-top: 14px;
+}
+
+.guide-search-helper {
+  margin: 12px 2px 0;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.45;
+  color: var(--ink-3);
+  text-align: center;
+}
+
+#school-search-wrap .search-label {
+  text-align: left;
+}
+
+.home-layout .search-label,
+.home-layout .search-helper-link {
+  text-align: center;
+}
+
+.home-layout .tool-guide-link {
+  font-size: 20px;
+  padding: 3px 14px 5px;
+}
+
+#school-search-wrap .search-panel {
+  max-width: none;
+  margin: 0 0 40px;
+}
+
+.school-search-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 14px;
+}
+
+#school-search-wrap .school-guide-link-wrap {
+  padding: 0;
+  text-align: right;
+}
+
+#school-search-wrap .school-guide-link-wrap .tool-guide-link {
+  display: inline-block;
+  padding: 0 0 6px;
+  border-radius: 0;
+  background: transparent;
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink);
+  font-family: var(--font-ui);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+  border-bottom: 3px solid var(--hechinger-gold);
+}
+
+#school-search-wrap .school-guide-link-wrap .tool-guide-link:hover,
+#school-search-wrap .school-guide-link-wrap .tool-guide-link:focus-visible,
+#school-search-wrap .school-guide-link-wrap .tool-guide-link:visited {
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink);
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+.guide-jump-links {
+  max-width: 860px;
+  margin: 10px auto 26px;
+  padding: 14px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px 26px;
+  border-top: 1px solid var(--line);
+}
+
+body[data-search-page="school.html"] #guide-jump-links,
+body[data-search-page="methodology.html"] #methodology-jump-links {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  padding: 12px 0 8px;
+  background: var(--paper-page);
+  border-bottom: 1px solid var(--line);
+}
+
+body[data-search-page="school.html"] #profile-jump-links {
+  max-width: none;
+  margin: 34px 0 0;
+  padding: 12px 0 8px;
+  justify-content: flex-start;
+  gap: 18px 42px;
+  border-top: 0;
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: var(--paper-page);
+}
+
+.profile-jump-links-label {
+  font-family: var(--font-ui);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  white-space: nowrap;
+}
+
+body[data-search-page="school.html"] .section-block {
+  text-align: center;
+}
+
+body[data-search-page="school.html"] .section-title {
+  text-align: center;
+  margin: 48px auto 6px;
+}
+
+body[data-search-page="school.html"] .section-title::after {
+  margin: 10px auto 0;
+}
+
+body[data-search-page="school.html"] .section-disclosure-summary {
+  text-align: center;
+}
+
+body[data-search-page="school.html"] .section-disclosure-hint {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body[data-search-page="school.html"] .section-copy,
+body[data-search-page="school.html"] .section-copy-block,
+body[data-search-page="school.html"] .graphic-source {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.guide-jump-links a {
+  font-family: var(--font-ui);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  padding-bottom: 3px;
+  transition: border-color 140ms ease, color 140ms ease;
+}
+
+.guide-jump-links a:hover {
+  border-bottom-color: var(--hechinger-gold);
+  color: var(--hechinger-gold-deep);
+}
+
+.guide-jump-links a.is-active {
+  border-bottom-color: var(--hechinger-yellow);
+}
+
+body[data-search-page="school.html"] .section-block,
+body[data-search-page="school.html"] #school-related-section,
+body[data-search-page="school.html"] #school-bottom-search-section {
+  scroll-margin-top: 92px;
+}
+
+.guide-section {
+  max-width: 860px;
+  margin: 0 auto 46px;
+}
+
+.guide-legend-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.guide-legend-item {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 20px 22px;
+}
+
+.guide-legend-item p {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 20px;
+  line-height: 1.55;
+  color: var(--ink-2);
+}
+
+.guide-chip {
+  display: inline-block;
+  width: 42px;
+  height: 18px;
+  margin-bottom: 12px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+}
+
+.guide-chip-blue {
+  background: var(--pos);
+  border-color: var(--pos-deep);
+}
+
+.guide-chip-red {
+  background: var(--neg);
+  border-color: var(--neg-deep);
+}
+
+.guide-chip-yellow {
+  background: var(--hechinger-yellow-pale);
+  border-color: var(--hechinger-yellow-soft);
+}
+
+.guide-note {
+  margin: 14px 0 0;
+  font-family: var(--font-body);
+  font-size: 21px;
+  line-height: 1.62;
+  color: var(--ink-3);
+  text-align: center;
+}
+
+.guide-note a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--hechinger-gold);
+}
+
+.guide-note a:hover {
+  color: var(--hechinger-gold-deep);
+}
+
+.guide-search-copy {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.guide-search-copy p {
+  margin: 0 0 14px;
+  font-family: var(--font-body);
+  font-size: 21px;
+  line-height: 1.62;
+  color: var(--ink-2);
+}
+
+.guide-search-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.guide-search-example {
+  margin: 28px auto 0;
+  max-width: 860px;
+}
+
+.guide-search-example img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  box-shadow: 0 12px 28px rgba(25, 31, 56, 0.08);
+}
+
+.guide-emphasis {
+  margin: 22px auto 0;
+  max-width: 760px;
+  font-family: var(--font-body);
+  font-size: 21px;
+  line-height: 1.55;
+  color: var(--ink);
+  text-align: center;
+}
+
+.guide-example {
+  padding: 28px 30px 32px;
+  background: linear-gradient(180deg, #fcfaf4 0%, #ffffff 100%);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  position: relative;
+  overflow: visible;
+}
+
+.guide-example + .guide-example {
+  margin-top: 28px;
+}
+
+.guide-example-mast {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.guide-example-school-name {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 50px;
+  line-height: 1.08;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.guide-example-meta {
+  margin: 10px 0 8px;
+  font-family: var(--font-body);
+  font-size: 20px;
+  font-style: italic;
+  color: var(--ink-3);
+}
+
+.guide-example-section-title {
+  margin: 26px auto 6px;
+}
+
+body[data-search-page="school.html"] .guide-example-section-copy {
+  max-width: 28rem;
+  margin: 16px auto 0;
+  padding: 0 12px;
+  text-align: left;
+}
+
+#guide-example-title {
+  margin-top: 18px;
+}
+
+.guide-example-note {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--ink-3);
+}
+
+.guide-sample-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 4px;
+}
+
+.guide-example-board {
+  position: relative;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.guide-sample-card {
+  margin: 0;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.guide-sample-chart-card {
+  justify-content: flex-start;
+  gap: 10px;
+  min-height: 196px;
+  padding: 18px 20px 14px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  color: var(--ink);
+}
+
+.guide-sample-mini-chart-title {
+  margin: 0;
+  text-align: center;
+  font-family: var(--font-accent-display);
+  font-size: 24px;
+  line-height: 1.08;
+  font-weight: 900;
+  color: var(--ink);
+}
+
+.guide-sample-mini-chart-title .sub {
+  display: block;
+  margin-top: 6px;
+  font-family: var(--font-body);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.35;
+  color: var(--ink-3);
+}
+
+.guide-sample-chart-svg {
+  width: 100%;
+  height: 86px;
+  overflow: visible;
+}
+
+.guide-sample-chart-axis {
+  stroke: rgba(62, 52, 44, 0.34);
+  stroke-width: 1.8;
+}
+
+.guide-sample-chart-grid {
+  fill: none;
+  stroke: rgba(62, 52, 44, 0.12);
+  stroke-width: 1;
+}
+
+.guide-sample-chart-line {
+  fill: none;
+  stroke: #005ab5;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.guide-sample-chart-point {
+  fill: #005ab5;
+}
+
+body[data-search-page="school.html"] .guide-sample-card.metric-strip[data-arrow]::before,
+body[data-search-page="school.html"] .guide-sample-card.metric-strip.negative::before,
+body[data-search-page="school.html"] .guide-sample-card.metric-strip.neg::before {
+  top: auto;
+  bottom: 14px;
+  left: 16px;
+  transform: none;
+}
+
+body[data-search-page="school.html"] .guide-sample-card.metric-strip.is-visible[data-arrow]::before {
+  transform: none;
+}
+
+.guide-sample-card .metric-statement {
+  font-size: 24px;
+}
+
+.guide-sample-card .metric-question {
+  font-size: 22px;
+}
+
+.guide-sample-card .metric-answer {
+  font-size: 30px;
+}
+
+.guide-sample-card.guide-arrow-right[data-arrow]::before {
+  left: auto;
+  right: -48px;
+}
+
+.guide-example-callouts {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.guide-callout {
+  position: absolute;
+  width: 188px;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: rgba(255, 252, 245, 0.96);
+  box-shadow: 0 10px 22px rgba(41, 31, 19, 0.08);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--ink-2);
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 520ms ease, transform 520ms ease;
+  transition-delay: var(--callout-delay, 0ms);
+}
+
+.guide-callout.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.guide-callout::after {
+  content: "";
+  position: absolute;
+  top: 24px;
+  border: 9px solid transparent;
+}
+
+.guide-callout-left {
+  right: calc(100% + 14px);
+  text-align: right;
+}
+
+.guide-callout-left::after {
+  left: 100%;
+  border-left-color: rgba(255, 252, 245, 0.96);
+}
+
+.guide-callout-right {
+  left: calc(100% + 14px);
+  text-align: left;
+}
+
+.guide-callout-right::after {
+  right: 100%;
+  border-right-color: rgba(255, 252, 245, 0.96);
+}
+
+.guide-callout-row-1 {
+  top: 18px;
+}
+
+.guide-callout-row-2 {
+  top: 236px;
+}
+
+.guide-callout-row-3 {
+  top: 448px;
+}
+
+.guide-example-summary {
+  margin-top: 20px;
+  padding: 18px 20px;
+  background: var(--paper);
+  border-left: 4px solid var(--hechinger-gold);
+}
+
+.guide-example-summary p {
+  margin: 0 0 10px;
+  font-family: var(--font-body);
+  font-size: 21px;
+  line-height: 1.62;
+  color: var(--ink-2);
+  text-align: center;
+}
+
+.guide-example-summary p:last-child {
+  margin-bottom: 0;
+}
+
+.guide-next-links {
+  max-width: 760px;
+  margin: 0 auto;
+  padding-left: 1.2em;
+  list-style: disc;
+  font-family: var(--font-body);
+  font-size: 21px;
+  line-height: 1.62;
+  color: var(--ink-2);
+  text-align: center;
+}
+
+.guide-next-links li + li {
+  margin-top: 12px;
+}
+
+.guide-next-links a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--hechinger-gold);
+}
+
+.guide-next-links a:hover {
+  color: var(--hechinger-gold-deep);
+}
+
+.guide-bottom-search {
+  margin-top: 28px;
+  text-align: center;
+}
+
+.guide-bottom-search .search-again-row {
+  display: flex;
+  justify-content: center;
+}
+
+.guide-bottom-search .search-panel {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.guide-bottom-search .search-label {
+  text-align: center;
+}
+
+.search-helper-link {
+  margin: 6px 0 14px;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.search-helper-link a {
+  color: var(--ink-2);
+  text-decoration: none;
+  border-bottom: 1px solid var(--hechinger-gold);
+}
+
+.search-helper-link a:hover {
+  color: var(--hechinger-gold-deep);
+}
+
+.search-helper-link .tool-guide-link,
+.search-helper-link .tool-guide-link:hover {
+  color: #fff;
+  border-bottom: none;
+}
+
+.home-page .search-helper-link .tool-guide-link,
+.home-page .search-helper-link .tool-guide-link:hover,
+.home-page .search-helper-link .tool-guide-link:focus-visible,
+.home-page .search-helper-link .tool-guide-link:visited {
+  color: #000 !important;
+  -webkit-text-fill-color: #000;
+}
+
+@media (max-width: 980px) {
+  .guide-deck {
+    font-size: 28px;
+  }
+
+  .guide-legend-grid,
+  .guide-sample-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .guide-example {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .guide-example .guide-example-board,
+  .guide-example .guide-sample-grid,
+  .guide-example .guide-example-callouts {
+    display: contents;
+  }
+
+  .guide-example .guide-example-mast { order: 1; }
+  .guide-example .guide-sample-grid > article:nth-child(1) { order: 2; }
+  .guide-example .guide-callout-left.guide-callout-row-1 { order: 3; }
+  .guide-example .guide-sample-grid > article:nth-child(2) { order: 4; }
+  .guide-example .guide-callout-right.guide-callout-row-1 { order: 5; }
+  .guide-example .guide-sample-grid > article:nth-child(3) { order: 6; }
+  .guide-example .guide-callout-left.guide-callout-row-2 { order: 7; }
+  .guide-example .guide-sample-grid > article:nth-child(4) { order: 8; }
+  .guide-example .guide-callout-right.guide-callout-row-2 { order: 9; }
+  .guide-example .guide-sample-grid > article:nth-child(5) { order: 10; }
+  .guide-example .guide-callout-left.guide-callout-row-3 { order: 11; }
+  .guide-example .guide-sample-grid > article:nth-child(6) { order: 12; }
+  .guide-example .guide-callout-right.guide-callout-row-3 { order: 13; }
+  .guide-example .guide-example-summary { order: 14; }
+
+  .guide-example-callouts {
+    pointer-events: auto;
+  }
+
+  .guide-callout {
+    position: static;
+    width: auto;
+    opacity: 1;
+    transform: none;
+    text-align: left;
+  }
+
+  .guide-callout::after {
+    display: none;
+  }
+
+  .guide-sample-card.guide-arrow-right[data-arrow]::before {
+    left: -48px;
+    right: auto;
+  }
+}
+
+@media (max-width: 720px) {
+  body[data-search-source="cuts"] .hero-solo-center,
+  body[data-search-source="accreditation"] .hero-solo-center,
+  body[data-search-source="research"] .hero-solo-center {
+    margin-bottom: 32px;
+  }
+
+  .guide-hero {
+    margin-top: 20px;
+  }
+
+  body[data-search-page="methodology.html"] .section-block {
+    scroll-margin-top: 340px;
+  }
+
+  .guide-deck {
+    font-size: 24px;
+  }
+
+  .guide-subhead {
+    font-size: 38px;
+  }
+
+  .guide-body,
+  .guide-bullet-list,
+  .guide-next-links {
+    font-size: 18px;
+  }
+
+  .guide-jump-links {
+    gap: 12px 18px;
+  }
+
+  .guide-example {
+    padding: 22px 18px 24px;
+  }
+
+  .guide-sample-card .metric-statement {
+    font-size: 21px;
+  }
+
+  .guide-sample-card .metric-question {
+    font-size: 20px;
+  }
+
+  .guide-sample-card .metric-answer {
+    font-size: 26px;
+  }
+
+  .guide-example-callouts {
+    grid-template-columns: 1fr;
+  }
+
+  .guide-sample-card.guide-arrow-right[data-arrow]::before {
+    left: -32px;
+    right: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .guide-callout {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ---------- Institution masthead ---------------------------------- */
+/* .quad-banner is the full-bleed Hechinger Yellow color band that sits
+   above the institution H1. Negative margin matches the .main-wrap
+   clamp() padding so the band extends edge-to-edge of the page no
+   matter the viewport width. */
+.quad-banner {
+  margin-left: calc(-1 * clamp(20px, 3vw, 32px));
+  margin-right: calc(-1 * clamp(20px, 3vw, 32px));
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  width: auto;
+  height: 240px;
+  overflow: hidden;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: #ffcc33;
+  display: block;
+}
+/* Default quad-banner media fills the shared container; institution-detail
+   pages that opt into .school-quad-banner below reuse the finance-page
+   illustration sizing instead of the old full-bleed SVG band treatment. */
+.quad-banner img,
+.quad-banner svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.school-quad-banner img {
+  object-position: center 42%;
+}
+
+body[data-search-page="school.html"] .school-quad-banner,
+body[data-search-source="cuts"] .school-quad-banner,
+body[data-search-source="accreditation"] .school-quad-banner,
+body[data-search-source="research"] .school-quad-banner {
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  height: clamp(190px, 19vw, 270px);
+  overflow: hidden;
+}
+
+body[data-search-page="school.html"] .school-quad-banner img,
+body[data-search-source="cuts"] .school-quad-banner img,
+body[data-search-source="accreditation"] .school-quad-banner img,
+body[data-search-source="research"] .school-quad-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 38%;
+}
+
+/* .school-mast is the centered title block under the quad-banner:
+   gold uppercase eyebrow rule + serif H1 + italic meta line + pill
+   action buttons. */
+.school-mast {
+  padding: 34px 0 0;
+  margin-top: 0;
+  text-align: left;
+}
+
+.school-profile-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 48px;
+  padding-bottom: 26px;
+}
+
+.school-mast .eyebrow {
+  display: block;
+  margin-bottom: 8px;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--hechinger-gold-deep);
+}
+
+.school-mast h1 {
+  margin: 0 0 6px;
+  max-width: 17ch;
+  font-family: var(--font-display);
+  font-size: clamp(44px, 5.6vw, 74px);
+  line-height: 0.97;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+}
+
+.school-name-row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.school-warning-summary-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 10px;
+  max-width: min(100%, 48rem);
+  margin-top: 4px;
+  margin-bottom: 2px;
+}
+
+.school-warning-summary {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  max-width: min(100%, 36rem);
+  padding: 10px 16px;
+  border: 1px solid var(--neg);
+  border-radius: 999px;
+  background: var(--neg);
+  color: #fff;
+  font-family: var(--font-ui);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.school-warning-summary.is-broad {
+  border-color: var(--hechinger-gold-deep);
+  background: var(--hechinger-gold);
+  color: var(--ink);
+}
+
+.school-warning-summary .guide-warning-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.school-warning-summary:focus-visible {
+  outline: 2px solid var(--status-blue-dark);
+  outline-offset: 3px;
+}
+
+.warning-sign-tooltip {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 10px);
+  transform: none;
+  width: min(440px, calc(100vw - 40px));
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: var(--ink);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.45;
+  text-align: left;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+  white-space: normal;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+  z-index: 25;
+}
+
+.warning-sign-tooltip::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -14px;
+  height: 14px;
+  background: transparent;
+}
+
+.warning-sign-tooltip strong {
+  font-weight: 700;
+}
+
+.warning-sign-tooltip a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.school-warning-summary .warning-sign-tooltip {
+  max-width: min(440px, calc(100vw - 40px));
+}
+
+.school-warning-summary:hover .warning-sign-tooltip,
+.school-warning-summary:focus-within .warning-sign-tooltip {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+body[data-search-page="school.html"] .metric-strip[data-warning-tooltip="true"] {
+  outline: none;
+}
+
+body[data-search-page="school.html"] .metric-strip[data-warning-tooltip="true"] .warning-sign-tooltip {
+  left: 18px;
+  transform: none;
+  width: min(340px, calc(100% - 36px));
+  pointer-events: none;
+}
+
+body[data-search-page="school.html"] .metric-strip[data-warning-tooltip="true"]:hover .warning-sign-tooltip,
+body[data-search-page="school.html"] .metric-strip[data-warning-tooltip="true"]:focus-within .warning-sign-tooltip {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* The .school-mast .meta and .school-mast .meta .sep rules previously
+   sat here; both are defined in full (with the inline-collapse logic
+   for school.html's three-paragraph structure) lower in the file. The
+   duplicates have been removed to satisfy stylelint. */
+
+/* Pill buttons used in .school-mast .school-actions. Outline + filled
+   variants. The legacy .download-button rule below stays in place for
+   the table toolbars on the landing pages. */
+.btn-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: 1px solid var(--ink);
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-pill-icon {
+  width: 17px;
+  height: 17px;
+  flex: 0 0 auto;
+  display: block;
+}
+.btn-pill.filled {
+  background: var(--ink);
+  color: var(--paper-page);
+}
+.btn-pill.filled:hover {
+  background: var(--ink-2);
+}
+.btn-pill.outline:hover {
+  background: var(--paper-2);
+}
+
+/* Override the old yellow .school-banner. Keep the rule so any HTML
+   that still uses it doesn't break, but neutralize the visual treatment.
+   Once all four institution pages are converted, the .school-banner
+   element disappears from markup entirely. */
+.school-banner {
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  text-align: center;
+}
+.school-banner h1 {
+  margin: 0;
+  font-size: 0;
+  line-height: 0;
+}
+
+.school-meta-wrap {
+  background: transparent;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+
+.school-actions-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  min-width: 280px;
+  margin-top: 10px;
+  padding-top: 0;
+}
+
+.school-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+  margin: 0;
+}
+
+.download-button {
+  appearance: none;
+  border: 0;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--paper-page);
+  padding: 12px 22px;
+  font-family: var(--font-ui);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.download-button:hover {
+  background: var(--ink-2);
+}
+
+/* Outline pill paired with .download-button (used as 'Share this profile'
+   on school.html). Editorial calm reads it as the lighter half of a
+   filled/outline pair. */
+.secondary-button {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--ink);
+  text-transform: uppercase;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 0.04em;
+}
+
+.secondary-button:hover {
+  background: var(--paper-2);
+  color: var(--ink-2);
+  border-color: var(--ink-2);
+}
+
+/* Per-line school meta paragraphs on school.html (school-meta-wrap
+   above the outcomes grid). Folded into a single comma-joined italic
+   line below the H1 in editorial-calm. */
+.school-meta {
+  margin: 6px 0 0;
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 22px;
+  line-height: 1.5;
+  color: var(--ink-3);
+}
+.school-meta:empty {
+  display: none;
+}
+
+.school-closure-flag {
+  margin-top: 8px;
+  margin-bottom: 12px;
+  font-family: var(--font-body);
+  font-size: 18px;
+  color: var(--neg-deep);
+  font-weight: 600;
+}
+
+.school-announced-closure-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: #fff;
+  font-family: var(--font-ui);
+  font-style: normal;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  cursor: default;
+  position: relative;
+}
+
+.school-announced-closure-badge:hover .warning-sign-tooltip,
+.school-announced-closure-badge:focus .warning-sign-tooltip {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.school-announced-closure-badge .warning-sign-tooltip a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+body[data-search-page="methodology.html"] .section-block {
+  scroll-margin-top: 92px;
+}
+
+.methodology-download-actions {
+  display: flex;
+  justify-content: center;
+  margin: 24px 0;
+}
+
+.methodology-license {
+  display: grid;
+  grid-template-columns: 132px minmax(0, 1fr);
+  gap: 20px;
+  align-items: center;
+  margin: 32px auto 0;
+  padding: 24px;
+  max-width: 860px;
+  border: 1px solid var(--line);
+  background: #fffdf8;
+}
+
+.methodology-license-mark {
+  display: block;
+}
+
+.methodology-license-mark img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.methodology-license-copy .section-title {
+  text-align: left;
+  margin-top: 0;
+}
+
+.methodology-license-copy .section-title::after {
+  margin-left: 0;
+}
+
+/* ---------- Section heads (school-profile sections) ----------
+   Centered Tiempos Headline H2 with a 40px gold underline. (The
+   §-numeral eyebrow from earlier mockups was dropped at the user's
+   request — they preferred the cleaner heading without the small
+   italic numeral above.) */
+.section-block {
+  margin: 0 0 40px;
+  text-align: center;
+}
+
+.section-title {
+  text-align: center;
+  margin: 48px auto 6px;
+  padding: 0 0 10px;
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 34px;
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.012em;
+  text-transform: none;
+  border-radius: 0;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: var(--hechinger-gold);
+  margin: 10px auto 0;
+}
+
+.section-disclosure {
+  text-align: left;
+}
+
+.section-disclosure-summary {
+  list-style: none;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+}
+
+.section-disclosure-summary::-webkit-details-marker {
+  display: none;
+}
+
+.section-disclosure-summary::marker {
+  display: none;
+}
+
+.section-disclosure-summary:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
+.section-disclosure-summary .section-title {
+  margin-bottom: 0;
+}
+
+.section-disclosure-hint {
+  margin: 6px auto 0;
+  font-family: var(--font-ui);
+  font-size: 17px;
+  line-height: 1.4;
+  font-weight: 600;
+  color: var(--ink-3);
+}
+
+.section-disclosure-hint::after {
+  content: " \2193";
+  display: inline-block;
+  margin-left: 6px;
+  transition: transform 0.15s ease;
+}
+
+.section-disclosure[open] .section-disclosure-hint::after {
+  transform: rotate(180deg);
+}
+
+.section-disclosure-body {
+  padding-top: 18px;
+}
+
+.section-copy {
+  margin: 18px auto 22px;
+  max-width: 62ch;
+  font-family: var(--font-body);
+  font-size: 22px;
+  line-height: 1.65;
+  font-style: normal;
+  color: var(--ink-2);
+  text-align: center;
+}
+
+.section-copy strong {
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.section-copy em {
+  font-style: italic;
+}
+
+.section-copy-block {
+  margin: 18px auto 22px;
+  max-width: 62ch;
+}
+
+.section-copy-block .section-copy {
+  margin: 0 0 16px;
+}
+
+.section-copy-block .section-copy:last-child {
+  margin-bottom: 0;
+}
+
+.search-again-row {
+  margin-top: 28px;
+}
+
+.return-search-tool {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 24px;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-ui);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.return-search-tool::before {
+  content: "\2191";
+  font-size: 20px;
+  line-height: 1;
+}
+
+.return-search-tool:hover,
+.return-search-tool:focus-visible {
+  background: var(--hechinger-yellow-pale);
+  border-color: var(--ink);
+  box-shadow: 0 0 0 3px var(--hechinger-yellow-soft);
+}
+
+.chart-note {
+  margin: 0.75rem auto 0;
+  max-width: 760px;
+  font-size: 0.9rem;
+  line-height: 1.35;
+  color: #5c6a7d;
+  text-align: center;
+}
+
+/* ---------- Metric strips ----------
+   Editorial-calm: pale-yellow neutral, saturated blue positive,
+   saturated brick negative — colorblind-safe pair. The .pos / .neg
+   classes from the design alias to the existing .positive / .negative
+   so JS that calls classList.add('positive') keeps working.
+
+   Strips span the full main-wrap content width (no max-width / no auto
+   margins) so the colored bars run flush from the left margin to the
+   right margin, matching the design template. */
+.metric-strip {
+  margin: 10px 0;
+  padding: 20px 28px;
+  width: 100%;
+  position: relative;
+  overflow: visible;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  font-family: var(--font-body);
+  font-size: 22px;
+  line-height: 1.55;
+  text-align: center;
+  color: var(--ink-2);
+}
+
+.metric-strip[data-arrow]::before {
+  position: absolute;
+  top: 50%;
+  left: -48px;
+  transform: translateY(calc(-50% + 10px));
+  opacity: 0;
+  font-family: var(--font-body);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1;
+  transition: opacity 400ms ease, transform 400ms ease;
+  transition-delay: var(--arrow-delay, 0ms);
+}
+
+.metric-strip.is-visible[data-arrow]::before {
+  opacity: 1;
+  transform: translateY(-50%);
+}
+
+.metric-strip[data-arrow="up"]::before {
+  content: "\2191";
+}
+
+.metric-strip[data-arrow="down"]::before {
+  content: "\2193";
+}
+
+.metric-strip.positive[data-arrow]::before {
+  color: var(--pos);
+}
+
+.metric-strip.negative[data-arrow]::before {
+  color: var(--neg);
+}
+
+body[data-search-page="school.html"] .metric-strip[data-arrow]::before,
+body[data-search-page="school.html"] .metric-strip.negative::before,
+body[data-search-page="school.html"] .metric-strip.neg::before {
+  content: "";
+  width: 42px;
+  height: 42px;
+  font-size: 0;
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  transform: translateY(-50%);
+  opacity: 1;
+  background-color: currentColor;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+}
+
+body[data-search-page="school.html"] .metric-strip.negative::before,
+body[data-search-page="school.html"] .metric-strip.neg::before {
+  content: "";
+  background-color: transparent;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='%23f7d54a'/%3E%3Ccircle cx='32' cy='32' r='22' fill='none' stroke='%23111' stroke-width='2'/%3E%3Crect x='28.5' y='17' width='7' height='24' rx='3.5' fill='%23111'/%3E%3Ccircle cx='32' cy='47.5' r='3.5' fill='%23111'/%3E%3C/svg%3E");
+  background-size: contain;
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+
+body[data-search-page="school.html"] .metric-strip[data-arrow="down"]::before {
+  content: "";
+}
+
+body[data-search-page="school.html"] .metric-strip[data-arrow="up"]::before {
+  content: none;
+}
+
+body[data-search-page="school.html"] #aid-section .metric-strip::before {
+  content: none;
+}
+
+body[data-search-page="school.html"] #aid-section .metric-strip,
+body[data-search-page="school.html"] #aid-section .metric-strip.positive,
+body[data-search-page="school.html"] #aid-section .metric-strip.pos,
+body[data-search-page="school.html"] #aid-section .metric-strip.negative,
+body[data-search-page="school.html"] #aid-section .metric-strip.neg {
+  background: var(--hechinger-yellow-pale);
+  border-color: var(--hechinger-yellow-soft);
+  color: var(--ink-2);
+}
+
+body[data-search-page="school.html"] #aid-section .metric-strip .metric-question,
+body[data-search-page="school.html"] #aid-section .metric-strip .metric-statement,
+body[data-search-page="school.html"] #aid-section .metric-strip .metric-answer {
+  color: inherit;
+  opacity: 1;
+  font-style: normal;
+}
+
+@media (max-width: 720px) {
+  .metric-strip[data-arrow]::before {
+    left: -32px;
+    font-size: 30px;
+  }
+}
+
+.metric-strip.neutral {
+  background: var(--hechinger-yellow-pale);
+  border: 1px solid var(--line);
+  color: var(--ink-2);
+}
+
+.metric-strip.negative,
+.metric-strip.neg {
+  background: var(--neg);
+  border-color: var(--neg-deep);
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.metric-strip.positive,
+.metric-strip.pos {
+  background: var(--pos);
+  border-color: var(--pos-deep);
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.metric-strip.positive .metric-question,
+.metric-strip.pos .metric-question,
+.metric-strip.positive .metric-statement,
+.metric-strip.pos .metric-statement,
+.metric-strip.negative .metric-question,
+.metric-strip.neg .metric-question,
+.metric-strip.negative .metric-statement,
+.metric-strip.neg .metric-statement {
+  color: #fff;
+  opacity: 0.92;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.metric-strip.positive .metric-answer,
+.metric-strip.pos .metric-answer,
+.metric-strip.negative .metric-answer,
+.metric-strip.neg .metric-answer {
+  color: #fff;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
+.metric-strip .metric-question {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: inherit;
+  opacity: 0.85;
+}
+
+.metric-strip .metric-answer {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: inherit;
+}
+
+.metric-strip .metric-answer.negative,
+.metric-strip .metric-answer.positive {
+  color: inherit;
+}
+
+.metric-strip .metric-statement {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: inherit;
+  max-width: 62ch;
+  margin: 0 auto;
+}
+
+.metric-strip strong {
+  font-weight: 700;
+  color: inherit;
+}
+
+.metric-strip.neutral strong {
+  color: var(--ink);
+}
+
+.info-panel {
+  width: min(100%, 780px);
+  margin: var(--space-2) auto;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px 20px;
+}
+
+.info-panel p {
+  margin: 0 0 12px;
+  line-height: 1.4;
+}
+
+.info-panel p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- Data card (table container) ----------
+   White panel with hairline border. Holds the table toolbar +
+   horizontally-scrollable .history-table-wrap + pagination. */
+.data-card {
+  width: min(100%, 880px);
+  margin: 24px auto;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 0;
+  text-align: left;
+  overflow: hidden;
+}
+
+.data-card h2,
+.data-card h3 {
+  margin: 0;
+  padding: 22px 24px 14px;
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+/* Per-cut card on cuts.html?unitid=... — the program-name heading
+   was rendering at the full 25px serif data-card h3 size, which made
+   long sentences ("Men's and women's tennis programs discontinued
+   effective end of spring 2026 season...") feel oversized vs. the
+   surrounding meta. Match the table-cell font instead so the cut
+   reads like a row body, not a section heading. Source-order placed
+   below the .data-card h3 rule so the same-specificity override
+   wins. */
+.data-card--cut h3 {
+  padding: 16px 24px 6px;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.cut-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 0 auto 12px;
+  max-width: 720px;
+  padding: 0 24px;
+}
+
+.history-table-cut-tags {
+  justify-content: flex-start;
+  margin: 0;
+  max-width: none;
+  padding: 0;
+}
+
+.cut-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--hechinger-gold);
+  color: var(--ink);
+  font-family: var(--font-ui);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+#school-outcomes-section.data-card {
+  width: 100%;
+  margin: 0 auto;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Outcomes grid (school.html top stats): three centered columns
+   separated by vertical hairlines. The top + bottom horizontal
+   dividers were removed — the columns sit cleanly without a frame
+   around the whole row. */
+#school-outcomes-section .research-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  margin: 0;
+}
+#school-outcomes-section .research-summary-grid.outcomes-count-1 {
+  grid-template-columns: minmax(280px, 420px);
+  justify-content: center;
+}
+#school-outcomes-section .research-summary-grid.outcomes-count-2 {
+  grid-template-columns: repeat(2, minmax(280px, 420px));
+  justify-content: center;
+}
+#school-outcomes-section .research-summary-grid.outcomes-count-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+#school-outcomes-section .research-summary-grid .metric-strip {
+  width: 100%;
+  margin: 0;
+  padding: 34px 42px 38px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: transparent;
+  border: 0;
+  border-right: 1px solid var(--line);
+  border-radius: 0;
+  text-align: left;
+  color: var(--ink-2);
+}
+#school-outcomes-section .research-summary-grid .metric-strip:last-child {
+  border-right: 0;
+}
+#school-outcomes-section .research-summary-grid .metric-question {
+  font-family: var(--font-ui);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.45;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: 24px;
+  min-height: calc(2 * 1.45em);
+  opacity: 1;
+}
+#school-outcomes-section .research-summary-grid .metric-answer {
+  font-family: var(--font-display);
+  font-size: clamp(38px, 4.4vw, 64px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+/* ---------- Table toolbar (filter input + download button) ----------
+   Centered row above each .history-table. Uppercase-label, pill-shaped
+   filter input, ink-filled download pill. */
+.table-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 0 24px 18px;
+  margin: 0;
+}
+
+.table-toolbar-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.table-toolbar-actions--stack {
+  flex-direction: column;
+  width: 100%;
+}
+
+.table-toolbar-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.table-search-autocomplete {
+  display: flex;
+  flex-direction: column;
+  width: min(560px, 100%);
+}
+
+.table-toolbar-spacer {
+  flex: 1 1 auto;
+}
+
+.table-filter-label {
+  font-family: var(--font-ui);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-right: 0;
+  align-self: center;
+}
+
+.table-filter-input {
+  min-width: 280px;
+  max-width: 100%;
+  padding: 12px 18px;
+  border: 1px solid var(--line-2);
+  border-radius: 999px;
+  background: var(--paper);
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 18px;
+  color: var(--ink);
+}
+
+.table-filter-select {
+  min-width: 280px;
+  max-width: 100%;
+  padding: 12px 18px;
+  border: 1px solid var(--line-2);
+  border-radius: 999px;
+  background: var(--paper);
+  font-family: var(--font-body);
+  font-size: 18px;
+  color: var(--ink);
+}
+
+.table-filter-menu {
+  position: relative;
+  min-width: 280px;
+  max-width: 100%;
+}
+
+.table-filter-menu > .table-filter-select {
+  list-style: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+.table-filter-menu > .table-filter-select::-webkit-details-marker {
+  display: none;
+}
+
+.table-filter-menu > .table-filter-select::after {
+  content: "▾";
+  float: right;
+  margin-left: 12px;
+  color: var(--ink-2);
+}
+
+.table-filter-menu[open] > .table-filter-select::after {
+  content: "▴";
+}
+
+.table-filter-menu-options {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  z-index: 20;
+  min-width: 100%;
+  max-width: min(420px, 90vw);
+  max-height: 320px;
+  overflow-y: auto;
+  padding: 14px 16px;
+  border: 1px solid var(--line-2);
+  border-radius: 22px;
+  background: var(--paper);
+  box-shadow: 0 18px 40px rgba(31, 26, 20, 0.14);
+}
+
+.history-table-filter-col {
+  overflow: visible;
+  padding-right: 20px !important;
+}
+
+.table-header-filter-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  overflow: visible;
+}
+
+.table-header-filter-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  min-width: 32px;
+  height: 32px;
+  padding: 0;
+  border-radius: 999px;
+}
+
+.table-header-filter-trigger .filter-icon {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+.table-filter-menu-options--header {
+  top: calc(100% + 8px);
+  left: auto;
+  right: 0;
+  min-width: 280px;
+  max-width: min(360px, calc(100vw - 40px));
+}
+
+.table-filter-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 0;
+  padding: 8px 0;
+  font-family: var(--font-body);
+  font-size: 17px;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.table-filter-option + .table-filter-option {
+  border-top: 1px solid rgba(31, 26, 20, 0.08);
+}
+
+.table-filter-option input {
+  margin-top: 4px;
+  accent-color: var(--line-blue);
+}
+
+.table-filter-input:focus,
+.table-filter-input:focus-visible,
+.table-filter-select:focus,
+.table-filter-select:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 1px;
+  border-color: var(--hechinger-gold);
+}
+
+.table-filter-input:focus,
+.table-filter-input:focus-visible {
+  font-style: normal;
+}
+
+.table-search-results {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.small-meta {
+  color: var(--ink-3);
+  font-size: 22px;
+  line-height: 1.55;
+  margin: 0 auto 10px;
+  max-width: 720px;
+  text-align: center;
+}
+
+/* Extra breathing room when a .small-meta caption (e.g. the
+   "These are the most recent public scores…" note above the
+   Federal Composite metric strip) is followed directly by a
+   colored metric-strip — without this the dense callout butts up
+   against the muted note above. */
+.small-meta + .metric-strip {
+  margin-top: 28px;
+}
+
+.plain-list,
+.link-list {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.plain-list li,
+.link-list li {
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.link-list a {
+  color: var(--line-blue);
+}
+
+.history-table-wrap {
+  overflow-x: auto;
+}
+
+/* Pagination: circular outline buttons; filled ink on the active page.
+   Sits at the bottom of each .data-card under the table. */
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin: 0;
+  padding: 18px 24px 22px;
+}
+
+.pagination-button {
+  appearance: none;
+  min-width: 40px;
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid var(--line-2);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--ink-3);
+  font-family: var(--font-ui);
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.pagination-button:hover {
+  background: var(--paper-2);
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+.pagination-button:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.pagination-button.is-active {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper-page);
+}
+
+/* Editorial history table: uppercase Inter-style headers in paper-2,
+   serif body, gentle row hover. */
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.history-table th,
+.history-table td {
+  padding: 16px 20px;
+  vertical-align: top;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink-2);
+}
+
+.history-table th {
+  background: var(--paper-2);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  font-family: var(--font-ui);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  position: relative;
+  padding-right: 42px;
+}
+
+.history-table tbody tr:hover {
+  background: var(--paper-2);
+}
+
+.history-table a {
+  color: var(--pos-deep);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.history-table-empty-cell {
+  text-align: center !important;
+  color: var(--ink-3) !important;
+  font-style: italic;
+}
+
+.sort-header-label {
+  display: block;
+  margin: 0;
+  font-size: 0.88em;
+}
+
+.sort-controls {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0;
+  width: 18px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.sort-button {
+  appearance: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 13px;
+  border: 0;
+  border-bottom: 1px solid #d9d9d9;
+  background: transparent;
+  color: #6b6b6b;
+  border-radius: 0;
+  font-size: 0.56rem;
+  line-height: 1;
+  padding: 2px 0;
+  cursor: pointer;
+}
+
+.sort-button:last-child {
+  border-bottom: 0;
+}
+
+.sort-button:hover {
+  background: #fff8db;
+}
+
+.sort-button:focus-visible {
+  outline: 2px solid var(--status-blue);
+  outline-offset: 2px;
+  background: #fff8db;
+}
+
+.sort-button.is-active {
+  background: var(--yellow);
+  color: var(--ink);
+}
+
+.empty-state {
+  width: min(100%, 780px);
+  margin: var(--space-2) auto;
+  background: var(--yellow-soft);
+  border: 1px solid rgba(217, 164, 65, 0.15);
+  border-radius: 10px;
+  padding: 18px 20px;
+  text-align: center;
+}
+
+.stack-cards {
+  display: grid;
+  gap: 14px;
+  margin-top: 0;
+}
+
+.stack-cards .metric-strip {
+  margin: 0 auto;
+}
+
+.research-summary-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.research-summary-grid .metric-strip {
+  width: 100%;
+  margin: 0;
+}
+
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  margin: 0;
+}
+
+.filter-label {
+  font-weight: 700;
+  color: #2c3350;
+}
+
+.filter-button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filter-button {
+  appearance: none;
+  border: 1px solid #cfcfcf;
+  background: var(--paper);
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.filter-button:hover {
+  background: #fff8db;
+  border-color: rgba(217, 164, 65, 0.45);
+}
+
+.filter-button:focus-visible {
+  outline: 2px solid var(--status-blue);
+  outline-offset: 2px;
+  background: #fff8db;
+  border-color: rgba(217, 164, 65, 0.45);
+}
+
+.filter-button.is-active {
+  background: var(--yellow);
+  border-color: rgba(217, 164, 65, 0.75);
+}
+
+/* ---------- Chart panel ----------
+   White card with hairline border, centered serif chart title with
+   optional italic sub-line beneath. Matches the editorial-calm design. */
+.chart-panel {
+  position: relative;
+  width: 100%;
+  margin: 14px 0;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 22px 26px 16px;
+}
+
+.chart-title {
+  margin: 0 0 14px;
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: 34px;
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.012em;
+  color: var(--ink);
+}
+.chart-title .sub {
+  display: block;
+  margin-top: 8px;
+  font-family: var(--font-body);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 22px;
+  color: var(--ink-3);
+  letter-spacing: 0;
+}
+
+/* Tiempos is reserved for major editorial headlines on the Finances,
+   College Cuts, Accreditation, and Research Funding sections. */
+body[data-search-page="school.html"] h1.serif,
+body[data-search-page="school.html"] .guide-subhead,
+body[data-search-page="school.html"] .guide-example-school-name,
+body[data-search-page="school.html"] .section-title,
+body[data-search-page="school.html"] .chart-title,
+body[data-search-page="school.html"] .data-card h2,
+body[data-search-page="school.html"] .data-card h3,
+body[data-search-page="school.html"] .school-mast h1,
+body[data-search-source="cuts"] .hero-solo-center h1,
+body[data-search-source="cuts"] .school-mast h1,
+body[data-search-source="cuts"] .data-card h2,
+body[data-search-source="cuts"] .chart-title,
+body[data-search-source="accreditation"] .hero-solo-center h1,
+body[data-search-source="accreditation"] .school-mast h1,
+body[data-search-source="accreditation"] .data-card h2,
+body[data-search-source="accreditation"] .chart-title,
+body[data-search-source="research"] .hero-solo-center h1,
+body[data-search-source="research"] .school-mast h1,
+body[data-search-source="research"] .data-card h2,
+body[data-search-source="research"] .chart-title,
+body[data-search-page="methodology.html"] .hero-solo-center h1,
+body[data-search-page="methodology.html"] .data-card h2,
+body[data-search-page="methodology.html"] .chart-title {
+  font-family: var(--font-accent-display);
+  font-style: normal;
+  font-weight: 900;
+}
+
+/* Keep landing-page headings centered, but left-align the explanatory copy
+   so the wide-column layout reads more naturally. */
+body[data-search-page="school.html"] .guide-body,
+body[data-search-page="school.html"] .guide-learn-more,
+body[data-search-page="school.html"] .guide-emphasis,
+body[data-search-page="school.html"] .guide-note,
+body[data-search-page="school.html"] .guide-search-copy,
+body[data-search-page="school.html"] .guide-example-summary,
+body[data-search-page="school.html"] .guide-next-links {
+  text-align: left;
+}
+
+body[data-search-page="school.html"] .guide-point-list,
+body[data-search-page="school.html"] .guide-bullet-list,
+body[data-search-page="school.html"] .guide-next-links {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body[data-search-page="school.html"] .guide-learn-more {
+  max-width: 760px;
+  margin: 18px auto 0;
+}
+
+body[data-search-page="school.html"] .guide-note {
+  max-width: 760px;
+  margin: 14px auto 0;
+}
+
+body[data-search-page="school.html"] .guide-bullet-list {
+  max-width: 760px;
+  margin: 10px 0 0;
+  padding-left: 28px;
+}
+
+body[data-search-page="school.html"] .guide-search-copy p,
+body[data-search-page="school.html"] .guide-example-summary p {
+  text-align: left;
+}
+
+body[data-search-source="cuts"] .hero-solo-center .data-as-of,
+body[data-search-source="accreditation"] .hero-solo-center .data-as-of,
+body[data-search-source="research"] .hero-solo-center .data-as-of {
+  margin: 6px auto 0;
+  text-align: center;
+}
+
+body[data-search-source="cuts"] #cuts-section-title {
+  padding-bottom: 8px;
+}
+
+body[data-search-source="cuts"] #cuts-table-intro {
+  margin-top: 10px;
+}
+
+body[data-search-source="accreditation"] #accreditation-section-title,
+body[data-search-source="research"] #research-section-title {
+  padding-bottom: 8px;
+}
+
+body[data-search-source="accreditation"] #accreditation-table-intro,
+body[data-search-source="research"] #research-table-intro {
+  margin-top: 10px;
+}
+
+body[data-search-page="school.html"] .section-copy,
+body[data-search-page="school.html"] .section-copy-block,
+body[data-search-page="school.html"] .section-copy-block .section-copy,
+body[data-search-page="school.html"] .small-meta,
+body[data-search-page="school.html"] .chart-note {
+  text-align: left;
+}
+
+body[data-search-page="school.html"] .small-meta {
+  max-width: 62ch;
+  margin: 18px auto 22px;
+}
+
+body[data-search-page="school.html"] .school-mast .eyebrow {
+  font-size: 18px;
+}
+
+body[data-search-page="school.html"] .chart-panel .chart-legend,
+body[data-search-page="school.html"] .chart-panel .graphic-source {
+  max-width: 790px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body[data-search-page="school.html"] .chart-panel .chart-legend {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+body[data-search-page="school.html"] .chart-panel .graphic-source {
+  text-align: left;
+}
+
+body[data-search-page="school.html"] #chart-international .chart-legend {
+  font-size: 16px;
+  gap: 14px;
+}
+
+body[data-search-page="school.html"] #chart-international .chart-legend-button {
+  padding: 4px 6px;
+}
+
+body[data-search-page="school.html"] #net-tuition-change-card .metric-statement {
+  max-width: 62ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body[data-search-page="school.html"] #school-bottom-search-section .section-copy,
+body[data-search-page="school.html"] #school-bottom-search-section .search-again-row {
+  text-align: center;
+}
+
+.more-detail-subsection {
+  max-width: 62ch;
+  margin: 0 auto 28px;
+  text-align: left;
+}
+
+.more-detail-subhead {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0 0 4px;
+  padding: 0;
+}
+
+.more-detail-subhead::before {
+  content: "• ";
+}
+
+body[data-search-page="school.html"] #more-financial-detail-section .section-copy {
+  text-align: left;
+}
+
+blockquote {
+  font-family: var(--font-accent-text);
+  font-style: italic;
+}
+
+.chart-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Axis tick labels (year on the X axis, value on the Y axis). The
+   chart SVG has a fixed viewBox of 760 x 260 user units, so any
+   font-size set in user units shrinks linearly when the SVG scales
+   into a narrow container. The default 14u looks fine on desktop
+   (~14 displayed px when the chart is ~760px wide) but renders at
+   ~6 displayed px on a 340px-wide phone. CSS overrides the inline
+   font-size attribute, so bumping these values in a media query
+   restores legibility on mobile without growing the SVG itself. */
+.chart-axis-tick {
+  font-size: 14px;
+}
+@media (max-width: 700px) {
+  .chart-axis-tick--y { font-size: 24px; }
+  .chart-axis-tick--x { font-size: 22px; }
+}
+
+.chart-legend {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  flex-wrap: wrap;
+  font-family: var(--font-ui);
+  font-size: 18px;
+  color: var(--ink-3);
+  margin-top: 14px;
+}
+
+.chart-legend-button {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid transparent;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  padding: 4px 8px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.chart-legend-button.is-active {
+  color: var(--ink-2);
+  border-color: rgba(17, 17, 17, 0.14);
+  background: rgba(17, 17, 17, 0.04);
+}
+
+.chart-legend-button:not(.is-active) {
+  opacity: 0.62;
+}
+
+.chart-legend-button:focus-visible {
+  outline: 2px solid var(--status-blue-dark);
+  outline-offset: 2px;
+}
+
+.legend-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.chart-tooltip {
+  position: absolute;
+  pointer-events: none;
+  background: rgba(17, 17, 17, 0.92);
+  color: #fff;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  line-height: 1.35;
+  width: max-content;
+  max-width: min(320px, calc(100% - 16px));
+  white-space: normal;
+  overflow-wrap: normal;
+  word-break: normal;
+  transform: translate(-50%, -115%);
+  opacity: 0;
+  transition: opacity 0.12s ease;
+  z-index: 10;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+}
+
+.chart-tooltip.visible {
+  opacity: 1;
+}
+
+.chart-tooltip-row {
+  display: block;
+  white-space: nowrap;
+}
+
+.chart-tooltip strong {
+  display: block;
+  white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+  .chart-tooltip {
+    font-size: 0.76rem;
+    padding: 7px 9px;
+  }
+}
+
+.graphic-source {
+  margin: 14px 0 0;
+  font-family: var(--font-ui);
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--ink-3);
+}
+
+.graphic-source strong {
+  color: var(--ink-2);
+  font-weight: 600;
+}
+
+.graphic-source a {
+  color: var(--ink-2);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  word-break: break-word;
+}
+
+/* ---------- Related-pages footer (institution profile pages) ----------
+   Bordered band with a gold uppercase header and a comma-spaced row
+   of section links. Used at the bottom of the school / cuts-school /
+   accred-school / research-school pages. */
+.related-card {
+  margin: 28px 0;
+  padding: 26px 32px;
+  text-align: center;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.related-card h3 {
+  margin: 0 0 14px;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  /* Deep gold for AA contrast — same trade as .school-mast .eyebrow. */
+  color: var(--hechinger-gold-deep);
+}
+
+.related-card ul,
+.related-card ol,
+.related-card .related-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 28px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 19px;
+}
+
+.related-card ul a,
+.related-card ol a,
+.related-card .related-list a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--hechinger-gold);
+  padding-bottom: 2px;
+}
+.related-card ul a:hover,
+.related-card ol a:hover,
+.related-card .related-list a:hover {
+  color: var(--hechinger-gold);
+}
+
+/* The .methodology-panel / .methodology-summary / .methodology-body
+   rules previously styled the per-page <details class="methodology-
+   panel"> blocks. Those blocks were removed in batch D once
+   methodology.html became the single home for the methodology copy,
+   so the rules are no longer referenced and have been deleted. */
+
+/* ---------- School-mast inline meta (school.html) ----------
+   The institution profile masthead has location + sector + urbanization
+   in three separate <p> elements (so existing JS that calls setText on
+   each id keeps working). They render as one comma-spaced italic line
+   with hairline middle-dot separators between non-empty siblings. */
+.school-mast .meta {
+  margin: 18px 0 12px;
+  text-align: left;
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 22px;
+  line-height: 1.6;
+  color: var(--ink-3);
+}
+
+.school-mast .meta > .school-meta {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-style: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+.school-mast .meta > .school-meta:empty {
+  display: none;
+}
+
+/* Insert a separator between any two non-empty meta paragraphs. The
+   sibling combinator means the rule fires only when the current p has
+   a non-empty p somewhere earlier in the same .meta — empties skip.
+   Color inherits the meta line's --ink-3 instead of using --line-2 so
+   the dot meets contrast against cream paper. */
+.school-mast .meta > .school-meta:not(:empty) ~ .school-meta:not(:empty)::before {
+  content: '\00b7';
+  margin: 0 8px;
+  font-style: normal;
+}
+
+/* ---------- Inline-meta separator (cuts/accred/research) ----------
+   These pages render the meta line via JS as plain text + empty
+   <span class="sep"></span> nodes. The middle dot is rendered via
+   ::after pseudo-content (not a real text node) for two reasons:
+     1) Playwright's aria-hidden-sync helper considers an aria-hidden
+        element with a visible text node a violation. Pseudo-content
+        is invisible to the helper.
+     2) Screen readers ignore CSS pseudo-content, so the meta line
+        reads cleanly as "City, State Sector" without the dots being
+        announced — no aria-hidden attribute needed.
+   The dot inherits the parent meta-line's --ink-3 color, which gives
+   it ample contrast against cream paper for sighted readers. */
+.school-mast .meta .sep {
+  display: inline;
+  margin: 0 8px;
+  font-style: normal;
+}
+.school-mast .meta .sep::after {
+  content: '\00b7';
+}
+
+/* ---------- Body content padding inside .data-card ----------
+   .data-card itself has padding: 0 (the h2 + .table-toolbar provide
+   their own horizontal padding). Body content nested inside the card
+   — cut-detail <article> blocks, the accreditation 'Coverage and
+   limitations' panel, and any other paragraph/list text — would
+   otherwise sit flush against the card border. These rules keep all
+   such body content inset by 32px so it reads as part of the card
+   rather than touching the edge.
+
+   Scope: direct children that are body text, plus paragraphs/lists
+   inside the unwrapped <div> containers JS uses for limitations and
+   similar sections. The history-table-wrap / table-toolbar / h2 /
+   pagination already manage their own horizontal padding and are
+   unaffected. */
+.data-card > article p,
+.data-card > article .small-meta,
+.data-card > p,
+.data-card > ul,
+.data-card > ol,
+.data-card > div > p,
+.data-card > div > ul,
+.data-card > div > ol {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+.data-card > article > p:last-child,
+.data-card > article > .small-meta:last-child {
+  padding-bottom: 18px;
+}
+.data-card > article {
+  padding-bottom: 4px;
+}
+.data-card > div > ul,
+.data-card > div > ol {
+  /* The default ul/ol left padding from the user-agent stylesheet
+     (40px) gets added on top of our 32px outer inset, which on
+     narrow cards pushes bullet text awkwardly far right. Reset to a
+     small marker indent so the bullet glyph sits cleanly inside
+     the card's left padding. */
+  padding-left: 64px;
+  margin: 0 0 14px;
+}
+.data-card > div > p {
+  margin: 0 0 12px;
+}
+
+/* ---------- 'Explore this institution' inline list ----------
+   Rendered by renderRelatedInstitutionLinks in app.js as
+   <div class="related-links"><p><strong>Explore this institution:
+   </strong></p><ul class="link-list">…</ul></div>. The default
+   .link-list rule (padding-left: 18px) leaves the bullets too close
+   to the data-card / page edge; this gives the block a proper inset
+   that matches the rest of the institution-mode body content. */
+.related-links {
+  max-width: 62ch;
+  padding: 18px 0 6px;
+  margin: 0 auto 18px;
+  text-align: left;
+}
+
+.related-links p {
+  margin: 0 0 12px;
+  font-family: var(--font-body);
+  font-size: 22px;
+  line-height: 1.65;
+  color: var(--ink-2);
+}
+
+.related-links p strong {
+  color: var(--ink);
+}
+
+.related-links .link-list {
+  margin: 0;
+  padding-left: 28px;
+  list-style: disc;
+  font-family: var(--font-body);
+  font-size: 22px;
+  line-height: 1.62;
+  display: block;
+  text-align: left;
+}
+
+.related-links .link-list li {
+  line-height: 1.62;
+  margin-bottom: 12px;
+}
+
+.related-links .link-list li::after {
+  content: "·";
+  margin-left: 18px;
+  color: var(--ink-3);
+}
+
+.related-links .link-list li:last-child::after {
+  content: none;
+  margin: 0;
+}
+
+.related-links .link-list a {
+  color: var(--pos-deep);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.related-links .link-list li::after,
+.related-links .link-list li:last-child::after {
+  content: none !important;
+  margin: 0 !important;
+}
+
+.is-hidden {
+  display: none !important;
+}
+
+@media (max-width: 700px) {
+  /* clamp() handles most of the small-screen sizing automatically;
+     these overrides are for the things clamp() can't address. */
+
+  body[data-search-page="school.html"] {
+    overflow-x: hidden;
+  }
+
+  /* Masthead: allow logo/wordmark to wrap on very narrow phones. */
+  .site-masthead {
+    padding: 16px 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .site-masthead .wm-text {
+    width: 142px;
+    flex-basis: 142px;
+  }
+  .site-masthead .logo {
+    width: 38px;
+    height: 38px;
+    flex-basis: 38px;
+  }
+
+  /* Tabs: scroll horizontally so all six fit without truncating labels. */
+  .top-tabs {
+    padding: 0 20px;
+    gap: 16px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: var(--hechinger-gold) transparent;
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath fill='%23e3b132' d='M7.4 1.2 3.1 5l4.3 3.8V1.2Z'/%3E%3C/svg%3E"),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath fill='%23e3b132' d='m2.6 1.2 4.3 3.8-4.3 3.8V1.2Z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat, no-repeat;
+    background-position: left 4px bottom 0, right 4px bottom 0;
+    background-size: 12px 12px, 12px 12px;
+  }
+
+  .top-tabs::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .top-tabs::-webkit-scrollbar:vertical {
+    width: 0;
+    height: 0;
+  }
+
+  .top-tabs::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .top-tabs::-webkit-scrollbar-thumb {
+    background: var(--hechinger-gold);
+    border-radius: 999px;
+  }
+
+  .top-tabs::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+
+  .top-tab {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    text-align: left;
+    padding: 14px 4px;
+    font-size: 16px;
+  }
+
+  /* Inner gutter shrinks on phones. */
+  .main-wrap {
+    padding: 32px 20px 0;
+  }
+
+  /* Footer navigation stacks cleanly on small screens. */
+  .pg-foot .ftr-columns {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .pg-foot .ftr-column--right {
+    justify-items: start;
+    text-align: left;
+  }
+
+  .pg-foot .ftr-info-msg {
+    text-align: left;
+  }
+
+  .pg-foot .ftr-nav-items {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+
+  .pg-foot .ftr-credit-summary,
+  .pg-foot .ftr-credit-meta,
+  .pg-foot .ftr-credit-illustration,
+  .pg-foot .ftr-credit-updated {
+    max-width: none;
+  }
+
+  /* Hero blocks: split collapses to single column with the SVG below the
+     text; centered hero releases its outer margins for full-width copy. */
+  .hero-split {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin-bottom: 28px;
+  }
+  .hero-solo,
+  .hero-solo-center {
+    max-width: 100%;
+  }
+  .hero-solo h1 {
+    max-width: none;
+  }
+  .hero-split h1,
+  .hero-solo h1,
+  .hero-solo-center h1,
+  h1.serif {
+    font-size: 36px;
+  }
+  .lede {
+    font-size: 17px;
+  }
+  .banner {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 360 / 420;
+    justify-self: center;
+  }
+  .banner.short {
+    height: auto;
+    aspect-ratio: 360 / 280;
+  }
+
+  .intro-callout {
+    grid-template-columns: 4px 1fr;
+    gap: 14px;
+    max-width: 100%;
+  }
+  .intro-box {
+    padding: 18px 20px;
+  }
+
+  .search-panel {
+    max-width: 100%;
+  }
+
+  .school-search-head {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  #school-search-wrap .school-guide-link-wrap {
+    text-align: left;
+  }
+
+  /* On narrow widths the placeholder ("Start typing a college name,
+     city, state or IPEDS ID") was getting clipped after about 22
+     characters. Shrink the input chrome (wrap padding, icon margin)
+     and the input font so more of the placeholder fits before the
+     right edge truncates it. */
+  .search-input-wrap {
+    padding: 0 12px;
+  }
+  .search-icon {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+  }
+  .search {
+    font-size: 15px;
+    padding: 14px 0;
+  }
+
+  .results.has-results {
+    max-height: min(360px, 55vh);
+  }
+  .result-section-title,
+  .result-item {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  /* On the school page at narrow widths the search lived behind a
+     collapsed <details> toggle ("click the dropdown to see the search
+     bar"). Hide that toggle and keep the panel always visible so the
+     search input is reachable in one tap, matching the homepage
+     pattern. */
+  .school-search-wrap > .school-search-summary {
+    display: none;
+  }
+  .school-search-wrap .search-panel {
+    display: block;
+  }
+
+  /* On the homepage at narrow widths, lift the search panel above the
+     yellow decorative box and the secondary helper paragraph so it sits
+     immediately under the lede headline / first lede paragraph. The
+     trick: flatten .hero-split and its inner .hero-text into the main
+     flex column via display: contents, then use `order` to interleave
+     the search panel between the first and second lede paragraphs.
+     Scoped to .home-layout so school.html and the dataset landing
+     pages (which share .main-wrap but not this hero structure) are
+     untouched. */
+  .home-layout {
+    display: flex;
+    flex-direction: column;
+  }
+  .home-layout .hero-split,
+  .home-layout .hero-split .hero-text {
+    display: contents;
+  }
+  .home-layout .hero-split h1 { order: 1; text-align: center; max-width: none; }
+  .home-layout > .search-panel { order: 2; margin-top: 4px; margin-bottom: 20px; }
+  .home-layout .hero-split .hero-text > .lede:nth-of-type(1) { order: 3; text-align: center; }
+  .home-layout .hero-split .hero-text > .lede:nth-of-type(2) { order: 4; text-align: center; }
+  .home-layout .hero-split .hero-text > .lede:nth-of-type(3) { order: 5; text-align: center; }
+  .home-layout .hero-split .hero-text > .lede:nth-of-type(4) { order: 6; text-align: center; }
+  .home-layout .hero-split .hero-text > .lede:nth-of-type(5) { order: 7; text-align: center; }
+  .home-layout .hero-split .banner-col { order: 8; margin-top: 8px; }
+  .home-layout > .pg-foot { order: 9; }
+  .home-layout .pg-foot { text-align: left; }
+
+  .methodology-license {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .methodology-license-copy .section-title {
+    text-align: center;
+  }
+
+  .methodology-license-copy .section-title::after {
+    margin-left: auto;
+  }
+
+  /* The previous mobile behavior (collapsed search behind a summary
+     toggle) was replaced above — search is now always visible on the
+     school page at narrow widths. */
+
+  .school-banner h1 {
+    font-size: 2.4rem;
+  }
+
+  /* Quad-banner shortens on mobile and breaks out of the 20px gutter. */
+  .quad-banner {
+    margin-left: -20px;
+    margin-right: -20px;
+    height: 160px;
+  }
+
+  body[data-search-page="school.html"] .school-quad-banner,
+  body[data-search-source="cuts"] .school-quad-banner,
+  body[data-search-source="accreditation"] .school-quad-banner,
+  body[data-search-source="research"] .school-quad-banner {
+    margin-left: 0;
+    margin-right: 0;
+    height: 165px;
+  }
+
+  .school-mast {
+    padding: 32px 16px 0;
+  }
+  .school-profile-header {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding-bottom: 26px;
+  }
+  .school-mast h1 {
+    max-width: none;
+    font-size: 30px;
+  }
+  .school-actions-wrap {
+    min-width: 0;
+    align-items: flex-start;
+    margin-top: 0;
+    padding-top: 0;
+  }
+  .school-actions {
+    width: 100%;
+    margin-top: 0;
+  }
+  .school-actions .btn-pill {
+    width: 100%;
+  }
+  .school-warning-summary {
+    font-size: 18px;
+    padding: 10px 16px;
+  }
+  body[data-search-page="school.html"] #profile-jump-links {
+    margin-top: 24px;
+    gap: 14px 22px;
+  }
+
+  .section-block {
+    margin: 0 0 32px;
+  }
+  .section-title {
+    font-size: 24px;
+    margin-top: 32px;
+  }
+
+  /* Outcomes grid stacks; horizontal dividers turn into bottom dividers. */
+  #school-outcomes-section .research-summary-grid {
+    grid-template-columns: 1fr;
+  }
+  #school-outcomes-section .research-summary-grid.outcomes-count-1,
+  #school-outcomes-section .research-summary-grid.outcomes-count-2,
+  #school-outcomes-section .research-summary-grid.outcomes-count-3 {
+    grid-template-columns: 1fr;
+    justify-content: stretch;
+  }
+  #school-outcomes-section .research-summary-grid .metric-strip {
+    padding: 24px 22px 28px;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+  #school-outcomes-section .research-summary-grid .metric-strip:last-child {
+    border-bottom: 0;
+  }
+
+  .metric-strip,
+  /* On phones the chart-panel's 26px horizontal padding plus the
+     20px main-wrap gutter eats ~92px of a 360px viewport, leaving
+     the SVG only ~268px to scale into. With pad.left fixed in
+     viewBox user units, less rendered width means each user unit is
+     fewer displayed pixels and abbreviated currency labels start to
+     clip on the left. Trim the chart-panel padding to give the SVG
+     ~32px more horizontal room. */
+  .chart-panel {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  body[data-search-page="school.html"] .section-block .metric-strip.negative,
+  body[data-search-page="school.html"] .section-block .metric-strip.neg {
+    padding-left: 72px;
+    padding-right: 18px;
+    text-align: left;
+  }
+
+  body[data-search-page="school.html"] .section-block .metric-strip.negative::before,
+  body[data-search-page="school.html"] .section-block .metric-strip.neg::before {
+    top: 22px;
+    left: 18px;
+    width: 36px;
+    height: 36px;
+    transform: none;
+  }
+
+  body[data-search-page="school.html"] .section-block .metric-strip.negative .metric-question,
+  body[data-search-page="school.html"] .section-block .metric-strip.neg .metric-question,
+  body[data-search-page="school.html"] .section-block .metric-strip.negative .metric-statement,
+  body[data-search-page="school.html"] .section-block .metric-strip.neg .metric-statement,
+  body[data-search-page="school.html"] .section-block .metric-strip.negative .metric-answer,
+  body[data-search-page="school.html"] .section-block .metric-strip.neg .metric-answer {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+  }
+
+  .data-card h2,
+  .data-card h3 {
+    padding: 18px 16px 10px;
+    font-size: 18px;
+  }
+  .table-toolbar {
+    padding: 0 16px 14px;
+    gap: 8px;
+  }
+  .table-filter-input,
+  .table-filter-select {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .table-filter-menu {
+    width: 100%;
+  }
+
+  .table-filter-menu-options {
+    max-width: 100%;
+  }
+
+  .table-filter-menu-options--header {
+    right: 0;
+    left: auto;
+    min-width: 240px;
+  }
+  .download-button {
+    width: 100%;
+  }
+
+  /* Tables get a horizontal scroll instead of squeezing columns to
+     unreadable widths. .history-table-wrap already provides overflow-x;
+     this just enforces a min table width inside it. */
+  .history-table-wrap {
+    -webkit-overflow-scrolling: touch;
+  }
+  .history-table {
+    min-width: 640px;
+    font-size: 13px;
+  }
+  .history-table th,
+  .history-table td {
+    padding: 10px 12px;
+  }
+
+  /* Related-card list stacks vertically. */
+  .related-card {
+    padding: 22px 16px;
+  }
+  .related-card ul,
+  .related-card ol,
+  .related-card .related-list {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+/* Tighter typography for the smallest phones — keeps 48px H1 from
+   wrapping into 4-5 lines on a 360px viewport. */
+@media (max-width: 420px) {
+  .top-tabs {
+    padding: 0 16px;
+    gap: 10px;
+    scroll-padding-inline: 16px;
+    scrollbar-width: thin;
+    background-position: left 2px bottom 0, right 2px bottom 0;
+  }
+
+  .top-tab {
+    min-height: 46px;
+    padding: 12px 2px;
+    font-size: 15px;
+  }
+
+  .hero-split h1,
+  .hero-solo h1,
+  .hero-solo-center h1,
+  h1.serif {
+    font-size: 30px;
+  }
+
+  .home-page .home-hero h1 {
+    font-size: 26px;
+    line-height: 0.95;
+    margin-bottom: 18px;
+  }
+
+  .home-search-panel {
+    margin-top: 22px;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .home-page .tool-guide-link {
+    font-size: 17px;
+    padding: 10px 18px;
+  }
+
+  .home-page .search-input-wrap {
+    padding: 0 14px;
+  }
+
+  .home-page .search {
+    padding: 14px 0;
+    font-size: 16px;
+  }
+
+  .home-rule {
+    margin: 18px 0 22px;
+  }
+
+  body[data-search-page="school.html"] .guide-top-banner {
+    margin-bottom: 18px;
+  }
+
+  body[data-search-page="school.html"] .guide-hero {
+    margin: 14px auto 12px;
+    padding-bottom: 0;
+  }
+
+  body[data-search-page="school.html"] .guide-hero .serif {
+    margin-bottom: 12px;
+  }
+
+  body[data-search-page="school.html"] .guide-deck {
+    margin-bottom: 6px;
+    font-size: 20px;
+  }
+
+  body[data-search-page="school.html"] #school-search-wrap {
+    margin-top: 0;
+  }
+}

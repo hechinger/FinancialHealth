@@ -1,0 +1,833 @@
+{
+  "unitid": "233277",
+  "generated_at": "2026-07-08",
+  "profile": {
+    "institution_name": "Radford University",
+    "institution_unique_name": "Radford University | Radford | Virginia",
+    "state": "Virginia",
+    "city": "Radford",
+    "control_label": "Public",
+    "sector": "Public, 4-year or above",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "Town: Fringe",
+    "religious_affiliation": "Not applicable",
+    "all_programs_distance_education": "No"
+  },
+  "summary": {
+    "latest_year": 2024,
+    "enrollment_pct_change_5yr": -21.5607,
+    "sector_median_enrollment_pct_change_5yr": -4.2732,
+    "enrollment_decline_last_3_of_5": "Yes",
+    "revenue_pct_change_5yr": -5.6108,
+    "sector_median_revenue_pct_change_5yr": -1.3261,
+    "net_tuition_per_fte_change_5yr": -39.7325,
+    "sector_median_net_tuition_per_fte_change_5yr": -17.7529,
+    "staff_total_headcount_pct_change_5yr": -14.2234,
+    "sector_median_staff_total_headcount_pct_change_5yr": 0.3908,
+    "staff_instructional_headcount_pct_change_5yr": -21.798,
+    "students_per_instructional_staff_fte": 14,
+    "sector_median_students_per_instructional_staff_fte": 16,
+    "ended_year_at_loss": "No",
+    "losses_last_3_of_5": "No",
+    "loss_years_last_10": 0,
+    "tuition_dependence_pct": 13.6118,
+    "sector_median_tuition_dependence_pct": 21.2464,
+    "tuition_dependence_vs_sector_median_sentence": "This college got 14.0% of its revenue from net tuition in 2024, below the median of 21% for public colleges.",
+    "unfunded_discount_rate": 48.0295,
+    "unfunded_discount_pct_change_5yr": 126.3541,
+    "share_grad_students": 28.0161,
+    "sector_avg_share_grad_students": 20.9865,
+    "research_expense": 698351,
+    "research_expense_per_fte": 102.6383,
+    "research_expense_pct_core_expenses": 0.3885,
+    "sector_research_spending_n": 548,
+    "sector_research_spending_positive_n": 522,
+    "sector_research_spending_reporting_share_pct": 95.3,
+    "sector_median_research_expense_per_fte_positive": 1080.4519,
+    "pct_international_all": 1.0811,
+    "pct_international_undergraduate": 1.2622,
+    "pct_international_graduate": 0.6158,
+    "international_student_count_change_5yr": -23,
+    "international_enrollment_pct_change_5yr": -19.6581,
+    "international_students_sentence": "In 2024, 1.1% of students were international. That includes 1.3% of undergraduates and 0.6% of graduate students.",
+    "federal_loan_pct_most_recent": 51,
+    "sector_avg_federal_loan_pct_most_recent": 37.9232,
+    "grad_plus_recipients": 154,
+    "grad_plus_disbursements_amt": 1640494,
+    "grad_plus_disbursements_per_recipient": 10652.5584,
+    "sector_median_grad_plus_disbursements_per_recipient": 8446.7298,
+    "federal_grants_contracts_pell_adjusted_pct_core_revenue": 4.8999,
+    "state_funding_pct_core_revenue": 49.5773,
+    "federal_grants_contracts_pell_adjusted_pct_change_5yr": 4.8763,
+    "state_funding_pct_change_5yr": 41.8568,
+    "endowment_assets_per_fte_adjusted": 10917.4872,
+    "sector_median_endowment_assets_per_fte_adjusted": 12637.3807,
+    "endowment_pct_change_5yr": 0.6049,
+    "sector_median_endowment_pct_change_5yr": 19.1807,
+    "endowment_spending_current_use_pct_core_revenue": 0.0137,
+    "graduation_rate_6yr": 49,
+    "median_earnings_10yr": 53739,
+    "median_debt_completers": 24000,
+    "scorecard_data_updated": "2026-03-23",
+    "ipeds_graduation_rate_year": 2024,
+    "ipeds_graduation_rate_label": "Bachelor degree within 6 years, total"
+  },
+  "series": {
+    "revenue_total_adjusted": [
+      {
+        "year": 2014,
+        "value": 273540282.3028
+      },
+      {
+        "year": 2015,
+        "value": 305674483.4175
+      },
+      {
+        "year": 2016,
+        "value": 318287304.8208
+      },
+      {
+        "year": 2017,
+        "value": 279343520.0263
+      },
+      {
+        "year": 2018,
+        "value": 278455400.6016
+      },
+      {
+        "year": 2019,
+        "value": 285488398.5318
+      },
+      {
+        "year": 2020,
+        "value": 304789818.9005
+      },
+      {
+        "year": 2021,
+        "value": 284872766.9564
+      },
+      {
+        "year": 2022,
+        "value": 300422089.9351
+      },
+      {
+        "year": 2023,
+        "value": 334775268.8405
+      },
+      {
+        "year": 2024,
+        "value": 269470315
+      }
+    ],
+    "expenses_total_adjusted": [
+      {
+        "year": 2014,
+        "value": 239968413.2635
+      },
+      {
+        "year": 2015,
+        "value": 249015151.096
+      },
+      {
+        "year": 2016,
+        "value": 260055191.7447
+      },
+      {
+        "year": 2017,
+        "value": 260650533.7536
+      },
+      {
+        "year": 2018,
+        "value": 275565020.0592
+      },
+      {
+        "year": 2019,
+        "value": 258074282.7497
+      },
+      {
+        "year": 2020,
+        "value": 284272304.3929
+      },
+      {
+        "year": 2021,
+        "value": 279999300.3481
+      },
+      {
+        "year": 2022,
+        "value": 254223469.7067
+      },
+      {
+        "year": 2023,
+        "value": 226183289.3498
+      },
+      {
+        "year": 2024,
+        "value": 231094109
+      }
+    ],
+    "net_tuition_per_fte_adjusted": [
+      {
+        "year": 2014,
+        "value": 7874.5577
+      },
+      {
+        "year": 2015,
+        "value": 8250.5917
+      },
+      {
+        "year": 2016,
+        "value": 8791.809
+      },
+      {
+        "year": 2017,
+        "value": 8546.2024
+      },
+      {
+        "year": 2018,
+        "value": 8526.7873
+      },
+      {
+        "year": 2019,
+        "value": 8944.9778
+      },
+      {
+        "year": 2020,
+        "value": 9969.1025
+      },
+      {
+        "year": 2021,
+        "value": 9487.6565
+      },
+      {
+        "year": 2022,
+        "value": 8063.8686
+      },
+      {
+        "year": 2023,
+        "value": 5926.9726
+      },
+      {
+        "year": 2024,
+        "value": 5390.9112
+      }
+    ],
+    "unfunded_discount_rate": [
+      {
+        "year": 2014,
+        "value": 16.3222
+      },
+      {
+        "year": 2015,
+        "value": 16.5919
+      },
+      {
+        "year": 2016,
+        "value": 16.3443
+      },
+      {
+        "year": 2017,
+        "value": 18.1455
+      },
+      {
+        "year": 2018,
+        "value": 19.3367
+      },
+      {
+        "year": 2019,
+        "value": 21.2188
+      },
+      {
+        "year": 2020,
+        "value": 21.3961
+      },
+      {
+        "year": 2021,
+        "value": 22.7163
+      },
+      {
+        "year": 2022,
+        "value": 21.6891
+      },
+      {
+        "year": 2023,
+        "value": 44.0405
+      },
+      {
+        "year": 2024,
+        "value": 48.0295
+      }
+    ],
+    "enrollment_headcount_total": [
+      {
+        "year": 2014,
+        "value": 10665
+      },
+      {
+        "year": 2015,
+        "value": 10574
+      },
+      {
+        "year": 2016,
+        "value": 10513
+      },
+      {
+        "year": 2017,
+        "value": 10254
+      },
+      {
+        "year": 2018,
+        "value": 10296
+      },
+      {
+        "year": 2019,
+        "value": 11085
+      },
+      {
+        "year": 2020,
+        "value": 14711
+      },
+      {
+        "year": 2021,
+        "value": 13511
+      },
+      {
+        "year": 2022,
+        "value": 9982
+      },
+      {
+        "year": 2023,
+        "value": 8921
+      },
+      {
+        "year": 2024,
+        "value": 8695
+      }
+    ],
+    "enrollment_headcount_undergrad": [
+      {
+        "year": 2014,
+        "value": 9387
+      },
+      {
+        "year": 2015,
+        "value": 9390
+      },
+      {
+        "year": 2016,
+        "value": 9379
+      },
+      {
+        "year": 2017,
+        "value": 8967
+      },
+      {
+        "year": 2018,
+        "value": 8836
+      },
+      {
+        "year": 2019,
+        "value": 8365
+      },
+      {
+        "year": 2020,
+        "value": 8449
+      },
+      {
+        "year": 2021,
+        "value": 7724
+      },
+      {
+        "year": 2022,
+        "value": 6995
+      },
+      {
+        "year": 2023,
+        "value": 6573
+      },
+      {
+        "year": 2024,
+        "value": 6259
+      }
+    ],
+    "enrollment_headcount_graduate": [
+      {
+        "year": 2014,
+        "value": 1278
+      },
+      {
+        "year": 2015,
+        "value": 1184
+      },
+      {
+        "year": 2016,
+        "value": 1134
+      },
+      {
+        "year": 2017,
+        "value": 1287
+      },
+      {
+        "year": 2018,
+        "value": 1460
+      },
+      {
+        "year": 2019,
+        "value": 2720
+      },
+      {
+        "year": 2020,
+        "value": 6262
+      },
+      {
+        "year": 2021,
+        "value": 5787
+      },
+      {
+        "year": 2022,
+        "value": 2987
+      },
+      {
+        "year": 2023,
+        "value": 2348
+      },
+      {
+        "year": 2024,
+        "value": 2436
+      }
+    ],
+    "enrollment_nonresident_total": [
+      {
+        "year": 2014,
+        "value": 81
+      },
+      {
+        "year": 2015,
+        "value": 98
+      },
+      {
+        "year": 2016,
+        "value": 109
+      },
+      {
+        "year": 2017,
+        "value": 104
+      },
+      {
+        "year": 2018,
+        "value": 124
+      },
+      {
+        "year": 2019,
+        "value": 117
+      },
+      {
+        "year": 2020,
+        "value": 93
+      },
+      {
+        "year": 2021,
+        "value": 69
+      },
+      {
+        "year": 2022,
+        "value": 81
+      },
+      {
+        "year": 2023,
+        "value": 86
+      },
+      {
+        "year": 2024,
+        "value": 94
+      }
+    ],
+    "enrollment_nonresident_undergrad": [
+      {
+        "year": 2014,
+        "value": 65
+      },
+      {
+        "year": 2015,
+        "value": 79
+      },
+      {
+        "year": 2016,
+        "value": 97
+      },
+      {
+        "year": 2017,
+        "value": 89
+      },
+      {
+        "year": 2018,
+        "value": 105
+      },
+      {
+        "year": 2019,
+        "value": 96
+      },
+      {
+        "year": 2020,
+        "value": 76
+      },
+      {
+        "year": 2021,
+        "value": 55
+      },
+      {
+        "year": 2022,
+        "value": 67
+      },
+      {
+        "year": 2023,
+        "value": 66
+      },
+      {
+        "year": 2024,
+        "value": 79
+      }
+    ],
+    "enrollment_nonresident_graduate": [
+      {
+        "year": 2014,
+        "value": 16
+      },
+      {
+        "year": 2015,
+        "value": 19
+      },
+      {
+        "year": 2016,
+        "value": 12
+      },
+      {
+        "year": 2017,
+        "value": 15
+      },
+      {
+        "year": 2018,
+        "value": 19
+      },
+      {
+        "year": 2019,
+        "value": 21
+      },
+      {
+        "year": 2020,
+        "value": 17
+      },
+      {
+        "year": 2021,
+        "value": 14
+      },
+      {
+        "year": 2022,
+        "value": 14
+      },
+      {
+        "year": 2023,
+        "value": 20
+      },
+      {
+        "year": 2024,
+        "value": 15
+      }
+    ],
+    "staff_headcount_total": [
+      {
+        "year": 2014,
+        "value": 1603
+      },
+      {
+        "year": 2015,
+        "value": 1597
+      },
+      {
+        "year": 2016,
+        "value": 1675
+      },
+      {
+        "year": 2017,
+        "value": 1615
+      },
+      {
+        "year": 2018,
+        "value": 1604
+      },
+      {
+        "year": 2019,
+        "value": 1835
+      },
+      {
+        "year": 2020,
+        "value": 1704
+      },
+      {
+        "year": 2021,
+        "value": 1625
+      },
+      {
+        "year": 2022,
+        "value": 1574
+      },
+      {
+        "year": 2023,
+        "value": 1567
+      },
+      {
+        "year": 2024,
+        "value": 1574
+      }
+    ],
+    "staff_headcount_instructional": [
+      {
+        "year": 2014,
+        "value": 670
+      },
+      {
+        "year": 2015,
+        "value": 675
+      },
+      {
+        "year": 2016,
+        "value": 690
+      },
+      {
+        "year": 2017,
+        "value": 684
+      },
+      {
+        "year": 2018,
+        "value": 681
+      },
+      {
+        "year": 2019,
+        "value": 812
+      },
+      {
+        "year": 2020,
+        "value": 756
+      },
+      {
+        "year": 2021,
+        "value": 704
+      },
+      {
+        "year": 2022,
+        "value": 675
+      },
+      {
+        "year": 2023,
+        "value": 651
+      },
+      {
+        "year": 2024,
+        "value": 635
+      }
+    ],
+    "endowment_value_adjusted": [
+      {
+        "year": 2014,
+        "value": 62592455.6809
+      },
+      {
+        "year": 2015,
+        "value": 69780139.689
+      },
+      {
+        "year": 2016,
+        "value": 58728710.1043
+      },
+      {
+        "year": 2017,
+        "value": 64430262.9802
+      },
+      {
+        "year": 2018,
+        "value": 70885630.2687
+      },
+      {
+        "year": 2019,
+        "value": 73835955.2743
+      },
+      {
+        "year": 2020,
+        "value": 71087838.9985
+      },
+      {
+        "year": 2021,
+        "value": 84315710.0159
+      },
+      {
+        "year": 2022,
+        "value": 69565080.2237
+      },
+      {
+        "year": 2023,
+        "value": 69453589.2989
+      },
+      {
+        "year": 2024,
+        "value": 74282583
+      }
+    ],
+    "endowment_spending_current_use": [
+      {
+        "year": 2020,
+        "value": 2843224
+      },
+      {
+        "year": 2021,
+        "value": 2230180
+      },
+      {
+        "year": 2022,
+        "value": 2681255
+      },
+      {
+        "year": 2023,
+        "value": 3071241
+      },
+      {
+        "year": 2024,
+        "value": 3017627
+      }
+    ],
+    "endowment_spending_current_use_adjusted": [
+      {
+        "year": 2020,
+        "value": 3446098.0922
+      },
+      {
+        "year": 2021,
+        "value": 2581772.6465
+      },
+      {
+        "year": 2022,
+        "value": 2873964.9064
+      },
+      {
+        "year": 2023,
+        "value": 3161825.3837
+      },
+      {
+        "year": 2024,
+        "value": 3017627
+      }
+    ],
+    "endowment_spending_current_use_pct_core_revenue": [
+      {
+        "year": 2020,
+        "value": 0.0142
+      },
+      {
+        "year": 2021,
+        "value": 0.0112
+      },
+      {
+        "year": 2022,
+        "value": 0.0118
+      },
+      {
+        "year": 2023,
+        "value": 0.0112
+      },
+      {
+        "year": 2024,
+        "value": 0.0137
+      }
+    ],
+    "federal_grants_contracts_pell_adjusted_adjusted": [
+      {
+        "year": 2014,
+        "value": 5698743.1276
+      },
+      {
+        "year": 2015,
+        "value": 6252594.9381
+      },
+      {
+        "year": 2016,
+        "value": 6012279.4852
+      },
+      {
+        "year": 2017,
+        "value": 5169285.5357
+      },
+      {
+        "year": 2018,
+        "value": 7576712.3403
+      },
+      {
+        "year": 2019,
+        "value": 10321148.0986
+      },
+      {
+        "year": 2020,
+        "value": 11563737.1157
+      },
+      {
+        "year": 2021,
+        "value": 11795288.699
+      },
+      {
+        "year": 2022,
+        "value": 5954415.4323
+      },
+      {
+        "year": 2023,
+        "value": 4542020.1278
+      },
+      {
+        "year": 2024,
+        "value": 10824442
+      }
+    ],
+    "state_funding_adjusted": [
+      {
+        "year": 2014,
+        "value": 70784399.341
+      },
+      {
+        "year": 2015,
+        "value": 72663780.3856
+      },
+      {
+        "year": 2016,
+        "value": 73836457.0842
+      },
+      {
+        "year": 2017,
+        "value": 77756900.9396
+      },
+      {
+        "year": 2018,
+        "value": 76539993.576
+      },
+      {
+        "year": 2019,
+        "value": 77205880.4332
+      },
+      {
+        "year": 2020,
+        "value": 82539351.0083
+      },
+      {
+        "year": 2021,
+        "value": 87809773.9031
+      },
+      {
+        "year": 2022,
+        "value": 92401042.3904
+      },
+      {
+        "year": 2023,
+        "value": 107242517.2131
+      },
+      {
+        "year": 2024,
+        "value": 109521755
+      }
+    ]
+  }
+}

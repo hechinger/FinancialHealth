@@ -1,0 +1,596 @@
+name: Refresh Source Data Weekly
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * 1"
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+  IPEDS_START_YEAR: "2014"
+  IPEDS_END_YEAR: "2024"
+  ACCREDITATION_REVIEW_SHEET_TAB: "accreditation_review"
+  COLLEGE_CUTS_REVIEW_SHEET_TAB: "college_cuts_review"
+  # Closure sheet import is temporarily disabled while the upstream
+  # closure tracker is being rebuilt outside this repo. Re-enable by
+  # un-commenting CLOSURE_SHEET_URL here AND the matching "Import closure
+  # outputs ..." step below. tests/test_import_closure_sheet.py runs
+  # against local fixtures and is unaffected.
+  # CLOSURE_SHEET_URL: "https://docs.google.com/spreadsheets/d/1TyVZlzfoD1sr0jID6Rt421-bN5wS_9JjWnCBofmbhi8/edit?gid=0#gid=0"
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: site-data-writes
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 355
+    env:
+      RENV_CONFIG_CACHE_SYMLINKS: "FALSE"
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Set up R
+        uses: r-lib/actions/setup-r@6f6e5bc62fba3a704f74e7ad7ef7676c5c6a2590  # v2.11.4
+        with:
+          r-version: "4.5.3"
+
+      - name: Cache R packages
+        uses: actions/cache@v4
+        with:
+          path: renv/library
+          key: r-ubuntu-24.04-${{ hashFiles('renv.lock') }}
+          restore-keys: |
+            r-ubuntu-24.04-
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            cmake \
+            libcurl4-openssl-dev \
+            libjpeg-dev \
+            libpoppler-cpp-dev \
+            libx11-dev \
+            pandoc
+
+      - name: Restore R packages
+        run: Rscript -e "Sys.setenv(RENV_CONFIG_SNAPSHOT_PROMPT = 'false'); renv::restore()"
+
+      - name: Compute weekly cache key
+        id: cache-week
+        shell: bash
+        run: echo "week=$(date +%Y-W%V)" >> $GITHUB_OUTPUT
+
+      # Mirrors the cache key used by refresh-ipeds-full.yml so the two
+      # workflows share a warm bulk-download cache. Without this the
+      # canonical-rebuild step below cold-fetches every IPEDS table on
+      # every weekly run.
+      - name: Restore IPEDS download cache
+        uses: actions/cache@v4
+        with:
+          path: ipeds/cache/downloads
+          key: ipeds-downloads-${{ runner.os }}-${{ hashFiles('scripts/collect_ipeds_data.R', 'scripts/build_ipeds_dataset.R') }}
+          restore-keys: |
+            ipeds-downloads-${{ runner.os }}-
+
+      - name: Cache accreditation scraped HTML
+        uses: actions/cache@v4
+        with:
+          path: data_pipelines/accreditation/cache
+          key: accreditation-cache-v1-${{ steps.cache-week.outputs.week }}
+          restore-keys: |
+            accreditation-cache-v1-
+
+      - name: Cache Grant Witness downloads and USAspending responses
+        uses: actions/cache@v4
+        with:
+          path: data_pipelines/grant_witness/cache
+          key: grant-witness-cache-v1-${{ steps.cache-week.outputs.week }}
+          restore-keys: |
+            grant-witness-cache-v1-
+
+      # Cache the canonical IPEDS CSV between weekly runs. IPEDS releases
+      # data 3 times a year (fall, winter, spring); refresh-ipeds-full.yml
+      # is scheduled to rebuild on those releases and seeds this cache.
+      # The weekly Monday refresh just needs the CSV to feed downstream
+      # steps (build_web_exports, import_supabase_institution_mapping),
+      # not to rebuild it from scratch — that's a 60-180 min step that
+      # produces identical output until NCES releases new data.
+      #
+      # Cache keys are scoped by IPEDS_END_YEAR + a hash of the rebuild
+      # scripts so the cache automatically invalidates when either the
+      # input year window or the build logic changes. Restore-keys keeps
+      # us reading any prior cache for the same end year if the script
+      # hash drifts mid-cycle (still better than a 2-hour cold rebuild).
+      - name: Cache canonical IPEDS dataset
+        id: cache-ipeds-canonical
+        uses: actions/cache@v4
+        with:
+          path: ipeds/derived
+          key: ipeds-derived-v1-${{ runner.os }}-${{ env.IPEDS_END_YEAR }}-${{ hashFiles('scripts/build_ipeds_dataset.R', 'scripts/build_ipeds_canonical_dataset.R', 'scripts/collect_ipeds_data.R', 'scripts/shared/ipeds_helpers.R', 'scripts/shared/ipeds_row_builders.R', 'scripts/shared/ipeds_collector_helpers.R') }}
+          restore-keys: |
+            ipeds-derived-v1-${{ runner.os }}-${{ env.IPEDS_END_YEAR }}-
+            ipeds-derived-v1-${{ runner.os }}-
+
+      - name: Run shared helper smoke tests
+        shell: bash
+        run: >
+          Rscript ./tests/run_shared_helper_smoke_tests.R
+
+      # The canonical IPEDS CSV is gitignored (ipeds/derived/), so it does
+      # not exist on a fresh checkout. Several downstream steps in this
+      # workflow depend on it: import_supabase_institution_mapping.py
+      # (Pass-2 IPEDS name match) and build_web_exports.R (--input flag).
+      #
+      # IPEDS only releases new data 3x/year (fall, winter, spring). The
+      # rebuild is identical between releases, so we cache the canonical
+      # CSV across weekly runs and only run the 60-180 min rebuild when
+      # the cache is cold (eviction, year bump, or rebuild-script change).
+      # refresh-ipeds-full.yml runs this rebuild on the IPEDS release
+      # cadence and seeds the same cache.
+      - name: Rebuild canonical IPEDS dataset (skip if cached)
+        shell: bash
+        timeout-minutes: 180
+        env:
+          CANONICAL_CSV: ipeds/derived/ipeds_financial_health_canonical_${{ env.IPEDS_START_YEAR }}_${{ env.IPEDS_END_YEAR }}.csv
+        run: |
+          if [ "${{ steps.cache-ipeds-canonical.outputs.cache-hit }}" = "true" ] && [ -s "$CANONICAL_CSV" ]; then
+            echo "Exact canonical IPEDS cache hit at $CANONICAL_CSV — skipping rebuild."
+            ls -lh "$CANONICAL_CSV"
+            exit 0
+          fi
+          echo "Canonical IPEDS dataset missing or restored from stale prefix key — rebuilding."
+          Rscript ./scripts/build_ipeds_dataset.R \
+            --start-year "${IPEDS_START_YEAR}" \
+            --end-year "${IPEDS_END_YEAR}"
+
+      # The weekly refresh stages any newly scraped review rows into the
+      # Google Sheet, but public JSON should stay pinned to the last committed
+      # reviewed snapshot until a human approves edits. Capture those
+      # committed candidate CSVs before the refresh rewrites them.
+      - name: Snapshot committed review candidate baselines
+        shell: bash
+        run: |
+          mkdir -p review-snapshots
+          for path in \
+            data_pipelines/accreditation/accreditation_review_candidates.csv \
+            data_pipelines/college_cuts/college_cuts_review_candidates.csv
+          do
+            if ! git cat-file -e "HEAD:$path"; then
+              echo "Missing committed review candidate snapshot: $path"
+              exit 1
+            fi
+            git show "HEAD:$path" > "review-snapshots/$(basename "$path")"
+          done
+
+      # All subsequent scraper / refresh steps `tee` their stdout+stderr
+      # into a single log file that the drift-warning reporter (at the end of
+      # the job) scans for known `warn_*` patterns. Keeping every scraper
+      # log in one place means one grep catches drift no matter which
+      # pipeline emitted it. See docs/OPERATIONS_MANUAL.md.
+      - name: Create refresh log directory
+        shell: bash
+        run: |
+          mkdir -p refresh-logs
+          : > refresh-logs/combined.log
+
+      - name: Refresh accreditation actions with cache fallback
+        shell: bash
+        timeout-minutes: 60
+        run: |
+          # --cache-max-age-days: reuse HTML cached within this many days even
+          #   when refresh=TRUE. actions/cache@v4 restores last week's cache, so
+          #   a 6-day window means a Monday run reuses last Monday's pages but
+          #   any older page (or any new institution since last week) refetches.
+          # --msche-parallel-workers: number of concurrent workers for the
+          #   per-institution MSCHE fetch loop. 4 is conservative; raise if no
+          #   rate-limit warnings appear in logs over a few weeks.
+          Rscript ./scripts/build_accreditation_actions.R \
+            --financial-input data/downloads/full_dataset.csv \
+            --cache-max-age-days 6 \
+            --msche-parallel-workers 4 \
+            --allow-partial-accreditation \
+            2>&1 | tee -a refresh-logs/combined.log
+
+      # Rebuild the DAPIP institutional-action pipeline so build_web_exports.R
+      # has fresh file_text_path values pointing at this runner's filesystem
+      # (the committed dapip_action_rows_filtered.csv carries absolute paths
+      # from whichever workstation last regenerated it, e.g. "C:/Users/...").
+      # Without this, the WSCUC / SACSCOC fallback tier in
+      # .select_action_summary_source_text can't read the cached letter
+      # text on CI and the export falls back to the raw scraper heading,
+      # which makes test_data_exports.js (Providence Christian, High Point)
+      # red. The accreditation cache step above also restores any prior
+      # week's PDF/text cache so this stays fast on warm runs.
+      - name: Rebuild DAPIP institution crosswalk
+        shell: bash
+        timeout-minutes: 30
+        run: |
+          Rscript ./scripts/build_dapip_crosswalk.R \
+            --input ipeds/derived/ipeds_financial_health_canonical_2014_2024.csv \
+            2>&1 | tee -a refresh-logs/combined.log
+
+      - name: Rebuild DAPIP institutional action rows
+        shell: bash
+        timeout-minutes: 90
+        run: |
+          Rscript ./scripts/build_dapip_accreditation_actions.R \
+            2>&1 | tee -a refresh-logs/combined.log
+
+      - name: Sync Supabase institution → unitid mapping
+        shell: bash
+        timeout-minutes: 10
+        run: |
+          python ./scripts/import_supabase_institution_mapping.py --skip-stale-check \
+            2>&1 | tee -a refresh-logs/combined.log
+
+      # build_web_exports.R joins the public-table audit back to the freshly
+      # rebuilt DAPIP rows, so the audit must be regenerated in the same run.
+      - name: Rebuild DAPIP vs scraper audit
+        shell: bash
+        timeout-minutes: 30
+        run: |
+          Rscript ./scripts/build_dapip_vs_scraper_audit.R \
+            2>&1 | tee -a refresh-logs/combined.log
+
+      - name: Verify Supabase mapping exists
+        shell: bash
+        run: |
+          test -s data_pipelines/college_cuts/supabase_institution_unitid_mapping.csv || { echo "Missing Supabase mapping CSV"; exit 1; }
+
+      - name: Refresh college cuts from public API
+        shell: bash
+        timeout-minutes: 60
+        run: |
+          Rscript ./scripts/build_college_cuts_join.R \
+            --financial-input data/downloads/full_dataset.csv \
+            2>&1 | tee -a refresh-logs/combined.log
+
+      - name: Refresh research cuts from Grant Witness
+        shell: bash
+        timeout-minutes: 60
+        run: |
+          Rscript ./scripts/build_grant_witness_join.R \
+            --financial-input data/downloads/full_dataset.csv \
+            2>&1 | tee -a refresh-logs/combined.log
+
+      # Disabled while the upstream closure tracker is rebuilt outside
+      # this repo. The committed data/closure_status_by_unitid.json is
+      # left in place; closure UI is gated off in the frontend (see
+      # CLAUDE.md "Do not recommend ... enabling closure display").
+      # Re-enable: uncomment this step AND the CLOSURE_SHEET_URL env var
+      # at the top of the workflow.
+      # - name: Import closure outputs from published Google Sheet
+      #   shell: bash
+      #   timeout-minutes: 10
+      #   run: >
+      #     python ./scripts/import_closure_sheet.py
+      #     --sheet "${CLOSURE_SHEET_URL}"
+
+      - name: Rebuild static web exports (candidate generation)
+        shell: bash
+        timeout-minutes: 60
+        run: >
+          Rscript ./scripts/build_web_exports.R
+          --input ipeds/derived/ipeds_financial_health_canonical_2014_2024.csv
+
+      - name: Decode Google service account credentials
+        shell: bash
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON_B64: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON_B64 }}
+        run: |
+          if [ -z "${GOOGLE_SERVICE_ACCOUNT_JSON_B64}" ]; then
+            echo "GOOGLE_SERVICE_ACCOUNT_JSON_B64 secret is not set."
+            exit 0
+          fi
+          echo "${GOOGLE_SERVICE_ACCOUNT_JSON_B64}" | base64 --decode > "$RUNNER_TEMP/google-service-account.json"
+          echo "GOOGLE_APPLICATION_CREDENTIALS=$RUNNER_TEMP/google-service-account.json" >> "$GITHUB_ENV"
+
+      # Staging is CSV-only: new candidate rows are written to
+      # editorial_overrides.csv and reach the Google Sheet only after the
+      # CSV commit lands (see "Append new review rows to Google Sheet" at
+      # the end of this job). A run that dies mid-way therefore never
+      # leaves sheet-only orphan rows behind (audit doc 3.1).
+      - name: Stage accreditation review queue
+        shell: bash
+        timeout-minutes: 15
+        run: |
+          Rscript ./scripts/stage_accreditation_review.R \
+            --input data_pipelines/accreditation/accreditation_review_candidates.csv \
+            --output data_pipelines/accreditation/editorial_overrides.csv \
+            --verbose \
+            2>&1 | tee -a refresh-logs/combined.log
+
+      - name: Stage college cuts review queue
+        shell: bash
+        timeout-minutes: 15
+        run: |
+          Rscript ./scripts/stage_college_cuts_review.R \
+            --input data_pipelines/college_cuts/college_cuts_review_candidates.csv \
+            --output data_pipelines/college_cuts/editorial_overrides.csv \
+            --verbose \
+            2>&1 | tee -a refresh-logs/combined.log
+
+      - name: Pull accreditation review decisions
+        shell: bash
+        timeout-minutes: 15
+        env:
+          ACCREDITATION_REVIEW_SHEET_ID: ${{ secrets.ACCREDITATION_REVIEW_SHEET_ID }}
+        run: |
+          if [ -n "${ACCREDITATION_REVIEW_SHEET_ID}" ] && [ -n "${GOOGLE_APPLICATION_CREDENTIALS:-}" ] && [ -f data_pipelines/accreditation/editorial_overrides.csv ]; then
+            Rscript ./scripts/pull_accreditation_overrides.R \
+              --sheet "${ACCREDITATION_REVIEW_SHEET_ID}" \
+              --tab "${ACCREDITATION_REVIEW_SHEET_TAB}" \
+              --verbose \
+              2>&1 | tee -a refresh-logs/combined.log \
+              || echo "::warning::Accreditation review sheet pull failed; continuing with committed editorial_overrides.csv (sheet review edits will not sync this run). Repair: run Publish Editorial Overrides with allow_editor_added_rows, or fix row_origin in the sheet." | tee -a refresh-logs/combined.log
+          else
+            echo "Skipping Google Sheet pull; using committed editorial_overrides.csv" | tee -a refresh-logs/combined.log
+          fi
+
+      - name: Pull college cuts review decisions
+        shell: bash
+        timeout-minutes: 15
+        env:
+          ACCREDITATION_REVIEW_SHEET_ID: ${{ secrets.ACCREDITATION_REVIEW_SHEET_ID }}
+        run: |
+          if [ -n "${ACCREDITATION_REVIEW_SHEET_ID}" ] && [ -n "${GOOGLE_APPLICATION_CREDENTIALS:-}" ] && [ -f data_pipelines/college_cuts/editorial_overrides.csv ]; then
+            Rscript ./scripts/pull_college_cuts_overrides.R \
+              --sheet "${ACCREDITATION_REVIEW_SHEET_ID}" \
+              --tab "${COLLEGE_CUTS_REVIEW_SHEET_TAB}" \
+              --verbose \
+              2>&1 | tee -a refresh-logs/combined.log \
+              || echo "::warning::College cuts review sheet pull failed; continuing with committed editorial_overrides.csv (sheet review edits will not sync this run). Repair: run Publish Editorial Overrides with allow_editor_added_rows, or fix row_origin in the sheet." | tee -a refresh-logs/combined.log
+          else
+            echo "Skipping college cuts Google Sheet pull; using committed editorial_overrides.csv" | tee -a refresh-logs/combined.log
+          fi
+
+      - name: Rebuild static web exports (review gate)
+        shell: bash
+        timeout-minutes: 60
+        run: >
+          Rscript ./scripts/build_web_exports.R
+          --input ipeds/derived/ipeds_financial_health_canonical_2014_2024.csv
+          --apply-only-review-gate
+          --accreditation-review-candidates-input review-snapshots/accreditation_review_candidates.csv
+          --cuts-review-candidates-input review-snapshots/college_cuts_review_candidates.csv
+          --enforce-review-gate
+          --enforce-cuts-review-gate
+
+      - name: Validate rebuilt artifacts
+        shell: bash
+        timeout-minutes: 5
+        run: |
+          node ./tests/test_data_exports.js
+          python ./tests/test_import_supabase.py
+
+      # Preserve the rebuilt accreditation outputs when validation fails so
+      # refresh regressions can be debugged from the exact JSON / pipeline
+      # rows that triggered the red run.
+      - name: Upload failed accreditation rebuild outputs
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: failed-accreditation-outputs
+          path: |
+            data/accreditation.json
+            data/accreditation_index.json
+            data_pipelines/accreditation/accreditation_tracker_actions_joined.csv
+            data_pipelines/accreditation/dapip_action_rows_filtered.csv
+            data_pipelines/accreditation/dapip_vs_scraper_audit.csv
+          retention-days: 30
+
+      # Drift-warning reporter. Scrapers emit named warnings whenever a
+      # structural assumption breaks (site layout change, action type
+      # disappears, parse returns 0 rows from a non-empty page). The weekly
+      # refresh keeps going because public JSON is rebuilt from the last
+      # committed reviewed snapshot, but the warnings are still surfaced for
+      # human triage. See docs/OPERATIONS_MANUAL.md for remediation steps.
+      # Detects drift, updates the committed consecutive-week state file
+      # (pushed by the commit step below), and files/updates a GitHub Issue
+      # so drift on a green run actually notifies someone. Always exits 0;
+      # the chronic-drift red-run check is the job's final step so a red
+      # week still pushes data and appends review rows.
+      - name: Report scraper drift warnings
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -o pipefail
+          LOG=refresh-logs/combined.log
+          if [ ! -s "$LOG" ]; then
+            echo "Refresh log $LOG is empty — scrapers produced no output, failing to be safe."
+            exit 1
+          fi
+          # Patterns, per source:
+          #   - accreditor scrapers: the warn_* helpers, empty-parse tail,
+          #     and "SCRAPER RETURNED 0 ROWS" (refresh runs with
+          #     --allow-partial-accreditation, so these are warnings).
+          #   - DAPIP / cuts API / Grant Witness: "PIPELINE DRIFT WARNING"
+          #     structured markers emitted at each source's 0-row path.
+          #   - "carry review decisions": the pull-step quarantine guard.
+          #   - "ANOMALY:": review-gate rows stranded outside the candidates.
+          ACC=$(grep -cE 'warn_if_scrape_count_dropped|warn_if_action_type_dropped|warn_on_empty_parse|Returning empty table|SCRAPER RETURNED 0 ROWS' "$LOG" || true)
+          DAPIP=$(grep -cE 'PIPELINE DRIFT WARNING: DAPIP' "$LOG" || true)
+          CUTS=$(grep -cE 'PIPELINE DRIFT WARNING: (College Cuts|fetch_all_api_cuts)' "$LOG" || true)
+          GW=$(grep -cE 'PIPELINE DRIFT WARNING: Grant Witness' "$LOG" || true)
+          QUAR=$(grep -cE 'carry review decisions' "$LOG" || true)
+          ANOM=$(grep -cE 'ANOMALY:' "$LOG" || true)
+
+          DRIFTED=""
+          [ "$ACC" -gt 0 ] && DRIFTED="$DRIFTED,accreditation_scrapers"
+          [ "$DAPIP" -gt 0 ] && DRIFTED="$DRIFTED,dapip"
+          [ "$CUTS" -gt 0 ] && DRIFTED="$DRIFTED,cuts_api"
+          [ "$GW" -gt 0 ] && DRIFTED="$DRIFTED,grant_witness"
+          [ "$QUAR" -gt 0 ] && DRIFTED="$DRIFTED,review_decision_quarantine"
+          [ "$ANOM" -gt 0 ] && DRIFTED="$DRIFTED,review_gate_anomaly"
+          DRIFTED="${DRIFTED#,}"
+
+          python3 scripts/ci/update_drift_state.py \
+            --state data_pipelines/drift_state.json \
+            --threshold 3 \
+            --drifted "$DRIFTED"
+
+          # Cross-source duplicate suppression is load-bearing absorption
+          # (C1): surface it for triage as a notice, but keep it out of the
+          # drift-state taxonomy - it firing weekly is expected behavior and
+          # must never accumulate toward a chronic-drift red run.
+          SUPPRESS=$(grep -nE 'Suppressing cross-source duplicate' "$LOG" || true)
+          if [ -n "$SUPPRESS" ]; then
+            echo "::notice::Cross-source duplicate suppression fired this run (expected absorption; triage if the folded rows look wrong)."
+            echo "$SUPPRESS"
+          fi
+
+          if [ -z "$DRIFTED" ]; then
+            echo "No scraper drift warnings found."
+            exit 0
+          fi
+
+          MATCHES=$(grep -nE \
+            'warn_if_scrape_count_dropped|warn_if_action_type_dropped|warn_on_empty_parse|Returning empty table|SCRAPER RETURNED 0 ROWS|PIPELINE DRIFT WARNING|carry review decisions|ANOMALY:' \
+            "$LOG" || true)
+          echo "::warning::Scraper drift warning(s) detected; weekly refresh continued because publish is pinned to the last committed reviewed snapshot."
+          echo "$MATCHES"
+          echo
+          echo "See docs/OPERATIONS_MANUAL.md for triage."
+
+          # Escalate through a tracked Issue (email notification to watchers).
+          # Failure to file must never fail the refresh.
+          {
+            RUN_URL="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+            BODY_FILE=$(mktemp)
+            {
+              echo "Weekly refresh detected pipeline drift in: ${DRIFTED//,/, }"
+              echo
+              echo "Run: ${RUN_URL}"
+              echo
+              echo '```'
+              echo "$MATCHES" | head -50
+              echo '```'
+              echo
+              echo "Consecutive-week counts live in data_pipelines/drift_state.json; the run goes red when any source reaches 3. See docs/OPERATIONS_MANUAL.md for triage."
+            } > "$BODY_FILE"
+            gh label create pipeline-drift \
+              --description "Automated weekly-refresh drift reports" \
+              --color D93F0B 2>/dev/null || true
+            EXISTING=$(gh issue list --label pipeline-drift --state open \
+              --json number --jq '.[0].number' 2>/dev/null || true)
+            if [ -n "$EXISTING" ] && [ "$EXISTING" != "null" ]; then
+              gh issue comment "$EXISTING" --body-file "$BODY_FILE"
+              echo "Commented on existing drift issue #$EXISTING"
+            else
+              gh issue create \
+                --title "Pipeline drift detected by weekly refresh" \
+                --label pipeline-drift \
+                --body-file "$BODY_FILE"
+              echo "Filed new drift issue"
+            fi
+          } || echo "::warning::Could not file/update the pipeline-drift issue; drift is still visible in this run's annotations."
+          exit 0
+
+      - name: Upload refresh logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: refresh-logs
+          path: refresh-logs/
+          retention-days: 30
+
+      - name: Commit and push updated data
+        shell: bash
+        timeout-minutes: 5
+        run: |
+          bash ./scripts/ci/commit_and_push.sh \
+            --commit-message "chore: refresh data [skip ci]" \
+            --no-changes-message "No data changes to commit." \
+            --target-branch-error-message "Could not determine target branch for refresh publish." \
+            --add data/ \
+            --add data_pipelines/accreditation/accreditation_review_candidates.csv \
+            --add data_pipelines/accreditation/accreditation_tracker_actions_joined.csv \
+            --add data_pipelines/accreditation/accreditation_tracker_institution_summary.csv \
+            --add data_pipelines/accreditation/editorial_overrides.csv \
+            --add data_pipelines/accreditation/dapip_action_rows_filtered.csv \
+            --add data_pipelines/accreditation/dapip_code_coverage.csv \
+            --add data_pipelines/accreditation/dapip_public_table_policy_counts.csv \
+            --add data_pipelines/accreditation/dapip_public_table_policy_family_counts.csv \
+            --add data_pipelines/accreditation/dapip_vs_scraper_audit.csv \
+            --add data_pipelines/college_cuts/college_cuts_review_candidates.csv \
+            --add data_pipelines/college_cuts/college_cuts_financial_tracker_cut_level_joined.csv \
+            --add data_pipelines/college_cuts/editorial_overrides.csv \
+            --add data_pipelines/college_cuts/supabase_institution_unitid_mapping.csv \
+            --add data_pipelines/scorecard/tracker_outcomes_joined.csv \
+            --add-if-exists data_pipelines/college_cuts/review_quarantine.csv \
+            --add-if-exists data_pipelines/accreditation/review_quarantine.csv \
+            --add-if-exists data_pipelines/drift_state.json \
+            --conflict-path data/ \
+            --conflict-path data_pipelines/accreditation/accreditation_review_candidates.csv \
+            --conflict-path data_pipelines/accreditation/accreditation_tracker_actions_joined.csv \
+            --conflict-path data_pipelines/accreditation/accreditation_tracker_institution_summary.csv \
+            --conflict-path data_pipelines/accreditation/dapip_action_rows_filtered.csv \
+            --conflict-path data_pipelines/accreditation/dapip_code_coverage.csv \
+            --conflict-path data_pipelines/accreditation/dapip_public_table_policy_counts.csv \
+            --conflict-path data_pipelines/accreditation/dapip_public_table_policy_family_counts.csv \
+            --conflict-path data_pipelines/accreditation/dapip_vs_scraper_audit.csv \
+            --conflict-path data_pipelines/college_cuts/college_cuts_review_candidates.csv \
+            --conflict-path data_pipelines/college_cuts/college_cuts_financial_tracker_cut_level_joined.csv \
+            --conflict-path data_pipelines/college_cuts/supabase_institution_unitid_mapping.csv \
+            --conflict-path data_pipelines/scorecard/tracker_outcomes_joined.csv
+
+      # Sheet appends deliberately run AFTER commit-and-push: a row may
+      # reach the review Sheet only once it exists in a pushed commit of
+      # editorial_overrides.csv. If this step fails, the new rows stay
+      # CSV-only and the next successful run recomputes the same diff and
+      # appends them then (self-healing). The strict pull guard therefore
+      # never sees sheet-only orphan rows from a dead run (audit doc 3.1).
+      - name: Append new review rows to Google Sheet (post-commit)
+        if: success()
+        shell: bash
+        timeout-minutes: 15
+        env:
+          ACCREDITATION_REVIEW_SHEET_ID: ${{ secrets.ACCREDITATION_REVIEW_SHEET_ID }}
+        run: |
+          if [ -z "${ACCREDITATION_REVIEW_SHEET_ID}" ] || [ -z "${GOOGLE_APPLICATION_CREDENTIALS:-}" ]; then
+            echo "Skipping review sheet append; Google Sheet credentials are not configured."
+            exit 0
+          fi
+          Rscript ./scripts/sync_review_sheet_appends.R \
+            --pipeline accreditation \
+            --sheet "${ACCREDITATION_REVIEW_SHEET_ID}" \
+            --tab "${ACCREDITATION_REVIEW_SHEET_TAB}" \
+            --verbose \
+            || echo "::warning::Accreditation review sheet append failed; new rows stay CSV-only and will be appended by the next successful refresh."
+          Rscript ./scripts/sync_review_sheet_appends.R \
+            --pipeline cuts \
+            --sheet "${ACCREDITATION_REVIEW_SHEET_ID}" \
+            --tab "${COLLEGE_CUTS_REVIEW_SHEET_TAB}" \
+            --verbose \
+            || echo "::warning::College cuts review sheet append failed; new rows stay CSV-only and will be appended by the next successful refresh."
+
+      # Runs LAST deliberately: data push and review-sheet appends have
+      # already completed, so a chronic-drift red run loses nothing — it
+      # only makes week-3+ drift impossible to ignore.
+      - name: Fail on chronic pipeline drift
+        shell: bash
+        run: |
+          python3 scripts/ci/update_drift_state.py \
+            --state data_pipelines/drift_state.json \
+            --threshold 3 \
+            --check-only

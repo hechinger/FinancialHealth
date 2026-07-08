@@ -1,0 +1,293 @@
+﻿name: Publish Editorial Overrides
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "Run mode"
+        required: true
+        default: publish
+        type: choice
+        options:
+          - publish
+          - teachout-audit
+          - teachout-cleanup
+      allow_editor_added_rows:
+        description: "Repair: import sheet-only non-manual rows into editorial_overrides.csv instead of failing the pull"
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: site-data-writes
+  cancel-in-progress: false
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+  IPEDS_START_YEAR: "2014"
+  IPEDS_END_YEAR: "2024"
+  ACCREDITATION_REVIEW_SHEET_TAB: "accreditation_review"
+  COLLEGE_CUTS_REVIEW_SHEET_TAB: "college_cuts_review"
+
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    env:
+      RENV_CONFIG_CACHE_SYMLINKS: "FALSE"
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        if: ${{ inputs.mode != 'teachout-audit' }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Set up Node.js
+        if: ${{ inputs.mode != 'teachout-audit' }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Set up R
+        uses: r-lib/actions/setup-r@6f6e5bc62fba3a704f74e7ad7ef7676c5c6a2590  # v2.11.4
+        with:
+          r-version: "4.5.3"
+
+      - name: Cache R packages
+        uses: actions/cache@v4
+        with:
+          path: renv/library
+          key: r-ubuntu-24.04-${{ hashFiles('renv.lock') }}
+          restore-keys: |
+            r-ubuntu-24.04-
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            cmake \
+            libcurl4-openssl-dev \
+            libjpeg-dev \
+            libpoppler-cpp-dev \
+            libx11-dev \
+            pandoc
+
+      - name: Restore R packages
+        run: Rscript -e "Sys.setenv(RENV_CONFIG_SNAPSHOT_PROMPT = 'false'); renv::restore()"
+
+      - name: Restore IPEDS download cache
+        if: ${{ inputs.mode != 'teachout-audit' }}
+        uses: actions/cache@v4
+        with:
+          path: ipeds/cache/downloads
+          key: ipeds-downloads-${{ runner.os }}-${{ hashFiles('scripts/collect_ipeds_data.R', 'scripts/build_ipeds_dataset.R') }}
+          restore-keys: |
+            ipeds-downloads-${{ runner.os }}-
+
+      - name: Restore canonical IPEDS dataset cache
+        if: ${{ inputs.mode != 'teachout-audit' }}
+        uses: actions/cache@v4
+        with:
+          path: ipeds/derived
+          key: ipeds-derived-v1-${{ runner.os }}-${{ env.IPEDS_END_YEAR }}-${{ hashFiles('scripts/build_ipeds_dataset.R', 'scripts/build_ipeds_canonical_dataset.R', 'scripts/collect_ipeds_data.R', 'scripts/shared/ipeds_helpers.R', 'scripts/shared/ipeds_row_builders.R', 'scripts/shared/ipeds_collector_helpers.R') }}
+          restore-keys: |
+            ipeds-derived-v1-${{ runner.os }}-${{ env.IPEDS_END_YEAR }}-
+            ipeds-derived-v1-${{ runner.os }}-
+
+      - name: Rebuild canonical IPEDS dataset (skip if cached)
+        if: ${{ inputs.mode != 'teachout-audit' }}
+        shell: bash
+        timeout-minutes: 180
+        env:
+          CANONICAL_CSV: ipeds/derived/ipeds_financial_health_canonical_${{ env.IPEDS_START_YEAR }}_${{ env.IPEDS_END_YEAR }}.csv
+        run: |
+          if [ -s "$CANONICAL_CSV" ]; then
+            echo "Canonical IPEDS dataset cache hit at $CANONICAL_CSV - skipping rebuild."
+            ls -lh "$CANONICAL_CSV"
+            exit 0
+          fi
+          echo "Canonical IPEDS dataset not found - rebuilding."
+          Rscript ./scripts/build_ipeds_dataset.R \
+            --start-year "${IPEDS_START_YEAR}" \
+            --end-year "${IPEDS_END_YEAR}"
+      - name: Decode Google service account credentials
+        shell: bash
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON_B64: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON_B64 }}
+        run: |
+          if [ -z "${GOOGLE_SERVICE_ACCOUNT_JSON_B64}" ]; then
+            echo "GOOGLE_SERVICE_ACCOUNT_JSON_B64 secret is not set."
+            exit 0
+          fi
+          echo "${GOOGLE_SERVICE_ACCOUNT_JSON_B64}" | base64 --decode > "$RUNNER_TEMP/google-service-account.json"
+          echo "GOOGLE_APPLICATION_CREDENTIALS=$RUNNER_TEMP/google-service-account.json" >> "$GITHUB_ENV"
+
+      - name: Require Google Sheet configuration
+        shell: bash
+        env:
+          ACCREDITATION_REVIEW_SHEET_ID: ${{ secrets.ACCREDITATION_REVIEW_SHEET_ID }}
+        run: |
+          if [ -z "${ACCREDITATION_REVIEW_SHEET_ID}" ]; then
+            echo "Missing ACCREDITATION_REVIEW_SHEET_ID secret."
+            exit 1
+          fi
+          if [ -z "${GOOGLE_APPLICATION_CREDENTIALS:-}" ]; then
+            echo "Missing GOOGLE_SERVICE_ACCOUNT_JSON_B64 secret or decoded credentials."
+            exit 1
+          fi
+
+      - name: Pull accreditation review decisions
+        if: ${{ inputs.mode == 'publish' }}
+        shell: bash
+        timeout-minutes: 15
+        env:
+          ACCREDITATION_REVIEW_SHEET_ID: ${{ secrets.ACCREDITATION_REVIEW_SHEET_ID }}
+        run: |
+          extra_flags=""
+          if [ "${{ inputs.allow_editor_added_rows }}" = "true" ]; then
+            extra_flags="--allow-editor-added-rows"
+          fi
+          Rscript ./scripts/pull_accreditation_overrides.R \
+            --sheet "${ACCREDITATION_REVIEW_SHEET_ID}" \
+            --tab "${ACCREDITATION_REVIEW_SHEET_TAB}" \
+            --verbose $extra_flags
+
+      - name: Pull college cuts review decisions
+        if: ${{ inputs.mode == 'publish' }}
+        shell: bash
+        timeout-minutes: 15
+        env:
+          ACCREDITATION_REVIEW_SHEET_ID: ${{ secrets.ACCREDITATION_REVIEW_SHEET_ID }}
+        run: |
+          extra_flags=""
+          if [ "${{ inputs.allow_editor_added_rows }}" = "true" ]; then
+            extra_flags="--allow-editor-added-rows"
+          fi
+          Rscript ./scripts/pull_college_cuts_overrides.R \
+            --sheet "${ACCREDITATION_REVIEW_SHEET_ID}" \
+            --tab "${COLLEGE_CUTS_REVIEW_SHEET_TAB}" \
+            --verbose $extra_flags
+
+      - name: Audit accreditation teach-out review rows
+        if: ${{ inputs.mode == 'teachout-audit' || inputs.mode == 'teachout-cleanup' }}
+        shell: bash
+        timeout-minutes: 15
+        env:
+          ACCREDITATION_REVIEW_SHEET_ID: ${{ secrets.ACCREDITATION_REVIEW_SHEET_ID }}
+        run: |
+          Rscript ./scripts/audit_accreditation_teachout_rows.R \
+            --sheet "${ACCREDITATION_REVIEW_SHEET_ID}" \
+            --tab "${ACCREDITATION_REVIEW_SHEET_TAB}" \
+            --output "$RUNNER_TEMP/accreditation_teachout_audit.csv" \
+            --verbose
+
+      - name: Upload teach-out audit artifact
+        if: ${{ inputs.mode == 'teachout-audit' || inputs.mode == 'teachout-cleanup' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: accreditation-teachout-audit
+          path: ${{ runner.temp }}/accreditation_teachout_audit.csv
+          if-no-files-found: error
+
+      - name: Clean accreditation teach-out review rows
+        if: ${{ inputs.mode == 'teachout-cleanup' }}
+        shell: bash
+        timeout-minutes: 15
+        env:
+          ACCREDITATION_REVIEW_SHEET_ID: ${{ secrets.ACCREDITATION_REVIEW_SHEET_ID }}
+        run: |
+          Rscript ./scripts/cleanup_accreditation_teachout_rows.R \
+            --sheet "${ACCREDITATION_REVIEW_SHEET_ID}" \
+            --tab "${ACCREDITATION_REVIEW_SHEET_TAB}" \
+            --verbose
+
+      - name: Pull remaining accreditation review decisions after teach-out cleanup
+        if: ${{ inputs.mode == 'teachout-cleanup' }}
+        shell: bash
+        timeout-minutes: 15
+        env:
+          ACCREDITATION_REVIEW_SHEET_ID: ${{ secrets.ACCREDITATION_REVIEW_SHEET_ID }}
+        run: |
+          Rscript ./scripts/pull_accreditation_overrides.R \
+            --sheet "${ACCREDITATION_REVIEW_SHEET_ID}" \
+            --tab "${ACCREDITATION_REVIEW_SHEET_TAB}" \
+            --verbose
+
+      - name: Rebuild DAPIP vs scraper audit
+        if: ${{ inputs.mode == 'publish' }}
+        shell: bash
+        timeout-minutes: 60
+        run: |
+          Rscript ./scripts/build_dapip_vs_scraper_audit.R
+
+      - name: Rebuild static web exports (review gate)
+        if: ${{ inputs.mode == 'publish' }}
+        shell: bash
+        timeout-minutes: 60
+        run: >
+          Rscript ./scripts/build_web_exports.R
+          --input ipeds/derived/ipeds_financial_health_canonical_2014_2024.csv
+          --only cuts,accreditation
+          --apply-only-review-gate
+          --accreditation-review-candidates-input data_pipelines/accreditation/accreditation_review_candidates.csv
+          --cuts-review-candidates-input data_pipelines/college_cuts/college_cuts_review_candidates.csv
+          --enforce-review-gate
+          --enforce-cuts-review-gate
+
+      - name: Rebuild accreditation exports after teach-out cleanup
+        if: ${{ inputs.mode == 'teachout-cleanup' }}
+        shell: bash
+        timeout-minutes: 60
+        run: >
+          Rscript ./scripts/build_web_exports.R
+          --input ipeds/derived/ipeds_financial_health_canonical_2014_2024.csv
+          --only accreditation
+          --apply-only-review-gate
+          --accreditation-review-candidates-input data_pipelines/accreditation/accreditation_review_candidates.csv
+          --enforce-review-gate
+
+      - name: Validate rebuilt artifacts
+        if: ${{ inputs.mode != 'teachout-audit' }}
+        shell: bash
+        timeout-minutes: 5
+        run: |
+          node ./tests/test_data_exports.js
+          python ./tests/test_import_supabase.py
+
+      - name: Commit and push editorial publish
+        if: ${{ inputs.mode != 'teachout-audit' }}
+        shell: bash
+        timeout-minutes: 5
+        run: |
+          if [ "${{ inputs.mode }}" = "teachout-cleanup" ]; then
+            bash ./scripts/ci/commit_and_push.sh \
+              --commit-message "chore: remove accreditation teach-out review rows [skip ci]" \
+              --no-changes-message "No editorial publish changes to commit." \
+              --target-branch-error-message "Could not determine target branch for editorial publish." \
+              --add data/ \
+              --add data_pipelines/accreditation/editorial_overrides.csv \
+              --add data_pipelines/accreditation/accreditation_review_candidates.csv \
+              --add-if-exists data_pipelines/college_cuts/review_quarantine.csv \
+              --add-if-exists data_pipelines/accreditation/review_quarantine.csv
+          else
+            bash ./scripts/ci/commit_and_push.sh \
+              --commit-message "chore: publish editorial updates [skip ci]" \
+              --no-changes-message "No editorial publish changes to commit." \
+              --target-branch-error-message "Could not determine target branch for editorial publish." \
+              --add data/ \
+              --add data_pipelines/accreditation/dapip_vs_scraper_audit.csv \
+              --add data_pipelines/accreditation/dapip_code_coverage.csv \
+              --add data_pipelines/accreditation/dapip_public_table_policy_counts.csv \
+              --add data_pipelines/accreditation/dapip_public_table_policy_family_counts.csv \
+              --add data_pipelines/accreditation/editorial_overrides.csv \
+              --add data_pipelines/college_cuts/editorial_overrides.csv \
+              --add-if-exists data_pipelines/college_cuts/review_quarantine.csv \
+              --add-if-exists data_pipelines/accreditation/review_quarantine.csv
+          fi

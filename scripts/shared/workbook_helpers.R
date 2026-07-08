@@ -1,0 +1,25 @@
+# =========================================================================
+# scripts/shared/workbook_helpers.R
+# =========================================================================
+#
+# PURPOSE:
+#   Compatibility loader that sources three workbook helper modules in dependency order.
+#   Source this inside main() in build_article_workbook.R after utils.R.
+#
+# SOURCED MODULES:
+#   - workbook_table_helpers.R    : Data frame / table manipulation helpers
+#   - workbook_registry_helpers.R : Workbook sheet registry and deduplication
+#   - workbook_xml_helpers.R      : SpreadsheetML/XML rendering
+#
+
+# Determine the helper directory: use 'root' if set, otherwise current directory.
+workbook_shared_dir <- if (exists("root", inherits = TRUE)) {
+  file.path(root, "scripts", "shared")
+} else {
+  file.path(getwd(), "scripts", "shared")
+}
+
+# Source modules in dependency order.
+source(file.path(workbook_shared_dir, "workbook_table_helpers.R"))
+source(file.path(workbook_shared_dir, "workbook_registry_helpers.R"))
+source(file.path(workbook_shared_dir, "workbook_xml_helpers.R"))

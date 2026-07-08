@@ -1,0 +1,875 @@
+{
+  "unitid": "188526",
+  "generated_at": "2026-07-08",
+  "profile": {
+    "institution_name": "Albany College of Pharmacy and Health Sciences",
+    "institution_unique_name": "Albany College of Pharmacy and Health Sciences | Albany | New York",
+    "state": "New York",
+    "city": "Albany",
+    "control_label": "Private not-for-profit",
+    "sector": "Private not-for-profit, 4-year or above",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "City: Midsize",
+    "religious_affiliation": "Not applicable",
+    "all_programs_distance_education": "No"
+  },
+  "summary": {
+    "latest_year": 2024,
+    "enrollment_pct_change_5yr": -33.9884,
+    "sector_median_enrollment_pct_change_5yr": -3.7344,
+    "enrollment_decline_last_3_of_5": "Yes",
+    "revenue_pct_change_5yr": -16.7275,
+    "sector_median_revenue_pct_change_5yr": -0.5117,
+    "net_tuition_per_fte_change_5yr": -45.2912,
+    "sector_median_net_tuition_per_fte_change_5yr": -17.816,
+    "staff_total_headcount_pct_change_5yr": -7.9872,
+    "sector_median_staff_total_headcount_pct_change_5yr": -1.7263,
+    "staff_instructional_headcount_pct_change_5yr": -3.3898,
+    "students_per_instructional_staff_fte": 10,
+    "sector_median_students_per_instructional_staff_fte": 12,
+    "ended_year_at_loss": "Yes",
+    "losses_last_3_of_5": "Yes",
+    "loss_years_last_10": 3,
+    "tuition_dependence_pct": 42.1698,
+    "sector_median_tuition_dependence_pct": 44.8638,
+    "tuition_dependence_vs_sector_median_sentence": "This college got 42.0% of its revenue from net tuition in 2024, below the median of 45% for private not-for-profit colleges.",
+    "unfunded_discount_rate": 35.2404,
+    "unfunded_discount_pct_change_5yr": 30.4628,
+    "share_grad_students": 44.3219,
+    "sector_avg_share_grad_students": 29.1503,
+    "research_expense": 2446388,
+    "research_expense_per_fte": 2682.443,
+    "research_expense_pct_core_expenses": 4.952,
+    "sector_research_spending_n": 1148,
+    "sector_research_spending_positive_n": 401,
+    "sector_research_spending_reporting_share_pct": 34.9,
+    "sector_median_research_expense_per_fte_positive": 585.5059,
+    "pct_international_all": 4.4101,
+    "pct_international_undergraduate": 4.1584,
+    "pct_international_graduate": 4.7264,
+    "international_student_count_change_5yr": -61,
+    "international_enrollment_pct_change_5yr": -60.396,
+    "international_students_sentence": "In 2024, 4.4% of students were international. That includes 4.2% of undergraduates and 4.7% of graduate students.",
+    "federal_loan_pct_most_recent": 83,
+    "sector_avg_federal_loan_pct_most_recent": 46.041,
+    "grad_plus_recipients": 94,
+    "grad_plus_disbursements_amt": 1154858,
+    "grad_plus_disbursements_per_recipient": 12285.7234,
+    "sector_median_grad_plus_disbursements_per_recipient": 11428,
+    "federal_grants_contracts_pell_adjusted_pct_core_revenue": 3.3189,
+    "state_funding_pct_core_revenue": 0.3158,
+    "federal_grants_contracts_pell_adjusted_pct_change_5yr": -36.934,
+    "state_funding_pct_change_5yr": -28.8894,
+    "endowment_assets_per_fte_adjusted": 74593.8618,
+    "sector_median_endowment_assets_per_fte_adjusted": 37427.0318,
+    "endowment_pct_change_5yr": 0.0752,
+    "sector_median_endowment_pct_change_5yr": 7.7657,
+    "endowment_spending_current_use_pct_core_revenue": 0.0079,
+    "graduation_rate_6yr": 57,
+    "median_earnings_10yr": 131426,
+    "median_debt_completers": 25500,
+    "scorecard_data_updated": "2026-03-23",
+    "ipeds_graduation_rate_year": 2024,
+    "ipeds_graduation_rate_label": "Bachelor degree within 6 years, total"
+  },
+  "series": {
+    "revenue_total_adjusted": [
+      {
+        "year": 2014,
+        "value": 73617085.1082
+      },
+      {
+        "year": 2015,
+        "value": 69889810.4678
+      },
+      {
+        "year": 2016,
+        "value": 62840307.9613
+      },
+      {
+        "year": 2017,
+        "value": 66650192.3758
+      },
+      {
+        "year": 2018,
+        "value": 65221389.3438
+      },
+      {
+        "year": 2019,
+        "value": 64891749.4565
+      },
+      {
+        "year": 2020,
+        "value": 64583027.4155
+      },
+      {
+        "year": 2021,
+        "value": 75037613.1811
+      },
+      {
+        "year": 2022,
+        "value": 37469547.8535
+      },
+      {
+        "year": 2023,
+        "value": 53273792.9251
+      },
+      {
+        "year": 2024,
+        "value": 54036995
+      }
+    ],
+    "expenses_total_adjusted": [
+      {
+        "year": 2014,
+        "value": 63384486.7494
+      },
+      {
+        "year": 2015,
+        "value": 62469126.7751
+      },
+      {
+        "year": 2016,
+        "value": 60177806.456
+      },
+      {
+        "year": 2017,
+        "value": 59266929.4988
+      },
+      {
+        "year": 2018,
+        "value": 59149728.8603
+      },
+      {
+        "year": 2019,
+        "value": 61093414.0338
+      },
+      {
+        "year": 2020,
+        "value": 60968660.7506
+      },
+      {
+        "year": 2021,
+        "value": 56829751.2519
+      },
+      {
+        "year": 2022,
+        "value": 54605894.8839
+      },
+      {
+        "year": 2023,
+        "value": 54684603.8029
+      },
+      {
+        "year": 2024,
+        "value": 54881276
+      }
+    ],
+    "net_tuition_per_fte_adjusted": [
+      {
+        "year": 2014,
+        "value": 39323.4798
+      },
+      {
+        "year": 2015,
+        "value": 48528.0359
+      },
+      {
+        "year": 2016,
+        "value": 44617.0425
+      },
+      {
+        "year": 2017,
+        "value": 47504.3195
+      },
+      {
+        "year": 2018,
+        "value": 44405.7689
+      },
+      {
+        "year": 2019,
+        "value": 45671.0614
+      },
+      {
+        "year": 2020,
+        "value": 45341.0715
+      },
+      {
+        "year": 2021,
+        "value": 29221.1376
+      },
+      {
+        "year": 2022,
+        "value": 27518.8995
+      },
+      {
+        "year": 2023,
+        "value": 24379.8324
+      },
+      {
+        "year": 2024,
+        "value": 24986.0943
+      }
+    ],
+    "unfunded_discount_rate": [
+      {
+        "year": 2014,
+        "value": 17.1369
+      },
+      {
+        "year": 2015,
+        "value": 19.0174
+      },
+      {
+        "year": 2016,
+        "value": 21.6012
+      },
+      {
+        "year": 2017,
+        "value": 22.4832
+      },
+      {
+        "year": 2018,
+        "value": 24.0171
+      },
+      {
+        "year": 2019,
+        "value": 27.0119
+      },
+      {
+        "year": 2020,
+        "value": 28.0894
+      },
+      {
+        "year": 2021,
+        "value": 30.0227
+      },
+      {
+        "year": 2022,
+        "value": 31.9938
+      },
+      {
+        "year": 2023,
+        "value": 35.7127
+      },
+      {
+        "year": 2024,
+        "value": 35.2404
+      }
+    ],
+    "enrollment_headcount_total": [
+      {
+        "year": 2014,
+        "value": 1647
+      },
+      {
+        "year": 2015,
+        "value": 1566
+      },
+      {
+        "year": 2016,
+        "value": 1487
+      },
+      {
+        "year": 2017,
+        "value": 1427
+      },
+      {
+        "year": 2018,
+        "value": 1415
+      },
+      {
+        "year": 2019,
+        "value": 1374
+      },
+      {
+        "year": 2020,
+        "value": 1294
+      },
+      {
+        "year": 2021,
+        "value": 1154
+      },
+      {
+        "year": 2022,
+        "value": 1092
+      },
+      {
+        "year": 2023,
+        "value": 1010
+      },
+      {
+        "year": 2024,
+        "value": 907
+      }
+    ],
+    "enrollment_headcount_undergrad": [
+      {
+        "year": 2014,
+        "value": 1079
+      },
+      {
+        "year": 2015,
+        "value": 1083
+      },
+      {
+        "year": 2016,
+        "value": 1008
+      },
+      {
+        "year": 2017,
+        "value": 911
+      },
+      {
+        "year": 2018,
+        "value": 916
+      },
+      {
+        "year": 2019,
+        "value": 876
+      },
+      {
+        "year": 2020,
+        "value": 844
+      },
+      {
+        "year": 2021,
+        "value": 708
+      },
+      {
+        "year": 2022,
+        "value": 658
+      },
+      {
+        "year": 2023,
+        "value": 643
+      },
+      {
+        "year": 2024,
+        "value": 505
+      }
+    ],
+    "enrollment_headcount_graduate": [
+      {
+        "year": 2014,
+        "value": 568
+      },
+      {
+        "year": 2015,
+        "value": 483
+      },
+      {
+        "year": 2016,
+        "value": 479
+      },
+      {
+        "year": 2017,
+        "value": 516
+      },
+      {
+        "year": 2018,
+        "value": 499
+      },
+      {
+        "year": 2019,
+        "value": 498
+      },
+      {
+        "year": 2020,
+        "value": 450
+      },
+      {
+        "year": 2021,
+        "value": 446
+      },
+      {
+        "year": 2022,
+        "value": 434
+      },
+      {
+        "year": 2023,
+        "value": 367
+      },
+      {
+        "year": 2024,
+        "value": 402
+      }
+    ],
+    "enrollment_nonresident_total": [
+      {
+        "year": 2014,
+        "value": 137
+      },
+      {
+        "year": 2015,
+        "value": 118
+      },
+      {
+        "year": 2016,
+        "value": 95
+      },
+      {
+        "year": 2017,
+        "value": 79
+      },
+      {
+        "year": 2018,
+        "value": 84
+      },
+      {
+        "year": 2019,
+        "value": 101
+      },
+      {
+        "year": 2020,
+        "value": 86
+      },
+      {
+        "year": 2021,
+        "value": 76
+      },
+      {
+        "year": 2022,
+        "value": 69
+      },
+      {
+        "year": 2023,
+        "value": 52
+      },
+      {
+        "year": 2024,
+        "value": 40
+      }
+    ],
+    "enrollment_nonresident_undergrad": [
+      {
+        "year": 2014,
+        "value": 63
+      },
+      {
+        "year": 2015,
+        "value": 74
+      },
+      {
+        "year": 2016,
+        "value": 62
+      },
+      {
+        "year": 2017,
+        "value": 55
+      },
+      {
+        "year": 2018,
+        "value": 43
+      },
+      {
+        "year": 2019,
+        "value": 47
+      },
+      {
+        "year": 2020,
+        "value": 50
+      },
+      {
+        "year": 2021,
+        "value": 34
+      },
+      {
+        "year": 2022,
+        "value": 27
+      },
+      {
+        "year": 2023,
+        "value": 28
+      },
+      {
+        "year": 2024,
+        "value": 21
+      }
+    ],
+    "enrollment_nonresident_graduate": [
+      {
+        "year": 2014,
+        "value": 74
+      },
+      {
+        "year": 2015,
+        "value": 44
+      },
+      {
+        "year": 2016,
+        "value": 33
+      },
+      {
+        "year": 2017,
+        "value": 24
+      },
+      {
+        "year": 2018,
+        "value": 41
+      },
+      {
+        "year": 2019,
+        "value": 54
+      },
+      {
+        "year": 2020,
+        "value": 36
+      },
+      {
+        "year": 2021,
+        "value": 42
+      },
+      {
+        "year": 2022,
+        "value": 42
+      },
+      {
+        "year": 2023,
+        "value": 24
+      },
+      {
+        "year": 2024,
+        "value": 19
+      }
+    ],
+    "staff_headcount_total": [
+      {
+        "year": 2014,
+        "value": 329
+      },
+      {
+        "year": 2015,
+        "value": 305
+      },
+      {
+        "year": 2016,
+        "value": 320
+      },
+      {
+        "year": 2017,
+        "value": 309
+      },
+      {
+        "year": 2018,
+        "value": 321
+      },
+      {
+        "year": 2019,
+        "value": 313
+      },
+      {
+        "year": 2020,
+        "value": 332
+      },
+      {
+        "year": 2021,
+        "value": 305
+      },
+      {
+        "year": 2022,
+        "value": 303
+      },
+      {
+        "year": 2023,
+        "value": 302
+      },
+      {
+        "year": 2024,
+        "value": 288
+      }
+    ],
+    "staff_headcount_instructional": [
+      {
+        "year": 2014,
+        "value": 132
+      },
+      {
+        "year": 2015,
+        "value": 125
+      },
+      {
+        "year": 2016,
+        "value": 111
+      },
+      {
+        "year": 2017,
+        "value": 108
+      },
+      {
+        "year": 2018,
+        "value": 112
+      },
+      {
+        "year": 2019,
+        "value": 118
+      },
+      {
+        "year": 2020,
+        "value": 125
+      },
+      {
+        "year": 2021,
+        "value": 111
+      },
+      {
+        "year": 2022,
+        "value": 114
+      },
+      {
+        "year": 2023,
+        "value": 117
+      },
+      {
+        "year": 2024,
+        "value": 114
+      }
+    ],
+    "endowment_value_adjusted": [
+      {
+        "year": 2014,
+        "value": 51167826.9316
+      },
+      {
+        "year": 2015,
+        "value": 53600070.1481
+      },
+      {
+        "year": 2016,
+        "value": 53964081.7705
+      },
+      {
+        "year": 2017,
+        "value": 59401623.0404
+      },
+      {
+        "year": 2018,
+        "value": 64265492.8005
+      },
+      {
+        "year": 2019,
+        "value": 67978449.3638
+      },
+      {
+        "year": 2020,
+        "value": 70932610.7524
+      },
+      {
+        "year": 2021,
+        "value": 85799798.0622
+      },
+      {
+        "year": 2022,
+        "value": 68233609.1994
+      },
+      {
+        "year": 2023,
+        "value": 69814719.4594
+      },
+      {
+        "year": 2024,
+        "value": 68029602
+      }
+    ],
+    "endowment_spending_current_use": [
+      {
+        "year": 2020,
+        "value": 336942
+      },
+      {
+        "year": 2021,
+        "value": 742705
+      },
+      {
+        "year": 2022,
+        "value": 395632
+      },
+      {
+        "year": 2023,
+        "value": 642572
+      },
+      {
+        "year": 2024,
+        "value": 387877
+      }
+    ],
+    "endowment_spending_current_use_adjusted": [
+      {
+        "year": 2020,
+        "value": 408386.8114
+      },
+      {
+        "year": 2021,
+        "value": 859794.0316
+      },
+      {
+        "year": 2022,
+        "value": 424067.2684
+      },
+      {
+        "year": 2023,
+        "value": 661524.27
+      },
+      {
+        "year": 2024,
+        "value": 387877
+      }
+    ],
+    "endowment_spending_current_use_pct_core_revenue": [
+      {
+        "year": 2020,
+        "value": 0.0067
+      },
+      {
+        "year": 2021,
+        "value": 0.0118
+      },
+      {
+        "year": 2022,
+        "value": 0.0123
+      },
+      {
+        "year": 2023,
+        "value": 0.0135
+      },
+      {
+        "year": 2024,
+        "value": 0.0079
+      }
+    ],
+    "federal_grants_contracts_pell_adjusted_adjusted": [
+      {
+        "year": 2014,
+        "value": 2547223.159
+      },
+      {
+        "year": 2015,
+        "value": 1851380.1246
+      },
+      {
+        "year": 2016,
+        "value": 941887.7956
+      },
+      {
+        "year": 2017,
+        "value": 1160466.2977
+      },
+      {
+        "year": 2018,
+        "value": 1810625.8949
+      },
+      {
+        "year": 2019,
+        "value": 2569189.1921
+      },
+      {
+        "year": 2020,
+        "value": 3792915.7515
+      },
+      {
+        "year": 2021,
+        "value": 2640434.3533
+      },
+      {
+        "year": 2022,
+        "value": 5502777.4459
+      },
+      {
+        "year": 2023,
+        "value": 1345574.9067
+      },
+      {
+        "year": 2024,
+        "value": 1620286
+      }
+    ],
+    "state_funding_adjusted": [
+      {
+        "year": 2014,
+        "value": 267516.0187
+      },
+      {
+        "year": 2015,
+        "value": 264314.9811
+      },
+      {
+        "year": 2016,
+        "value": 231612.053
+      },
+      {
+        "year": 2017,
+        "value": 190350.5599
+      },
+      {
+        "year": 2018,
+        "value": 230463.1697
+      },
+      {
+        "year": 2019,
+        "value": 216842.5504
+      },
+      {
+        "year": 2020,
+        "value": 205948.438
+      },
+      {
+        "year": 2021,
+        "value": 187475.9756
+      },
+      {
+        "year": 2022,
+        "value": 167442.6445
+      },
+      {
+        "year": 2023,
+        "value": 168522.0549
+      },
+      {
+        "year": 2024,
+        "value": 154198
+      }
+    ]
+  },
+  "latest_status": {
+    "accreditors": "MSCHE",
+    "action_labels": "Merger of Albany College of Pharmacy and Health Sciences with Russell Sage College (effective June 1, 2026)",
+    "active_actions": null,
+    "has_active_warning": false,
+    "has_active_warning_or_notice": false,
+    "has_active_adverse_action": false,
+    "latest_action_date": "2026-02-26",
+    "latest_action_year": "2026",
+    "action_count": 1
+  },
+  "actions": [
+    {
+      "accreditor": "MSCHE",
+      "action_type": "other",
+      "action_label": "To acknowledge receipt of the complex substantive change request. To include the change in legal status, form of control, and ownership within the institution's scope of accreditation, effective June 1, 2026. To note the complex substantive change request includes the merger of Albany College of Pharmacy and Health Sciences with Russell Sage College, effective June 1, 2026, the anticipated date of the transaction. To require notification of the date of the closing of the transaction within five calendar days of the transaction, or immediate notification if there is any delay of the date of the closing of the transaction, by email to [email protected]. To note that Russell Sage College is the surviving institution. To note that the surviving institution is responsible for ensuring the submission of all required reports and information on behalf of the integrated institution. To note that Albany College of Pharmacy and Health Sciences will maintain accreditation for the sole purpose of implementing the teach-out plan and agreements and effectuating the change in ownership process with the United States Department of Education per the United States Department of Education's Updated Guidance and Procedures for Changes in Ownership, dated September 15, 2022 (Electronic Announcement ID: GENERAL-22-70).To note that Albany College of Pharmacy and Health Sciences' accreditation cease date will be determined after the United States Department of Education has approved the merger application. To request a supplemental information report, due July 31, 2026, providing (1) updated status of the implementation of the complex substantive change (Substantive Change Policy and Complex Substantive Change Procedures); (2) an update on the date Albany College of Pharmacy and Health Sciences degree granting authority will cease (Requirement of Affiliation 1); and (3) written evidence of review, including but not limited to, approval of the transaction from all required licensing, regulatory, or other legal entities as necessary, including but not limited to the United States Department of Education and the New York State Education Department (Standard II). To remind the institution of its obligation to immediately inform the Commission about any and all developments relevant to this action. To note that the Commission reserves the right to rescind this action if any developments reveal additional information that might have affected the Commission's decision and/or the requested substantive change is not implemented within one calendar year from the date of this action. To note the action for Russell Sage College on February 26, 2026. The next evaluation visit is scheduled for 2027-2028.",
+      "action_label_short": "Merger of Albany College of Pharmacy and Health Sciences with Russell Sage College (effective June 1, 2026)",
+      "action_scope": null,
+      "action_status": null,
+      "action_date": "2026-02-26",
+      "action_year": "2026",
+      "notes": null,
+      "source_url": "https://www.msche.org/institution/0704/",
+      "source_title": "MSCHE Statement of Accreditation Status - Albany College of Pharmacy and Health Sciences",
+      "source_page_url": "https://www.msche.org/institution/0704/",
+      "source_page_modified": null,
+      "display_action": true,
+      "public_table_strategy": null,
+      "hybrid_candidate": false,
+      "hybrid_reason": null,
+      "has_financial_profile": true,
+      "is_primary_tracker": true
+    }
+  ],
+  "sources": [
+    {
+      "accreditor": "MSCHE",
+      "source_title": "MSCHE Statement of Accreditation Status - Albany College of Pharmacy and Health Sciences",
+      "source_url": "https://www.msche.org/institution/0704/",
+      "source_page_url": "https://www.msche.org/institution/0704/"
+    }
+  ]
+}

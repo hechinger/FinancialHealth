@@ -1,0 +1,281 @@
+if (!exists("run_test", mode = "function")) {
+  source(file.path(getwd(), "tests", "test_support.R"))
+}
+
+run_test("Accreditation text and classification", function() {
+  assert_identical(unname(clean_text("<p>Hello<br>World</p>")), "Hello World")
+  html <- paste0(
+    "<html><head><title> Example Title </title>",
+    "<meta property=\"article:modified_time\" content=\"2025-02-03T12:00:00Z\">",
+    "</head></html>"
+  )
+  assert_identical(unname(extract_page_title(html)), "Example Title")
+  assert_identical(unname(extract_page_modified_date(html)), "2025-02-03")
+  assert_identical(state_name("MA"), "Massachusetts")
+  assert_identical(normalize_accreditation_name("University of Hawai’i at Hilo"), "university of hawaii at hilo")
+  assert_identical(normalize_accreditation_name("University of Hawai’i, Hilo"), "university of hawaii at hilo")
+  assert_identical(normalize_accreditation_name("Catholic University of America, The"), "catholic university of america")
+  assert_identical(normalize_accreditation_name("The George Washington University"), "george washington university")
+  parsed <- extract_name_state_from_item("Example College, Boston, MA")
+  assert_identical(unname(parsed$institution_name_raw), "Example College")
+  assert_identical(unname(parsed$institution_state_raw), "Massachusetts")
+  assert_identical(classify_action("Placed on probation"), "probation")
+  assert_identical(classify_action("Continued on High Probation"), "probation")
+  assert_identical(classify_action("Issue a Notice of Concern"), "notice")
+  assert_identical(classify_action("Accepted Teach-Out Plan"), "other")
+  assert_identical(classify_action("Denied Reaffirmation"), "adverse_action")
+  # SACSCOC denied-reaffirmation + placed on Warning must classify as "warning", not "adverse_action"
+  assert_identical(
+    classify_action("denied reaffirmation, continued accreditation, and placed the institution on Warning for twelve months for failure to comply with Core Requirement 13.1", "SACSCOC"),
+    "warning"
+  )
+  assert_identical(
+    classify_action("denied reaffirmation, continued accreditation, and placed Blue Mountain Christian University on Warning for twelve months", "SACSCOC"),
+    "warning"
+  )
+  # Plain denied reaffirmation with no warning clause stays adverse_action
+  assert_identical(
+    classify_action("Denied Reaffirmation", "SACSCOC"),
+    "adverse_action"
+  )
+  assert_identical(
+    classify_action("Approved the institution's Teach-Out Agreement with Goddard College, wherein Prescott College will serve as a teach-out receiving institution for certain Goddard College programs.", "HLC"),
+    "other"
+  )
+  assert_identical(
+    classify_action("Following a Special Visit - Remove Notice of Concern/Issue a Warning", "WSCUC"),
+    "warning"
+  )
+  assert_identical(
+    classify_action("Following a Special Visit - Remove the Warning, Issue a Formal Notice of Concern, Reaffirm Accreditation for 6 Years", "WSCUC"),
+    "notice"
+  )
+  assert_identical(
+    classify_action("Following a Special Visit - Remove the Warning, Reaffirm Accreditation for 6 Years", "WSCUC"),
+    "removed"
+  )
+  assert_identical(
+    classify_action("The SACSCOC Board of Trustees placed the institution on Probation for Good Cause for twelve months for failure to comply with Standard 13.6 (Federal and state responsibilities).", "SACSCOC"),
+    "probation"
+  )
+  assert_identical(
+    classify_action("At its meeting on March 5, 2021, the New England Commission of Higher Education (NECHE) voted to issue a Notation to Eastern Nazarene College because the Commission found that the College is in danger of not meeting the Commission's standard on Institutional Resources.", "NECHE"),
+    "notice"
+  )
+  assert_identical(
+    classify_action("Denied staff action recommendation to require monitoring.", "HLC"),
+    "other"
+  )
+  assert_identical(
+    classify_action("Accepted the staff recommendation to require the institution to provide an interim report.", "HLC"),
+    "monitoring"
+  )
+  assert_identical(
+    classify_action("Approved the institution’s request to offer the following certificate program: Graduate Certificate in Intraoperative Neuromonitoring, 35 credit hours, Post-Baccalaureate Certificate, CIP 51.0922", "HLC"),
+    "other"
+  )
+  assert_identical(
+    classify_action("At its meeting on March 5, 2021, the New England Commission of Higher Education (NECHE) voted to remove Hellenic College, Inc. from probation for failure to meet the standards on Institutional Resources and Planning and Evaluation, and to remove the Notations with respect to the standards on Organization and Governance and The Academic Program.", "NECHE"),
+    "removed"
+  )
+  assert_identical(
+    classify_action("To note the supplemental information report, requested by the Commission action of June 6, 2025, is no longer required.", "MSCHE"),
+    "other"
+  )
+  assert_identical(classify_status("Removed from probation"), "resolved")
+  assert_true(has_public_action_keywords("Public Notice of Concern"))
+  assert_true(has_public_action_keywords("Accepted teach-out plan"))
+  assert_true(has_public_action_keywords("Denied reaffirmation"))
+
+  # MSCHE adverse_action disambiguation: institutional vs. branch/location.
+  # True institutional adverse actions must classify as adverse_action.
+  saint_rose <- paste(
+    "To acknowledge receipt of the institution's notification dated",
+    "December 1, 2023, of its intention to cease instruction at all",
+    "locations on June 30, 2024."
+  )
+  assert_identical(classify_action(saint_rose, "MSCHE"), "adverse_action")
+  anna_maria <- paste(
+    "To note that the institution announced on April 23, 2026 that its",
+    "Board of Trustees voted to cease academic operations effective",
+    "June 30, 2026. The institution will close all locations."
+  )
+  assert_identical(classify_action(anna_maria, "MSCHE"), "adverse_action")
+  voluntary_surrender <- paste(
+    "To accept the institution's voluntary surrender of accreditation",
+    "effective immediately."
+  )
+  assert_identical(classify_action(voluntary_surrender, "MSCHE"), "other")
+
+  # False positives that previously classified as adverse_action but are
+  # really substantive-change paperwork tied to a sub-unit. These must
+  # demote to "other" so the adverse_action bucket reflects only true
+  # institutional signals.
+  branch_close <- paste(
+    "To acknowledge receipt of the substantive change request. To note",
+    "the institution's decision to close the additional location at",
+    "123 Main Street, Anytown, PA."
+  )
+  assert_identical(classify_action(branch_close, "MSCHE"), "other")
+  branch_campus_close <- paste(
+    "To acknowledge receipt of the substantive change request. To note",
+    "the institution's decision to close the branch campus at 456 Elm",
+    "Street, Othertown, NJ."
+  )
+  assert_identical(classify_action(branch_campus_close, "MSCHE"), "other")
+  branch_teach_out <- paste(
+    "To acknowledge receipt of the teach-out plan. To approve the",
+    "teach-out plan for the closure of the additional location at",
+    "789 Oak Avenue."
+  )
+  assert_identical(classify_action(branch_teach_out, "MSCHE"), "other")
+  candidate_teach_out <- paste(
+    "To acknowledge receipt of the teach-out plan. To approve the",
+    "teach-out plan as required of candidate institutions."
+  )
+  assert_identical(classify_action(candidate_teach_out, "MSCHE"), "other")
+  preapp_candidate <- paste(
+    "Pending the successful completion of the on-site Pre-Applicant",
+    "Site Visit, to allow the institution to submit an application",
+    "for Candidate for Accreditation Status because the pre-applicant",
+    "institution appears to meet the minimum requirements."
+  )
+  assert_identical(classify_action(preapp_candidate, "MSCHE"), "other")
+  assert_identical(
+    classify_action(c(preapp_candidate, "Placed on probation"), "MSCHE"),
+    c("other", "probation")
+  )
+  assert_identical(
+    classify_action(
+      paste(
+        "To acknowledge receipt of the teach-out plan. To approve the teach-out plan.",
+        "To note that the institution will conduct and complete its own teach-out by August 30, 2020",
+        "and that teach-out agreements are not required."
+      ),
+      "MSCHE"
+    ),
+    "other"
+  )
+  assert_identical(
+    classify_action(
+      paste(
+        "To acknowledge receipt of the complex substantive change request.",
+        "To include the change in legal status, form of control, and ownership within the institution's scope of accreditation, effective June 30, 2025.",
+        "To note the complex substantive change request includes the merger of Lackawanna College with Peirce College, effective June 30, 2025."
+      ),
+      "MSCHE"
+    ),
+    "other"
+  )
+})
+
+run_test("MSCHE staff-preamble strip", function() {
+  # Idempotent: no preamble -> unchanged.
+  assert_identical(
+    strip_msche_staff_preamble("To accept the progress report."),
+    "To accept the progress report."
+  )
+  # Stripped form is "To " + remainder, regardless of original casing.
+  assert_identical(
+    strip_msche_staff_preamble(
+      "Staff acted on behalf of the Commission to acknowledge receipt of X"
+    ),
+    "To acknowledge receipt of X"
+  )
+  assert_identical(
+    strip_msche_staff_preamble(
+      "STAFF ACTED ON BEHALF OF THE COMMISSION TO REQUEST a monitoring report"
+    ),
+    "To request a monitoring report"
+  )
+  # Preamble without trailing "to" still yields a leading "To ".
+  assert_identical(
+    strip_msche_staff_preamble(
+      "Staff acted on behalf of the Commission acknowledge receipt of X"
+    ),
+    "To acknowledge receipt of X"
+  )
+  # NA pass-through.
+  assert_true(is.na(strip_msche_staff_preamble(NA_character_)))
+})
+
+run_test("MSCHE procedural-drop classifier", function() {
+  # Pure procedural rows -> dropped.
+  assert_true(is_msche_procedural_drop(
+    "To acknowledge receipt of the supplemental information report."
+  ))
+  assert_true(is_msche_procedural_drop(
+    "To request a supplemental information report due January 9, 2023."
+  ))
+  assert_true(is_msche_procedural_drop(
+    "To approve the teach-out plan as required of candidate institutions."
+  ))
+  assert_true(is_msche_procedural_drop(
+    "To remind the institution of its obligations."
+  ))
+  assert_true(is_msche_procedural_drop(
+    "To temporarily waive substantive change policy due to COVID-19."
+  ))
+
+  # Substantive-keep override: institution-level closures must NOT
+  # be dropped even when the row's preamble matches a procedural
+  # pattern. Saint Rose / Anna Maria-style rows.
+  saint_rose <- paste(
+    "To acknowledge receipt of the institution's notification dated",
+    "December 1, 2023, of its intention to cease instruction at all",
+    "locations on June 30, 2024."
+  )
+  assert_true(!is_msche_procedural_drop(saint_rose))
+  voluntary_surrender_via_ack <- paste(
+    "To acknowledge receipt of the institution's notice of voluntary",
+    "surrender of accreditation effective June 30, 2024."
+  )
+  assert_true(!is_msche_procedural_drop(voluntary_surrender_via_ack))
+  merger_via_ack <- paste(
+    "To acknowledge receipt of the substantive change request. To",
+    "approve the merger of College X into University Y, with",
+    "University Y as the surviving institution."
+  )
+  assert_true(!is_msche_procedural_drop(merger_via_ack))
+
+  # Status-page short labels (no procedural shape) -> not dropped.
+  assert_true(!is_msche_procedural_drop("Non-Compliance Warning"))
+  assert_true(!is_msche_procedural_drop("Non-Compliance Probation"))
+
+  # NA / empty inputs are safe.
+  assert_true(!is_msche_procedural_drop(""))
+  assert_identical(length(is_msche_procedural_drop(character(0))), 0L)
+})
+
+run_test("Accreditation tracker matching", function() {
+  actions_df <- data.frame(
+    institution_name_normalized = c("example college", "name only match", "name only match", "same name different state"),
+    institution_state_normalized = c("Massachusetts", NA, "California", "Texas"),
+    stringsAsFactors = FALSE
+  )
+  lookup_exact <- data.frame(
+    matched_unitid = "100",
+    tracker_name = "Example College",
+    tracker_state = "Massachusetts",
+    norm_name = "example college",
+    state_match = "Massachusetts",
+    stringsAsFactors = FALSE
+  )
+  lookup_name_only <- data.frame(
+    matched_unitid = c("200", "300"),
+    tracker_name = c("Name Only Match University", "Same Name Different State"),
+    tracker_state = c("California", "California"),
+    norm_name = c("name only match", "same name different state"),
+    stringsAsFactors = FALSE
+  )
+
+  matched <- match_institutions_to_tracker(actions_df, lookup_exact, lookup_name_only)
+  assert_identical(matched$unitid[[1]], "100")
+  assert_identical(matched$match_method[[1]], "normalized_name_plus_state")
+  assert_identical(matched$unitid[[2]], "200")
+  assert_identical(matched$match_method[[2]], "normalized_name_only")
+  assert_identical(matched$unitid[[3]], "200")
+  assert_identical(matched$match_method[[3]], "normalized_name_only")
+  assert_true(is.na(matched$unitid[[4]]))
+  assert_identical(matched$match_method[[4]], "unmatched")
+})

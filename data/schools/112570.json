@@ -1,0 +1,767 @@
+{
+  "unitid": "112570",
+  "generated_at": "2026-07-08",
+  "profile": {
+    "institution_name": "California College of ASU",
+    "institution_unique_name": "California College of ASU | Los Angeles | California",
+    "state": "California",
+    "city": "Los Angeles",
+    "control_label": "Private not-for-profit",
+    "sector": "Private not-for-profit, 4-year or above",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "City: Large",
+    "religious_affiliation": "Not applicable",
+    "all_programs_distance_education": "No"
+  },
+  "summary": {
+    "latest_year": 2024,
+    "enrollment_pct_change_5yr": -71.3287,
+    "sector_median_enrollment_pct_change_5yr": -3.7344,
+    "enrollment_decline_last_3_of_5": "Yes",
+    "revenue_pct_change_5yr": -90.1717,
+    "sector_median_revenue_pct_change_5yr": -0.5117,
+    "net_tuition_per_fte_change_5yr": -10.6046,
+    "sector_median_net_tuition_per_fte_change_5yr": -17.816,
+    "staff_total_headcount_pct_change_5yr": -38.8535,
+    "sector_median_staff_total_headcount_pct_change_5yr": -1.7263,
+    "staff_instructional_headcount_pct_change_5yr": -23.8095,
+    "students_per_instructional_staff_fte": 7,
+    "sector_median_students_per_instructional_staff_fte": 12,
+    "ended_year_at_loss": "Yes",
+    "losses_last_3_of_5": "Yes",
+    "loss_years_last_10": 6,
+    "tuition_dependence_pct": 97.4202,
+    "sector_median_tuition_dependence_pct": 44.8638,
+    "tuition_dependence_vs_sector_median_sentence": "This college got 97.0% of its revenue from net tuition in 2024, above the median of 45% for private not-for-profit colleges.",
+    "unfunded_discount_rate": 0,
+    "unfunded_discount_pct_change_5yr": null,
+    "share_grad_students": null,
+    "sector_avg_share_grad_students": 29.1503,
+    "research_expense": 0,
+    "research_expense_per_fte": 0,
+    "research_expense_pct_core_expenses": 0,
+    "sector_research_spending_n": 1148,
+    "sector_research_spending_positive_n": 401,
+    "sector_research_spending_reporting_share_pct": 34.9,
+    "sector_median_research_expense_per_fte_positive": 585.5059,
+    "pct_international_all": 0.6098,
+    "pct_international_undergraduate": 0.6098,
+    "pct_international_graduate": null,
+    "international_student_count_change_5yr": -34,
+    "international_enrollment_pct_change_5yr": -97.1429,
+    "international_students_sentence": "In 2024, 0.6% of students were international.",
+    "federal_loan_pct_most_recent": 62,
+    "sector_avg_federal_loan_pct_most_recent": 46.041,
+    "grad_plus_recipients": null,
+    "grad_plus_disbursements_amt": null,
+    "grad_plus_disbursements_per_recipient": null,
+    "sector_median_grad_plus_disbursements_per_recipient": 11428,
+    "federal_grants_contracts_pell_adjusted_pct_core_revenue": 0,
+    "state_funding_pct_core_revenue": 0,
+    "federal_grants_contracts_pell_adjusted_pct_change_5yr": null,
+    "state_funding_pct_change_5yr": null,
+    "endowment_assets_per_fte_adjusted": null,
+    "sector_median_endowment_assets_per_fte_adjusted": 37427.0318,
+    "endowment_pct_change_5yr": null,
+    "sector_median_endowment_pct_change_5yr": 7.7657,
+    "endowment_spending_current_use_pct_core_revenue": null,
+    "graduation_rate_6yr": 37,
+    "median_earnings_10yr": 42014,
+    "median_debt_completers": 25000,
+    "scorecard_data_updated": "2026-03-23",
+    "ipeds_graduation_rate_year": 2024,
+    "ipeds_graduation_rate_label": "Bachelor degree within 6 years, total"
+  },
+  "series": {
+    "revenue_total_adjusted": [
+      {
+        "year": 2014,
+        "value": 9199071.4412
+      },
+      {
+        "year": 2015,
+        "value": 10499966.2591
+      },
+      {
+        "year": 2016,
+        "value": 10996920.2525
+      },
+      {
+        "year": 2017,
+        "value": 12563230.3729
+      },
+      {
+        "year": 2018,
+        "value": 31530948.1444
+      },
+      {
+        "year": 2019,
+        "value": 16598166.1295
+      },
+      {
+        "year": 2020,
+        "value": 25166191.5371
+      },
+      {
+        "year": 2021,
+        "value": 21186207.9959
+      },
+      {
+        "year": 2022,
+        "value": 17077217.155
+      },
+      {
+        "year": 2023,
+        "value": 5847814.3417
+      },
+      {
+        "year": 2024,
+        "value": 1631317
+      }
+    ],
+    "expenses_total_adjusted": [
+      {
+        "year": 2014,
+        "value": 9956477.4115
+      },
+      {
+        "year": 2015,
+        "value": 10095054.5704
+      },
+      {
+        "year": 2016,
+        "value": 11796180.4339
+      },
+      {
+        "year": 2017,
+        "value": 12909835.4743
+      },
+      {
+        "year": 2018,
+        "value": 29575084.9183
+      },
+      {
+        "year": 2019,
+        "value": 20526436.2852
+      },
+      {
+        "year": 2020,
+        "value": 38869916.6568
+      },
+      {
+        "year": 2021,
+        "value": 21029755.94
+      },
+      {
+        "year": 2022,
+        "value": 16704084.2208
+      },
+      {
+        "year": 2023,
+        "value": 11388466.6778
+      },
+      {
+        "year": 2024,
+        "value": 5258948
+      }
+    ],
+    "net_tuition_per_fte_adjusted": [
+      {
+        "year": 2014,
+        "value": 23699.0679
+      },
+      {
+        "year": 2015,
+        "value": 27937.6568
+      },
+      {
+        "year": 2016,
+        "value": 19514.3817
+      },
+      {
+        "year": 2017,
+        "value": 18045.2726
+      },
+      {
+        "year": 2018,
+        "value": 23429.0285
+      },
+      {
+        "year": 2019,
+        "value": 17259.7737
+      },
+      {
+        "year": 2020,
+        "value": 18828.0234
+      },
+      {
+        "year": 2021,
+        "value": 14787.2735
+      },
+      {
+        "year": 2022,
+        "value": 12235.9593
+      },
+      {
+        "year": 2023,
+        "value": 16334.6769
+      },
+      {
+        "year": 2024,
+        "value": 15429.4466
+      }
+    ],
+    "unfunded_discount_rate": [
+      {
+        "year": 2014,
+        "value": 0
+      },
+      {
+        "year": 2015,
+        "value": 0
+      },
+      {
+        "year": 2016,
+        "value": 0
+      },
+      {
+        "year": 2017,
+        "value": 0
+      },
+      {
+        "year": 2018,
+        "value": 0
+      },
+      {
+        "year": 2019,
+        "value": 0
+      },
+      {
+        "year": 2020,
+        "value": 0
+      },
+      {
+        "year": 2021,
+        "value": 0
+      },
+      {
+        "year": 2022,
+        "value": 0
+      },
+      {
+        "year": 2023,
+        "value": 0
+      },
+      {
+        "year": 2024,
+        "value": 0
+      }
+    ],
+    "enrollment_headcount_total": [
+      {
+        "year": 2014,
+        "value": 383
+      },
+      {
+        "year": 2015,
+        "value": 391
+      },
+      {
+        "year": 2016,
+        "value": 388
+      },
+      {
+        "year": 2017,
+        "value": 502
+      },
+      {
+        "year": 2018,
+        "value": 631
+      },
+      {
+        "year": 2019,
+        "value": 572
+      },
+      {
+        "year": 2020,
+        "value": 1045
+      },
+      {
+        "year": 2021,
+        "value": 926
+      },
+      {
+        "year": 2022,
+        "value": 1040
+      },
+      {
+        "year": 2023,
+        "value": 462
+      },
+      {
+        "year": 2024,
+        "value": 164
+      }
+    ],
+    "enrollment_headcount_undergrad": [
+      {
+        "year": 2014,
+        "value": 383
+      },
+      {
+        "year": 2015,
+        "value": 391
+      },
+      {
+        "year": 2016,
+        "value": 388
+      },
+      {
+        "year": 2017,
+        "value": 502
+      },
+      {
+        "year": 2018,
+        "value": 631
+      },
+      {
+        "year": 2019,
+        "value": 572
+      },
+      {
+        "year": 2020,
+        "value": 1045
+      },
+      {
+        "year": 2021,
+        "value": 926
+      },
+      {
+        "year": 2022,
+        "value": 1040
+      },
+      {
+        "year": 2023,
+        "value": 462
+      },
+      {
+        "year": 2024,
+        "value": 164
+      }
+    ],
+    "enrollment_headcount_graduate": [],
+    "enrollment_nonresident_total": [
+      {
+        "year": 2014,
+        "value": 26
+      },
+      {
+        "year": 2015,
+        "value": 26
+      },
+      {
+        "year": 2016,
+        "value": 27
+      },
+      {
+        "year": 2017,
+        "value": 35
+      },
+      {
+        "year": 2018,
+        "value": 35
+      },
+      {
+        "year": 2019,
+        "value": 35
+      },
+      {
+        "year": 2020,
+        "value": 36
+      },
+      {
+        "year": 2021,
+        "value": 36
+      },
+      {
+        "year": 2022,
+        "value": 39
+      },
+      {
+        "year": 2023,
+        "value": 11
+      },
+      {
+        "year": 2024,
+        "value": 1
+      }
+    ],
+    "enrollment_nonresident_undergrad": [
+      {
+        "year": 2014,
+        "value": 26
+      },
+      {
+        "year": 2015,
+        "value": 26
+      },
+      {
+        "year": 2016,
+        "value": 27
+      },
+      {
+        "year": 2017,
+        "value": 35
+      },
+      {
+        "year": 2018,
+        "value": 35
+      },
+      {
+        "year": 2019,
+        "value": 35
+      },
+      {
+        "year": 2020,
+        "value": 36
+      },
+      {
+        "year": 2021,
+        "value": 36
+      },
+      {
+        "year": 2022,
+        "value": 39
+      },
+      {
+        "year": 2023,
+        "value": 11
+      },
+      {
+        "year": 2024,
+        "value": 1
+      }
+    ],
+    "enrollment_nonresident_graduate": [],
+    "staff_headcount_total": [
+      {
+        "year": 2014,
+        "value": 84
+      },
+      {
+        "year": 2015,
+        "value": 151
+      },
+      {
+        "year": 2016,
+        "value": 141
+      },
+      {
+        "year": 2017,
+        "value": 156
+      },
+      {
+        "year": 2018,
+        "value": 143
+      },
+      {
+        "year": 2019,
+        "value": 157
+      },
+      {
+        "year": 2020,
+        "value": 164
+      },
+      {
+        "year": 2021,
+        "value": 153
+      },
+      {
+        "year": 2022,
+        "value": 114
+      },
+      {
+        "year": 2023,
+        "value": 101
+      },
+      {
+        "year": 2024,
+        "value": 96
+      }
+    ],
+    "staff_headcount_instructional": [
+      {
+        "year": 2014,
+        "value": 51
+      },
+      {
+        "year": 2015,
+        "value": 85
+      },
+      {
+        "year": 2016,
+        "value": 84
+      },
+      {
+        "year": 2017,
+        "value": 103
+      },
+      {
+        "year": 2018,
+        "value": 69
+      },
+      {
+        "year": 2019,
+        "value": 105
+      },
+      {
+        "year": 2020,
+        "value": 103
+      },
+      {
+        "year": 2021,
+        "value": 111
+      },
+      {
+        "year": 2022,
+        "value": 84
+      },
+      {
+        "year": 2023,
+        "value": 81
+      },
+      {
+        "year": 2024,
+        "value": 80
+      }
+    ],
+    "endowment_value_adjusted": [],
+    "endowment_spending_current_use": [],
+    "endowment_spending_current_use_adjusted": [],
+    "endowment_spending_current_use_pct_core_revenue": [],
+    "federal_grants_contracts_pell_adjusted_adjusted": [
+      {
+        "year": 2014,
+        "value": 0
+      },
+      {
+        "year": 2015,
+        "value": 0
+      },
+      {
+        "year": 2016,
+        "value": 0
+      },
+      {
+        "year": 2017,
+        "value": 0
+      },
+      {
+        "year": 2018,
+        "value": 0
+      },
+      {
+        "year": 2019,
+        "value": 0
+      },
+      {
+        "year": 2020,
+        "value": 0
+      },
+      {
+        "year": 2021,
+        "value": 5025031.0569
+      },
+      {
+        "year": 2022,
+        "value": 5318460.3044
+      },
+      {
+        "year": 2023,
+        "value": 0
+      },
+      {
+        "year": 2024,
+        "value": 0
+      }
+    ],
+    "state_funding_adjusted": [
+      {
+        "year": 2014,
+        "value": 0
+      },
+      {
+        "year": 2015,
+        "value": 0
+      },
+      {
+        "year": 2016,
+        "value": 0
+      },
+      {
+        "year": 2017,
+        "value": 0
+      },
+      {
+        "year": 2018,
+        "value": 0
+      },
+      {
+        "year": 2019,
+        "value": 0
+      },
+      {
+        "year": 2020,
+        "value": 0
+      },
+      {
+        "year": 2021,
+        "value": 0
+      },
+      {
+        "year": 2022,
+        "value": 0
+      },
+      {
+        "year": 2023,
+        "value": 0
+      },
+      {
+        "year": 2024,
+        "value": 0
+      }
+    ]
+  },
+  "latest_status": {
+    "accreditors": "WSCUC",
+    "action_labels": "Continue a warning; Continued the sanction of Warning because, although the college had demonstrated improvement with some of the issues identified by the commission, it found CCASU had not demonstrated that it is in compliance with WSCUC Standard 3 (concerning financial stability and resource planning).; Institution closed and no longer accredited; Received heightened monitoring or focused review; Removed Notice of Concern and issued a Warning because it is out of compliance with standards concerning financial sustainability and shared governance",
+    "active_actions": "adverse_action; notice; warning",
+    "has_active_warning": true,
+    "has_active_warning_or_notice": true,
+    "has_active_adverse_action": false,
+    "latest_action_date": "2025-12-31",
+    "latest_action_year": "2025",
+    "action_count": 5
+  },
+  "actions": [
+    {
+      "accreditor": "WSCUC",
+      "action_type": "adverse_action",
+      "action_label": "Loss of Accreditation or Preaccreditation: Voluntary Withdrawal",
+      "action_label_short": "Institution closed and no longer accredited",
+      "action_scope": null,
+      "action_status": "active",
+      "action_date": "2025-12-31",
+      "action_year": "2025",
+      "notes": "Loss of Accreditation or Preaccreditation: Voluntary Withdrawal | CC-ASU has officially closed its campus and is no longer accredited",
+      "source_url": "https://ope.ed.gov/dapip/#/institution-profile/103592",
+      "source_title": "DAPIP Institutional Accreditation Action",
+      "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/103592",
+      "source_page_modified": null,
+      "display_action": true,
+      "public_table_strategy": "dapip_backed_keep",
+      "hybrid_candidate": false,
+      "hybrid_reason": null,
+      "has_financial_profile": true,
+      "is_primary_tracker": true
+    },
+    {
+      "accreditor": "WSCUC",
+      "action_type": "warning",
+      "action_label": "At that meeting, the Commission acted to continue the sanction of Warning.",
+      "action_label_short": "Continued the sanction of Warning because, although the college had demonstrated improvement with some of the issues identified by the commission, it found CCASU had not demonstrated that it is in compliance with WSCUC Standard 3 (concerning financial stability and resource planning).",
+      "action_scope": null,
+      "action_status": "active",
+      "action_date": "2025-06-27",
+      "action_year": "2025",
+      "notes": "Probation or Equivalent or a More Severe Status: Warning",
+      "source_url": "https://ope.ed.gov/dapip/#/institution-profile/103592",
+      "source_title": "DAPIP Institutional Accreditation Action",
+      "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/103592",
+      "source_page_modified": null,
+      "display_action": true,
+      "public_table_strategy": "dapip_backed_keep",
+      "hybrid_candidate": false,
+      "hybrid_reason": null,
+      "has_financial_profile": true,
+      "is_primary_tracker": true
+    },
+    {
+      "accreditor": "WSCUC",
+      "action_type": "warning",
+      "action_label": "Following a Special Visit – Continue a Warning",
+      "action_label_short": "Continue a warning",
+      "action_scope": null,
+      "action_status": null,
+      "action_date": "2024-06-01",
+      "action_year": "2024",
+      "notes": null,
+      "source_url": "https://www.wscuc.org/post/june-2024-commission-actions/",
+      "source_title": "June 2024 Commission Actions - WSCUC",
+      "source_page_url": "https://www.wscuc.org/post/june-2024-commission-actions/",
+      "source_page_modified": null,
+      "display_action": true,
+      "public_table_strategy": null,
+      "hybrid_candidate": false,
+      "hybrid_reason": null,
+      "has_financial_profile": true,
+      "is_primary_tracker": true
+    },
+    {
+      "accreditor": "WSCUC",
+      "action_type": "warning",
+      "action_label": "Continue with the previously scheduled Special Visit in spring 2024 to address the requirements in this letter in addition to the specified requirements retained from the previous Commission Action Letter of July 7, 2021 Warning A Warning reflects the Commission’s finding that an institution fails to meet one or more of the Standards of Accreditation.",
+      "action_label_short": "Removed Notice of Concern and issued a Warning because it is out of compliance with standards concerning financial sustainability and shared governance",
+      "action_scope": null,
+      "action_status": "active",
+      "action_date": "2023-12-11",
+      "action_year": "2023",
+      "notes": "Probation or Equivalent or a More Severe Status: Warning",
+      "source_url": "https://ope.ed.gov/dapip/#/institution-profile/103592",
+      "source_title": "DAPIP Institutional Accreditation Action",
+      "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/103592",
+      "source_page_modified": null,
+      "display_action": true,
+      "public_table_strategy": "dapip_backed_keep",
+      "hybrid_candidate": false,
+      "hybrid_reason": null,
+      "has_financial_profile": true,
+      "is_primary_tracker": true
+    },
+    {
+      "accreditor": "WSCUC",
+      "action_type": "notice",
+      "action_label": "Heightened Monitoring or Focused Review",
+      "action_label_short": "Received heightened monitoring or focused review",
+      "action_scope": null,
+      "action_status": "active",
+      "action_date": "2021-06-25",
+      "action_year": "2021",
+      "notes": "Heightened Monitoring or Focused Review",
+      "source_url": "https://ope.ed.gov/dapip/#/institution-profile/103592",
+      "source_title": "DAPIP Institutional Accreditation Action",
+      "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/103592",
+      "source_page_modified": null,
+      "display_action": true,
+      "public_table_strategy": "dapip_backed_keep",
+      "hybrid_candidate": false,
+      "hybrid_reason": null,
+      "has_financial_profile": true,
+      "is_primary_tracker": true
+    }
+  ],
+  "sources": [
+    {
+      "accreditor": "WSCUC",
+      "source_title": "DAPIP Institutional Accreditation Action",
+      "source_url": "https://ope.ed.gov/dapip/#/institution-profile/103592",
+      "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/103592"
+    },
+    {
+      "accreditor": "WSCUC",
+      "source_title": "June 2024 Commission Actions - WSCUC",
+      "source_url": "https://www.wscuc.org/post/june-2024-commission-actions/",
+      "source_page_url": "https://www.wscuc.org/post/june-2024-commission-actions/"
+    }
+  ]
+}

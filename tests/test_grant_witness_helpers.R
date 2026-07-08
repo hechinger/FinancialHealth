@@ -1,0 +1,200 @@
+if (!exists("run_test", mode = "function")) {
+  source(file.path(getwd(), "tests", "test_support.R"))
+}
+
+run_test("Grant Witness name helpers", function() {
+  assert_identical(
+    prettify_institution_name("TEXAS A&M UNIVERSITY"),
+    "Texas A&M University"
+  )
+  assert_identical(
+    prettify_institution_name("OHIO STATE UNIVERSITY, THE"),
+    "The Ohio State University"
+  )
+  assert_identical(
+    simplify_institution_name("Board of Trustees of Southern Illinois University"),
+    "southern illinois university"
+  )
+  assert_identical(
+    simplify_institution_name("University of North Carolina at Greensboro"),
+    "university of north carolina greensboro"
+  )
+  assert_identical(
+    simplify_institution_name("University of North Carolina Greensboro"),
+    "university of north carolina greensboro"
+  )
+  assert_true(
+    grepl(
+      "subaward",
+      detect_pass_through_phrase("Regional grantmaker initiative", "Will administer subawards"),
+      fixed = TRUE
+    )
+  )
+  assert_identical(
+    strip_legal_prefixes("Board of Trustees of Southern Illinois University"),
+    "Southern Illinois University"
+  )
+  assert_identical(abbr_to_state("IL"), "Illinois")
+  assert_identical(normalize_city("San Juan, PR"), "san juan pr")
+  assert_true(is_noncampus_medical_or_foundation_name("The Water Research Foundation"))
+  assert_true(is_noncampus_medical_or_foundation_name("Oklahoma Medical Research Foundation"))
+  assert_true(!is_likely_higher_ed_name("The Water Research Foundation"))
+  assert_true(!is_likely_higher_ed_name("Oklahoma Medical Research Foundation"))
+  assert_true(is_currently_disrupted("nih", "Frozen Funding"))
+  assert_true(!is_currently_disrupted("nsf", "Reinstated"))
+  assert_true(!is_currently_disrupted("nih", "Possibly Unfrozen Funding"))
+  assert_true(is_public_tracker_included("nih", "Possibly Unfrozen Funding"))
+  assert_true(is_public_tracker_included("epa", "Possibly Reinstated"))
+  assert_true(!is_public_tracker_included("epa", "Reinstated"))
+  assert_true(!is_currently_disrupted("nih", "Terminated", reinstatement_date = "2025-09-18"))
+  assert_true(!is_public_tracker_included("nih", "Terminated", reinstatement_date = "2025-09-18"))
+  epa_reterminated_history <- paste(
+    "- 2025-05-10: End date cut off from 2027-05-31 to 2025-05-10",
+    "- 2025-06-06: End date extended from 2025-05-10 to 2027-05-31",
+    "- 2025-06-09: End date cut off from 2027-05-31 to 2025-06-09",
+    "- 2025-06-09: Reported terminated by DOGE",
+    "- 2025-07-01: Program reported terminated",
+    sep = "\n"
+  )
+  assert_true(
+    is_currently_disrupted(
+      "epa",
+      "Terminated",
+      reinstatement_date = "2025-06-06",
+      status_history = epa_reterminated_history,
+      termination_date = "2025-05-10"
+    )
+  )
+  epa_reinstated_with_later_outlays <- paste(
+    "- 2025-05-10: End date cut off from 2027-08-31 to 2025-05-10",
+    "- 2025-06-05: End date extended from 2025-05-10 to 2027-08-31",
+    "- 2025-07-01: Program reported terminated",
+    "- 2025-07-31: Outlay of $37,850",
+    sep = "\n"
+  )
+  assert_true(
+    !is_currently_disrupted(
+      "epa",
+      "Terminated",
+      reinstatement_date = "2025-06-05",
+      status_history = epa_reinstated_with_later_outlays,
+      termination_date = "2025-05-10"
+    )
+  )
+  cdc_renewed_history <- paste(
+    "- 2025-05-20: Termination date in TAGGS PDF",
+    "- 2025-09-24: Grant renewed",
+    sep = "\n"
+  )
+  assert_true(
+    !is_currently_disrupted(
+      "cdc",
+      "Terminated",
+      status_history = cdc_renewed_history,
+      termination_date = "2025-05-20"
+    )
+  )
+  # CDC "At Risk" used to classify as currently_disrupted, but Grant Witness
+  # treats that status as "on a termination target list with no formal notice
+  # yet" — i.e. not yet a confirmed loss. We deliberately exclude those so
+  # tracker totals only count formal terminations. Hence "other" below.
+  assert_equal(
+    classify_status_bucket(
+      c("nih", "cdc", "epa", "nih"),
+      c("Possibly Unfrozen Funding", "At Risk", "Reinstated", "Unfrozen Funding")
+    ),
+    c("possibly_restored", "other", "not_currently_disrupted", "not_currently_disrupted")
+  )
+  # Confirm CDC terminations still classify as disrupted after the at-risk
+  # exclusion so the rule change didn't accidentally drop everything CDC-related.
+  assert_identical(
+    classify_status_bucket("cdc", "Terminated"),
+    "currently_disrupted"
+  )
+  assert_identical(
+    classify_status_bucket(
+      "cdc",
+      "Terminated",
+      status_history = cdc_renewed_history,
+      termination_date = "2025-05-20"
+    ),
+    "not_currently_disrupted"
+  )
+})
+
+run_test("Grant Witness standardization config", function() {
+  sample_nsf <- data.frame(
+    grant_id = "12345",
+    status = "Terminated",
+    org_name = "BOARD OF TRUSTEES OF SOUTHERN ILLINOIS UNIVERSITY",
+    org_state = "IL",
+    org_city = "Carbondale",
+    award_type = "Research",
+    project_title = "CAMPUS RESEARCH",
+    abstract = "Study of campus finance",
+    nsf_start_date = NA_character_,
+    usasp_start_date = "2024-01-01",
+    nsf_end_date = NA_character_,
+    usasp_end_date = "2025-01-01",
+    termination_date = "2024-10-01",
+    reinstatement_date = NA_character_,
+    estimated_budget = "$100,000",
+    estimated_outlays = "50000",
+    estimated_remaining = "50000",
+    usaspending_url = "https://example.com/award/abc",
+    nsf_url = "https://nsf.example/123",
+    stringsAsFactors = FALSE
+  )
+
+  standardized <- standardize_grant_witness_rows("nsf", sample_nsf, "nsf_terminations.csv")
+  assert_identical(standardized$grant_id[[1]], "12345")
+  assert_identical(standardized$organization_state[[1]], "Illinois")
+  assert_identical(standardized$start_date[[1]], "2024-01-01")
+  assert_equal(standardized$award_value[[1]], 100000)
+  assert_identical(standardized$remaining_field[[1]], "estimated_remaining")
+  assert_identical(standardized$detail_url[[1]], "https://nsf.example/123")
+
+  temp_file <- tempfile("grant-witness-cache-")
+  writeLines("cached", temp_file)
+  maybe_download("https://invalid.example/grants.csv", temp_file, skip_download = TRUE)
+  assert_true(file.exists(temp_file), "Expected cached Grant Witness file to be reused.")
+})
+
+run_test("Grant Witness standardization uses its own numeric parser", function() {
+  sample_nsf <- data.frame(
+    grant_id = "12345",
+    status = "Terminated",
+    org_name = "Example University",
+    org_state = "IL",
+    org_city = "Carbondale",
+    award_type = "Research",
+    project_title = "CAMPUS RESEARCH",
+    abstract = "Study of campus finance",
+    nsf_start_date = "2024-01-01",
+    usasp_start_date = NA_character_,
+    nsf_end_date = "2025-01-01",
+    usasp_end_date = NA_character_,
+    termination_date = "2024-10-01",
+    reinstatement_date = NA_character_,
+    estimated_budget = "$100,000",
+    estimated_outlays = "50000",
+    estimated_remaining = "50000",
+    usaspending_url = "https://example.com/award/abc",
+    nsf_url = "https://nsf.example/123",
+    stringsAsFactors = FALSE
+  )
+
+  prior_to_num <- if (exists("to_num", envir = .GlobalEnv, inherits = FALSE)) get("to_num", envir = .GlobalEnv) else NULL
+  had_prior_to_num <- exists("to_num", envir = .GlobalEnv, inherits = FALSE)
+  assign("to_num", function(x) suppressWarnings(as.numeric(gsub(",", "", as.character(x)))), envir = .GlobalEnv)
+  on.exit({
+    if (had_prior_to_num) {
+      assign("to_num", prior_to_num, envir = .GlobalEnv)
+    } else if (exists("to_num", envir = .GlobalEnv, inherits = FALSE)) {
+      rm("to_num", envir = .GlobalEnv)
+    }
+  }, add = TRUE)
+
+  standardized <- standardize_grant_witness_rows("nsf", sample_nsf, "nsf_terminations.csv")
+  assert_equal(standardized$award_value[[1]], 100000)
+})

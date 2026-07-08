@@ -1,0 +1,944 @@
+{
+  "unitid": "166054",
+  "generated_at": "2026-07-08",
+  "profile": {
+    "institution_name": "Hellenic College-Holy Cross Greek Orthodox School of Theology",
+    "institution_unique_name": "Hellenic College-Holy Cross Greek Orthodox School of Theology | Brookline | Massachusetts",
+    "state": "Massachusetts",
+    "city": "Brookline",
+    "control_label": "Private not-for-profit",
+    "sector": "Private not-for-profit, 4-year or above",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "Suburb: Large",
+    "religious_affiliation": "Greek Orthodox",
+    "all_programs_distance_education": "No"
+  },
+  "summary": {
+    "latest_year": 2024,
+    "enrollment_pct_change_5yr": 40.3509,
+    "sector_median_enrollment_pct_change_5yr": -3.7344,
+    "enrollment_decline_last_3_of_5": "Yes",
+    "revenue_pct_change_5yr": 29.3484,
+    "sector_median_revenue_pct_change_5yr": -0.5117,
+    "net_tuition_per_fte_change_5yr": 38.8108,
+    "sector_median_net_tuition_per_fte_change_5yr": -17.816,
+    "staff_total_headcount_pct_change_5yr": 41.4634,
+    "sector_median_staff_total_headcount_pct_change_5yr": -1.7263,
+    "staff_instructional_headcount_pct_change_5yr": -5.8824,
+    "students_per_instructional_staff_fte": 7,
+    "sector_median_students_per_instructional_staff_fte": 12,
+    "ended_year_at_loss": "No",
+    "losses_last_3_of_5": "No",
+    "loss_years_last_10": 3,
+    "tuition_dependence_pct": 17.2861,
+    "sector_median_tuition_dependence_pct": 44.8638,
+    "tuition_dependence_vs_sector_median_sentence": "This college got 17.0% of its revenue from net tuition in 2024, below the median of 45% for private not-for-profit colleges.",
+    "unfunded_discount_rate": 26.2529,
+    "unfunded_discount_pct_change_5yr": 65.0096,
+    "share_grad_students": 68.75,
+    "sector_avg_share_grad_students": 29.1503,
+    "research_expense": 0,
+    "research_expense_per_fte": 0,
+    "research_expense_pct_core_expenses": 0,
+    "sector_research_spending_n": 1148,
+    "sector_research_spending_positive_n": 401,
+    "sector_research_spending_reporting_share_pct": 34.9,
+    "sector_median_research_expense_per_fte_positive": 585.5059,
+    "pct_international_all": 2.9167,
+    "pct_international_undergraduate": 2.6667,
+    "pct_international_graduate": 3.0303,
+    "international_student_count_change_5yr": 6,
+    "international_enrollment_pct_change_5yr": 600,
+    "international_students_sentence": "In 2024, 2.9% of students were international. That includes 2.7% of undergraduates and 3% of graduate students.",
+    "federal_loan_pct_most_recent": 38,
+    "sector_avg_federal_loan_pct_most_recent": 46.041,
+    "grad_plus_recipients": 7,
+    "grad_plus_disbursements_amt": 52692,
+    "grad_plus_disbursements_per_recipient": 7527.4286,
+    "sector_median_grad_plus_disbursements_per_recipient": 11428,
+    "federal_grants_contracts_pell_adjusted_pct_core_revenue": 0,
+    "state_funding_pct_core_revenue": 0,
+    "federal_grants_contracts_pell_adjusted_pct_change_5yr": null,
+    "state_funding_pct_change_5yr": null,
+    "endowment_assets_per_fte_adjusted": 276064.7118,
+    "sector_median_endowment_assets_per_fte_adjusted": 37427.0318,
+    "endowment_pct_change_5yr": 80.2137,
+    "sector_median_endowment_pct_change_5yr": 7.7657,
+    "endowment_spending_current_use_pct_core_revenue": 0.2559,
+    "graduation_rate_6yr": 44,
+    "median_earnings_10yr": 51724,
+    "median_debt_completers": 21500,
+    "scorecard_data_updated": "2026-03-23",
+    "ipeds_graduation_rate_year": 2024,
+    "ipeds_graduation_rate_label": "Bachelor degree within 6 years, total"
+  },
+  "series": {
+    "revenue_total_adjusted": [
+      {
+        "year": 2014,
+        "value": 18250466.4608
+      },
+      {
+        "year": 2015,
+        "value": 9996041.8352
+      },
+      {
+        "year": 2016,
+        "value": 19045534.8315
+      },
+      {
+        "year": 2017,
+        "value": 17830263.4588
+      },
+      {
+        "year": 2018,
+        "value": 14997696.3626
+      },
+      {
+        "year": 2019,
+        "value": 14024050.566
+      },
+      {
+        "year": 2020,
+        "value": 17472652.1972
+      },
+      {
+        "year": 2021,
+        "value": 22594873.8477
+      },
+      {
+        "year": 2022,
+        "value": 18759763.0385
+      },
+      {
+        "year": 2023,
+        "value": 16661045.8809
+      },
+      {
+        "year": 2024,
+        "value": 18139890
+      }
+    ],
+    "expenses_total_adjusted": [
+      {
+        "year": 2014,
+        "value": 14564272.2204
+      },
+      {
+        "year": 2015,
+        "value": 16832220.577
+      },
+      {
+        "year": 2016,
+        "value": 17121346.8195
+      },
+      {
+        "year": 2017,
+        "value": 17143798.7469
+      },
+      {
+        "year": 2018,
+        "value": 16075762.0587
+      },
+      {
+        "year": 2019,
+        "value": 15162679.1699
+      },
+      {
+        "year": 2020,
+        "value": 12777665.5853
+      },
+      {
+        "year": 2021,
+        "value": 11374932.4733
+      },
+      {
+        "year": 2022,
+        "value": 14372324.1401
+      },
+      {
+        "year": 2023,
+        "value": 14855246.8311
+      },
+      {
+        "year": 2024,
+        "value": 16670275
+      }
+    ],
+    "net_tuition_per_fte_adjusted": [
+      {
+        "year": 2014,
+        "value": 17793.4702
+      },
+      {
+        "year": 2015,
+        "value": 8850.5238
+      },
+      {
+        "year": 2016,
+        "value": 25276.8884
+      },
+      {
+        "year": 2017,
+        "value": 15640.9631
+      },
+      {
+        "year": 2018,
+        "value": 14559.549
+      },
+      {
+        "year": 2019,
+        "value": 13287.979
+      },
+      {
+        "year": 2020,
+        "value": 10359.2884
+      },
+      {
+        "year": 2021,
+        "value": 14627.0465
+      },
+      {
+        "year": 2022,
+        "value": 18363.3624
+      },
+      {
+        "year": 2023,
+        "value": 15604.3417
+      },
+      {
+        "year": 2024,
+        "value": 18445.1529
+      }
+    ],
+    "unfunded_discount_rate": [
+      {
+        "year": 2014,
+        "value": 0
+      },
+      {
+        "year": 2015,
+        "value": 51.947
+      },
+      {
+        "year": 2016,
+        "value": 32.8317
+      },
+      {
+        "year": 2017,
+        "value": 25.9177
+      },
+      {
+        "year": 2018,
+        "value": 26.5826
+      },
+      {
+        "year": 2019,
+        "value": 15.9099
+      },
+      {
+        "year": 2020,
+        "value": 42.0284
+      },
+      {
+        "year": 2021,
+        "value": 32.9355
+      },
+      {
+        "year": 2022,
+        "value": 28.6881
+      },
+      {
+        "year": 2023,
+        "value": 39.4706
+      },
+      {
+        "year": 2024,
+        "value": 26.2529
+      }
+    ],
+    "enrollment_headcount_total": [
+      {
+        "year": 2014,
+        "value": 220
+      },
+      {
+        "year": 2015,
+        "value": 191
+      },
+      {
+        "year": 2016,
+        "value": 202
+      },
+      {
+        "year": 2017,
+        "value": 206
+      },
+      {
+        "year": 2018,
+        "value": 187
+      },
+      {
+        "year": 2019,
+        "value": 171
+      },
+      {
+        "year": 2020,
+        "value": 154
+      },
+      {
+        "year": 2021,
+        "value": 143
+      },
+      {
+        "year": 2022,
+        "value": 136
+      },
+      {
+        "year": 2023,
+        "value": 146
+      },
+      {
+        "year": 2024,
+        "value": 240
+      }
+    ],
+    "enrollment_headcount_undergrad": [
+      {
+        "year": 2014,
+        "value": 93
+      },
+      {
+        "year": 2015,
+        "value": 83
+      },
+      {
+        "year": 2016,
+        "value": 99
+      },
+      {
+        "year": 2017,
+        "value": 105
+      },
+      {
+        "year": 2018,
+        "value": 81
+      },
+      {
+        "year": 2019,
+        "value": 76
+      },
+      {
+        "year": 2020,
+        "value": 58
+      },
+      {
+        "year": 2021,
+        "value": 48
+      },
+      {
+        "year": 2022,
+        "value": 40
+      },
+      {
+        "year": 2023,
+        "value": 44
+      },
+      {
+        "year": 2024,
+        "value": 75
+      }
+    ],
+    "enrollment_headcount_graduate": [
+      {
+        "year": 2014,
+        "value": 127
+      },
+      {
+        "year": 2015,
+        "value": 108
+      },
+      {
+        "year": 2016,
+        "value": 103
+      },
+      {
+        "year": 2017,
+        "value": 101
+      },
+      {
+        "year": 2018,
+        "value": 106
+      },
+      {
+        "year": 2019,
+        "value": 95
+      },
+      {
+        "year": 2020,
+        "value": 96
+      },
+      {
+        "year": 2021,
+        "value": 95
+      },
+      {
+        "year": 2022,
+        "value": 96
+      },
+      {
+        "year": 2023,
+        "value": 102
+      },
+      {
+        "year": 2024,
+        "value": 165
+      }
+    ],
+    "enrollment_nonresident_total": [
+      {
+        "year": 2014,
+        "value": 14
+      },
+      {
+        "year": 2015,
+        "value": 13
+      },
+      {
+        "year": 2016,
+        "value": 7
+      },
+      {
+        "year": 2017,
+        "value": 2
+      },
+      {
+        "year": 2018,
+        "value": 1
+      },
+      {
+        "year": 2019,
+        "value": 1
+      },
+      {
+        "year": 2020,
+        "value": 1
+      },
+      {
+        "year": 2021,
+        "value": 1
+      },
+      {
+        "year": 2022,
+        "value": 3
+      },
+      {
+        "year": 2023,
+        "value": 4
+      },
+      {
+        "year": 2024,
+        "value": 7
+      }
+    ],
+    "enrollment_nonresident_undergrad": [
+      {
+        "year": 2014,
+        "value": 7
+      },
+      {
+        "year": 2015,
+        "value": 10
+      },
+      {
+        "year": 2016,
+        "value": 6
+      },
+      {
+        "year": 2017,
+        "value": 0
+      },
+      {
+        "year": 2018,
+        "value": 0
+      },
+      {
+        "year": 2019,
+        "value": 0
+      },
+      {
+        "year": 2020,
+        "value": 1
+      },
+      {
+        "year": 2021,
+        "value": 1
+      },
+      {
+        "year": 2022,
+        "value": 2
+      },
+      {
+        "year": 2023,
+        "value": 1
+      },
+      {
+        "year": 2024,
+        "value": 2
+      }
+    ],
+    "enrollment_nonresident_graduate": [
+      {
+        "year": 2014,
+        "value": 7
+      },
+      {
+        "year": 2015,
+        "value": 3
+      },
+      {
+        "year": 2016,
+        "value": 1
+      },
+      {
+        "year": 2017,
+        "value": 2
+      },
+      {
+        "year": 2018,
+        "value": 1
+      },
+      {
+        "year": 2019,
+        "value": 1
+      },
+      {
+        "year": 2020,
+        "value": 0
+      },
+      {
+        "year": 2021,
+        "value": 0
+      },
+      {
+        "year": 2022,
+        "value": 1
+      },
+      {
+        "year": 2023,
+        "value": 3
+      },
+      {
+        "year": 2024,
+        "value": 5
+      }
+    ],
+    "staff_headcount_total": [
+      {
+        "year": 2014,
+        "value": 71
+      },
+      {
+        "year": 2015,
+        "value": 67
+      },
+      {
+        "year": 2016,
+        "value": 67
+      },
+      {
+        "year": 2017,
+        "value": 70
+      },
+      {
+        "year": 2018,
+        "value": 70
+      },
+      {
+        "year": 2019,
+        "value": 82
+      },
+      {
+        "year": 2020,
+        "value": 112
+      },
+      {
+        "year": 2021,
+        "value": 113
+      },
+      {
+        "year": 2022,
+        "value": 117
+      },
+      {
+        "year": 2023,
+        "value": 113
+      },
+      {
+        "year": 2024,
+        "value": 116
+      }
+    ],
+    "staff_headcount_instructional": [
+      {
+        "year": 2014,
+        "value": 18
+      },
+      {
+        "year": 2015,
+        "value": 18
+      },
+      {
+        "year": 2016,
+        "value": 18
+      },
+      {
+        "year": 2017,
+        "value": 18
+      },
+      {
+        "year": 2018,
+        "value": 22
+      },
+      {
+        "year": 2019,
+        "value": 34
+      },
+      {
+        "year": 2020,
+        "value": 24
+      },
+      {
+        "year": 2021,
+        "value": 28
+      },
+      {
+        "year": 2022,
+        "value": 35
+      },
+      {
+        "year": 2023,
+        "value": 33
+      },
+      {
+        "year": 2024,
+        "value": 32
+      }
+    ],
+    "endowment_value_adjusted": [
+      {
+        "year": 2014,
+        "value": 36228887.8536
+      },
+      {
+        "year": 2015,
+        "value": 32232803.7173
+      },
+      {
+        "year": 2016,
+        "value": 30183825.3649
+      },
+      {
+        "year": 2017,
+        "value": 27875018.5576
+      },
+      {
+        "year": 2018,
+        "value": 26603725.9004
+      },
+      {
+        "year": 2019,
+        "value": 26041854.4744
+      },
+      {
+        "year": 2020,
+        "value": 25912792.9556
+      },
+      {
+        "year": 2021,
+        "value": 35652865.8287
+      },
+      {
+        "year": 2022,
+        "value": 46092036.3904
+      },
+      {
+        "year": 2023,
+        "value": 45665140.6421
+      },
+      {
+        "year": 2024,
+        "value": 46931001
+      }
+    ],
+    "endowment_spending_current_use": [
+      {
+        "year": 2020,
+        "value": 107653
+      },
+      {
+        "year": 2021,
+        "value": 1650767
+      },
+      {
+        "year": 2022,
+        "value": 3062495
+      },
+      {
+        "year": 2023,
+        "value": 16928139
+      },
+      {
+        "year": 2024,
+        "value": 4577490
+      }
+    ],
+    "endowment_spending_current_use_adjusted": [
+      {
+        "year": 2020,
+        "value": 130479.6238
+      },
+      {
+        "year": 2021,
+        "value": 1911013.9479
+      },
+      {
+        "year": 2022,
+        "value": 3282605.7783
+      },
+      {
+        "year": 2023,
+        "value": 17427424.1547
+      },
+      {
+        "year": 2024,
+        "value": 4577490
+      }
+    ],
+    "endowment_spending_current_use_pct_core_revenue": [
+      {
+        "year": 2020,
+        "value": 0.0084
+      },
+      {
+        "year": 2021,
+        "value": 0.0876
+      },
+      {
+        "year": 2022,
+        "value": 0.1783
+      },
+      {
+        "year": 2023,
+        "value": 1.0618
+      },
+      {
+        "year": 2024,
+        "value": 0.2559
+      }
+    ],
+    "federal_grants_contracts_pell_adjusted_adjusted": [
+      {
+        "year": 2014,
+        "value": 0
+      },
+      {
+        "year": 2015,
+        "value": 0
+      },
+      {
+        "year": 2016,
+        "value": 0
+      },
+      {
+        "year": 2017,
+        "value": 0
+      },
+      {
+        "year": 2018,
+        "value": 0
+      },
+      {
+        "year": 2019,
+        "value": 0
+      },
+      {
+        "year": 2020,
+        "value": 849453.8276
+      },
+      {
+        "year": 2021,
+        "value": 79627.9447
+      },
+      {
+        "year": 2022,
+        "value": 0
+      },
+      {
+        "year": 2023,
+        "value": 0
+      },
+      {
+        "year": 2024,
+        "value": 0
+      }
+    ],
+    "state_funding_adjusted": [
+      {
+        "year": 2014,
+        "value": 0
+      },
+      {
+        "year": 2015,
+        "value": 0
+      },
+      {
+        "year": 2016,
+        "value": 0
+      },
+      {
+        "year": 2017,
+        "value": 0
+      },
+      {
+        "year": 2018,
+        "value": 0
+      },
+      {
+        "year": 2019,
+        "value": 0
+      },
+      {
+        "year": 2020,
+        "value": 0
+      },
+      {
+        "year": 2021,
+        "value": 0
+      },
+      {
+        "year": 2022,
+        "value": 0
+      },
+      {
+        "year": 2023,
+        "value": 0
+      },
+      {
+        "year": 2024,
+        "value": 0
+      }
+    ]
+  },
+  "latest_status": {
+    "accreditors": "NECHE",
+    "action_labels": "Placed on Probation; Probation removed; Received heightened monitoring or focused review because Concerns Hellenic College may no longer meet the standards on Planning and Evaluation and Institutional Resources.",
+    "active_actions": "notice; probation",
+    "has_active_warning": false,
+    "has_active_warning_or_notice": true,
+    "has_active_adverse_action": false,
+    "latest_action_date": "2021-04-05",
+    "latest_action_year": "2021",
+    "action_count": 4
+  },
+  "actions": [
+    {
+      "accreditor": "NECHE",
+      "action_type": "removed",
+      "action_label": "At its meeting on March 5, 2021, the New England Commission of Higher Education (NECHE) voted to remove Hellenic College, Inc. from probation for failure to meet the standards on Institutional Resources and Planning and Evaluation, and to remove the Notations with respect to…",
+      "action_label_short": "Probation removed",
+      "action_scope": null,
+      "action_status": null,
+      "action_date": "2021-04-05",
+      "action_year": "2021",
+      "notes": null,
+      "source_url": "https://www.neche.org/commission-statements/joint-statement-by-hellenic-college-holy-cross-and-the-commission-april-5-2021/",
+      "source_title": "Joint Statement by Hellenic College Holy Cross and the Commission April 5, 2021",
+      "source_page_url": "https://www.neche.org/commission-statements/joint-statement-by-hellenic-college-holy-cross-and-the-commission-april-5-2021/",
+      "source_page_modified": null,
+      "display_action": true,
+      "public_table_strategy": null,
+      "hybrid_candidate": false,
+      "hybrid_reason": null,
+      "has_financial_profile": true,
+      "is_primary_tracker": true
+    },
+    {
+      "accreditor": "NECHE",
+      "action_type": "removed",
+      "action_label": "from probation for failure to meet the standards on Institutional Resources and Planning and Evaluation, and to remove the Notations with respect to the standards on Organization and Governance and The Academic Program.",
+      "action_label_short": "Probation removed",
+      "action_scope": null,
+      "action_status": "resolved",
+      "action_date": "2021-03-05",
+      "action_year": "2021",
+      "notes": "Accreditation Reaffirmed: Probation Removed",
+      "source_url": "https://ope.ed.gov/dapip/#/institution-profile/121178",
+      "source_title": "DAPIP Institutional Accreditation Action",
+      "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/121178",
+      "source_page_modified": null,
+      "display_action": true,
+      "public_table_strategy": "dapip_backed_keep",
+      "hybrid_candidate": false,
+      "hybrid_reason": null,
+      "has_financial_profile": true,
+      "is_primary_tracker": true
+    },
+    {
+      "accreditor": "NECHE",
+      "action_type": "probation",
+      "action_label": "on probation for a period not to exceed two years because the Commission found that Hellenic College, Inc.",
+      "action_label_short": "Placed on Probation",
+      "action_scope": null,
+      "action_status": "active",
+      "action_date": "2019-11-21",
+      "action_year": "2019",
+      "notes": "Probation or Equivalent or a More Severe Status: Probation |",
+      "source_url": "https://ope.ed.gov/dapip/#/institution-profile/121178",
+      "source_title": "DAPIP Institutional Accreditation Action",
+      "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/121178",
+      "source_page_modified": null,
+      "display_action": true,
+      "public_table_strategy": "dapip_backed_keep",
+      "hybrid_candidate": false,
+      "hybrid_reason": null,
+      "has_financial_profile": true,
+      "is_primary_tracker": true
+    },
+    {
+      "accreditor": "NECHE",
+      "action_type": "notice",
+      "action_label": "to show cause why it should not be placed on probation or have its accreditation withdrawn because the Commission had reason to believe that Hellenic College, Inc.",
+      "action_label_short": "Received heightened monitoring or focused review because Concerns Hellenic College may no longer meet the standards on Planning and Evaluation and Institutional Resources.",
+      "action_scope": null,
+      "action_status": "active",
+      "action_date": "2019-05-31",
+      "action_year": "2019",
+      "notes": "Heightened Monitoring or Focused Review | Concerns Hellenic College may no longer meet the standards on Planning and Evaluation and Institutional Resources",
+      "source_url": "https://ope.ed.gov/dapip/#/institution-profile/121178",
+      "source_title": "DAPIP Institutional Accreditation Action",
+      "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/121178",
+      "source_page_modified": null,
+      "display_action": true,
+      "public_table_strategy": "dapip_backed_keep",
+      "hybrid_candidate": false,
+      "hybrid_reason": null,
+      "has_financial_profile": true,
+      "is_primary_tracker": true
+    }
+  ],
+  "sources": [
+    {
+      "accreditor": "NECHE",
+      "source_title": "Joint Statement by Hellenic College Holy Cross and the Commission April 5, 2021",
+      "source_url": "https://www.neche.org/commission-statements/joint-statement-by-hellenic-college-holy-cross-and-the-commission-april-5-2021/",
+      "source_page_url": "https://www.neche.org/commission-statements/joint-statement-by-hellenic-college-holy-cross-and-the-commission-april-5-2021/"
+    },
+    {
+      "accreditor": "NECHE",
+      "source_title": "DAPIP Institutional Accreditation Action",
+      "source_url": "https://ope.ed.gov/dapip/#/institution-profile/121178",
+      "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/121178"
+    }
+  ]
+}
