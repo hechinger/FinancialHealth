@@ -348,6 +348,17 @@ function isEndowmentRed(summary) {
   return stateIsNegative(endowmentChangeState(summary));
 }
 
+function stateAidChangeState(summary) {
+  return sentimentClass(firstNumericValue(
+    summary?.state_local_support_pct_change_5yr,
+    summary?.state_funding_pct_change_5yr
+  ));
+}
+
+function isStateAidRed(summary) {
+  return stateIsNegative(stateAidChangeState(summary));
+}
+
 function trendDirection(value) {
   const numeric = asNumber(value);
   if (numeric === null || numeric === 0) return "";
@@ -1211,11 +1222,6 @@ function buildInstructionalStaffRatioParagraph(profile, summary, latestDataYear)
   ];
 }
 
-const INSTITUTION_CLOSURE_DISPLAY_CATEGORIES = new Set([
-  "Institution closures",
-  "Institution closures/absorptions"
-]);
-
 function normalizeInstitutionClosureText(...parts) {
   return parts
     .map((value) => String(value || "").trim())
@@ -1224,32 +1230,19 @@ function normalizeInstitutionClosureText(...parts) {
     .toLowerCase();
 }
 
-function normalizeInstitutionClosureCategory(value) {
-  const category = String(value || "").trim();
-  if (category === "Institution closures") return "Institution closures/absorptions";
-  return category;
-}
-
-function getInstitutionClosureCategories(cut) {
-  const values = Array.isArray(cut?.display_categories)
-    ? cut.display_categories
-    : [cut?.primary_display_category, cut?.display_category];
-  return values
-    .map((value) => normalizeInstitutionClosureCategory(value))
-    .filter(Boolean)
-    .filter((value, index, list) => list.indexOf(value) === index);
-}
-
 function findInstitutionClosureAnnouncement(cutsRecord) {
-  return (cutsRecord?.landing_cuts ?? []).find((cut) => {
-    const categories = getInstitutionClosureCategories(cut);
-    if (categories.some((category) => INSTITUTION_CLOSURE_DISPLAY_CATEGORIES.has(category))) return true;
-    const text = normalizeInstitutionClosureText(cut?.cut_label_public, cut?.program_name);
-    return /\binstitution clos|\bclos(?:e|ing|ure)\b|\babsor(?:b|bed|ption)\b/.test(text);
-  }) || null;
+  if (cutsRecord?.confirmed_closure_announcement !== true) return null;
+  return (cutsRecord?.landing_cuts ?? []).find((cut) => cut?.cut_type === "institution_closure") || null;
+}
+
+function confirmedClosureBadgeKind(cutsRecord) {
+  if (cutsRecord?.confirmed_closure_announcement !== true) return null;
+  const kind = String(cutsRecord?.confirmed_closure_badge_kind || "").trim().toLowerCase();
+  return kind || null;
 }
 
 function isAbsorptionAnnouncement(cut, cutsRecord) {
+  if (confirmedClosureBadgeKind(cutsRecord) === "absorption") return true;
   const text = normalizeInstitutionClosureText(
     cut?.cut_label_public,
     cut?.program_name,
@@ -1260,6 +1253,13 @@ function isAbsorptionAnnouncement(cut, cutsRecord) {
 
 function announcedClosureYear(cutsRecord) {
   const cut = findInstitutionClosureAnnouncement(cutsRecord);
+  const confirmedKind = confirmedClosureBadgeKind(cutsRecord);
+  if (confirmedKind === "absorption") return null;
+  const explicitDate = String(cutsRecord?.confirmed_closure_announcement_date || "").trim();
+  if (confirmedKind === "closure" && explicitDate) {
+    const match = explicitDate.match(/\b(20\d{2})\b/);
+    if (match) return Number(match[1]);
+  }
   if (!cut || isAbsorptionAnnouncement(cut, cutsRecord)) return null;
   const explicit = Number(cut.announcement_year || "");
   if (Number.isFinite(explicit) && explicit > 1900) return explicit;
@@ -1268,6 +1268,7 @@ function announcedClosureYear(cutsRecord) {
 }
 
 function hasAnnouncedAbsorption(cutsRecord) {
+  if (confirmedClosureBadgeKind(cutsRecord) === "absorption") return true;
   const cut = findInstitutionClosureAnnouncement(cutsRecord);
   return isAbsorptionAnnouncement(cut, cutsRecord);
 }
@@ -1338,6 +1339,7 @@ function computeSchoolWarningSummary(summary, enrollmentFlag, visibility) {
   pushMetric("enrollment", "Enrollment", visibility.hasEnrollmentCard, isEnrollmentRed(summary));
   pushMetric("enrollment_decline", "Enrollment declined in 3 of the previous 5 years", visibility.hasEnrollmentFlagCard, isEnrollmentDeclineRed(enrollmentFlag));
   pushMetric("staff", "Staff headcount", visibility.hasStaffCard, isStaffRed(summary));
+  pushMetric("state_aid", "State & local funding", visibility.hasStateAidCard, isStateAidRed(summary));
   pushMetric("endowment", "Endowment", visibility.hasEndowmentCard, isEndowmentRed(summary));
 
   const coreIndicatorsMissing = !visibility.hasEnrollmentCard || !visibility.hasNetTuitionCard || !visibility.hasLossRepeatCard;
@@ -1709,7 +1711,10 @@ async function init() {
   const enrollmentBenchmark = firstNumericValue(s.sector_median_enrollment_pct_change_5yr, sectorHeadlineBenchmarks?.median_enrollment_pct_change_5yr);
   const staffBenchmark = firstNumericValue(s.sector_median_staff_total_headcount_pct_change_5yr, sectorHeadlineBenchmarks?.median_staff_total_headcount_pct_change_5yr);
   const endowmentBenchmark = firstNumericValue(s.sector_median_endowment_pct_change_5yr, sectorHeadlineBenchmarks?.median_endowment_pct_change_5yr);
-  const stateAidBenchmark = sectorHeadlineBenchmarks?.median_state_funding_pct_change_5yr;
+  const stateAidBenchmark = firstNumericValue(
+    sectorHeadlineBenchmarks?.median_state_local_support_pct_change_5yr,
+    sectorHeadlineBenchmarks?.median_state_funding_pct_change_5yr
+  );
 
   const downloadButton = document.getElementById("download-school-data");
   if (downloadButton) {
@@ -1985,10 +1990,21 @@ async function init() {
 
   const hasEndowmentValue = hasMeaningfulData(series.endowment_value_adjusted);
 
+  const stateSupportPctCoreRevenue = firstNumericValue(
+    s.state_local_support_pct_core_revenue,
+    s.state_funding_pct_core_revenue
+  );
+  const stateSupportPctChange5yr = firstNumericValue(
+    s.state_local_support_pct_change_5yr,
+    s.state_funding_pct_change_5yr
+  );
+  const stateSupportSeries = hasMeaningfulData(series.state_local_support_adjusted)
+    ? series.state_local_support_adjusted
+    : series.state_funding_adjusted;
   const hasState =
-    (asNumber(s.state_funding_pct_core_revenue) ?? 0) !== 0 ||
-    ((asNumber(s.state_funding_pct_change_5yr) ?? 0) !== 0) ||
-    hasMeaningfulData(series.state_funding_adjusted);
+    (stateSupportPctCoreRevenue ?? 0) !== 0 ||
+    ((stateSupportPctChange5yr ?? 0) !== 0) ||
+    hasMeaningfulData(stateSupportSeries);
   const isPublic = isPublicProfile(p);
   const showPublicStateAidSection = isPublic && hasState;
   const showAidDropdownState = hasState && !isPublic;
@@ -2016,7 +2032,8 @@ async function init() {
     hasEnrollmentCard,
     hasEnrollmentFlagCard,
     hasStaffCard,
-    hasEndowmentCard
+    hasEndowmentCard,
+    hasStateAidCard: showPublicStateAidSection && stateSupportPctChange5yr !== null
   });
   syncSchoolWarningSummaryBadge(warningSummary, p);
 
@@ -2054,7 +2071,7 @@ async function init() {
   const aidIntro = document.getElementById("aid-section-intro");
   if (aidIntro) {
     if (showAidDropdownState) {
-      aidIntro.textContent = "Some public colleges depend more than others on state funding. A higher share means the college is more exposed if that funding changes.";
+      aidIntro.textContent = "Some public colleges depend more than others on state and local funding. A higher share means the college is more exposed if that funding changes.";
       setHidden("aid-section-intro", false);
     } else {
       setHidden("aid-section-intro", true);
@@ -2062,21 +2079,21 @@ async function init() {
   }
   const aidTitle = document.getElementById("aid-section-title");
   if (aidTitle) {
-    aidTitle.textContent = "Want details about state aid?";
+    aidTitle.textContent = "Want details about state & local funding?";
   }
 
   if (hasState) {
-    const stateChange5yr = asNumber(s.state_funding_pct_change_5yr);
+    const stateChange5yr = stateSupportPctChange5yr;
     setText(
       "state-share-copy",
-      `${Number.isFinite(latestDataYear) ? `In ${latestDataYear}, ` : "In the latest year, "}${fmtPlainPct(s.state_funding_pct_core_revenue || 0)} of this college's core revenue came from state appropriations.`
+      `${Number.isFinite(latestDataYear) ? `In ${latestDataYear}, ` : "In the latest year, "}${fmtPlainPct(stateSupportPctCoreRevenue || 0)} of this college's core revenue came from state and local appropriations, grants and contracts.`
     );
     setHidden("state-share-copy", false);
 
     if (stateChange5yr === null) {
       applyStrip(
         "state-change-card",
-        "State aid data are not available.",
+        "State and local funding data are not available.",
         "neutral",
         ""
       );
@@ -2084,14 +2101,14 @@ async function init() {
       applyStripLines(
         "state-change-card",
         buildTrendCardLines(
-          "State aid",
-          s.state_funding_pct_change_5yr,
+          "State & local funding",
+          stateChange5yr,
           fiveYearRangeText,
           p,
           stateAidBenchmark
         ),
-        sentimentClass(s.state_funding_pct_change_5yr),
-        trendDirection(s.state_funding_pct_change_5yr)
+        sentimentClass(stateChange5yr),
+        trendDirection(stateChange5yr)
       );
     }
     setHidden("state-change-card", false);
@@ -2232,19 +2249,19 @@ async function init() {
 
   if (hasState) {
     renderLineChart("chart-state", {
-      title: "State government appropriations over time (adjusted for inflation)",
+      title: "State & local funding over time (adjusted for inflation)",
       format: "currency",
       ...financeTooltip2024Config,
       showLegend: false,
       series: [
-        { label: "State Funding", color: CHART_COLOR_PRIMARY, values: toSeries(series.state_funding_adjusted) }
+        { label: "State & Local Funding", color: CHART_COLOR_PRIMARY, values: toSeries(stateSupportSeries) }
       ]
     });
   }
   upsertSectionSourceNote("chart-state", hasState ? [
     createIpedsCitation(latestDataYear || "latest", "Finance", schoolRetrievedAt)
   ] : []);
-  moveChartNoteBelowSource("state-negative-note", "chart-state", hasState && hasNegativePoint(series.state_funding_adjusted));
+  moveChartNoteBelowSource("state-negative-note", "chart-state", hasState && hasNegativePoint(stateSupportSeries));
 
   // Nav tracker is built here after all section visibility updates land.
   setupProfileJumpLinkTracking();
