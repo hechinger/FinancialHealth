@@ -1,6 +1,6 @@
 {
   "unitid": "141565",
-  "generated_at": "2026-07-14",
+  "generated_at": "2026-08-31",
   "profile": {
     "institution_name": "University of Hawaii at Hilo",
     "institution_unique_name": "University of Hawaii at Hilo | Hilo | Hawaii",
@@ -19,22 +19,22 @@
     "sector_median_enrollment_pct_change_5yr": -4.2732,
     "enrollment_decline_last_3_of_5": "Yes",
     "revenue_pct_change_5yr": 1.4495,
-    "sector_median_revenue_pct_change_5yr": -1.3261,
+    "sector_median_revenue_pct_change_5yr": -1.3025,
     "net_tuition_per_fte_change_5yr": -40.8021,
     "sector_median_net_tuition_per_fte_change_5yr": -17.7529,
     "staff_total_headcount_pct_change_5yr": -5.9801,
     "sector_median_staff_total_headcount_pct_change_5yr": 0.3908,
     "staff_instructional_headcount_pct_change_5yr": -7.197,
-    "students_per_instructional_staff_fte": 11,
-    "sector_median_students_per_instructional_staff_fte": 16,
+    "students_per_instructional_staff_fte": 11.7882,
+    "sector_median_students_per_instructional_staff_fte": 16.7461,
     "ended_year_at_loss": "No",
     "losses_last_3_of_5": "No",
     "loss_years_last_10": 6,
     "tuition_dependence_pct": 10.4453,
-    "sector_median_tuition_dependence_pct": 21.2464,
+    "sector_median_tuition_dependence_pct": 21.2045,
     "tuition_dependence_vs_sector_median_sentence": "This college got 10.0% of its revenue from net tuition in 2024, below the median of 21% for public colleges.",
-    "unfunded_discount_rate": 41.2319,
-    "unfunded_discount_pct_change_5yr": 14.6626,
+    "unfunded_discount_rate": null,
+    "unfunded_discount_pct_change_5yr": null,
     "share_grad_students": 11.9915,
     "sector_avg_share_grad_students": 20.9865,
     "research_expense": 10617397,
@@ -70,7 +70,9 @@
     "median_debt_completers": 20500,
     "scorecard_data_updated": "2026-03-23",
     "ipeds_graduation_rate_year": 2024,
-    "ipeds_graduation_rate_label": "Bachelor degree within 6 years, total"
+    "ipeds_graduation_rate_label": "Bachelor degree within 6 years, total",
+    "state_local_support_pct_core_revenue": 53.6974,
+    "state_local_support_pct_change_5yr": -1.4726
   },
   "series": {
     "revenue_total_adjusted": [
@@ -251,10 +253,6 @@
       {
         "year": 2023,
         "value": 37.7999
-      },
-      {
-        "year": 2024,
-        "value": 41.2319
       }
     ],
     "enrollment_headcount_total": [
@@ -828,11 +826,57 @@
         "year": 2024,
         "value": 46644894
       }
+    ],
+    "state_local_support_adjusted": [
+      {
+        "year": 2014,
+        "value": 58301397.506
+      },
+      {
+        "year": 2015,
+        "value": 61744795.3861
+      },
+      {
+        "year": 2016,
+        "value": 63756510.6051
+      },
+      {
+        "year": 2017,
+        "value": 67159318.8881
+      },
+      {
+        "year": 2018,
+        "value": 71253010.9349
+      },
+      {
+        "year": 2019,
+        "value": 74611276.5635
+      },
+      {
+        "year": 2020,
+        "value": 74598312.1129
+      },
+      {
+        "year": 2021,
+        "value": 69242713.353
+      },
+      {
+        "year": 2022,
+        "value": 61402164.7491
+      },
+      {
+        "year": 2023,
+        "value": 65406329.7627
+      },
+      {
+        "year": 2024,
+        "value": 73512558
+      }
     ]
   },
   "latest_status": {
     "accreditors": "WSCUC",
-    "action_labels": "Received heightened monitoring or focused review; Removed Notice of Concern",
+    "action_labels": "Monitoring status removed; Received heightened monitoring or focused review",
     "active_actions": "notice",
     "has_active_warning": false,
     "has_active_warning_or_notice": true,
@@ -846,7 +890,7 @@
       "accreditor": "WSCUC",
       "action_type": "removed",
       "action_label": "WSCUC is committed to an accreditation process that adds value to institutions while contributing to public accountability, and we thank you for your continued support of this process.",
-      "action_label_short": "Removed Notice of Concern",
+      "action_label_short": "Monitoring status removed",
       "action_scope": null,
       "action_status": "resolved",
       "action_date": "2025-06-27",

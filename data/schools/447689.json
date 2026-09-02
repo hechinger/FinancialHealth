@@ -1,6 +1,6 @@
 {
   "unitid": "447689",
-  "generated_at": "2026-07-14",
+  "generated_at": "2026-08-31",
   "profile": {
     "institution_name": "Georgia Gwinnett College",
     "institution_unique_name": "Georgia Gwinnett College | Lawrenceville | Georgia",
@@ -19,22 +19,22 @@
     "sector_median_enrollment_pct_change_5yr": -4.2732,
     "enrollment_decline_last_3_of_5": "No",
     "revenue_pct_change_5yr": -19.9107,
-    "sector_median_revenue_pct_change_5yr": -1.3261,
+    "sector_median_revenue_pct_change_5yr": -1.3025,
     "net_tuition_per_fte_change_5yr": -38.5937,
     "sector_median_net_tuition_per_fte_change_5yr": -17.7529,
     "staff_total_headcount_pct_change_5yr": -12.2378,
     "sector_median_staff_total_headcount_pct_change_5yr": 0.3908,
     "staff_instructional_headcount_pct_change_5yr": -14.2012,
-    "students_per_instructional_staff_fte": 19,
-    "sector_median_students_per_instructional_staff_fte": 16,
+    "students_per_instructional_staff_fte": 20.6276,
+    "sector_median_students_per_instructional_staff_fte": 16.7461,
     "ended_year_at_loss": "No",
     "losses_last_3_of_5": "No",
     "loss_years_last_10": 3,
     "tuition_dependence_pct": 15.9982,
-    "sector_median_tuition_dependence_pct": 21.2464,
+    "sector_median_tuition_dependence_pct": 21.2045,
     "tuition_dependence_vs_sector_median_sentence": "This college got 16.0% of its revenue from net tuition in 2024, below the median of 21% for public colleges.",
-    "unfunded_discount_rate": 46.2069,
-    "unfunded_discount_pct_change_5yr": 21.0516,
+    "unfunded_discount_rate": null,
+    "unfunded_discount_pct_change_5yr": null,
     "share_grad_students": null,
     "sector_avg_share_grad_students": 20.9865,
     "research_expense": 329891,
@@ -70,7 +70,9 @@
     "median_debt_completers": 20076,
     "scorecard_data_updated": "2026-03-23",
     "ipeds_graduation_rate_year": 2024,
-    "ipeds_graduation_rate_label": "Bachelor degree within 6 years, total"
+    "ipeds_graduation_rate_label": "Bachelor degree within 6 years, total",
+    "state_local_support_pct_core_revenue": 53.1714,
+    "state_local_support_pct_change_5yr": -5.4387
   },
   "series": {
     "revenue_total_adjusted": [
@@ -251,10 +253,6 @@
       {
         "year": 2023,
         "value": 37.6132
-      },
-      {
-        "year": 2024,
-        "value": 46.2069
       }
     ],
     "enrollment_headcount_total": [
@@ -629,6 +627,52 @@
       {
         "year": 2024,
         "value": 67899103
+      }
+    ],
+    "state_local_support_adjusted": [
+      {
+        "year": 2014,
+        "value": 52833566.9869
+      },
+      {
+        "year": 2015,
+        "value": 59343737.8801
+      },
+      {
+        "year": 2016,
+        "value": 63418655.1866
+      },
+      {
+        "year": 2017,
+        "value": 68254016.9698
+      },
+      {
+        "year": 2018,
+        "value": 81126478.6126
+      },
+      {
+        "year": 2019,
+        "value": 83296030.0924
+      },
+      {
+        "year": 2020,
+        "value": 85051844.624
+      },
+      {
+        "year": 2021,
+        "value": 66620935.7216
+      },
+      {
+        "year": 2022,
+        "value": 75152171.2017
+      },
+      {
+        "year": 2023,
+        "value": 82757779.2902
+      },
+      {
+        "year": 2024,
+        "value": 78765796
       }
     ]
   }

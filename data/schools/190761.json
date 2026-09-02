@@ -1,6 +1,6 @@
 {
   "unitid": "190761",
-  "generated_at": "2026-07-14",
+  "generated_at": "2026-08-31",
   "profile": {
     "institution_name": "Dominican University New York",
     "institution_unique_name": "Dominican University New York | Orangeburg | New York",
@@ -19,20 +19,20 @@
     "sector_median_enrollment_pct_change_5yr": -3.7344,
     "enrollment_decline_last_3_of_5": "Yes",
     "revenue_pct_change_5yr": -12.7554,
-    "sector_median_revenue_pct_change_5yr": -0.5117,
+    "sector_median_revenue_pct_change_5yr": -0.3378,
     "net_tuition_per_fte_change_5yr": -26.4923,
     "sector_median_net_tuition_per_fte_change_5yr": -17.816,
     "staff_total_headcount_pct_change_5yr": -11.9221,
     "sector_median_staff_total_headcount_pct_change_5yr": -1.7263,
     "staff_instructional_headcount_pct_change_5yr": -11.8483,
-    "students_per_instructional_staff_fte": 13,
-    "sector_median_students_per_instructional_staff_fte": 12,
+    "students_per_instructional_staff_fte": 14.3354,
+    "sector_median_students_per_instructional_staff_fte": 12.9781,
     "ended_year_at_loss": "No",
     "losses_last_3_of_5": "No",
     "loss_years_last_10": 2,
     "tuition_dependence_pct": 57.0115,
-    "sector_median_tuition_dependence_pct": 44.8638,
-    "tuition_dependence_vs_sector_median_sentence": "This college got 57.0% of its revenue from net tuition in 2024, above the median of 45% for private not-for-profit colleges.",
+    "sector_median_tuition_dependence_pct": 44.2508,
+    "tuition_dependence_vs_sector_median_sentence": "This college got 57.0% of its revenue from net tuition in 2024, above the median of 44% for private not-for-profit colleges.",
     "unfunded_discount_rate": 40.3695,
     "unfunded_discount_pct_change_5yr": 9.7202,
     "share_grad_students": 20.48,
@@ -57,9 +57,9 @@
     "grad_plus_disbursements_per_recipient": 6919.125,
     "sector_median_grad_plus_disbursements_per_recipient": 11428,
     "federal_grants_contracts_pell_adjusted_pct_core_revenue": 15.3469,
-    "state_funding_pct_core_revenue": 0.3563,
+    "state_funding_pct_core_revenue": 0,
     "federal_grants_contracts_pell_adjusted_pct_change_5yr": 865.3163,
-    "state_funding_pct_change_5yr": -49.3373,
+    "state_funding_pct_change_5yr": -100,
     "endowment_assets_per_fte_adjusted": 3396.9742,
     "sector_median_endowment_assets_per_fte_adjusted": 37427.0318,
     "endowment_pct_change_5yr": -36.4498,
@@ -826,18 +826,18 @@
       },
       {
         "year": 2024,
-        "value": 143666
+        "value": 0
       }
     ]
   },
   "latest_status": {
     "accreditors": "MSCHE",
-    "action_labels": "Non-Compliance Warning",
-    "active_actions": null,
-    "has_active_warning": false,
-    "has_active_warning_or_notice": false,
+    "action_labels": "Placed on Warning because of insufficient evidence of compliance with Standard V (Educational Effectiveness Assessment)",
+    "active_actions": "warning",
+    "has_active_warning": true,
+    "has_active_warning_or_notice": true,
     "has_active_adverse_action": false,
-    "latest_action_date": "2026-07-06",
+    "latest_action_date": "2026-06-25",
     "latest_action_year": "2026",
     "action_count": 1
   },
@@ -845,19 +845,19 @@
     {
       "accreditor": "MSCHE",
       "action_type": "warning",
-      "action_label": "Non-Compliance Warning",
-      "action_label_short": "Non-Compliance Warning",
+      "action_label": "Manuel Martínez President Dominican University New York 470 Western Highway Orangeburg, NY 10962 NOTIFICATION OF NON-COMPLIANCE WARNING ACTION Dear Dr.",
+      "action_label_short": "Placed on Warning because of insufficient evidence of compliance with Standard V (Educational Effectiveness Assessment)",
       "action_scope": null,
-      "action_status": null,
-      "action_date": "2026-07-06",
+      "action_status": "active",
+      "action_date": "2026-06-25",
       "action_year": "2026",
-      "notes": null,
-      "source_url": "https://msche.box.com/shared/static/bdnmebjsins5ct2s2944j9ur0chv5e11.pdf",
-      "source_title": "Non-Compliance and Adverse Actions by Status - Middle States Commission on Higher Education",
-      "source_page_url": "https://msche.box.com/shared/static/bdnmebjsins5ct2s2944j9ur0chv5e11.pdf",
+      "notes": "Probation or Equivalent or a More Severe Status: Warning",
+      "source_url": "https://ope.ed.gov/dapip/#/institution-profile/130280",
+      "source_title": "DAPIP Institutional Accreditation Action",
+      "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/130280",
       "source_page_modified": null,
       "display_action": true,
-      "public_table_strategy": null,
+      "public_table_strategy": "dapip_backed_keep",
       "hybrid_candidate": false,
       "hybrid_reason": null,
       "has_financial_profile": true,
@@ -867,9 +867,9 @@
   "sources": [
     {
       "accreditor": "MSCHE",
-      "source_title": "Non-Compliance and Adverse Actions by Status - Middle States Commission on Higher Education",
-      "source_url": "https://msche.box.com/shared/static/bdnmebjsins5ct2s2944j9ur0chv5e11.pdf",
-      "source_page_url": "https://msche.box.com/shared/static/bdnmebjsins5ct2s2944j9ur0chv5e11.pdf"
+      "source_title": "DAPIP Institutional Accreditation Action",
+      "source_url": "https://ope.ed.gov/dapip/#/institution-profile/130280",
+      "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/130280"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "unitid": "155317",
-  "generated_at": "2026-07-14",
+  "generated_at": "2026-08-31",
   "profile": {
     "institution_name": "University of Kansas",
     "institution_unique_name": "University of Kansas | Lawrence | Kansas",
@@ -19,22 +19,22 @@
     "sector_median_enrollment_pct_change_5yr": -4.2732,
     "enrollment_decline_last_3_of_5": "Yes",
     "revenue_pct_change_5yr": 13.7169,
-    "sector_median_revenue_pct_change_5yr": -1.3261,
+    "sector_median_revenue_pct_change_5yr": -1.3025,
     "net_tuition_per_fte_change_5yr": -20.9311,
     "sector_median_net_tuition_per_fte_change_5yr": -17.7529,
     "staff_total_headcount_pct_change_5yr": 15.6089,
     "sector_median_staff_total_headcount_pct_change_5yr": 0.3908,
     "staff_instructional_headcount_pct_change_5yr": 21.1858,
-    "students_per_instructional_staff_fte": 18,
-    "sector_median_students_per_instructional_staff_fte": 16,
+    "students_per_instructional_staff_fte": 8.6532,
+    "sector_median_students_per_instructional_staff_fte": 16.7461,
     "ended_year_at_loss": "No",
     "losses_last_3_of_5": "No",
     "loss_years_last_10": 0,
     "tuition_dependence_pct": 17.8309,
-    "sector_median_tuition_dependence_pct": 21.2464,
+    "sector_median_tuition_dependence_pct": 21.2045,
     "tuition_dependence_vs_sector_median_sentence": "This college got 18.0% of its revenue from net tuition in 2024, below the median of 21% for public colleges.",
-    "unfunded_discount_rate": 12.3459,
-    "unfunded_discount_pct_change_5yr": 35.7723,
+    "unfunded_discount_rate": null,
+    "unfunded_discount_pct_change_5yr": null,
     "share_grad_students": 28.0686,
     "sector_avg_share_grad_students": 20.9865,
     "research_expense": 473226177,
@@ -70,7 +70,9 @@
     "median_debt_completers": 21000,
     "scorecard_data_updated": "2026-03-23",
     "ipeds_graduation_rate_year": 2024,
-    "ipeds_graduation_rate_label": "Bachelor degree within 6 years, total"
+    "ipeds_graduation_rate_label": "Bachelor degree within 6 years, total",
+    "state_local_support_pct_core_revenue": 23.2083,
+    "state_local_support_pct_change_5yr": 7.2999
   },
   "series": {
     "revenue_total_adjusted": [
@@ -251,10 +253,6 @@
       {
         "year": 2023,
         "value": 10.2492
-      },
-      {
-        "year": 2024,
-        "value": 12.3459
       }
     ],
     "enrollment_headcount_total": [
@@ -827,6 +825,52 @@
       {
         "year": 2024,
         "value": 305434379
+      }
+    ],
+    "state_local_support_adjusted": [
+      {
+        "year": 2014,
+        "value": 383621617.4188
+      },
+      {
+        "year": 2015,
+        "value": 390736869.2729
+      },
+      {
+        "year": 2016,
+        "value": 386146461.6442
+      },
+      {
+        "year": 2017,
+        "value": 380791144.1025
+      },
+      {
+        "year": 2018,
+        "value": 365553479.3189
+      },
+      {
+        "year": 2019,
+        "value": 361103207.0124
+      },
+      {
+        "year": 2020,
+        "value": 374455530.2351
+      },
+      {
+        "year": 2021,
+        "value": 365959163.4985
+      },
+      {
+        "year": 2022,
+        "value": 344408403.9001
+      },
+      {
+        "year": 2023,
+        "value": 393931447.5584
+      },
+      {
+        "year": 2024,
+        "value": 387463280
       }
     ]
   }

@@ -1,6 +1,6 @@
 {
   "unitid": "237215",
-  "generated_at": "2026-07-14",
+  "generated_at": "2026-08-31",
   "profile": {
     "institution_name": "Bluefield State University",
     "institution_unique_name": "Bluefield State University | Bluefield | West Virginia",
@@ -19,22 +19,22 @@
     "sector_median_enrollment_pct_change_5yr": -4.2732,
     "enrollment_decline_last_3_of_5": "Yes",
     "revenue_pct_change_5yr": 56.059,
-    "sector_median_revenue_pct_change_5yr": -1.3261,
+    "sector_median_revenue_pct_change_5yr": -1.3025,
     "net_tuition_per_fte_change_5yr": 53.2002,
     "sector_median_net_tuition_per_fte_change_5yr": -17.7529,
     "staff_total_headcount_pct_change_5yr": 19.171,
     "sector_median_staff_total_headcount_pct_change_5yr": 0.3908,
     "staff_instructional_headcount_pct_change_5yr": -1.8868,
-    "students_per_instructional_staff_fte": 13,
-    "sector_median_students_per_instructional_staff_fte": 16,
+    "students_per_instructional_staff_fte": 13.2155,
+    "sector_median_students_per_instructional_staff_fte": 16.7461,
     "ended_year_at_loss": "No",
     "losses_last_3_of_5": "No",
     "loss_years_last_10": 6,
     "tuition_dependence_pct": 18.3001,
-    "sector_median_tuition_dependence_pct": 21.2464,
+    "sector_median_tuition_dependence_pct": 21.2045,
     "tuition_dependence_vs_sector_median_sentence": "This college got 18.0% of its revenue from net tuition in 2024, below the median of 21% for public colleges.",
-    "unfunded_discount_rate": 43.9017,
-    "unfunded_discount_pct_change_5yr": -18.552,
+    "unfunded_discount_rate": null,
+    "unfunded_discount_pct_change_5yr": null,
     "share_grad_students": 2.3109,
     "sector_avg_share_grad_students": 20.9865,
     "research_expense": 332376,
@@ -70,7 +70,9 @@
     "median_debt_completers": 18250,
     "scorecard_data_updated": "2026-03-23",
     "ipeds_graduation_rate_year": 2024,
-    "ipeds_graduation_rate_label": "Bachelor degree within 6 years, total"
+    "ipeds_graduation_rate_label": "Bachelor degree within 6 years, total",
+    "state_local_support_pct_core_revenue": 29.7824,
+    "state_local_support_pct_change_5yr": 34.5714
   },
   "series": {
     "revenue_total_adjusted": [
@@ -251,10 +253,6 @@
       {
         "year": 2023,
         "value": 47.3401
-      },
-      {
-        "year": 2024,
-        "value": 43.9017
       }
     ],
     "enrollment_headcount_total": [
@@ -755,6 +753,52 @@
       {
         "year": 2024,
         "value": 6855771
+      }
+    ],
+    "state_local_support_adjusted": [
+      {
+        "year": 2014,
+        "value": 11233140.6003
+      },
+      {
+        "year": 2015,
+        "value": 10091589.6805
+      },
+      {
+        "year": 2016,
+        "value": 9671166.7393
+      },
+      {
+        "year": 2017,
+        "value": 9379688.8601
+      },
+      {
+        "year": 2018,
+        "value": 8944897.9189
+      },
+      {
+        "year": 2019,
+        "value": 8833527.4915
+      },
+      {
+        "year": 2020,
+        "value": 9821051.8274
+      },
+      {
+        "year": 2021,
+        "value": 9603294.0546
+      },
+      {
+        "year": 2022,
+        "value": 9399680.0859
+      },
+      {
+        "year": 2023,
+        "value": 8985451.7546
+      },
+      {
+        "year": 2024,
+        "value": 11887404
       }
     ]
   }

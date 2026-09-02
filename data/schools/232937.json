@@ -1,6 +1,6 @@
 {
   "unitid": "232937",
-  "generated_at": "2026-07-14",
+  "generated_at": "2026-08-31",
   "profile": {
     "institution_name": "Norfolk State University",
     "institution_unique_name": "Norfolk State University | Norfolk | Virginia",
@@ -19,22 +19,22 @@
     "sector_median_enrollment_pct_change_5yr": -4.2732,
     "enrollment_decline_last_3_of_5": "No",
     "revenue_pct_change_5yr": 22.212,
-    "sector_median_revenue_pct_change_5yr": -1.3261,
+    "sector_median_revenue_pct_change_5yr": -1.3025,
     "net_tuition_per_fte_change_5yr": -42.8741,
     "sector_median_net_tuition_per_fte_change_5yr": -17.7529,
     "staff_total_headcount_pct_change_5yr": 25.4814,
     "sector_median_staff_total_headcount_pct_change_5yr": 0.3908,
     "staff_instructional_headcount_pct_change_5yr": 51.0582,
-    "students_per_instructional_staff_fte": 15,
-    "sector_median_students_per_instructional_staff_fte": 16,
+    "students_per_instructional_staff_fte": 15.898,
+    "sector_median_students_per_instructional_staff_fte": 16.7461,
     "ended_year_at_loss": "No",
     "losses_last_3_of_5": "No",
     "loss_years_last_10": 2,
     "tuition_dependence_pct": 9.1022,
-    "sector_median_tuition_dependence_pct": 21.2464,
+    "sector_median_tuition_dependence_pct": 21.2045,
     "tuition_dependence_vs_sector_median_sentence": "This college got 9.0% of its revenue from net tuition in 2024, below the median of 21% for public colleges.",
-    "unfunded_discount_rate": 59.004,
-    "unfunded_discount_pct_change_5yr": 41.6697,
+    "unfunded_discount_rate": null,
+    "unfunded_discount_pct_change_5yr": null,
     "share_grad_students": 9.8171,
     "sector_avg_share_grad_students": 20.9865,
     "research_expense": 8116678,
@@ -70,7 +70,9 @@
     "median_debt_completers": 29000,
     "scorecard_data_updated": "2026-03-23",
     "ipeds_graduation_rate_year": 2024,
-    "ipeds_graduation_rate_label": "Bachelor degree within 6 years, total"
+    "ipeds_graduation_rate_label": "Bachelor degree within 6 years, total",
+    "state_local_support_pct_core_revenue": 59.9159,
+    "state_local_support_pct_change_5yr": 63.5792
   },
   "series": {
     "revenue_total_adjusted": [
@@ -251,10 +253,6 @@
       {
         "year": 2023,
         "value": 46.3458
-      },
-      {
-        "year": 2024,
-        "value": 59.004
       }
     ],
     "enrollment_headcount_total": [
@@ -827,6 +825,52 @@
       {
         "year": 2024,
         "value": 118754263
+      }
+    ],
+    "state_local_support_adjusted": [
+      {
+        "year": 2014,
+        "value": 67327966.2334
+      },
+      {
+        "year": 2015,
+        "value": 68284642.6645
+      },
+      {
+        "year": 2016,
+        "value": 69980041.707
+      },
+      {
+        "year": 2017,
+        "value": 73615219.4628
+      },
+      {
+        "year": 2018,
+        "value": 74028597.7456
+      },
+      {
+        "year": 2019,
+        "value": 73677062.3117
+      },
+      {
+        "year": 2020,
+        "value": 77794550.8097
+      },
+      {
+        "year": 2021,
+        "value": 86337403.6118
+      },
+      {
+        "year": 2022,
+        "value": 99572948.0133
+      },
+      {
+        "year": 2023,
+        "value": 113096090.5464
+      },
+      {
+        "year": 2024,
+        "value": 120520351
       }
     ]
   },

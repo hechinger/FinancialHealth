@@ -1,6 +1,6 @@
 {
   "unitid": "141574",
-  "generated_at": "2026-07-14",
+  "generated_at": "2026-08-31",
   "profile": {
     "institution_name": "University of Hawaii at Manoa",
     "institution_unique_name": "University of Hawaii at Manoa | Honolulu | Hawaii",
@@ -19,22 +19,22 @@
     "sector_median_enrollment_pct_change_5yr": -4.2732,
     "enrollment_decline_last_3_of_5": "No",
     "revenue_pct_change_5yr": -3.1731,
-    "sector_median_revenue_pct_change_5yr": -1.3261,
+    "sector_median_revenue_pct_change_5yr": -1.3025,
     "net_tuition_per_fte_change_5yr": -21.0002,
     "sector_median_net_tuition_per_fte_change_5yr": -17.7529,
     "staff_total_headcount_pct_change_5yr": -4.5297,
     "sector_median_staff_total_headcount_pct_change_5yr": 0.3908,
     "staff_instructional_headcount_pct_change_5yr": -3.4877,
-    "students_per_instructional_staff_fte": 15,
-    "sector_median_students_per_instructional_staff_fte": 16,
+    "students_per_instructional_staff_fte": 12.8569,
+    "sector_median_students_per_instructional_staff_fte": 16.7461,
     "ended_year_at_loss": "No",
     "losses_last_3_of_5": "No",
     "loss_years_last_10": 5,
     "tuition_dependence_pct": 15.7571,
-    "sector_median_tuition_dependence_pct": 21.2464,
+    "sector_median_tuition_dependence_pct": 21.2045,
     "tuition_dependence_vs_sector_median_sentence": "This college got 16.0% of its revenue from net tuition in 2024, below the median of 21% for public colleges.",
-    "unfunded_discount_rate": 33.4758,
-    "unfunded_discount_pct_change_5yr": -1.066,
+    "unfunded_discount_rate": null,
+    "unfunded_discount_pct_change_5yr": null,
     "share_grad_students": 23.9391,
     "sector_avg_share_grad_students": 20.9865,
     "research_expense": 288102273,
@@ -70,7 +70,9 @@
     "median_debt_completers": 18500,
     "scorecard_data_updated": "2026-03-23",
     "ipeds_graduation_rate_year": 2024,
-    "ipeds_graduation_rate_label": "Bachelor degree within 6 years, total"
+    "ipeds_graduation_rate_label": "Bachelor degree within 6 years, total",
+    "state_local_support_pct_core_revenue": 46.472,
+    "state_local_support_pct_change_5yr": -2.7112
   },
   "series": {
     "revenue_total_adjusted": [
@@ -251,10 +253,6 @@
       {
         "year": 2023,
         "value": 32.1063
-      },
-      {
-        "year": 2024,
-        "value": 33.4758
       }
     ],
     "enrollment_headcount_total": [
@@ -827,6 +825,52 @@
       {
         "year": 2024,
         "value": 313607724
+      }
+    ],
+    "state_local_support_adjusted": [
+      {
+        "year": 2014,
+        "value": 422124685.5946
+      },
+      {
+        "year": 2015,
+        "value": 453810991.2299
+      },
+      {
+        "year": 2016,
+        "value": 481631265.7106
+      },
+      {
+        "year": 2017,
+        "value": 514228309.6459
+      },
+      {
+        "year": 2018,
+        "value": 528821101.6015
+      },
+      {
+        "year": 2019,
+        "value": 552279139.0473
+      },
+      {
+        "year": 2020,
+        "value": 564746969.7188
+      },
+      {
+        "year": 2021,
+        "value": 519326238.5454
+      },
+      {
+        "year": 2022,
+        "value": 434632694.0554
+      },
+      {
+        "year": 2023,
+        "value": 477459811.6365
+      },
+      {
+        "year": 2024,
+        "value": 537305840
       }
     ]
   }

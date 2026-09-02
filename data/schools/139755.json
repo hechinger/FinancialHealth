@@ -1,6 +1,6 @@
 {
   "unitid": "139755",
-  "generated_at": "2026-07-14",
+  "generated_at": "2026-08-31",
   "profile": {
     "institution_name": "Georgia Institute of Technology-Main Campus",
     "institution_unique_name": "Georgia Institute of Technology-Main Campus | Atlanta | Georgia",
@@ -19,22 +19,22 @@
     "sector_median_enrollment_pct_change_5yr": -4.2732,
     "enrollment_decline_last_3_of_5": "No",
     "revenue_pct_change_5yr": 16.4345,
-    "sector_median_revenue_pct_change_5yr": -1.3261,
+    "sector_median_revenue_pct_change_5yr": -1.3025,
     "net_tuition_per_fte_change_5yr": -23.3243,
     "sector_median_net_tuition_per_fte_change_5yr": -17.7529,
     "staff_total_headcount_pct_change_5yr": 33.8792,
     "sector_median_staff_total_headcount_pct_change_5yr": 0.3908,
     "staff_instructional_headcount_pct_change_5yr": 66.0656,
-    "students_per_instructional_staff_fte": 17,
-    "sector_median_students_per_instructional_staff_fte": 16,
+    "students_per_instructional_staff_fte": 24.9099,
+    "sector_median_students_per_instructional_staff_fte": 16.7461,
     "ended_year_at_loss": "No",
     "losses_last_3_of_5": "No",
     "loss_years_last_10": 1,
     "tuition_dependence_pct": 17.0489,
-    "sector_median_tuition_dependence_pct": 21.2464,
+    "sector_median_tuition_dependence_pct": 21.2045,
     "tuition_dependence_vs_sector_median_sentence": "This college got 17.0% of its revenue from net tuition in 2024, below the median of 21% for public colleges.",
-    "unfunded_discount_rate": 12.9903,
-    "unfunded_discount_pct_change_5yr": 5.3762,
+    "unfunded_discount_rate": null,
+    "unfunded_discount_pct_change_5yr": null,
     "share_grad_students": 63.9581,
     "sector_avg_share_grad_students": 20.9865,
     "research_expense": 1510197512,
@@ -70,7 +70,9 @@
     "median_debt_completers": 21672,
     "scorecard_data_updated": "2026-03-23",
     "ipeds_graduation_rate_year": 2024,
-    "ipeds_graduation_rate_label": "Bachelor degree within 6 years, total"
+    "ipeds_graduation_rate_label": "Bachelor degree within 6 years, total",
+    "state_local_support_pct_core_revenue": 21.2408,
+    "state_local_support_pct_change_5yr": 36.0076
   },
   "series": {
     "revenue_total_adjusted": [
@@ -251,10 +253,6 @@
       {
         "year": 2023,
         "value": 12.264
-      },
-      {
-        "year": 2024,
-        "value": 12.9903
       }
     ],
     "enrollment_headcount_total": [
@@ -827,6 +825,52 @@
       {
         "year": 2024,
         "value": 530870251
+      }
+    ],
+    "state_local_support_adjusted": [
+      {
+        "year": 2014,
+        "value": 310547488.1967
+      },
+      {
+        "year": 2015,
+        "value": 314564107.0377
+      },
+      {
+        "year": 2016,
+        "value": 314993184.1025
+      },
+      {
+        "year": 2017,
+        "value": 352746042.1713
+      },
+      {
+        "year": 2018,
+        "value": 374032840.0109
+      },
+      {
+        "year": 2019,
+        "value": 408378399.5537
+      },
+      {
+        "year": 2020,
+        "value": 453412308.7831
+      },
+      {
+        "year": 2021,
+        "value": 394758950.9358
+      },
+      {
+        "year": 2022,
+        "value": 468342022.3732
+      },
+      {
+        "year": 2023,
+        "value": 517240008.1921
+      },
+      {
+        "year": 2024,
+        "value": 555425585
       }
     ]
   }
