@@ -1,6 +1,6 @@
 {
   "unitid": "109785",
-  "generated_at": "2026-08-31",
+  "generated_at": "2026-09-09",
   "profile": {
     "institution_name": "Azusa Pacific University",
     "institution_unique_name": "Azusa Pacific University | Azusa | California",
@@ -832,16 +832,58 @@
   },
   "latest_status": {
     "accreditors": "WSCUC",
-    "action_labels": "Removed the warning, issued a formal notice of concern, and reaffirmed accreditation for 6 years",
-    "active_actions": null,
+    "action_labels": "Received heightened monitoring or focused review; Removed Notice of Concern; Removed the warning, issued a formal notice of concern, and reaffirmed accreditation for 6 years",
+    "active_actions": "notice",
     "has_active_warning": false,
-    "has_active_warning_or_notice": false,
+    "has_active_warning_or_notice": true,
     "has_active_adverse_action": false,
-    "latest_action_date": "2024-06-01",
-    "latest_action_year": "2024",
-    "action_count": 1
+    "latest_action_date": "2026-06-26",
+    "latest_action_year": "2026",
+    "action_count": 3
   },
   "actions": [
+    {
+      "accreditor": "WSCUC",
+      "action_type": "removed",
+      "action_label": "Continue with the previously scheduled reaffirmation review with the Offsite Review in fall 2029 and the Accreditation Visit in spring 2030 4.",
+      "action_label_short": "Removed Notice of Concern",
+      "action_scope": null,
+      "action_status": "resolved",
+      "action_date": "2026-06-26",
+      "action_year": "2026",
+      "notes": "Removal of Monitoring Status",
+      "source_url": "https://ope.ed.gov/dapip/#/institution-profile/102605",
+      "source_title": "DAPIP Institutional Accreditation Action",
+      "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/102605",
+      "source_page_modified": null,
+      "display_action": true,
+      "public_table_strategy": "dapip_backed_keep",
+      "hybrid_candidate": false,
+      "hybrid_reason": null,
+      "has_financial_profile": true,
+      "is_primary_tracker": true
+    },
+    {
+      "accreditor": "WSCUC",
+      "action_type": "notice",
+      "action_label": "Heightened Monitoring or Focused Review",
+      "action_label_short": "Received heightened monitoring or focused review",
+      "action_scope": null,
+      "action_status": "active",
+      "action_date": "2024-06-28",
+      "action_year": "2024",
+      "notes": "Heightened Monitoring or Focused Review",
+      "source_url": "https://ope.ed.gov/dapip/#/institution-profile/102605",
+      "source_title": "DAPIP Institutional Accreditation Action",
+      "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/102605",
+      "source_page_modified": null,
+      "display_action": true,
+      "public_table_strategy": "dapip_backed_keep",
+      "hybrid_candidate": false,
+      "hybrid_reason": null,
+      "has_financial_profile": true,
+      "is_primary_tracker": true
+    },
     {
       "accreditor": "WSCUC",
       "action_type": "notice",
@@ -865,6 +907,12 @@
     }
   ],
   "sources": [
+    {
+      "accreditor": "WSCUC",
+      "source_title": "DAPIP Institutional Accreditation Action",
+      "source_url": "https://ope.ed.gov/dapip/#/institution-profile/102605",
+      "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/102605"
+    },
     {
       "accreditor": "WSCUC",
       "source_title": "June 2024 Commission Actions - WSCUC",

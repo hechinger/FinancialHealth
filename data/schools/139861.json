@@ -1,6 +1,6 @@
 {
   "unitid": "139861",
-  "generated_at": "2026-08-31",
+  "generated_at": "2026-09-09",
   "profile": {
     "institution_name": "Georgia College & State University",
     "institution_unique_name": "Georgia College & State University | Milledgeville | Georgia",
@@ -873,5 +873,47 @@
         "value": 54993433
       }
     ]
-  }
+  },
+  "latest_status": {
+    "accreditors": "SACSCOC",
+    "action_labels": "Requested to provide referral report documenting compliance with standards concerning qualified adminsitrative and academic officers, distance and correpsondence education, student complaints, institutional environment and comprehensive institution reviews.",
+    "active_actions": "notice",
+    "has_active_warning": false,
+    "has_active_warning_or_notice": true,
+    "has_active_adverse_action": false,
+    "latest_action_date": "2020-09-02",
+    "latest_action_year": "2020",
+    "action_count": 1
+  },
+  "actions": [
+    {
+      "accreditor": "SACSCOC",
+      "action_type": "notice",
+      "action_label": "Basedonly on those reviewed standards, the institution is requestedto submit a Referral Report due April 1, 2021, addressingthe following referenced standards ofthe Principles: Standard 5.",
+      "action_label_short": "Requested to provide referral report documenting compliance with standards concerning qualified adminsitrative and academic officers, distance and correpsondence education, student complaints, institutional environment and comprehensive institution reviews.",
+      "action_scope": null,
+      "action_status": "active",
+      "action_date": "2020-09-02",
+      "action_year": "2020",
+      "notes": "Heightened Monitoring or Focused Review",
+      "source_url": "https://ope.ed.gov/dapip/#/institution-profile/111294",
+      "source_title": "DAPIP Institutional Accreditation Action",
+      "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/111294",
+      "source_page_modified": null,
+      "display_action": true,
+      "public_table_strategy": "dapip_backed_keep",
+      "hybrid_candidate": false,
+      "hybrid_reason": null,
+      "has_financial_profile": true,
+      "is_primary_tracker": true
+    }
+  ],
+  "sources": [
+    {
+      "accreditor": "SACSCOC",
+      "source_title": "DAPIP Institutional Accreditation Action",
+      "source_url": "https://ope.ed.gov/dapip/#/institution-profile/111294",
+      "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/111294"
+    }
+  ]
 }

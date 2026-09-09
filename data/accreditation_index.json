@@ -104,6 +104,41 @@
       }
     ]
   },
+  "100858": {
+    "unitid": "100858",
+    "financial_unitid": "100858",
+    "has_financial_profile": true,
+    "is_primary_tracker": true,
+    "institution_name": "Auburn University",
+    "institution_alias": null,
+    "institution_unique_name": "Auburn University | Auburn | Alabama",
+    "state": "Alabama",
+    "city": "Auburn",
+    "control_label": "Public",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "latest_action_date": "2019-06-13",
+    "latest_action_label": "Requested Referral Report on Federal and state responsibilities",
+    "action_count": 1,
+    "landing_actions": [
+      {
+        "accreditor": "SACSCOC",
+        "action_label": "Based only on those reviewed standards, the institution is requested to submit a Referral Report due September 9, 2019, addressing the following referenced standard of the Principles: Standard 13.6 (Federal and state responsibilities) This standard expects thai an institution (a) is in compliance with its program responsibilities under Title IV of the most recent Higher Education Act as amended and (b) audits financial aid programs as required by federal and slate regulations.",
+        "action_label_short": "Requested Referral Report on Federal and state responsibilities",
+        "action_scope": null,
+        "action_type": "notice",
+        "action_date": "2019-06-13",
+        "action_year": "2019",
+        "display_action": true,
+        "public_table_strategy": "dapip_backed_keep",
+        "hybrid_candidate": false,
+        "hybrid_reason": null,
+        "notes": "Heightened Monitoring or Focused Review",
+        "source_url": "https://ope.ed.gov/dapip/#/institution-profile/100122",
+        "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/100122",
+        "source_title": "DAPIP Institutional Accreditation Action"
+      }
+    ]
+  },
   "101189": {
     "unitid": "101189",
     "financial_unitid": "101189",
@@ -428,10 +463,27 @@
     "city": "San Francisco",
     "control_label": "Private for-profit",
     "category": "Degree-granting, primarily baccalaureate or above",
-    "latest_action_date": "2026-02-01",
+    "latest_action_date": "2026-02-13",
     "latest_action_label": "Removed Notice of Concern and issued a Warning because it is out of compliance with standards concerning student completion and resource planning",
-    "action_count": 2,
+    "action_count": 3,
     "landing_actions": [
+      {
+        "accreditor": "WSCUC",
+        "action_label": "At that meeting the Commission removed the Notice of Concern and issued a Warning.",
+        "action_label_short": "Removed Notice of Concern and issued a Warning because it is out of compliance with standards concerning student completion and resource planning",
+        "action_scope": null,
+        "action_type": "notice",
+        "action_date": "2026-02-13",
+        "action_year": "2026",
+        "display_action": true,
+        "public_table_strategy": "dapip_backed_keep",
+        "hybrid_candidate": false,
+        "hybrid_reason": null,
+        "notes": "Warning or Equivalent-Factors Affecting Academic Quality",
+        "source_url": "https://ope.ed.gov/dapip/#/institution-profile/102368",
+        "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/102368",
+        "source_title": "DAPIP Institutional Accreditation Action"
+      },
       {
         "accreditor": "WSCUC",
         "action_label": "Following a Special Visit – Remove Notice of Concern/Issue a Warning",
@@ -480,10 +532,44 @@
     "city": "Azusa",
     "control_label": "Private not-for-profit",
     "category": "Degree-granting, primarily baccalaureate or above",
-    "latest_action_date": "2024-06-01",
-    "latest_action_label": "Removed the warning, issued a formal notice of concern, and reaffirmed accreditation for 6 years",
-    "action_count": 1,
+    "latest_action_date": "2026-06-26",
+    "latest_action_label": "Removed Notice of Concern",
+    "action_count": 3,
     "landing_actions": [
+      {
+        "accreditor": "WSCUC",
+        "action_label": "Continue with the previously scheduled reaffirmation review with the Offsite Review in fall 2029 and the Accreditation Visit in spring 2030 4.",
+        "action_label_short": "Removed Notice of Concern",
+        "action_scope": null,
+        "action_type": "removed",
+        "action_date": "2026-06-26",
+        "action_year": "2026",
+        "display_action": true,
+        "public_table_strategy": "dapip_backed_keep",
+        "hybrid_candidate": false,
+        "hybrid_reason": null,
+        "notes": "Removal of Monitoring Status",
+        "source_url": "https://ope.ed.gov/dapip/#/institution-profile/102605",
+        "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/102605",
+        "source_title": "DAPIP Institutional Accreditation Action"
+      },
+      {
+        "accreditor": "WSCUC",
+        "action_label": "Heightened Monitoring or Focused Review",
+        "action_label_short": "Received heightened monitoring or focused review",
+        "action_scope": null,
+        "action_type": "notice",
+        "action_date": "2024-06-28",
+        "action_year": "2024",
+        "display_action": true,
+        "public_table_strategy": "dapip_backed_keep",
+        "hybrid_candidate": false,
+        "hybrid_reason": null,
+        "notes": "Heightened Monitoring or Focused Review",
+        "source_url": "https://ope.ed.gov/dapip/#/institution-profile/102605",
+        "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/102605",
+        "source_title": "DAPIP Institutional Accreditation Action"
+      },
       {
         "accreditor": "WSCUC",
         "action_label": "Following a Special Visit – Remove the Warning, Issue a Formal Notice of Concern, Reaffirm Accreditation for 6 Years",
@@ -706,27 +792,10 @@
     "city": "Santee",
     "control_label": "Private not-for-profit",
     "category": "Degree-granting, primarily baccalaureate or above",
-    "latest_action_date": "2025-05-20",
-    "latest_action_label": "Warning removed",
+    "latest_action_date": "2025-05-01",
+    "latest_action_label": "Removed a warning and issued a notice of concern following an interim report review",
     "action_count": 7,
     "landing_actions": [
-      {
-        "accreditor": "WSCUC",
-        "action_label": "Accreditation Reaffirmed:  Warning Removed",
-        "action_label_short": "Warning removed",
-        "action_scope": null,
-        "action_type": "removed",
-        "action_date": "2025-05-20",
-        "action_year": "2025",
-        "display_action": true,
-        "public_table_strategy": "dapip_backed_keep",
-        "hybrid_candidate": false,
-        "hybrid_reason": null,
-        "notes": "Accreditation Reaffirmed: Warning Removed",
-        "source_url": "https://ope.ed.gov/dapip/#/institution-profile/103404",
-        "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/103404",
-        "source_title": "DAPIP Institutional Accreditation Action"
-      },
       {
         "accreditor": "WSCUC",
         "action_label": "Following an Interim Report Review – Remove a Warning, Issue a Notice of Concern",
@@ -797,6 +866,23 @@
       },
       {
         "accreditor": "WSCUC",
+        "action_label": "Warning or Equivalent-Factors Affecting Academic Quality",
+        "action_label_short": "Received warning for factors affecting academic quality",
+        "action_scope": null,
+        "action_type": "warning",
+        "action_date": "2022-06-24",
+        "action_year": "2022",
+        "display_action": true,
+        "public_table_strategy": null,
+        "hybrid_candidate": false,
+        "hybrid_reason": null,
+        "notes": null,
+        "source_url": "https://ope.ed.gov/dapip/#/institution-profile/103404",
+        "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/103404",
+        "source_title": "DAPIP Institutional Accreditation Action"
+      },
+      {
+        "accreditor": "WSCUC",
         "action_label": "Probation or Equivalent or a More Severe Status: Warning",
         "action_label_short": "Placed on Warning",
         "action_scope": null,
@@ -815,7 +901,7 @@
       {
         "accreditor": "WSCUC",
         "action_label": "Probation or Equivalent or a More Severe Status: Probation",
-        "action_label_short": "Placed on Probation",
+        "action_label_short": "Placed on Probation (Significantly out of compliance - fiscal and administrative capacity)",
         "action_scope": null,
         "action_type": "probation",
         "action_date": "2019-06-28",
@@ -1004,6 +1090,41 @@
       }
     ]
   },
+  "113698": {
+    "unitid": "113698",
+    "financial_unitid": "113698",
+    "has_financial_profile": true,
+    "is_primary_tracker": true,
+    "institution_name": "Dominican University of California",
+    "institution_alias": "DUofC",
+    "institution_unique_name": "Dominican University of California | San Rafael | California",
+    "state": "California",
+    "city": "San Rafael",
+    "control_label": "Private not-for-profit",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "latest_action_date": "2026-06-26",
+    "latest_action_label": "Placed on Warning because of non-compliance with Standard 3, CFRs 3.4 and 3.5. Required to address deficiencies including \"ongoing operating deficits that endanger the financial sustainability of the institution.\"",
+    "action_count": 1,
+    "landing_actions": [
+      {
+        "accreditor": "WSCUC",
+        "action_label": "At that meeting, the Commission acted to place Dominican University of California on Warning.",
+        "action_label_short": "Placed on Warning because of non-compliance with Standard 3, CFRs 3.4 and 3.5. Required to address deficiencies including \"ongoing operating deficits that endanger the financial sustainability of the institution.\"",
+        "action_scope": null,
+        "action_type": "warning",
+        "action_date": "2026-06-26",
+        "action_year": "2026",
+        "display_action": true,
+        "public_table_strategy": "dapip_backed_keep",
+        "hybrid_candidate": false,
+        "hybrid_reason": null,
+        "notes": "Probation or Equivalent or a More Severe Status: Warning",
+        "source_url": "https://ope.ed.gov/dapip/#/institution-profile/103820",
+        "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/103820",
+        "source_title": "DAPIP Institutional Accreditation Action"
+      }
+    ]
+  },
   "115083": {
     "unitid": "115083",
     "financial_unitid": "115083",
@@ -1125,6 +1246,76 @@
       }
     ]
   },
+  "117557": {
+    "unitid": "117557",
+    "financial_unitid": "117557",
+    "has_financial_profile": true,
+    "is_primary_tracker": true,
+    "institution_name": "Lincoln University",
+    "institution_alias": null,
+    "institution_unique_name": "Lincoln University | Oakland | California",
+    "state": "California",
+    "city": "Oakland",
+    "control_label": "Private not-for-profit",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "latest_action_date": "2026-06-26",
+    "latest_action_label": "Placed on Probation because it has not demonstrated compliance with Standard 3, CFRs 3.5 and 3.4 because of concerns about financial sustainability and resource planning.",
+    "action_count": 1,
+    "landing_actions": [
+      {
+        "accreditor": "WSCUC",
+        "action_label": "At that meeting, the Commission acted to impose Probation on Lincoln University.",
+        "action_label_short": "Placed on Probation because it has not demonstrated compliance with Standard 3, CFRs 3.5 and 3.4 because of concerns about financial sustainability and resource planning.",
+        "action_scope": null,
+        "action_type": "probation",
+        "action_date": "2026-06-26",
+        "action_year": "2026",
+        "display_action": true,
+        "public_table_strategy": "dapip_backed_keep",
+        "hybrid_candidate": false,
+        "hybrid_reason": null,
+        "notes": "Probation or Equivalent or a More Severe Status: Probation",
+        "source_url": "https://ope.ed.gov/dapip/#/institution-profile/104717",
+        "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/104717",
+        "source_title": "DAPIP Institutional Accreditation Action"
+      }
+    ]
+  },
+  "117627": {
+    "unitid": "117627",
+    "financial_unitid": "117627",
+    "has_financial_profile": true,
+    "is_primary_tracker": true,
+    "institution_name": "La Sierra University",
+    "institution_alias": null,
+    "institution_unique_name": "La Sierra University | Riverside | California",
+    "state": "California",
+    "city": "Riverside",
+    "control_label": "Private not-for-profit",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "latest_action_date": "2026-06-26",
+    "latest_action_label": "Placed on Warning because of non-compliance with several standards concerning academic outcomes and management of the significant budget deficit.",
+    "action_count": 1,
+    "landing_actions": [
+      {
+        "accreditor": "WSCUC",
+        "action_label": "At that meeting, the Commission acted to place La Sierra University on Warning.",
+        "action_label_short": "Placed on Warning because of non-compliance with several standards concerning academic outcomes and management of the significant budget deficit.",
+        "action_scope": null,
+        "action_type": "warning",
+        "action_date": "2026-06-26",
+        "action_year": "2026",
+        "display_action": true,
+        "public_table_strategy": "dapip_backed_keep",
+        "hybrid_candidate": false,
+        "hybrid_reason": null,
+        "notes": "Probation or Equivalent or a More Severe Status: Warning",
+        "source_url": "https://ope.ed.gov/dapip/#/institution-profile/104735",
+        "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/104735",
+        "source_title": "DAPIP Institutional Accreditation Action"
+      }
+    ]
+  },
   "117751": {
     "unitid": "117751",
     "financial_unitid": "117751",
@@ -1189,10 +1380,27 @@
     "city": "Atherton",
     "control_label": "Private not-for-profit",
     "category": "Degree-granting, primarily baccalaureate or above",
-    "latest_action_date": "2024-06-01",
-    "latest_action_label": "Continue a formal notice of concern",
-    "action_count": 3,
+    "latest_action_date": "2026-06-26",
+    "latest_action_label": "Continued Notice of Concern because of non-compliance with Standard 3, CFRs 3.4 and 3.5 on financial sustainability",
+    "action_count": 4,
     "landing_actions": [
+      {
+        "accreditor": "WSCUC",
+        "action_label": "Continue with the previously scheduled reaffirmation review with the Offsite Review in fall 2027 and the Accreditation Visit in spring 2028.",
+        "action_label_short": "Continued Notice of Concern because of non-compliance with Standard 3, CFRs 3.4 and 3.5 on financial sustainability",
+        "action_scope": null,
+        "action_type": "notice",
+        "action_date": "2026-06-26",
+        "action_year": "2026",
+        "display_action": true,
+        "public_table_strategy": "dapip_backed_keep",
+        "hybrid_candidate": false,
+        "hybrid_reason": null,
+        "notes": "Heightened Monitoring or Focused Review",
+        "source_url": "https://ope.ed.gov/dapip/#/institution-profile/105172",
+        "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/105172",
+        "source_title": "DAPIP Institutional Accreditation Action"
+      },
       {
         "accreditor": "WSCUC",
         "action_label": "Following a Special Visit – Continue a Formal Notice of Concern",
@@ -1362,10 +1570,27 @@
     "city": "Angwin",
     "control_label": "Private not-for-profit",
     "category": "Degree-granting, primarily baccalaureate or above",
-    "latest_action_date": "2021-06-25",
-    "latest_action_label": "Received heightened monitoring or focused review",
-    "action_count": 1,
+    "latest_action_date": "2026-06-01",
+    "latest_action_label": "Remove Notice of Concern",
+    "action_count": 2,
     "landing_actions": [
+      {
+        "accreditor": "WSCUC",
+        "action_label": "Following Accreditation Visit– Remove Notice of Concern",
+        "action_label_short": "Remove Notice of Concern",
+        "action_scope": null,
+        "action_type": "removed",
+        "action_date": "2026-06-01",
+        "action_year": "2026",
+        "display_action": true,
+        "public_table_strategy": "scraper_backed_keep",
+        "hybrid_candidate": false,
+        "hybrid_reason": null,
+        "notes": "Pacific Union College",
+        "source_url": "https://www.wscuc.org/post/june-2026-commission-actions/",
+        "source_page_url": "https://www.wscuc.org/post/june-2026-commission-actions/",
+        "source_title": "June 2026 Commission Actions - WSCUC"
+      },
       {
         "accreditor": "WSCUC",
         "action_label": "Heightened Monitoring or Focused Review",
@@ -1381,6 +1606,41 @@
         "notes": "Heightened Monitoring or Focused Review",
         "source_url": "https://ope.ed.gov/dapip/#/institution-profile/105792",
         "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/105792",
+        "source_title": "DAPIP Institutional Accreditation Action"
+      }
+    ]
+  },
+  "122728": {
+    "unitid": "122728",
+    "financial_unitid": "122728",
+    "has_financial_profile": true,
+    "is_primary_tracker": true,
+    "institution_name": "William Jessup University",
+    "institution_alias": "Jessup University",
+    "institution_unique_name": "William Jessup University | Rocklin | California",
+    "state": "California",
+    "city": "Rocklin",
+    "control_label": "Private not-for-profit",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "latest_action_date": "2026-06-26",
+    "latest_action_label": "Placed on Warning because it is out of compliant with Standards 3.4, 3.5 and 3.11, which concern budget deficits and having a comprehensive and realistic financial plan.",
+    "action_count": 1,
+    "landing_actions": [
+      {
+        "accreditor": "WSCUC",
+        "action_label": "At that meeting the Commission acted to place Jessup on Warning.",
+        "action_label_short": "Placed on Warning because it is out of compliant with Standards 3.4, 3.5 and 3.11, which concern budget deficits and having a comprehensive and realistic financial plan.",
+        "action_scope": null,
+        "action_type": "warning",
+        "action_date": "2026-06-26",
+        "action_year": "2026",
+        "display_action": true,
+        "public_table_strategy": "dapip_backed_keep",
+        "hybrid_candidate": false,
+        "hybrid_reason": null,
+        "notes": "Probation or Equivalent or a More Severe Status: Warning",
+        "source_url": "https://ope.ed.gov/dapip/#/institution-profile/106360",
+        "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/106360",
         "source_title": "DAPIP Institutional Accreditation Action"
       }
     ]
@@ -1449,10 +1709,27 @@
     "city": "Moraga",
     "control_label": "Private not-for-profit",
     "category": "Degree-granting, primarily baccalaureate or above",
-    "latest_action_date": "2024-02-16",
-    "latest_action_label": "Received heightened monitoring or focused review",
-    "action_count": 1,
+    "latest_action_date": "2026-06-26",
+    "latest_action_label": "Placed on Warning because it is out of compliance with Standard 3, CFRs 3.4 and 3.5. Required to address deficiencies including \"ongoing operating deficits that endanger the financial sustainabiity of the institution.\"",
+    "action_count": 2,
     "landing_actions": [
+      {
+        "accreditor": "WSCUC",
+        "action_label": "At that meeting the Commission acted to place Saint Mary’s College of California on Warning.",
+        "action_label_short": "Placed on Warning because it is out of compliance with Standard 3, CFRs 3.4 and 3.5. Required to address deficiencies including \"ongoing operating deficits that endanger the financial sustainabiity of the institution.\"",
+        "action_scope": null,
+        "action_type": "warning",
+        "action_date": "2026-06-26",
+        "action_year": "2026",
+        "display_action": true,
+        "public_table_strategy": "dapip_backed_keep",
+        "hybrid_candidate": false,
+        "hybrid_reason": null,
+        "notes": "Probation or Equivalent or a More Severe Status: Warning",
+        "source_url": "https://ope.ed.gov/dapip/#/institution-profile/106652",
+        "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/106652",
+        "source_title": "DAPIP Institutional Accreditation Action"
+      },
       {
         "accreditor": "WSCUC",
         "action_label": "Heightened Monitoring or Focused Review",
@@ -1543,7 +1820,7 @@
       {
         "accreditor": "WSCUC",
         "action_label": "Procedural History Following the 2023 reaffirmation of accreditation review of University of Redlands, the 2024 reaffirmation of accreditation review of Woodbury University, and the 2024 change of control approval of Woodbury University to become a subsidiary of the University of Redlands, all areas for development from the WSCUC reviews were combined into a single Special Visit review of University of Redlands together with Woodbury University.",
-        "action_label_short": "Monitoring status removed",
+        "action_label_short": "Removed Notice of Concern",
         "action_scope": null,
         "action_type": "removed",
         "action_date": "2025-06-27",
@@ -2007,7 +2284,7 @@
     "category": "Degree-granting, primarily baccalaureate or above",
     "latest_action_date": "2025-12-07",
     "latest_action_label": "Removed from warning",
-    "action_count": 2,
+    "action_count": 3,
     "landing_actions": [
       {
         "accreditor": "SACSCOC",
@@ -2039,6 +2316,23 @@
         "hybrid_candidate": false,
         "hybrid_reason": null,
         "notes": "Probation or Equivalent or a More Severe Status: Warning",
+        "source_url": "https://ope.ed.gov/dapip/#/institution-profile/109697",
+        "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/109697",
+        "source_title": "DAPIP Institutional Accreditation Action"
+      },
+      {
+        "accreditor": "SACSCOC",
+        "action_label": "Based only on those reviewed standards, the institution is requested to submit a Referral Report due April 1, 2020, addressing the following referenced standards of the Principles: Standard 6.2.c (Program coordination) For each ofits educational programs, this standard expects an institution to assign appropriate responsibility for program coordirsat ion.",
+        "action_label_short": "Requested Referral Report on program coordination, student outcomes in educational programs, policies for awarding credit, physical resources and institutional environment",
+        "action_scope": null,
+        "action_type": "notice",
+        "action_date": "2019-06-13",
+        "action_year": "2019",
+        "display_action": true,
+        "public_table_strategy": "dapip_backed_keep",
+        "hybrid_candidate": false,
+        "hybrid_reason": null,
+        "notes": "Heightened Monitoring or Focused Review",
         "source_url": "https://ope.ed.gov/dapip/#/institution-profile/109697",
         "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/109697",
         "source_title": "DAPIP Institutional Accreditation Action"
@@ -2601,6 +2895,76 @@
       }
     ]
   },
+  "139764": {
+    "unitid": "139764",
+    "financial_unitid": "139764",
+    "has_financial_profile": true,
+    "is_primary_tracker": true,
+    "institution_name": "Georgia Southwestern State University",
+    "institution_alias": "GSW, Georgia Southwestern",
+    "institution_unique_name": "Georgia Southwestern State University | Americus | Georgia",
+    "state": "Georgia",
+    "city": "Americus",
+    "control_label": "Public",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "latest_action_date": "2020-09-02",
+    "latest_action_label": "Requested Referral Report on Student complaints",
+    "action_count": 1,
+    "landing_actions": [
+      {
+        "accreditor": "SACSCOC",
+        "action_label": "Based only on those reviewed standards, the institution is requested to submit a Referral Report due April 1, 2021, addressing the following referenced standard of the Principles: Standard 12.",
+        "action_label_short": "Requested Referral Report on Student complaints",
+        "action_scope": null,
+        "action_type": "notice",
+        "action_date": "2020-09-02",
+        "action_year": "2020",
+        "display_action": true,
+        "public_table_strategy": "dapip_backed_keep",
+        "hybrid_candidate": false,
+        "hybrid_reason": null,
+        "notes": "Heightened Monitoring or Focused Review",
+        "source_url": "https://ope.ed.gov/dapip/#/institution-profile/111267",
+        "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/111267",
+        "source_title": "DAPIP Institutional Accreditation Action"
+      }
+    ]
+  },
+  "139861": {
+    "unitid": "139861",
+    "financial_unitid": "139861",
+    "has_financial_profile": true,
+    "is_primary_tracker": true,
+    "institution_name": "Georgia College & State University",
+    "institution_alias": "Georgia College",
+    "institution_unique_name": "Georgia College & State University | Milledgeville | Georgia",
+    "state": "Georgia",
+    "city": "Milledgeville",
+    "control_label": "Public",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "latest_action_date": "2020-09-02",
+    "latest_action_label": "Requested to provide referral report documenting compliance with standards concerning qualified adminsitrative and academic officers, distance and correpsondence education, student complaints, institutional environment and comprehensive institution reviews.",
+    "action_count": 1,
+    "landing_actions": [
+      {
+        "accreditor": "SACSCOC",
+        "action_label": "Basedonly on those reviewed standards, the institution is requestedto submit a Referral Report due April 1, 2021, addressingthe following referenced standards ofthe Principles: Standard 5.",
+        "action_label_short": "Requested to provide referral report documenting compliance with standards concerning qualified adminsitrative and academic officers, distance and correpsondence education, student complaints, institutional environment and comprehensive institution reviews.",
+        "action_scope": null,
+        "action_type": "notice",
+        "action_date": "2020-09-02",
+        "action_year": "2020",
+        "display_action": true,
+        "public_table_strategy": "dapip_backed_keep",
+        "hybrid_candidate": false,
+        "hybrid_reason": null,
+        "notes": "Heightened Monitoring or Focused Review",
+        "source_url": "https://ope.ed.gov/dapip/#/institution-profile/111294",
+        "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/111294",
+        "source_title": "DAPIP Institutional Accreditation Action"
+      }
+    ]
+  },
   "139940": {
     "unitid": "139940",
     "financial_unitid": "139940",
@@ -2910,13 +3274,13 @@
     "control_label": "Public",
     "category": "Degree-granting, primarily baccalaureate or above",
     "latest_action_date": "2025-06-27",
-    "latest_action_label": "Monitoring status removed",
+    "latest_action_label": "Removed Notice of Concern",
     "action_count": 2,
     "landing_actions": [
       {
         "accreditor": "WSCUC",
         "action_label": "WSCUC is committed to an accreditation process that adds value to institutions while contributing to public accountability, and we thank you for your continued support of this process.",
-        "action_label_short": "Monitoring status removed",
+        "action_label_short": "Removed Notice of Concern",
         "action_scope": null,
         "action_type": "removed",
         "action_date": "2025-06-27",
@@ -2980,6 +3344,41 @@
         "notes": "Heightened Monitoring or Focused Review",
         "source_url": "https://ope.ed.gov/dapip/#/institution-profile/111966",
         "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/111966",
+        "source_title": "DAPIP Institutional Accreditation Action"
+      }
+    ]
+  },
+  "145497": {
+    "unitid": "145497",
+    "financial_unitid": "145497",
+    "has_financial_profile": true,
+    "is_primary_tracker": true,
+    "institution_name": "Hebrew Theological College",
+    "institution_alias": "HTC, TI, Teacher's Institute, Skokie Yeshiva, Sarah Hartman Womenâs College of Touro at HTC, Machon Torani L'Banot, Beis HaMidrash L'Torah",
+    "institution_unique_name": "Hebrew Theological College | Skokie | Illinois",
+    "state": "Illinois",
+    "city": "Skokie",
+    "control_label": "Private not-for-profit",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "latest_action_date": "2026-07-07",
+    "latest_action_label": "Voluntarily Surrendered Accreditation. \"The institution has indicated that it intends to maintain accreditation as part of Touro University’s\r\naccreditation through another federally recognized accrediting agency.\"",
+    "action_count": 1,
+    "landing_actions": [
+      {
+        "accreditor": "HLC",
+        "action_label": "Hebrew Theological College Voluntary Resignation of Accreditation Effective: July 7, 2026 Hebrew Theological College in Skokie, Illinois, voluntarily resigned its accreditation with the Higher Learning Commission effective July 7, 2026.",
+        "action_label_short": "Voluntarily Surrendered Accreditation. \"The institution has indicated that it intends to maintain accreditation as part of Touro University’s\r\naccreditation through another federally recognized accrediting agency.\"",
+        "action_scope": null,
+        "action_type": "adverse_action",
+        "action_date": "2026-07-07",
+        "action_year": "2026",
+        "display_action": true,
+        "public_table_strategy": "dapip_backed_keep",
+        "hybrid_candidate": false,
+        "hybrid_reason": null,
+        "notes": "Loss of Accreditation or Preaccreditation: Voluntary Withdrawal | The institution voluntarily resigned status with HLC, effective July 7, 2026.",
+        "source_url": "https://ope.ed.gov/dapip/#/institution-profile/113102",
+        "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/113102",
         "source_title": "DAPIP Institutional Accreditation Action"
       }
     ]
@@ -3228,6 +3627,41 @@
       }
     ]
   },
+  "156365": {
+    "unitid": "156365",
+    "financial_unitid": "156365",
+    "has_financial_profile": true,
+    "is_primary_tracker": true,
+    "institution_name": "Campbellsville University",
+    "institution_alias": null,
+    "institution_unique_name": "Campbellsville University | Campbellsville | Kentucky",
+    "state": "Kentucky",
+    "city": "Campbellsville",
+    "control_label": "Private not-for-profit",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "latest_action_date": "2019-12-08",
+    "latest_action_label": "Requested to submit a Monitoring Report because of concerns over compliance with Standard 6.2.b (Program faculty)",
+    "action_count": 1,
+    "landing_actions": [
+      {
+        "accreditor": "SACSCOC",
+        "action_label": "Carter: The following action regarding your institution was taken by the Board of Trustees of the Southern Association of Colleges and Schools Commission on Colleges (SACSCOC) during its meeting held on December 8, 2019: The SACSCOC Board of Trustees accepted the prospectus for the acquisition of Campbellsville University (a SACSCOC institution) from Phillips Graduate University in Chatsworth, CA, (a non-SACSCOC entity) and authorized a Substantive Change Committee to visit the institution.",
+        "action_label_short": "Requested to submit a Monitoring Report because of concerns over compliance with Standard 6.2.b (Program faculty)",
+        "action_scope": null,
+        "action_type": "other",
+        "action_date": "2019-12-08",
+        "action_year": "2019",
+        "display_action": true,
+        "public_table_strategy": null,
+        "hybrid_candidate": false,
+        "hybrid_reason": null,
+        "notes": null,
+        "source_url": "https://ope.ed.gov/dapip/#/institution-profile/117432",
+        "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/117432",
+        "source_title": "DAPIP Institutional Accreditation Action"
+      }
+    ]
+  },
   "156417": {
     "unitid": "156417",
     "financial_unitid": "156417",
@@ -3381,7 +3815,7 @@
     "category": "Degree-granting, primarily baccalaureate or above",
     "latest_action_date": "2025-12-01",
     "latest_action_label": "Removed from probation for good cause",
-    "action_count": 4,
+    "action_count": 5,
     "landing_actions": [
       {
         "accreditor": "SACSCOC",
@@ -3447,6 +3881,23 @@
         "hybrid_candidate": false,
         "hybrid_reason": null,
         "notes": "Probation or Equivalent or a More Severe Status: Warning",
+        "source_url": "https://ope.ed.gov/dapip/#/institution-profile/117575",
+        "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/117575",
+        "source_title": "DAPIP Institutional Accreditation Action"
+      },
+      {
+        "accreditor": "SACSCOC",
+        "action_label": "Based oniy on those reviewed standards, the institution is requested to submit a Referral Report due April 1, 2020, addressing the following referenced standards of the Princijles. Standard 6.2.c (Program coordination) For each of its educational programs, this standard expects an institution to assign appropriate responsibility for program coordination.",
+        "action_label_short": "Requested to provide referral report documenting compliance with standards concerning program coordination, institutional environment, representation to other agencies, federal and state responsibilities, cooperative academic arrangements, program coordination and student outcomes for educational programs.",
+        "action_scope": null,
+        "action_type": "notice",
+        "action_date": "2019-06-13",
+        "action_year": "2019",
+        "display_action": true,
+        "public_table_strategy": "dapip_backed_keep",
+        "hybrid_candidate": false,
+        "hybrid_reason": null,
+        "notes": "Heightened Monitoring or Focused Review",
         "source_url": "https://ope.ed.gov/dapip/#/institution-profile/117575",
         "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/117575",
         "source_title": "DAPIP Institutional Accreditation Action"
@@ -4316,10 +4767,27 @@
     "city": "Baltimore",
     "control_label": "Private not-for-profit",
     "category": "Degree-granting, primarily baccalaureate or above",
-    "latest_action_date": "2024-01-25",
-    "latest_action_label": "Merger of Maryland University of Integrative Health with Notre Dame of Maryland University (effective February 1, 2024)",
-    "action_count": 1,
+    "latest_action_date": "2026-06-25",
+    "latest_action_label": "Placed on Warning because of insufficient evidence of compliance with Standard V (Educational Effectiveness Assessment)",
+    "action_count": 2,
     "landing_actions": [
+      {
+        "accreditor": "MSCHE",
+        "action_label": "Charles Street Baltimore, MD 21210 NOTIFICATION OF NON-COMPLIANCE WARNING ACTION Dear Dr.",
+        "action_label_short": "Placed on Warning because of insufficient evidence of compliance with Standard V (Educational Effectiveness Assessment)",
+        "action_scope": null,
+        "action_type": "warning",
+        "action_date": "2026-06-25",
+        "action_year": "2026",
+        "display_action": true,
+        "public_table_strategy": "dapip_backed_keep",
+        "hybrid_candidate": false,
+        "hybrid_reason": null,
+        "notes": "Probation or Equivalent or a More Severe Status: Warning",
+        "source_url": "https://ope.ed.gov/dapip/#/institution-profile/120315",
+        "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/120315",
+        "source_title": "DAPIP Institutional Accreditation Action"
+      },
       {
         "accreditor": "MSCHE",
         "action_label": "To acknowledge receipt of the complex substantive change request. To include the change in legal status, form of control, and ownership within the institution's scope of accreditation, effective February 1, 2024. To note the complex substantive change request includes the merger of Maryland University of Integrative Health with Notre Dame of Maryland University, effective, February 1, 2024, the anticipated date of the transaction. To require notification of the date of the closing of the transaction within five calendar days of the transaction by email to [email protected] or, if there is a subsequent delay in the anticipated date of the closing of the transaction, to require immediate notification to the Commission of the revised anticipated transaction date. To note that Notre Dame of Maryland University is the surviving institution. To note that the surviving institution is responsible for ensuring the submission of all required reports and information on behalf of the integrated institution. To note the Maryland University of Integrative Health will maintain accreditation for the sole purpose of implementing the teach-out plan and agreements and effectuating the change in ownership process with the United States Department of Education per the United States Department of Education's Updated Guidance and Procedures for Changes in Ownership, dated September 15, 2022 (Electronic Announcement ID: GENERAL-22-70). To note the action for Maryland University of Integrative Health on January 25, 2024. To note that the main campus of Maryland University of Integrative Health at 7750 Montpelier Road, Laurel, MD 20723 will become an additional location included within the scope of accreditation of Notre Dame of Maryland University. To require immediate notification when 7750 Montpelier Road, Laurel, MD 20723 becomes an additional location of Notre Dame of Maryland University by email to [email protected]. To note that the Commission may rescind this action if instruction does not commence within one calendar year from the date of this action. To request a complex substantive change supplemental information report, due July 1, 2024, providing (1) the updated status of the complex substantive change (Substantive Change Policy and Complex Substantive Change Procedures); (2) written evidence of review, including but not limited to, approval of the transaction from all outstanding required licensing, regulatory, or other legal entities as necessary, including the United States Department of Education and the Maryland Higher Education Commission (Standard II); and, (3) written evidence of the institution's updated Eligibility and Certification Approval Report (ECAR) reflecting the inclusion of the additional location. To direct a prompt Commission liaison guidance visit to discuss the Commission's expectations including post-transaction requirements. To direct a complex substantive change site visit to the main campus at 4701 N. Charles Street, Baltimore, MD 21210 and the additional location at 7750 Montpelier Road, Laurel, MD 20723 as soon as practicable but no later than six months after the anticipated date of the transaction, February 1, 2024. To remind the institution of its obligation to inform the Commission about any and all developments relevant to this action. To note the Commission may rescind this action if any development reveals additional information that might have affected the Commission's decision or the complex substantive change is not implemented within one year of this action. To direct the institution to conduct a new comprehensive evaluation in accordance with Commission policy and procedures and federal regulation 34 CFR § 602.22(h). To note that the institution is currently in self-study in anticipation of an evaluation visit in 2025-2026.",
@@ -4858,6 +5326,41 @@
       }
     ]
   },
+  "175616": {
+    "unitid": "175616",
+    "financial_unitid": "175616",
+    "has_financial_profile": true,
+    "is_primary_tracker": true,
+    "institution_name": "Delta State University",
+    "institution_alias": null,
+    "institution_unique_name": "Delta State University | Cleveland | Mississippi",
+    "state": "Mississippi",
+    "city": "Cleveland",
+    "control_label": "Public",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "latest_action_date": "2020-09-02",
+    "latest_action_label": "Requested to submit Referral Report addressing student complaints, control of finances, and federal and state responsibilities",
+    "action_count": 1,
+    "landing_actions": [
+      {
+        "accreditor": "SACSCOC",
+        "action_label": "Based only on those reviewed standards, the institution is requested to submit a Referral Report due April 1, 2021, addressing the following referenced standards of the Principles: Standard 12.",
+        "action_label_short": "Requested to submit Referral Report addressing student complaints, control of finances, and federal and state responsibilities",
+        "action_scope": null,
+        "action_type": "notice",
+        "action_date": "2020-09-02",
+        "action_year": "2020",
+        "display_action": true,
+        "public_table_strategy": "dapip_backed_keep",
+        "hybrid_candidate": false,
+        "hybrid_reason": null,
+        "notes": "Heightened Monitoring or Focused Review",
+        "source_url": "https://ope.ed.gov/dapip/#/institution-profile/124618",
+        "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/124618",
+        "source_title": "DAPIP Institutional Accreditation Action"
+      }
+    ]
+  },
   "176017": {
     "unitid": "176017",
     "financial_unitid": "176017",
@@ -5377,6 +5880,41 @@
         "notes": "Accreditation Reaffirmed: Probation Removed",
         "source_url": "https://ope.ed.gov/dapip/#/institution-profile/126410",
         "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/126410",
+        "source_title": "DAPIP Institutional Accreditation Action"
+      }
+    ]
+  },
+  "180258": {
+    "unitid": "180258",
+    "financial_unitid": "180258",
+    "has_financial_profile": true,
+    "is_primary_tracker": true,
+    "institution_name": "University of Providence",
+    "institution_alias": "Previously known as the University of Great Falls (prior to July 2018)",
+    "institution_unique_name": "University of Providence | Great Falls | Montana",
+    "state": "Montana",
+    "city": "Great Falls",
+    "control_label": "Private not-for-profit",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "latest_action_date": "2026-08-05",
+    "latest_action_label": "Placed on probation because of significant financial issues at the institution.",
+    "action_count": 1,
+    "landing_actions": [
+      {
+        "accreditor": "NWCCU",
+        "action_label": "Accreditation Accept the Report, Issue Sanction of Probation Status of Previous Recommendations Addressed in this Evaluation • Recommendation 1: Spring 2023 Ad Hoc Report with Visit - Continued as Non-Compliant Recommendations Out of Compliance The Commission finds that the following Recommendations are areas where University of Providence is out of compliance with the NWCCU Standards for Accreditation.",
+        "action_label_short": "Placed on probation because of significant financial issues at the institution.",
+        "action_scope": null,
+        "action_type": "probation",
+        "action_date": "2026-08-05",
+        "action_year": "2026",
+        "display_action": true,
+        "public_table_strategy": "dapip_backed_keep",
+        "hybrid_candidate": false,
+        "hybrid_reason": null,
+        "notes": "Probation or Equivalent or a More Severe Status: Probation",
+        "source_url": "https://ope.ed.gov/dapip/#/institution-profile/126599",
+        "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/126599",
         "source_title": "DAPIP Institutional Accreditation Action"
       }
     ]
@@ -6958,6 +7496,41 @@
       }
     ]
   },
+  "198464": {
+    "unitid": "198464",
+    "financial_unitid": "198464",
+    "has_financial_profile": true,
+    "is_primary_tracker": true,
+    "institution_name": "East Carolina University",
+    "institution_alias": "ECU",
+    "institution_unique_name": "East Carolina University | Greenville | North Carolina",
+    "state": "North Carolina",
+    "city": "Greenville",
+    "control_label": "Public",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "latest_action_date": "2019-06-13",
+    "latest_action_label": "Requested to provide referral report documenting compliance with standards concerning institutional environment",
+    "action_count": 1,
+    "landing_actions": [
+      {
+        "accreditor": "SACSCOC",
+        "action_label": "Based only on those reviewed standards, the institution is requested to submit a Referral Report due September 9,2019, addressing the following referenced standard of the Principles: Standard 13.8 (Institutional environment) This standard expects an institution to take reasonable steps to provide a healthy, safe, and secure en i’ironinent Jar all members of the campus commun itv.",
+        "action_label_short": "Requested to provide referral report documenting compliance with standards concerning institutional environment",
+        "action_scope": null,
+        "action_type": "notice",
+        "action_date": "2019-06-13",
+        "action_year": "2019",
+        "display_action": true,
+        "public_table_strategy": "dapip_backed_keep",
+        "hybrid_candidate": false,
+        "hybrid_reason": null,
+        "notes": "Heightened Monitoring or Focused Review",
+        "source_url": "https://ope.ed.gov/dapip/#/institution-profile/133386",
+        "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/133386",
+        "source_title": "DAPIP Institutional Accreditation Action"
+      }
+    ]
+  },
   "198561": {
     "unitid": "198561",
     "financial_unitid": "198561",
@@ -8463,6 +9036,41 @@
       }
     ]
   },
+  "210146": {
+    "unitid": "210146",
+    "financial_unitid": "210146",
+    "has_financial_profile": true,
+    "is_primary_tracker": true,
+    "institution_name": "Southern Oregon University",
+    "institution_alias": "SOU",
+    "institution_unique_name": "Southern Oregon University | Ashland | Oregon",
+    "state": "Oregon",
+    "city": "Ashland",
+    "control_label": "Public",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "latest_action_date": "2026-08-05",
+    "latest_action_label": "Placed on probation because of significant financial issues at the institution.",
+    "action_count": 1,
+    "landing_actions": [
+      {
+        "accreditor": "NWCCU",
+        "action_label": "Accreditation Issue Sanction of Probation Recommendations Out of Compliance The Commission finds that the following Recommendations is an area where Southern Oregon University is out of compliance with the NWCCU Standards for Accreditation.",
+        "action_label_short": "Placed on probation because of significant financial issues at the institution.",
+        "action_scope": null,
+        "action_type": "probation",
+        "action_date": "2026-08-05",
+        "action_year": "2026",
+        "display_action": true,
+        "public_table_strategy": "dapip_backed_keep",
+        "hybrid_candidate": false,
+        "hybrid_reason": null,
+        "notes": "Probation or Equivalent or a More Severe Status: Probation",
+        "source_url": "https://ope.ed.gov/dapip/#/institution-profile/138497",
+        "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/138497",
+        "source_title": "DAPIP Institutional Accreditation Action"
+      }
+    ]
+  },
   "210304": {
     "unitid": "210304",
     "financial_unitid": "210304",
@@ -9262,6 +9870,41 @@
       }
     ]
   },
+  "216542": {
+    "unitid": "216542",
+    "financial_unitid": "216542",
+    "has_financial_profile": true,
+    "is_primary_tracker": true,
+    "institution_name": "University of Valley Forge",
+    "institution_alias": "VFCC; UVF; Valley Forge",
+    "institution_unique_name": "University of Valley Forge | Phoenixville | Pennsylvania",
+    "state": "Pennsylvania",
+    "city": "Phoenixville",
+    "control_label": "Private not-for-profit",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "latest_action_date": "2026-06-25",
+    "latest_action_label": "Required to Show Cause because of insufficient evidence of compliance with Standard VI (Planning, Resources, and Institutional Improvement)",
+    "action_count": 1,
+    "landing_actions": [
+      {
+        "accreditor": "MSCHE",
+        "action_label": "David Kim President University of Valley Forge 1401 Charlestown Road Phoenixville, PA 19460 NOTIFICATION OF NON-COMPLIANCE SHOW CAUSE ACTION Dear Rev.",
+        "action_label_short": "Required to Show Cause because of insufficient evidence of compliance with Standard VI (Planning, Resources, and Institutional Improvement)",
+        "action_scope": null,
+        "action_type": "show_cause",
+        "action_date": "2026-06-25",
+        "action_year": "2026",
+        "display_action": true,
+        "public_table_strategy": "dapip_backed_keep",
+        "hybrid_candidate": false,
+        "hybrid_reason": null,
+        "notes": "Probation or Equivalent or a More Severe Status: Show Cause",
+        "source_url": "https://ope.ed.gov/dapip/#/institution-profile/141617",
+        "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/141617",
+        "source_title": "DAPIP Institutional Accreditation Action"
+      }
+    ]
+  },
   "216694": {
     "unitid": "216694",
     "financial_unitid": "216694",
@@ -9433,7 +10076,7 @@
     "category": "Degree-granting, primarily baccalaureate or above",
     "latest_action_date": "2020-12-01",
     "latest_action_label": "Removed from probation",
-    "action_count": 1,
+    "action_count": 2,
     "landing_actions": [
       {
         "accreditor": "SACSCOC",
@@ -9451,6 +10094,23 @@
         "source_url": "https://web.archive.org/web/20210117150616id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2020-accreditation-actions-and-public-disclosure-statements/",
         "source_page_url": "https://web.archive.org/web/20210117150616id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2020-accreditation-actions-and-public-disclosure-statements/",
         "source_title": "December 2020 Accreditation Actions and Public Disclosure Statements - SACSCOC"
+      },
+      {
+        "accreditor": "SACSCOC",
+        "action_label": "Artis: The following action regarding your institution was taken by the Board of Trustees of the Southern Association of Colleges and Schools Commission on Colleges (SACSCOC) during its meeting held on December 8, 2019: The SACSCOC Board of Trustees reviewed the institution’s Second Monitoring Report following submission of a Referral Report in December 2017 and continued the institution in accreditation for Good Cause and placed the institution on Probation for twelve months for failure to comply with Standard 13.3 (Financial responsibility), Standard 13.4 (Control of finances), and Standard 13.6 (Federal and state responsibilities) of the Principles of Accreditation. A Special Committee was authorized.",
+        "action_label_short": "Placed on probation for twelve months for failure to comply with Standard 13.3 (Financial responsibility), Standard 13.4 (Control of finances), and Standard 13.6 (Federal and state responsibilities)",
+        "action_scope": null,
+        "action_type": "notice",
+        "action_date": "2019-12-08",
+        "action_year": "2019",
+        "display_action": true,
+        "public_table_strategy": "dapip_backed_keep",
+        "hybrid_candidate": false,
+        "hybrid_reason": null,
+        "notes": "Heightened Monitoring or Focused Review",
+        "source_url": "https://ope.ed.gov/dapip/#/institution-profile/142133",
+        "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/142133",
+        "source_title": "DAPIP Institutional Accreditation Action"
       }
     ]
   },
@@ -9571,6 +10231,41 @@
         "notes": "Heightened Monitoring or Focused Review",
         "source_url": "https://ope.ed.gov/dapip/#/institution-profile/142179",
         "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/142179",
+        "source_title": "DAPIP Institutional Accreditation Action"
+      }
+    ]
+  },
+  "217882": {
+    "unitid": "217882",
+    "financial_unitid": "217882",
+    "has_financial_profile": true,
+    "is_primary_tracker": true,
+    "institution_name": "Clemson University",
+    "institution_alias": null,
+    "institution_unique_name": "Clemson University | Clemson | South Carolina",
+    "state": "South Carolina",
+    "city": "Clemson",
+    "control_label": "Public",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "latest_action_date": "2019-06-13",
+    "latest_action_label": "Requested to provide referral report documenting compliance with standards concerning student outcomes in educational programs.",
+    "action_count": 1,
+    "landing_actions": [
+      {
+        "accreditor": "SACSCOC",
+        "action_label": "Based only on those reviewed standards, the institution is requested to submit a Referral Report due Api-il 1, 2020, addressing the following referenced standard of the Principles identified below: Standard 8.2.a (Student outcomes: educational programs) This standard expects an insüruüon to ideiit expected student learning outcomes, assess the extent to which it achieves these outcomes, and provide evidence ofseeking improvement based on analysis ofthe results for each of its educational programs.",
+        "action_label_short": "Requested to provide referral report documenting compliance with standards concerning student outcomes in educational programs.",
+        "action_scope": null,
+        "action_type": "notice",
+        "action_date": "2019-06-13",
+        "action_year": "2019",
+        "display_action": true,
+        "public_table_strategy": "dapip_backed_keep",
+        "hybrid_candidate": false,
+        "hybrid_reason": null,
+        "notes": "Heightened Monitoring or Focused Review",
+        "source_url": "https://ope.ed.gov/dapip/#/institution-profile/142221",
+        "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/142221",
         "source_title": "DAPIP Institutional Accreditation Action"
       }
     ]
@@ -9711,7 +10406,7 @@
     "category": "Degree-granting, primarily baccalaureate or above",
     "latest_action_date": "2024-12-08",
     "latest_action_label": "Placed on probation for good cause for twelve months for failure to comply with Core Requirement 13.1 (Financial resources) and Standard 13.3 (Financial responsibility)",
-    "action_count": 4,
+    "action_count": 5,
     "landing_actions": [
       {
         "accreditor": "SACSCOC",
@@ -9777,6 +10472,23 @@
         "hybrid_candidate": false,
         "hybrid_reason": null,
         "notes": "Probation or Equivalent or a More Severe Status: Warning",
+        "source_url": "https://ope.ed.gov/dapip/#/institution-profile/142300",
+        "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/142300",
+        "source_title": "DAPIP Institutional Accreditation Action"
+      },
+      {
+        "accreditor": "SACSCOC",
+        "action_label": "Gustafson: The following action regarding your institution was taken by the Board of Trustees of the Southern Association of Colleges and Schools Commission on Colleges (SACSCOC) during its meeting held on June 13, 2019: The SACSCOC Board of Trustees reviewed the institution's Referral Report following the submission ofthe institution's Fifth-Year Interim Report in June 2018.",
+        "action_label_short": "Requested to submit a Monitoring Report addressing student outcomes for educational programs",
+        "action_scope": null,
+        "action_type": "notice",
+        "action_date": "2019-06-13",
+        "action_year": "2019",
+        "display_action": true,
+        "public_table_strategy": "dapip_backed_keep",
+        "hybrid_candidate": false,
+        "hybrid_reason": null,
+        "notes": "Heightened Monitoring or Focused Review",
         "source_url": "https://ope.ed.gov/dapip/#/institution-profile/142300",
         "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/142300",
         "source_title": "DAPIP Institutional Accreditation Action"
@@ -10283,6 +10995,41 @@
         "notes": "Heightened Monitoring or Focused Review | The institution has not demonstrated that it manages its financial resources in a responsible manner.",
         "source_url": "https://ope.ed.gov/dapip/#/institution-profile/143181",
         "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/143181",
+        "source_title": "DAPIP Institutional Accreditation Action"
+      }
+    ]
+  },
+  "220075": {
+    "unitid": "220075",
+    "financial_unitid": "220075",
+    "has_financial_profile": true,
+    "is_primary_tracker": true,
+    "institution_name": "East Tennessee State University",
+    "institution_alias": "ETSU",
+    "institution_unique_name": "East Tennessee State University | Johnson City | Tennessee",
+    "state": "Tennessee",
+    "city": "Johnson City",
+    "control_label": "Public",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "latest_action_date": "2019-06-13",
+    "latest_action_label": "Requested to provide referral report documenting compliance with standards concerning qualified administrative/academic officers and policies for awarding credit",
+    "action_count": 1,
+    "landing_actions": [
+      {
+        "accreditor": "SACSCOC",
+        "action_label": "Based only on those reviewed standards, the institution is requested to submit a Referral Report due April 1, 2020, addressing the following standards of the Princioles: Standard 5.4 (Qualified administrative/academic officers) This slandard expects an institution to employ adininisfrailve and academic officers with appropriate experience and qua!",
+        "action_label_short": "Requested to provide referral report documenting compliance with standards concerning qualified administrative/academic officers and policies for awarding credit",
+        "action_scope": null,
+        "action_type": "notice",
+        "action_date": "2019-06-13",
+        "action_year": "2019",
+        "display_action": true,
+        "public_table_strategy": "dapip_backed_keep",
+        "hybrid_candidate": false,
+        "hybrid_reason": null,
+        "notes": "Heightened Monitoring or Focused Review",
+        "source_url": "https://ope.ed.gov/dapip/#/institution-profile/143297",
+        "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/143297",
         "source_title": "DAPIP Institutional Accreditation Action"
       }
     ]
@@ -11066,6 +11813,41 @@
         "notes": "Heightened Monitoring or Focused Review",
         "source_url": "https://ope.ed.gov/dapip/#/institution-profile/144856",
         "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/144856",
+        "source_title": "DAPIP Institutional Accreditation Action"
+      }
+    ]
+  },
+  "224554": {
+    "unitid": "224554",
+    "financial_unitid": "224554",
+    "has_financial_profile": true,
+    "is_primary_tracker": true,
+    "institution_name": "East Texas A&M University",
+    "institution_alias": "East Texas A&M",
+    "institution_unique_name": "East Texas A&M University | Commerce | Texas",
+    "state": "Texas",
+    "city": "Commerce",
+    "control_label": "Public",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "latest_action_date": "2020-09-02",
+    "latest_action_label": "Requested to submit Referral Report addressing federal and state responsibilities and comprehensive institutional reviews",
+    "action_count": 1,
+    "landing_actions": [
+      {
+        "accreditor": "SACSCOC",
+        "action_label": "Based only on those reviewed standards, the institution is requested to submit a Referral Report due April 1, 2021, addressing the following referenced standardsofthe Principles: Standard 13.",
+        "action_label_short": "Requested to submit Referral Report addressing federal and state responsibilities and comprehensive institutional reviews",
+        "action_scope": null,
+        "action_type": "notice",
+        "action_date": "2020-09-02",
+        "action_year": "2020",
+        "display_action": true,
+        "public_table_strategy": "dapip_backed_keep",
+        "hybrid_candidate": false,
+        "hybrid_reason": null,
+        "notes": "Heightened Monitoring or Focused Review",
+        "source_url": "https://ope.ed.gov/dapip/#/institution-profile/144865",
+        "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/144865",
         "source_title": "DAPIP Institutional Accreditation Action"
       }
     ]
@@ -13780,7 +14562,7 @@
     "city": null,
     "control_label": null,
     "category": null,
-    "latest_action_date": "2026-08-26",
+    "latest_action_date": "2026-09-01",
     "latest_action_label": "On Probation",
     "action_count": 1,
     "landing_actions": [
@@ -13790,7 +14572,7 @@
         "action_label_short": "On Probation",
         "action_scope": null,
         "action_type": "probation",
-        "action_date": "2026-08-26",
+        "action_date": "2026-09-01",
         "action_year": "2026",
         "display_action": true,
         "public_table_strategy": "scraper_backed_keep",
@@ -14162,7 +14944,7 @@
     "city": null,
     "control_label": null,
     "category": null,
-    "latest_action_date": "2026-08-26",
+    "latest_action_date": "2026-09-01",
     "latest_action_label": "Withdrawal of accreditation",
     "action_count": 1,
     "landing_actions": [
@@ -14172,7 +14954,7 @@
         "action_label_short": "Withdrawal of accreditation",
         "action_scope": null,
         "action_type": "adverse_action",
-        "action_date": "2026-08-26",
+        "action_date": "2026-09-01",
         "action_year": "2026",
         "display_action": true,
         "public_table_strategy": "scraper_backed_keep",
@@ -14372,7 +15154,7 @@
     "city": null,
     "control_label": null,
     "category": null,
-    "latest_action_date": "2026-07-06",
+    "latest_action_date": "2026-09-03",
     "latest_action_label": "Non-Compliance Show Cause",
     "action_count": 1,
     "landing_actions": [
@@ -14382,7 +15164,7 @@
         "action_label_short": "Non-Compliance Show Cause",
         "action_scope": null,
         "action_type": "show_cause",
-        "action_date": "2026-07-06",
+        "action_date": "2026-09-03",
         "action_year": "2026",
         "display_action": true,
         "public_table_strategy": "scraper_backed_keep",
@@ -16257,7 +17039,7 @@
     "city": null,
     "control_label": null,
     "category": null,
-    "latest_action_date": "2026-08-26",
+    "latest_action_date": "2026-09-01",
     "latest_action_label": "On Probation",
     "action_count": 1,
     "landing_actions": [
@@ -16267,7 +17049,7 @@
         "action_label_short": "On Probation",
         "action_scope": null,
         "action_type": "probation",
-        "action_date": "2026-08-26",
+        "action_date": "2026-09-01",
         "action_year": "2026",
         "display_action": true,
         "public_table_strategy": "scraper_backed_keep",
@@ -16449,7 +17231,7 @@
     "city": null,
     "control_label": null,
     "category": null,
-    "latest_action_date": "2026-07-06",
+    "latest_action_date": "2026-09-03",
     "latest_action_label": "Non-Compliance Probation",
     "action_count": 1,
     "landing_actions": [
@@ -16459,7 +17241,7 @@
         "action_label_short": "Non-Compliance Probation",
         "action_scope": null,
         "action_type": "probation",
-        "action_date": "2026-07-06",
+        "action_date": "2026-09-03",
         "action_year": "2026",
         "display_action": true,
         "public_table_strategy": "scraper_backed_keep",
@@ -16503,7 +17285,7 @@
         "notes": "Northeastern Technical College, Cheraw, South Carolina (removed from Warning)",
         "source_url": "https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2025-accreditation-actions-and-public-disclosure-statements/",
         "source_page_url": "https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2025-accreditation-actions-and-public-disclosure-statements/",
-        "source_title": "December 2025 Accreditation Actions and Public Disclosure Statements - SACSCOC"
+        "source_title": "December 2025 Accreditation Actions and Public Disclosure Statements - The Commission"
       },
       {
         "accreditor": "SACSCOC",
@@ -16536,7 +17318,7 @@
     "city": null,
     "control_label": null,
     "category": null,
-    "latest_action_date": "2026-08-26",
+    "latest_action_date": "2026-09-01",
     "latest_action_label": "Withdrawal of accreditation",
     "action_count": 1,
     "landing_actions": [
@@ -16546,7 +17328,7 @@
         "action_label_short": "Withdrawal of accreditation",
         "action_scope": null,
         "action_type": "adverse_action",
-        "action_date": "2026-08-26",
+        "action_date": "2026-09-01",
         "action_year": "2026",
         "display_action": true,
         "public_table_strategy": "scraper_backed_keep",
@@ -16606,10 +17388,27 @@
     "city": null,
     "control_label": null,
     "category": null,
-    "latest_action_date": "2026-08-25",
-    "latest_action_label": "Accredited – Spring 2026 Evaluation of Institutional Effectiveness",
+    "latest_action_date": "2026-09-01",
+    "latest_action_label": "Accredited – Spring 2026 Policies, Regulations, and financial Review",
     "action_count": 4,
     "landing_actions": [
+      {
+        "accreditor": "NWCCU",
+        "action_label": "Accredited – \n\t\t\t\t\t\t\tSpring 2026 Policies, Regulations, and Financial Review",
+        "action_label_short": "Accredited – Spring 2026 Policies, Regulations, and financial Review",
+        "action_scope": null,
+        "action_type": "warning",
+        "action_date": "2026-09-01",
+        "action_year": "2026",
+        "display_action": true,
+        "public_table_strategy": "scraper_backed_keep",
+        "hybrid_candidate": false,
+        "hybrid_reason": null,
+        "notes": "Status: Accredited | Evaluation: \n\t\t\t\t\t\t\tSpring 2026 Policies, Regulations, and Financial Review\t\t\t\t\t\t | Reason: \n\t\t\t\t\t\t\tAs of their most recent evaluation, this institution is substantially compliant with the Standards, Policies, and Eligibility Requirements of the Northwest Commission on Colleges and Universities.",
+        "source_url": "https://nwccu.org/institutional-directory/warner-pacific-university/",
+        "source_page_url": "https://nwccu.org/institutional-directory/warner-pacific-university/",
+        "source_title": "NWCCU Institution Notification Letter – NA"
+      },
       {
         "accreditor": "NWCCU",
         "action_label": "Accredited – \n\t\t\t\t\t\t\tSpring 2026 Evaluation of Institutional Effectiveness",
@@ -16623,25 +17422,8 @@
         "hybrid_candidate": false,
         "hybrid_reason": null,
         "notes": "Status: Accredited | Evaluation: \n\t\t\t\t\t\t\tSpring 2026 Evaluation of Institutional Effectiveness\t\t\t\t\t\t | Reason: \n\t\t\t\t\t\t\tAs of their most recent evaluation, this institution is substantially compliant with the Standards, Policies, and Eligibility Requirements of the Northwest Commission on Colleges and Universities.",
-        "source_url": "https://nwccu.box.com/s/723z4dki0xmw85uq2bz6m900evlujk3o",
-        "source_page_url": "https://nwccu.box.com/s/723z4dki0xmw85uq2bz6m900evlujk3o",
-        "source_title": "NWCCU Institution Notification Letter – NA"
-      },
-      {
-        "accreditor": "NWCCU",
-        "action_label": "Accredited – \n\t\t\t\t\t\t\tSpring 2026 Policies, Regulations, and Financial Review",
-        "action_label_short": "Accredited – Spring 2026 Policies, Regulations, and financial Review",
-        "action_scope": null,
-        "action_type": "warning",
-        "action_date": "2026-08-25",
-        "action_year": "2026",
-        "display_action": true,
-        "public_table_strategy": "scraper_backed_keep",
-        "hybrid_candidate": false,
-        "hybrid_reason": null,
-        "notes": "Status: Accredited | Evaluation: \n\t\t\t\t\t\t\tSpring 2026 Policies, Regulations, and Financial Review\t\t\t\t\t\t | Reason: \n\t\t\t\t\t\t\tAs of their most recent evaluation, this institution is substantially compliant with the Standards, Policies, and Eligibility Requirements of the Northwest Commission on Colleges and Universities.",
-        "source_url": "https://nwccu.box.com/s/8zmyx3rb39anjkg97qb8csw6i5b4xgfp",
-        "source_page_url": "https://nwccu.box.com/s/8zmyx3rb39anjkg97qb8csw6i5b4xgfp",
+        "source_url": "https://nwccu.org/institutional-directory/wenatchee-valley-college/",
+        "source_page_url": "https://nwccu.org/institutional-directory/wenatchee-valley-college/",
         "source_title": "NWCCU Institution Notification Letter – NA"
       },
       {
@@ -16657,8 +17439,8 @@
         "hybrid_candidate": false,
         "hybrid_reason": null,
         "notes": "Status: Accredited | Evaluation: \n\t\t\t\t\t\t\tSpring 2026 Special Report\t\t\t\t\t\t | Reason: \n\t\t\t\t\t\t\tAs of their most recent evaluation, this institution is substantially compliant with the Standards, Policies, and Eligibility Requirements of the Northwest Commission on Colleges and Universities.",
-        "source_url": "https://nwccu.box.com/s/54aofes55jwxxalg025yl2104spt74nt",
-        "source_page_url": "https://nwccu.box.com/s/54aofes55jwxxalg025yl2104spt74nt",
+        "source_url": "https://nwccu.org/institutional-directory/lane-community-college/",
+        "source_page_url": "https://nwccu.org/institutional-directory/lane-community-college/",
         "source_title": "NWCCU Institution Notification Letter – NA"
       },
       {
@@ -16674,8 +17456,8 @@
         "hybrid_candidate": false,
         "hybrid_reason": null,
         "notes": "Status: Accredited | Evaluation: \n\t\t\t\t\t\t\tSpring 2026 Financial Resources Review\t\t\t\t\t\t | Reason: \n\t\t\t\t\t\t\tAs of their most recent evaluation, this institution is substantially compliant with the Standards, Policies, and Eligibility Requirements of the Northwest Commission on Colleges and Universities.",
-        "source_url": "https://nwccu.box.com/s/fxqii7wp06570pcj1yx7v31ltbmbg2e2",
-        "source_page_url": "https://nwccu.box.com/s/fxqii7wp06570pcj1yx7v31ltbmbg2e2",
+        "source_url": "https://nwccu.org/institutional-directory/university-of-providence/",
+        "source_page_url": "https://nwccu.org/institutional-directory/university-of-providence/",
         "source_title": "NWCCU Institution Notification Letter – NA"
       }
     ]
@@ -17041,7 +17823,7 @@
     "city": null,
     "control_label": null,
     "category": null,
-    "latest_action_date": "2026-07-06",
+    "latest_action_date": "2026-09-03",
     "latest_action_label": "Non-Compliance Warning",
     "action_count": 1,
     "landing_actions": [
@@ -17051,7 +17833,7 @@
         "action_label_short": "Non-Compliance Warning",
         "action_scope": null,
         "action_type": "warning",
-        "action_date": "2026-07-06",
+        "action_date": "2026-09-03",
         "action_year": "2026",
         "display_action": true,
         "public_table_strategy": "scraper_backed_keep",
@@ -17111,7 +17893,7 @@
     "city": null,
     "control_label": null,
     "category": null,
-    "latest_action_date": "2026-07-06",
+    "latest_action_date": "2026-09-03",
     "latest_action_label": "Non-Compliance Warning",
     "action_count": 1,
     "landing_actions": [
@@ -17121,7 +17903,7 @@
         "action_label_short": "Non-Compliance Warning",
         "action_scope": null,
         "action_type": "warning",
-        "action_date": "2026-07-06",
+        "action_date": "2026-09-03",
         "action_year": "2026",
         "display_action": true,
         "public_table_strategy": "scraper_backed_keep",
@@ -17652,7 +18434,7 @@
     "city": null,
     "control_label": null,
     "category": null,
-    "latest_action_date": "2026-07-06",
+    "latest_action_date": "2026-09-03",
     "latest_action_label": "Non-Compliance Warning",
     "action_count": 1,
     "landing_actions": [
@@ -17662,7 +18444,7 @@
         "action_label_short": "Non-Compliance Warning",
         "action_scope": null,
         "action_type": "warning",
-        "action_date": "2026-07-06",
+        "action_date": "2026-09-03",
         "action_year": "2026",
         "display_action": true,
         "public_table_strategy": "scraper_backed_keep",
@@ -18035,7 +18817,7 @@
     "city": null,
     "control_label": null,
     "category": null,
-    "latest_action_date": "2026-07-06",
+    "latest_action_date": "2026-09-03",
     "latest_action_label": "Non-Compliance Warning",
     "action_count": 1,
     "landing_actions": [
@@ -18045,7 +18827,7 @@
         "action_label_short": "Non-Compliance Warning",
         "action_scope": null,
         "action_type": "warning",
-        "action_date": "2026-07-06",
+        "action_date": "2026-09-03",
         "action_year": "2026",
         "display_action": true,
         "public_table_strategy": "scraper_backed_keep",
@@ -18469,7 +19251,7 @@
     "city": null,
     "control_label": null,
     "category": null,
-    "latest_action_date": "2026-07-06",
+    "latest_action_date": "2026-09-03",
     "latest_action_label": "Non-Compliance Show Cause",
     "action_count": 1,
     "landing_actions": [
@@ -18479,7 +19261,7 @@
         "action_label_short": "Non-Compliance Show Cause",
         "action_scope": null,
         "action_type": "show_cause",
-        "action_date": "2026-07-06",
+        "action_date": "2026-09-03",
         "action_year": "2026",
         "display_action": true,
         "public_table_strategy": "scraper_backed_keep",

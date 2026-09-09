@@ -1,6 +1,6 @@
 {
   "unitid": "122728",
-  "generated_at": "2026-08-31",
+  "generated_at": "2026-09-09",
   "profile": {
     "institution_name": "William Jessup University",
     "institution_unique_name": "William Jessup University | Rocklin | California",
@@ -829,5 +829,47 @@
         "value": 0
       }
     ]
-  }
+  },
+  "latest_status": {
+    "accreditors": "WSCUC",
+    "action_labels": "Placed on Warning because it is out of compliant with Standards 3.4, 3.5 and 3.11, which concern budget deficits and having a comprehensive and realistic financial plan.",
+    "active_actions": "warning",
+    "has_active_warning": true,
+    "has_active_warning_or_notice": true,
+    "has_active_adverse_action": false,
+    "latest_action_date": "2026-06-26",
+    "latest_action_year": "2026",
+    "action_count": 1
+  },
+  "actions": [
+    {
+      "accreditor": "WSCUC",
+      "action_type": "warning",
+      "action_label": "At that meeting the Commission acted to place Jessup on Warning.",
+      "action_label_short": "Placed on Warning because it is out of compliant with Standards 3.4, 3.5 and 3.11, which concern budget deficits and having a comprehensive and realistic financial plan.",
+      "action_scope": null,
+      "action_status": "active",
+      "action_date": "2026-06-26",
+      "action_year": "2026",
+      "notes": "Probation or Equivalent or a More Severe Status: Warning",
+      "source_url": "https://ope.ed.gov/dapip/#/institution-profile/106360",
+      "source_title": "DAPIP Institutional Accreditation Action",
+      "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/106360",
+      "source_page_modified": null,
+      "display_action": true,
+      "public_table_strategy": "dapip_backed_keep",
+      "hybrid_candidate": false,
+      "hybrid_reason": null,
+      "has_financial_profile": true,
+      "is_primary_tracker": true
+    }
+  ],
+  "sources": [
+    {
+      "accreditor": "WSCUC",
+      "source_title": "DAPIP Institutional Accreditation Action",
+      "source_url": "https://ope.ed.gov/dapip/#/institution-profile/106360",
+      "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/106360"
+    }
+  ]
 }
