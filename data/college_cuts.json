@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-09",
+  "generated_at": "2026-09-10",
   "recent": [
     {
       "unitid": "230764",
@@ -2515,7 +2515,7 @@
           "display_categories": [
             "Staff layoffs"
           ],
-          "cut_type": "other",
+          "cut_type": "staff_layoff",
           "status": null,
           "effective_term": null,
           "students_affected": null,
@@ -2809,9 +2809,10 @@
           "primary_display_category": "Academic program cuts",
           "display_category": "Academic program cuts",
           "display_categories": [
-            "Academic program cuts"
+            "Academic program cuts",
+            "Staff layoffs"
           ],
-          "cut_type": "other",
+          "cut_type": "staff_layoff",
           "status": null,
           "effective_term": null,
           "students_affected": null,
@@ -9220,7 +9221,7 @@
             "Hiring freezes / furloughs",
             "Staff layoffs"
           ],
-          "cut_type": "Other",
+          "cut_type": "staff_layoff",
           "status": null,
           "effective_term": null,
           "students_affected": null,

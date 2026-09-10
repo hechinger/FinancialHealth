@@ -1421,7 +1421,7 @@
         "announcement_date": "2026-04-16",
         "announcement_year": 2026,
         "program_name": "Announced plan for $54 million in reduced spending through layoffs, budget cuts and elimination of vacant positions to close budget gap as state of Colorado sees budget shortfall.",
-        "cut_type": "other",
+        "cut_type": "staff_layoff",
         "cut_label_public": "Announced plan for $54 million in reduced spending through layoffs, budget cuts and elimination of vacant positions to close budget gap as state of Colorado…",
         "primary_display_category": "Staff layoffs",
         "display_category": "Staff layoffs",
@@ -1658,12 +1658,13 @@
         "announcement_date": "2024-12-11",
         "announcement_year": 2025,
         "program_name": "Cut three academic programs, including graduate certificate in global health, due to low enrollment.",
-        "cut_type": "other",
+        "cut_type": "staff_layoff",
         "cut_label_public": "Cut three academic programs, including graduate certificate in global health, due to low enrollment.",
         "primary_display_category": "Academic program cuts",
         "display_category": "Academic program cuts",
         "display_categories": [
-          "Academic program cuts"
+          "Academic program cuts",
+          "Staff layoffs"
         ],
         "positions_affected": null,
         "faculty_affected": null,
@@ -6791,7 +6792,7 @@
         "announcement_date": "2025-06-18",
         "announcement_year": 2025,
         "program_name": "Cut $350 million from budget following hiring freeze, layoffs and budget cuts",
-        "cut_type": "Other",
+        "cut_type": "staff_layoff",
         "cut_label_public": "Cut $350 million from budget following hiring freeze, layoffs and budget cuts",
         "primary_display_category": "Hiring freezes / furloughs",
         "display_category": "Hiring freezes / furloughs",
