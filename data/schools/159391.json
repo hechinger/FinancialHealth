@@ -873,5 +873,47 @@
         "value": 388116689
       }
     ]
-  }
+  },
+  "latest_status": {
+    "accreditors": "SACSCOC",
+    "action_labels": "Requested to submit a referral report documenting compliance with accreditation standards concerning adequate physical facilities and resources.",
+    "active_actions": "notice",
+    "has_active_warning": false,
+    "has_active_warning_or_notice": true,
+    "has_active_adverse_action": false,
+    "latest_action_date": "2020-09-02",
+    "latest_action_year": "2020",
+    "action_count": 1
+  },
+  "actions": [
+    {
+      "accreditor": "SACSCOC",
+      "action_type": "notice",
+      "action_label": "org President Thomas Galligan September 18, 2020 Page Two the institution fails to document compliaiice with the above listed standards at the time ofthis review, the C&R commiUee will recommend further review whichmay begin a two-year monitoring period within which the institution must document compliance with all standards.",
+      "action_label_short": "Requested to submit a referral report documenting compliance with accreditation standards concerning adequate physical facilities and resources.",
+      "action_scope": null,
+      "action_status": "active",
+      "action_date": "2020-09-02",
+      "action_year": "2020",
+      "notes": "Heightened Monitoring or Focused Review",
+      "source_url": "https://ope.ed.gov/dapip/#/institution-profile/118675",
+      "source_title": "DAPIP Institutional Accreditation Action",
+      "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/118675",
+      "source_page_modified": null,
+      "display_action": true,
+      "public_table_strategy": "dapip_backed_keep",
+      "hybrid_candidate": false,
+      "hybrid_reason": null,
+      "has_financial_profile": true,
+      "is_primary_tracker": true
+    }
+  ],
+  "sources": [
+    {
+      "accreditor": "SACSCOC",
+      "source_title": "DAPIP Institutional Accreditation Action",
+      "source_url": "https://ope.ed.gov/dapip/#/institution-profile/118675",
+      "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/118675"
+    }
+  ]
 }
