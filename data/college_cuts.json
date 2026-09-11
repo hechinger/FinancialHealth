@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-10",
+  "generated_at": "2026-09-11",
   "recent": [
     {
       "unitid": "144281",
@@ -87,6 +87,35 @@
       "source_url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOcF8tdkpPaUIxQVNDNV84ekw4cjJVOUpGOWRrSC1iOVU1dlNCTjBEdjY4MzlpcFBtMXpOMDlXTWc1aTQwU21YQjBKb21ydGhldmw2VG94M24wWXAtbVF5V3NnekR3ajVBMVlZWjZfUWw5OE00SDdlelUwY1BoaE9Lc1M5Um0xbjY2NEVRclc4TnJOV3g2UkpSeFZZT241S05jS3BjQUZZcmVrVUVOM3FOUjJtVTFfZkhnWlB5QzZPaVdNREdMaThwX1pKRi3SAeABQVVfeXFMT1h3NzhFb0hXY2ZVMEMtb3RjMFgyVzBXZGVHTWx3S1FCQXlNVFUxbVl3UlFIVmNGU0wxWXhidlBlN0U1YXRYRlgtZHNFNDBVUEw0T0VyVnFKZkE4NGl1Vk10MTRYbXhsQ3cxTHN4MExtT1Fpb1haUGpNR1lTY0VPbXYyT05OZW80NWVZNEpIMk5zRTlVelkySXZQSm9fVFRPV1pTSFMwNERPLW0yQXItMzQyb0V6TE5nd0Rrb3RZNmxEYnQzQjJ2UUxCZTFMXzRJYi1UOXJrU05QR2taV3MtaTE?oc=5&hl=en-US&gl=US&ceid=US%3Aen",
       "source_title": "Full Sail University eliminates 180 positions in organizational realignment - WFTV",
       "source_publication": "WFTV"
+    },
+    {
+      "unitid": "111188",
+      "financial_unitid": "111188",
+      "institution_name": "California State University Maritime Academy",
+      "city": null,
+      "state": "California",
+      "control_label": null,
+      "category": null,
+      "is_primary_tracker": false,
+      "has_financial_profile": true,
+      "announcement_date": "2026-08-27",
+      "announcement_year": 2026,
+      "program_name": "Merged with California Polytechnic State University, San Luis Obispo",
+      "cut_label_public": "Merged with California Polytechnic State University, San Luis Obispo",
+      "cut_summary_public": null,
+      "primary_display_category": "Institution closures/absorptions",
+      "display_category": "Institution closures/absorptions",
+      "display_categories": [
+        "Institution closures/absorptions"
+      ],
+      "cut_type": "institution_closure",
+      "status": null,
+      "effective_term": null,
+      "positions_affected": null,
+      "notes": null,
+      "source_url": "https://ope.ed.gov/dapip/#/institution-profile/103194",
+      "source_title": "DAPIP Institutional Accreditation Action",
+      "source_publication": "DAPIP Institutional Accreditation Action"
     },
     {
       "unitid": "230764",
@@ -700,35 +729,6 @@
       "source_url": "https://dailybruin.com/2026/07/08/ucla-cuts-27-dts-jobs-amid-budget-deficit-upte-cwa-9119-alleges-contract-violation",
       "source_title": null,
       "source_publication": "Daily Bruin"
-    },
-    {
-      "unitid": "498571",
-      "financial_unitid": "498571",
-      "institution_name": "Pennsylvania Western University",
-      "city": null,
-      "state": "Pennsylvania",
-      "control_label": null,
-      "category": null,
-      "is_primary_tracker": false,
-      "has_financial_profile": true,
-      "announcement_date": "2026-06-30",
-      "announcement_year": 2026,
-      "program_name": "Cut six undergraduate majors and three graduate majors. Cut 34 minors while adding 45 new certificates, credentials and concentrations.",
-      "cut_label_public": "Cut six undergraduate majors and three graduate majors. Cut 34 minors while adding 45 new certificates, credentials and concentrations.",
-      "cut_summary_public": null,
-      "primary_display_category": "Academic program cuts",
-      "display_category": "Academic program cuts",
-      "display_categories": [
-        "Academic program cuts"
-      ],
-      "cut_type": "program_suspension",
-      "status": null,
-      "effective_term": null,
-      "positions_affected": null,
-      "notes": null,
-      "source_url": "https://www.post-gazette.com/news/education/2026/06/30/pennwest-program-cuts-california-arts-certificates/stories/202606290046",
-      "source_title": "Some PennWest alumni alarmed as university moves to eliminate art programs - Pittsburgh Post-Gazette",
-      "source_publication": "Pittsburgh Post-Gazette"
     }
   ],
   "schools": {
@@ -1843,6 +1843,51 @@
           "source_url": "https://lookout.co/as-uc-santa-cruz-reduces-its-budget-german-persian-language-courses-face-elimination/story",
           "source_title": null,
           "source_publication": "Lookout",
+          "source_published_at": null
+        }
+      ]
+    },
+    "111188": {
+      "unitid": "111188",
+      "financial_unitid": "111188",
+      "has_financial_profile": true,
+      "is_primary_tracker": false,
+      "institution_name": "California State University Maritime Academy",
+      "institution_alias": "California State University Maritime Academy",
+      "city": null,
+      "state": "California",
+      "control_label": null,
+      "category": null,
+      "latest_cut_date": "2026-08-27",
+      "latest_cut_label": "Merged with California Polytechnic State University, San Luis Obispo",
+      "confirmed_closure_announcement": false,
+      "confirmed_closure_badge_kind": {},
+      "confirmed_closure_announcement_date": {},
+      "confirmed_closure_source_url": {},
+      "confirmed_closure_evidence_text": {},
+      "cut_count": 1,
+      "cuts": [
+        {
+          "announcement_date": "2026-08-27",
+          "announcement_year": 2026,
+          "program_name": "Merged with California Polytechnic State University, San Luis Obispo",
+          "cut_label_public": "Merged with California Polytechnic State University, San Luis Obispo",
+          "cut_summary_public": null,
+          "primary_display_category": "Institution closures/absorptions",
+          "display_category": "Institution closures/absorptions",
+          "display_categories": [
+            "Institution closures/absorptions"
+          ],
+          "cut_type": "institution_closure",
+          "status": null,
+          "effective_term": null,
+          "students_affected": null,
+          "faculty_affected": null,
+          "positions_affected": null,
+          "notes": null,
+          "source_url": "https://ope.ed.gov/dapip/#/institution-profile/103194",
+          "source_title": "DAPIP Institutional Accreditation Action",
+          "source_publication": "DAPIP Institutional Accreditation Action",
           "source_published_at": null
         }
       ]

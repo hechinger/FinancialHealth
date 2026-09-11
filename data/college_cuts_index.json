@@ -893,6 +893,44 @@
       }
     ]
   },
+  "111188": {
+    "unitid": "111188",
+    "financial_unitid": "111188",
+    "has_financial_profile": true,
+    "is_primary_tracker": false,
+    "institution_name": "California State University Maritime Academy",
+    "institution_alias": "California State University Maritime Academy",
+    "institution_unique_name": "California State University Maritime Academy | California",
+    "state": "California",
+    "city": null,
+    "control_label": null,
+    "category": null,
+    "latest_cut_date": "2026-08-27",
+    "latest_cut_label": "Merged with California Polytechnic State University, San Luis Obispo",
+    "confirmed_closure_announcement": false,
+    "confirmed_closure_badge_kind": {},
+    "confirmed_closure_announcement_date": {},
+    "confirmed_closure_source_url": {},
+    "confirmed_closure_evidence_text": {},
+    "cut_count": 1,
+    "landing_cuts": [
+      {
+        "announcement_date": "2026-08-27",
+        "announcement_year": 2026,
+        "program_name": "Merged with California Polytechnic State University, San Luis Obispo",
+        "cut_type": "institution_closure",
+        "cut_label_public": "Merged with California Polytechnic State University, San Luis Obispo",
+        "primary_display_category": "Institution closures/absorptions",
+        "display_category": "Institution closures/absorptions",
+        "display_categories": [
+          "Institution closures/absorptions"
+        ],
+        "positions_affected": null,
+        "faculty_affected": null,
+        "source_url": "https://ope.ed.gov/dapip/#/institution-profile/103194"
+      }
+    ]
+  },
   "112190": {
     "unitid": "112190",
     "financial_unitid": "112190",
