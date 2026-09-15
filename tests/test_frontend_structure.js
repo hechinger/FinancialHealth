@@ -55,6 +55,7 @@ const PAGES = [
       { pattern: /<a[^>]+class="top-tab is-active"[^>]+href="cuts\.html"[^>]+aria-current="page"[^>]*>College Cuts<\/a>/, message: "Active College Cuts tab with aria-current" },
       { pattern: /id="cuts-list"[^>]*aria-live="polite"/, message: 'cuts-list with aria-live="polite"' },
       { pattern: /id="cuts-search-results"/, message: "Cuts autocomplete results container" },
+      { pattern: /src="js\/cuts\.js\?v=[^"]+"/, message: "Versioned College Cuts script URL" },
       // Editorial Calm dropped the legacy .masthead-title decorative
       // duplicate from cuts/accred/research/school in favor of a real
       // page-specific h1 in the hero. Accept the legacy treatment OR
