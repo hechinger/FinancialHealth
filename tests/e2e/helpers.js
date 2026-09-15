@@ -112,6 +112,67 @@ function schoolWithTuitionDependenceAtDisplayedMedian() {
   throw new Error('No school with displayed tuition dependence equal to displayed sector median available for e2e tests');
 }
 
+function asFiniteNumber(value) {
+  if (value === null || value === undefined || value === '') return null;
+  const numeric = Number(value);
+  return Number.isFinite(numeric) ? numeric : null;
+}
+
+function isNegativeFiveYearTrend(value) {
+  const numeric = asFiniteNumber(value);
+  return numeric !== null && numeric <= -10;
+}
+
+function isYes(value) {
+  return value === true || value === 1 || String(value || '').trim().toLowerCase() === 'yes' || String(value || '').trim() === '1';
+}
+
+function schoolWithPatternAndWideWarningBadges() {
+  const schoolsDir = path.join(ROOT, 'data', 'schools');
+  const files = fs.readdirSync(schoolsDir).filter((file) => file.endsWith('.json')).sort();
+
+  for (const file of files) {
+    const school = JSON.parse(fs.readFileSync(path.join(schoolsDir, file), 'utf8'));
+    const summary = school.summary || {};
+    const control = String(school.profile?.control_label || '').trim().toLowerCase();
+
+    // This test only needs private schools, avoiding the public-only state-aid
+    // card while matching the same visible-card rules used on school.html.
+    if (control === 'public') continue;
+
+    const hasRevenue = asFiniteNumber(summary.revenue_pct_change_5yr) !== null;
+    const hasLossPattern = summary.losses_last_3_of_5 !== null && summary.losses_last_3_of_5 !== undefined && summary.losses_last_3_of_5 !== '';
+    const hasLossYears = summary.loss_years_last_10 !== null && summary.loss_years_last_10 !== undefined && summary.loss_years_last_10 !== '';
+    const hasNetTuition = asFiniteNumber(summary.net_tuition_per_fte_change_5yr) !== null;
+    const hasEnrollment = asFiniteNumber(summary.enrollment_pct_change_5yr) !== null;
+    const hasEnrollmentPattern = summary.enrollment_decline_last_3_of_5 !== null && summary.enrollment_decline_last_3_of_5 !== undefined && summary.enrollment_decline_last_3_of_5 !== '';
+    const hasStaff = asFiniteNumber(summary.staff_total_headcount_pct_change_5yr) !== null;
+    const hasEndowment = asFiniteNumber(summary.endowment_pct_change_5yr) !== null;
+
+    const redCount = [
+      hasRevenue && isNegativeFiveYearTrend(summary.revenue_pct_change_5yr),
+      hasLossPattern && isYes(summary.losses_last_3_of_5),
+      hasLossYears && asFiniteNumber(summary.loss_years_last_10) >= 5,
+      hasNetTuition && isNegativeFiveYearTrend(summary.net_tuition_per_fte_change_5yr),
+      hasEnrollment && isNegativeFiveYearTrend(summary.enrollment_pct_change_5yr),
+      hasEnrollmentPattern && isYes(summary.enrollment_decline_last_3_of_5),
+      hasStaff && isNegativeFiveYearTrend(summary.staff_total_headcount_pct_change_5yr),
+      hasEndowment && isNegativeFiveYearTrend(summary.endowment_pct_change_5yr)
+    ].filter(Boolean).length;
+
+    if (
+      isNegativeFiveYearTrend(summary.enrollment_pct_change_5yr) &&
+      isNegativeFiveYearTrend(summary.net_tuition_per_fte_change_5yr) &&
+      isYes(summary.losses_last_3_of_5) &&
+      redCount >= 6
+    ) {
+      return school.unitid || path.basename(file, '.json');
+    }
+  }
+
+  throw new Error('No private school currently qualifies for both warning-summary badges');
+}
+
 function latestEnrollmentText(unitid) {
   const school = readJson(path.join('data', 'schools', `${unitid}.json`));
   const points = (school.series?.enrollment_headcount_total || [])
@@ -488,6 +549,7 @@ module.exports = {
   schoolWithCharts,
   schoolWithoutEndowment,
   schoolWithTuitionDependenceAtDisplayedMedian,
+  schoolWithPatternAndWideWarningBadges,
   latestEnrollmentText,
   schoolWithClosureStatus,
   schoolWithRelatedPages,

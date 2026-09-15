@@ -13,6 +13,7 @@ const {
   schoolWithResearchSource,
   schoolWithoutEndowment,
   schoolWithTuitionDependenceAtDisplayedMedian,
+  schoolWithPatternAndWideWarningBadges,
   schoolWithClosureStatus,
   relatedPagesForSchool,
   unmatchedCutSchool,
@@ -30,10 +31,11 @@ const unmatchedCutUnitid = unmatchedCutSchool();
 const unmatchedResearchUnitid = unmatchedResearchSchool();
 const unmatchedAccreditationUnitid = unmatchedAccreditationSchool();
 const patternOnlyWarningBadgeUnitid = '119173'; // Mount Saint Mary's University: pattern badge (enr -19.7%, ntr -30.7%, losses 3/5) with only 3 reds total
-const patternAndWideWarningBadgeUnitid = '101116';
+const patternAndWideWarningBadgeUnitid = schoolWithPatternAndWideWarningBadges();
 const wideOnlyWarningBadgeUnitid = '144281'; // Columbia College Chicago: 6 reds, no pattern badge (enr -8.2% not below -10%)
+const stateAidWideBadgeUnitid = '185129'; // NJCU (public): 6th red is the state & local funding indicator (-14.9%); net tuition -8.1% stays neutral
 const noWarningBadgeUnitid = '104586';
-const californiaArtsClosureUnitid = '110370';
+const southernOregonNoClosureUnitid = '210146';
 const limestoneClosureUnitid = '218238';
 const cornishAbsorptionUnitid = '235024';
 
@@ -397,18 +399,17 @@ test.describe('Frontend state synchronization', () => {
     await expect(closureFlag).toBeEmpty();
   });
 
-  test('school pages show closure or absorption badges from institution closure records', async ({ page }) => {
-    await page.goto(`/school.html?unitid=${californiaArtsClosureUnitid}`);
+  test('school pages show closure or absorption badges only for institution_closure records', async ({ page }) => {
+    await page.goto(`/school.html?unitid=${southernOregonNoClosureUnitid}`);
 
-    let closureBadge = page.locator('#school-announced-closure .school-announced-closure-badge');
+    const noClosureBadgeWrap = page.locator('#school-announced-closure');
     let absorptionBadgeWrap = page.locator('#school-announced-merger');
-    await expect(closureBadge).toBeVisible();
-    await expect(closureBadge).toContainText('Closure announced');
+    await expect(noClosureBadgeWrap).toHaveClass(/is-hidden/);
     await expect(absorptionBadgeWrap).toHaveClass(/is-hidden/);
 
     await page.goto(`/school.html?unitid=${limestoneClosureUnitid}`);
 
-    closureBadge = page.locator('#school-announced-closure .school-announced-closure-badge');
+    let closureBadge = page.locator('#school-announced-closure .school-announced-closure-badge');
     absorptionBadgeWrap = page.locator('#school-announced-merger');
     await expect(closureBadge).toBeVisible();
     await expect(closureBadge).toContainText('Closure announced');
@@ -446,6 +447,17 @@ test.describe('Frontend state synchronization', () => {
     await expect(badges.nth(1)).toHaveAttribute('aria-label', /at least 6/i);
 
     await page.goto(`/school.html?unitid=${wideOnlyWarningBadgeUnitid}`);
+
+    badgeGroup = page.locator('#school-warning-summary');
+    badges = badgeGroup.locator('.school-warning-summary');
+    await expect(badgeGroup).not.toHaveClass(/is-hidden/);
+    await expect(badges).toHaveCount(1);
+    await expect(badges.nth(0)).toContainText('At least 6 warning signs');
+    await expect(badges.nth(0)).toHaveClass(/is-broad/);
+
+    // Public institutions: the state & local funding indicator counts toward
+    // the tally (NJCU only reaches 6 reds through it).
+    await page.goto(`/school.html?unitid=${stateAidWideBadgeUnitid}`);
 
     badgeGroup = page.locator('#school-warning-summary');
     badges = badgeGroup.locator('.school-warning-summary');

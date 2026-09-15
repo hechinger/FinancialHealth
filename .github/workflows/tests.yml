@@ -75,4 +75,6 @@ jobs:
           python tests/test_update_drift_state.py
           python tests/test_build_federal_composite_scores.py
           python tests/test_build_hcm_level2.py
-          python tests/test_import_supabase.py
+          # The Supabase importer test runs in the private source repository.
+          # Its authoritative manual-alias input is intentionally not deployed
+          # to this public static-site repository.
