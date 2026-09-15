@@ -51,10 +51,37 @@
     return isPrimaryTrackerInstitution(record);
   }
 
+  function parseCutDate(cut) {
+    const raw = String(cut?.announcement_date || "").trim();
+    if (!raw) return null;
+    if (/^\d{4}-\d{2}-\d{2}$/.test(raw)) {
+      const parsed = new Date(`${raw}T00:00:00Z`);
+      return Number.isNaN(parsed.getTime()) ? null : parsed;
+    }
+    if (/^\d{4}-\d{2}$/.test(raw)) {
+      const parsed = new Date(`${raw}-01T00:00:00Z`);
+      return Number.isNaN(parsed.getTime()) ? null : parsed;
+    }
+    const parsed = new Date(raw);
+    return Number.isNaN(parsed.getTime()) ? null : parsed;
+  }
+
+  function formatCutDate(cut) {
+    const parsed = parseCutDate(cut);
+    if (parsed) {
+      return parsed.toLocaleDateString("en-US", {
+        month: "long",
+        year: "numeric",
+        timeZone: "UTC"
+      });
+    }
+    return String(cut?.announcement_year || "").trim();
+  }
+
   function renderCutItem(cut) {
     const label = cleanCutLabel(cut.cut_label_public || cut.program_name || resolveDisplayCategory(cut));
     const categories = resolveDisplayCategories(cut);
-    const date = cut.announcement_date || cut.announcement_year || "";
+    const date = formatCutDate(cut);
     const term = cut.effective_term ? `<p class="small-meta">Effective term: ${escapeHtml(cut.effective_term)}</p>` : "";
     const sourceLink = renderExternalLink(cut.source_url, "Source");
     const source = sourceLink
@@ -477,7 +504,7 @@
           <td>${renderCategoryTags(resolveDisplayCategories(cut), "history-table-cut-tags")}</td>
           <td>${escapeHtml(cut.state || "")}</td>
           <td>${escapeHtml(cut.control_label || "")}</td>
-          <td>${escapeHtml(cut.announcement_date || cut.announcement_year || "")}</td>
+          <td>${escapeHtml(formatCutDate(cut))}</td>
         </tr>
       `)
         : [`<tr><td colspan="5" class="history-table-empty-cell">${escapeHtml(emptyMessage)}</td></tr>`])
@@ -486,7 +513,7 @@
         cleanCutLabel(cut.cut_label_public || cut.program_name),
         cut.state,
         cut.control_label,
-        cut.announcement_date || cut.announcement_year || ""
+        formatCutDate(cut)
       ]);
     return renderHistoryTable({
       ariaLabel: "College cuts by institution",

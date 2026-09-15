@@ -171,6 +171,15 @@ test.describe('Frontend state synchronization', () => {
     await expect(list.locator('th[aria-sort="descending"]')).toHaveCount(1);
     await expect(list.locator('th[aria-sort="descending"]')).toContainText('Date');
 
+    const landingDates = await list.locator('tbody tr td:nth-child(5)').evaluateAll((cells) =>
+      cells.map((cell) => (cell.textContent || '').trim())
+    );
+    expect(landingDates.length).toBeGreaterThan(1);
+    expect(landingDates[0]).toMatch(/^(January|February|March|April|May|June|July|August|September|October|November|December) \d{4}$/);
+    for (let index = 1; index < landingDates.length; index += 1) {
+      expect(parseVisibleMonthYear(landingDates[index - 1]) >= parseVisibleMonthYear(landingDates[index])).toBe(true);
+    }
+
     await list.locator('button[data-sort-key="state"][data-sort-direction="asc"]').click();
 
     await expect(list.locator('th[aria-sort]')).toHaveCount(1);
