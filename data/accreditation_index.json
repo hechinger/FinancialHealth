@@ -463,27 +463,10 @@
     "city": "San Francisco",
     "control_label": "Private for-profit",
     "category": "Degree-granting, primarily baccalaureate or above",
-    "latest_action_date": "2026-02-13",
+    "latest_action_date": "2026-02-01",
     "latest_action_label": "Removed Notice of Concern and issued a Warning because it is out of compliance with standards concerning student completion and resource planning",
-    "action_count": 3,
+    "action_count": 2,
     "landing_actions": [
-      {
-        "accreditor": "WSCUC",
-        "action_label": "At that meeting the Commission removed the Notice of Concern and issued a Warning.",
-        "action_label_short": "Removed Notice of Concern and issued a Warning because it is out of compliance with standards concerning student completion and resource planning",
-        "action_scope": null,
-        "action_type": "notice",
-        "action_date": "2026-02-13",
-        "action_year": "2026",
-        "display_action": true,
-        "public_table_strategy": "dapip_backed_keep",
-        "hybrid_candidate": false,
-        "hybrid_reason": null,
-        "notes": "Warning or Equivalent-Factors Affecting Academic Quality",
-        "source_url": "https://ope.ed.gov/dapip/#/institution-profile/102368",
-        "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/102368",
-        "source_title": "DAPIP Institutional Accreditation Action"
-      },
       {
         "accreditor": "WSCUC",
         "action_label": "Following a Special Visit – Remove Notice of Concern/Issue a Warning",
@@ -504,7 +487,7 @@
       {
         "accreditor": "WSCUC",
         "action_label": "Following a Special Visit – Issue a Formal Notice of Concern",
-        "action_label_short": "Issue a formal notice of concern",
+        "action_label_short": "Received a formal notice of concern",
         "action_scope": null,
         "action_type": "notice",
         "action_date": "2024-06-01",
@@ -3383,41 +3366,6 @@
       }
     ]
   },
-  "145497": {
-    "unitid": "145497",
-    "financial_unitid": "145497",
-    "has_financial_profile": true,
-    "is_primary_tracker": true,
-    "institution_name": "Hebrew Theological College",
-    "institution_alias": "HTC, TI, Teacher's Institute, Skokie Yeshiva, Sarah Hartman Womenâs College of Touro at HTC, Machon Torani L'Banot, Beis HaMidrash L'Torah",
-    "institution_unique_name": "Hebrew Theological College | Skokie | Illinois",
-    "state": "Illinois",
-    "city": "Skokie",
-    "control_label": "Private not-for-profit",
-    "category": "Degree-granting, primarily baccalaureate or above",
-    "latest_action_date": "2026-07-07",
-    "latest_action_label": "Voluntarily Surrendered Accreditation. \"The institution has indicated that it intends to maintain accreditation as part of Touro University’s\r\naccreditation through another federally recognized accrediting agency.\"",
-    "action_count": 1,
-    "landing_actions": [
-      {
-        "accreditor": "HLC",
-        "action_label": "Hebrew Theological College Voluntary Resignation of Accreditation Effective: July 7, 2026 Hebrew Theological College in Skokie, Illinois, voluntarily resigned its accreditation with the Higher Learning Commission effective July 7, 2026.",
-        "action_label_short": "Voluntarily Surrendered Accreditation. \"The institution has indicated that it intends to maintain accreditation as part of Touro University’s\r\naccreditation through another federally recognized accrediting agency.\"",
-        "action_scope": null,
-        "action_type": "adverse_action",
-        "action_date": "2026-07-07",
-        "action_year": "2026",
-        "display_action": true,
-        "public_table_strategy": "dapip_backed_keep",
-        "hybrid_candidate": false,
-        "hybrid_reason": null,
-        "notes": "Loss of Accreditation or Preaccreditation: Voluntary Withdrawal | The institution voluntarily resigned status with HLC, effective July 7, 2026.",
-        "source_url": "https://ope.ed.gov/dapip/#/institution-profile/113102",
-        "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/113102",
-        "source_title": "DAPIP Institutional Accreditation Action"
-      }
-    ]
-  },
   "151810": {
     "unitid": "151810",
     "financial_unitid": "151810",
@@ -3465,10 +3413,27 @@
     "city": "Saint Mary of the Woods",
     "control_label": "Private not-for-profit",
     "category": "Degree-granting, primarily baccalaureate or above",
-    "latest_action_date": "2025-06-26",
-    "latest_action_label": "Placed on Notice because it is at risk of being out of compliance with standards involving financial responsibility and reporting.",
-    "action_count": 1,
+    "latest_action_date": "2026-05-28",
+    "latest_action_label": "Placed on Notice because it is at risk of being out of compliance with accreditation standard concerning fair and ethical behavior.",
+    "action_count": 2,
     "landing_actions": [
+      {
+        "accreditor": "HLC",
+        "action_label": "On Notice",
+        "action_label_short": "Placed on Notice because it is at risk of being out of compliance with accreditation standard concerning fair and ethical behavior.",
+        "action_scope": null,
+        "action_type": "notice",
+        "action_date": "2026-05-28",
+        "action_year": "2026",
+        "display_action": true,
+        "public_table_strategy": null,
+        "hybrid_candidate": false,
+        "hybrid_reason": null,
+        "notes": null,
+        "source_url": "https://www.hlcommission.org/wp-content/uploads/HLC-Action-Letter-Saint-Mary-of-the-Woods-College-7.8.25.pdf",
+        "source_page_url": "https://www.hlcommission.org/wp-content/uploads/HLC-Action-Letter-Saint-Mary-of-the-Woods-College-7.8.25.pdf",
+        "source_title": "Accreditation Actions | The Higher Learning Commission - On Notice"
+      },
       {
         "accreditor": "HLC",
         "action_label": "Summary of the Action: The Institution has been placed on Notice because it is at risk of being out of compliance with the Criteria for Accreditation.",
@@ -4996,7 +4961,7 @@
     "category": "Degree-granting, primarily baccalaureate or above",
     "latest_action_date": "2026-06-04",
     "latest_action_label": "Accepted Teach Out Plan",
-    "action_count": 5,
+    "action_count": 4,
     "landing_actions": [
       {
         "accreditor": "NECHE",
@@ -5031,23 +4996,6 @@
         "source_url": "https://www.neche.org/commission-statements/joint-statement-by-anna-maria-college-and-the-commission-april-2026/",
         "source_page_url": "https://www.neche.org/commission-statements/joint-statement-by-anna-maria-college-and-the-commission-april-2026/",
         "source_title": "Joint Statement by Anna Maria College and the Commission April 2026"
-      },
-      {
-        "accreditor": "NECHE",
-        "action_label": "Voluntary Withdrawal Received",
-        "action_label_short": "Voluntarily Surrendered Accreditation",
-        "action_scope": null,
-        "action_type": "adverse_action",
-        "action_date": "2026-04-24",
-        "action_year": "2026",
-        "display_action": true,
-        "public_table_strategy": "dapip_backed_keep",
-        "hybrid_candidate": false,
-        "hybrid_reason": null,
-        "notes": "Voluntary Withdrawal Received | Anticipated closure date and accreditation withdrawal effective date of December 31, 2026",
-        "source_url": "https://ope.ed.gov/dapip/#/institution-profile/120607",
-        "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/120607",
-        "source_title": "DAPIP Institutional Accreditation Action"
       },
       {
         "accreditor": "NECHE",
@@ -10094,7 +10042,7 @@
     "category": "Degree-granting, primarily baccalaureate or above",
     "latest_action_date": "2026-08-19",
     "latest_action_label": "To note that the institution's accreditation will cease on September 11, 2026.",
-    "action_count": 5,
+    "action_count": 3,
     "landing_actions": [
       {
         "accreditor": "MSCHE",
@@ -10132,54 +10080,20 @@
       },
       {
         "accreditor": "MSCHE",
-        "action_label": "To note the decision of the University of Valley Forge to cease academic instruction and close while on show cause. To note that the show cause report required by the Commission action of June 25, 2026, is no longer required and that an on-site show cause visit will not be conducted because the institution will close. To note that the requirement to appear before the Commission to show cause why its accreditation should not be withdrawn is no longer required. To note the submission of a teach-out plan with teach-out agreements due September 1, 2026, is now due August 14, 2026.",
-        "action_label_short": "To note the decision of the University of Valley Forge to cease academic instruction and close while on show cause.",
+        "action_label": "Non-Compliance Show Cause",
+        "action_label_short": "To require the institution to show cause to demonstrate why its accreditation should not be withdrawn because of insufficient evidence that the institution is in compliance with Standard VI (Planning, Resources, and Institutional Improvement) and Standard VII (Governance, Leadership, and Administration)",
         "action_scope": null,
-        "action_type": "other",
-        "action_date": "2026-08-11",
-        "action_year": "2026",
-        "display_action": true,
-        "public_table_strategy": "scraper_backed_keep",
-        "hybrid_candidate": false,
-        "hybrid_reason": null,
-        "notes": "To note the decision of the University of Valley Forge to cease academic instruction and close while on show cause. To note that the show cause report required by the Commission action of June 25, 2026, is no longer required and that an on-site show cause visit will not be conducted because the institution will close. To note that the requirement to appear before the Commission to show cause why its accreditation should not be withdrawn is no longer required. To note the submission of a teach-out plan with teach-out agreements due September 1, 2026, is now due August 14, 2026.",
-        "source_url": "https://www.msche.org/institution/0815/",
-        "source_page_url": "https://www.msche.org/institution/0815/",
-        "source_title": "MSCHE Statement of Accreditation Status - University of Valley Forge"
-      },
-      {
-        "accreditor": "MSCHE",
-        "action_label": "To acknowledge receipt of the teach-out plan. To approve the teach-out plan and the teach-out agreement with Messiah University, Mechanicsburg, PA. To postpone a decision on the following teach-out agreements because information was insufficient, and the Commission needs to verify information: (1) Eastern University, St. David's, PA and (2) Southeastern University, Lakeland, FL. To remind the institution of its obligation to submit signed teach-out agreements as they become available and to facilitate the transfer of students in a timely manner. To require an updated, comprehensive, and implementable teach-out plan with signed teach-out agreements, due August 14, 2026 providing evidence of (1) signed copies of any updated teach-out agreements, including any documentation supporting the agreements (Teach-Out Plans and Agreements Policy and Procedures); (2) documentation of financial and human resources necessary to implement the teach-out plan including, but not limited to, financial resources to meet staffing and payroll obligations (Teach-Out Plans and Agreements Policy and Procedures); (3) copies of documentation and appropriate advisement and support services specific to the needs of all students, including but not limited to those with special considerations such as student athletes, international students, and veterans (Teach-Out Plans and Agreements Policy and Procedures); (4) documentation that communications regarding student records has occurred and that transcripts have been issued to all students (Teach-Out Plans and Agreements Policy and Procedures); (5) an executed agreement for the permanent disposition of student records so that students and alumni will be able to obtain accurate and complete transcripts in the future (Teach-Out Plans and Agreements Policy and Procedures); (6) a finalized agreement for the arrangements of employee and other organizational records (Teach-Out Plans and Agreements Policy and Procedures); (7) the status of any and all payments, deposits and refunds for students (Standard 2, Teach-Out Plans and Agreements Policy and Procedures); and (8) updated and ongoing communications regarding the status of the institution to the University of Valley Forge community, including all governing board members, students, faculty, and staff, and others with significant roles (Standard 2, Communication in the Accreditation Process Policy and Procedures, Public Disclosures Policy and Procedures and Teach-Out Plans and Agreements Policy and Procedures). In accordance with Commission policy and federal regulations, the teach-out plan must provide for the equitable treatment of students to complete their education or transfer to another institution. To direct the institution to execute an agreement with a custodian or repository for student academic records and transcripts, including evidence of financial payment for services if necessary. To direct the immediate release of any and all refunds owed to students.",
-        "action_label_short": "Approved Teach-Out Agreements",
-        "action_scope": null,
-        "action_type": "adverse_action",
-        "action_date": "2026-08-11",
+        "action_type": "show_cause",
+        "action_date": "2026-06-29",
         "action_year": "2026",
         "display_action": true,
         "public_table_strategy": null,
         "hybrid_candidate": false,
         "hybrid_reason": null,
         "notes": null,
-        "source_url": "https://www.msche.org/institution/0815/",
-        "source_page_url": "https://www.msche.org/institution/0815/",
-        "source_title": "MSCHE Statement of Accreditation Status - University of Valley Forge"
-      },
-      {
-        "accreditor": "MSCHE",
-        "action_label": "David Kim President University of Valley Forge 1401 Charlestown Road Phoenixville, PA 19460 NOTIFICATION OF NON-COMPLIANCE SHOW CAUSE ACTION Dear Rev.",
-        "action_label_short": "Required to Show Cause because of insufficient evidence of compliance with Standard VI (Planning, Resources, and Institutional Improvement)",
-        "action_scope": null,
-        "action_type": "show_cause",
-        "action_date": "2026-06-25",
-        "action_year": "2026",
-        "display_action": true,
-        "public_table_strategy": "dapip_backed_keep",
-        "hybrid_candidate": false,
-        "hybrid_reason": null,
-        "notes": "Probation or Equivalent or a More Severe Status: Show Cause",
-        "source_url": "https://ope.ed.gov/dapip/#/institution-profile/141617",
-        "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/141617",
-        "source_title": "DAPIP Institutional Accreditation Action"
+        "source_url": "https://msche.box.com/shared/static/sejuhprw93drq0dnjzupsgv2yxn06jmr.pdf",
+        "source_page_url": "https://msche.box.com/shared/static/sejuhprw93drq0dnjzupsgv2yxn06jmr.pdf",
+        "source_title": "Non-Compliance and Adverse Actions by Status - Middle States Commission on Higher Education"
       }
     ]
   },
