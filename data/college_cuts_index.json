@@ -444,7 +444,7 @@
         "announcement_date": "2025-09-03",
         "announcement_year": 2025,
         "program_name": "CLU satellite campuses in Oxnard and Westlake Village closing summer 2026 due to sustained enrollment decline.",
-        "cut_type": "program_suspension",
+        "cut_type": "campus_closure",
         "cut_label_public": "CLU satellite campuses in Oxnard and Westlake Village closing summer 2026 due to sustained enrollment decline.",
         "primary_display_category": "Campus closures",
         "display_category": "Campus closures",
@@ -470,7 +470,7 @@
     "control_label": "Public",
     "category": "Degree-granting, primarily baccalaureate or above",
     "latest_cut_date": "2025-03-07",
-    "latest_cut_label": "Cut due to $450k/yr NCAA settlement costs and state funding cuts.",
+    "latest_cut_label": "Discontinued Swimming & Diving due to $450k/yr NCAA settlement costs.",
     "confirmed_closure_announcement": false,
     "confirmed_closure_badge_kind": {},
     "confirmed_closure_announcement_date": {},
@@ -481,9 +481,9 @@
       {
         "announcement_date": "2025-03-07",
         "announcement_year": 2025,
-        "program_name": "Cut due to $450k/yr NCAA settlement costs and state funding cuts.",
+        "program_name": "Discontinued Swimming & Diving due to $450k/yr NCAA settlement costs.",
         "cut_type": "program_suspension",
-        "cut_label_public": "Cut due to $450k/yr NCAA settlement costs and state funding cuts.",
+        "cut_label_public": "Discontinued Swimming & Diving due to $450k/yr NCAA settlement costs.",
         "primary_display_category": "Athletics cuts",
         "display_category": "Athletics cuts",
         "display_categories": [
@@ -2751,31 +2751,15 @@
     "city": "Evanston",
     "control_label": "Private not-for-profit",
     "category": "Degree-granting, primarily baccalaureate or above",
-    "latest_cut_date": "2026-08-18",
-    "latest_cut_label": "Northwestern plans to restructure Program of African Studies, cut two staff positions",
+    "latest_cut_date": "2025-07-29",
+    "latest_cut_label": "425 positions eliminated (5% of staff budget), nearly half of which were vacant",
     "confirmed_closure_announcement": false,
     "confirmed_closure_badge_kind": {},
     "confirmed_closure_announcement_date": {},
     "confirmed_closure_source_url": {},
     "confirmed_closure_evidence_text": {},
-    "cut_count": 3,
+    "cut_count": 2,
     "landing_cuts": [
-      {
-        "announcement_date": "2026-08-18",
-        "announcement_year": 2026,
-        "program_name": "Northwestern plans to restructure Program of African Studies, cut two staff positions",
-        "cut_type": "department_closure",
-        "cut_label_public": "Northwestern plans to restructure Program of African Studies, cut two staff positions",
-        "primary_display_category": "Research center cuts",
-        "display_category": "Research center cuts",
-        "display_categories": [
-          "Research center cuts",
-          "Staff layoffs"
-        ],
-        "positions_affected": 2,
-        "faculty_affected": null,
-        "source_url": "https://dailynorthwestern.com/2026/08/20/top-stories/northwestern-plans-to-restructure-program-of-african-studies-cut-two-staff-positions/"
-      },
       {
         "announcement_date": "2025-07-29",
         "announcement_year": 2025,
@@ -4280,7 +4264,7 @@
     "confirmed_closure_announcement_date": {},
     "confirmed_closure_source_url": {},
     "confirmed_closure_evidence_text": {},
-    "cut_count": 2,
+    "cut_count": 1,
     "landing_cuts": [
       {
         "announcement_date": "2026-05-28",
@@ -4296,21 +4280,6 @@
         "positions_affected": 29,
         "faculty_affected": 29,
         "source_url": "https://www.thebanner.com/education/higher-education/loyola-university-maryland-deficit-HG4AZKIQERF7HGOV6NQR55WR3M/"
-      },
-      {
-        "announcement_date": "2026-05-28",
-        "announcement_year": 2026,
-        "program_name": "Eliminated 66 jobs amid $20 million deficit",
-        "cut_type": "staff_layoff",
-        "cut_label_public": "Eliminated 66 jobs amid $20 million deficit",
-        "primary_display_category": "Staff layoffs",
-        "display_category": "Staff layoffs",
-        "display_categories": [
-          "Staff layoffs"
-        ],
-        "positions_affected": null,
-        "faculty_affected": null,
-        "source_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNSExDUHFYMXhOS3BwbU9weWJOb3NiRFRWdURNelpDcE4ydXg1YTVQUUZJTlNNTTVTdmlubjV1VGtITkY5cVNDcENUdGc0Y0xkOVJfejR5LUVDc0lBUUJWTFVBeW5ZUTc0T3VreGdNVVcySjVXaVFsZ0duN0ZxRmN5VTlyRUJiX2g3SWduMWt2TEVnb3pITDlxZnlzd2tGU1A0T1JTSTRaSjREZ0pVaXZLVmlPUVNEUQ?oc=5&hl=en-US&gl=US&ceid=US%3Aen"
       }
     ]
   },
@@ -4546,8 +4515,8 @@
     "city": "Waltham",
     "control_label": "Private not-for-profit",
     "category": "Degree-granting, primarily baccalaureate or above",
-    "latest_cut_date": "2024-05-31",
-    "latest_cut_label": "Facing budget deficit, Brandeis University eliminated 60 positions",
+    "latest_cut_date": "2024-05-01",
+    "latest_cut_label": "60 full/part-time staff positions eliminated due to financial challenges, enrollment declines, and structural inefficiencies.",
     "confirmed_closure_announcement": false,
     "confirmed_closure_badge_kind": {},
     "confirmed_closure_announcement_date": {},
@@ -4556,19 +4525,19 @@
     "cut_count": 1,
     "landing_cuts": [
       {
-        "announcement_date": "2024-05-31",
+        "announcement_date": "2024-05-01",
         "announcement_year": 2024,
-        "program_name": "Facing budget deficit, Brandeis University eliminated 60 positions",
+        "program_name": "60 full/part-time staff positions eliminated due to financial challenges, enrollment declines, and structural inefficiencies.",
         "cut_type": "staff_layoff",
-        "cut_label_public": "Facing budget deficit, Brandeis University eliminated 60 positions",
+        "cut_label_public": "60 full/part-time staff positions eliminated due to financial challenges, enrollment declines, and structural inefficiencies.",
         "primary_display_category": "Staff layoffs",
         "display_category": "Staff layoffs",
         "display_categories": [
           "Staff layoffs"
         ],
-        "positions_affected": null,
-        "faculty_affected": null,
-        "source_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQU0JTMlMwMjlxSmRfSl9CRU5ERXZ6eEd0SzJTTnU1bXdUY05SSDMwMTVlSzFnR2M3Zy1hTHBfVDZmMS1oQUVvSkdKRFltQlNkU0xsVklsaGt0NUVGU3dVcHNON1Q3TTdheDJrb2cxdWJRa0UwNWxocERIdHVIRFBTZ0M3S0xHSGVZOW9CVjdNQQ?oc=5&hl=en-US&gl=US&ceid=US%3Aen"
+        "positions_affected": 60,
+        "faculty_affected": 60,
+        "source_url": "https://ejewishphilanthropy.com/brandeis-university-to-cut-60-positions-restructure-schools-as-its-faces-financial-challenges/"
       }
     ]
   },
@@ -9088,20 +9057,20 @@
         "source_url": "https://www.opb.org/article/2026/07/23/southern-oregon-board-of-trustees-vitality-plan/"
       },
       {
-        "announcement_date": "2026-02-03",
+        "announcement_date": "2025-09-25",
         "announcement_year": 2026,
-        "program_name": "Eliminated 23 majors/minors and 70 positions in 2025 resiliency plan to address structural deficit.",
+        "program_name": "Will eliminate 10 bachelor’s degrees, 12 minors and one graduate program and lay off 18 employees and cut about three dozen other jobs through other methods in the face of long-term structural budget deficits.",
         "cut_type": "staff_layoff",
-        "cut_label_public": "Eliminated 23 majors/minors and 70 positions in 2025 resiliency plan to address structural deficit.",
+        "cut_label_public": "Will eliminate 10 bachelor’s degrees, 12 minors and one graduate program and lay off 18 employees and cut about three dozen other jobs through other methods in…",
         "primary_display_category": "Academic program cuts",
         "display_category": "Academic program cuts",
         "display_categories": [
           "Academic program cuts",
           "Staff layoffs"
         ],
-        "positions_affected": null,
+        "positions_affected": 18,
         "faculty_affected": null,
-        "source_url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOREdMRHZyaTN0RW9yRFhOUUNIMGU4d296SzN2aFZIZmtuNWVHT0ZHT3lQbEJmdWkzOFRmVmJ1QXdBazlYeHdnc3VuRnRBU3JLa2Naa3dEQXhraUdZR2NobDdPaFJoQ012bkFBUmFrY2gxV0RycG96Zmh3RFFEWjFHdm1n?oc=5&hl=en-US&gl=US&ceid=US%3Aen"
+        "source_url": "https://www.highereddive.com/news/southern-oregon-university-to-cut-23-programs-and-lay-off-18-employees/761036/"
       },
       {
         "announcement_date": "2023-06-29",
