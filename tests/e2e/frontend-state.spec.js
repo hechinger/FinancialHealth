@@ -433,7 +433,7 @@ test.describe('Frontend state synchronization', () => {
     await expect(badges).toHaveCount(1);
     await expect(badges.nth(0)).toContainText('Significant enrollment declines and losses');
     await expect(badges.nth(0)).not.toHaveClass(/is-broad/);
-    await expect(badges.nth(0)).toHaveAttribute('aria-label', /operating losses in at least 3 of the last 5 years/i);
+    await expect(badges.nth(0)).toHaveAttribute('aria-label', /operating losses in at least 3 of the latest 5 available finance years/i);
 
     await page.goto(`/school.html?unitid=${patternAndWideWarningBadgeUnitid}`);
 
