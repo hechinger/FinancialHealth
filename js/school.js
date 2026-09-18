@@ -6,6 +6,7 @@ const SHOW_CLOSURE_FLAGS = false;
 const CHART_COLOR_PRIMARY = "#005ab5";
 const CHART_COLOR_SECONDARY = "#e69f00";
 const CHART_COLOR_TERTIARY = "#009e73";
+const ENROLLMENT_DECLINE_YOY_THRESHOLD_PCT = -1;
 
 function asNumber(value) {
   if (value === null || value === undefined || value === "") return null;
@@ -115,7 +116,8 @@ const IPEDS_COMPONENT_LABELS = {
 
 function formatSourceDate(value) {
   if (!value) return "the latest update";
-  const parsed = new Date(`${value}T00:00:00`);
+  const rawValue = String(value);
+  const parsed = new Date(rawValue.includes("T") ? rawValue : `${rawValue}T00:00:00`);
   if (Number.isNaN(parsed.getTime())) return value;
   return new Intl.DateTimeFormat("en-US", {
     month: "long",
@@ -161,9 +163,14 @@ function createSourceCitation(textBeforeUrl, url, textAfterUrl = ".") {
   return sentence;
 }
 
-function createIpedsCitation(collectionYear, surveyComponent, retrievedAt) {
+function createIpedsCitation(vintage, surveyComponent, fallbackRetrievedAt) {
+  const collectionYear = vintage?.collection_year ?? vintage?.collectionYear ?? "latest";
+  const collectionYearLabel = vintage?.academic_year_label ?? vintage?.academicYearLabel ?? formatIpedsCollectionYear(collectionYear);
+  const releaseStatus = String(vintage?.release_status ?? vintage?.releaseStatus ?? "").trim().toLowerCase();
+  const statusLabel = releaseStatus === "provisional" ? " (provisional)" : "";
+  const retrievedAt = vintage?.retrieved_at ?? vintage?.retrievedAt ?? fallbackRetrievedAt;
   return createSourceCitation(
-    `U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), ${formatIpedsCollectionYear(collectionYear)}, ${normalizeIpedsComponentLabel(surveyComponent)}, Retrieved ${formatSourceDate(retrievedAt)}, from `,
+    `U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), ${collectionYearLabel}, ${normalizeIpedsComponentLabel(surveyComponent)}${statusLabel}, Retrieved ${formatSourceDate(retrievedAt)}, from `,
     SCHOOL_SOURCE_URLS.ipeds,
     "."
   );
@@ -251,17 +258,9 @@ function hasNegativePoint(values) {
   return toSeries(values).some((point) => point.value < 0);
 }
 
-function recentFiveYearRangeText(seriesValues) {
-  const values = toSeries(seriesValues);
-  if (values.length === 0) return "over the most recent available period";
-  if (values.length < 6) {
-    const start = values[0].year;
-    const end = values[values.length - 1].year;
-    return start === end ? `in ${end}` : `from ${start} to ${end}`;
-  }
-  const end = values[values.length - 1].year;
-  const start = values[values.length - 6].year;
-  return `from ${start} to ${end}`;
+function since2019RangeText(endYear) {
+  const numericYear = asNumber(endYear);
+  return numericYear === null ? "since 2019" : `from 2019 to ${numericYear}`;
 }
 
 const TREND_RED_THRESHOLD = -10;
@@ -293,7 +292,7 @@ function stateIsNegative(state) {
 }
 
 function revenueChangeState(summary) {
-  return sentimentClass(summary?.revenue_pct_change_5yr);
+  return sentimentClass(summary?.revenue_pct_change_since_2019);
 }
 
 function lossPatternState(summary) {
@@ -301,11 +300,11 @@ function lossPatternState(summary) {
 }
 
 function netTuitionChangeState(summary) {
-  return sentimentClass(summary?.net_tuition_per_fte_change_5yr);
+  return sentimentClass(summary?.net_tuition_per_fte_change_since_2019);
 }
 
 function enrollmentChangeState(summary) {
-  return sentimentClass(summary?.enrollment_pct_change_5yr);
+  return sentimentClass(summary?.enrollment_pct_change_since_2019);
 }
 
 function enrollmentDeclineState(value) {
@@ -313,11 +312,11 @@ function enrollmentDeclineState(value) {
 }
 
 function staffChangeState(summary) {
-  return sentimentClass(summary?.staff_total_headcount_pct_change_5yr);
+  return sentimentClass(summary?.staff_total_headcount_pct_change_since_2019);
 }
 
 function endowmentChangeState(summary) {
-  return sentimentClass(summary?.endowment_pct_change_5yr);
+  return sentimentClass(summary?.endowment_pct_change_since_2019);
 }
 
 function isRevenueRed(summary) {
@@ -350,8 +349,8 @@ function isEndowmentRed(summary) {
 
 function stateAidChangeState(summary) {
   return sentimentClass(firstNumericValue(
-    summary?.state_local_support_pct_change_5yr,
-    summary?.state_funding_pct_change_5yr
+    summary?.state_local_support_pct_change_since_2019,
+    summary?.state_funding_pct_change_since_2019
   ));
 }
 
@@ -492,8 +491,6 @@ function schoolWarningTypeLabel(profile) {
 }
 
 const WIDESPREAD_WARNING_MIN_REDS = 6;
-const PATTERN_YEAR_END = 2024;
-const PATTERN_YEAR_START = PATTERN_YEAR_END - 5;
 
 function appendSchoolWarningContext(tooltip, count, totalVisible, typeLabel) {
   const countStrong = document.createElement("strong");
@@ -730,7 +727,7 @@ function setupProfileJumpLinkTracking() {
   };
 }
 
-function syncSchoolWarningSummaryBadge(warningSummary, profile = null) {
+function syncSchoolWarningSummaryBadge(warningSummary, profile = null, summary = null) {
   const node = document.getElementById("school-warning-summary");
   if (!node) return;
 
@@ -748,7 +745,10 @@ function syncSchoolWarningSummaryBadge(warningSummary, profile = null) {
   const badges = [];
 
   if (warningSummary.showPatternBadge) {
-    const tooltipLabel = `This school shows a pattern of declines of at least 10% in both enrollment and net tuition revenue per student over five years, plus operating losses in at least 3 of the last 5 years. Across all ${totalVisible} potential indicators for a ${typeLabel}, ${count} ${count === 1 ? "is" : "are"} flagged as concerning. This is a sign of financial stress. Check out this institution's audits for more context.`;
+    const enrollmentRange = since2019RangeText(summary?.latest_enrollment_year);
+    const financeRange = since2019RangeText(summary?.latest_finance_year);
+    const patternDescription = `declines of at least 10% in enrollment ${enrollmentRange} and net tuition revenue per FTE ${financeRange}, plus operating losses in at least 3 of the latest 5 available finance years`;
+    const tooltipLabel = `This school shows a pattern of ${patternDescription}. Across all ${totalVisible} potential indicators for a ${typeLabel}, ${count} ${count === 1 ? "is" : "are"} flagged as concerning. This is a sign of financial stress. Check out this institution's audits for more context.`;
     badges.push(buildSchoolWarningBadge({
       label: "Significant enrollment declines and losses",
       tooltipLabel,
@@ -757,7 +757,7 @@ function syncSchoolWarningSummaryBadge(warningSummary, profile = null) {
         const patternStrong = document.createElement("strong");
         patternStrong.textContent = "declines of at least 10%";
         tooltip.append(patternStrong);
-        tooltip.append(document.createTextNode(" in both enrollment and net tuition revenue per student over five years, plus operating losses in at least 3 of the last 5 years."));
+        tooltip.append(document.createTextNode(` in enrollment ${enrollmentRange} and net tuition revenue per FTE ${financeRange}, plus operating losses in at least 3 of the latest 5 available finance years.`));
         appendSchoolWarningContext(tooltip, count, totalVisible, typeLabel);
       }
     }));
@@ -1297,10 +1297,15 @@ function deriveEnrollmentFlag(summary, series) {
   if (summary.enrollment_decline_last_3_of_5) return summary.enrollment_decline_last_3_of_5;
   const values = toSeries(series.enrollment_headcount_total);
   if (values.length < 6) return "No data";
-  const recent = values.slice(-6);
+  const valuesByYear = new Map(values.map((point) => [point.year, point.value]));
+  const latestYear = Math.max(...values.map((point) => point.year));
   let declines = 0;
-  for (let i = 1; i < recent.length; i += 1) {
-    if (recent[i].value < recent[i - 1].value) declines += 1;
+  for (let year = latestYear - 5; year < latestYear; year += 1) {
+    const priorValue = valuesByYear.get(year);
+    const currentValue = valuesByYear.get(year + 1);
+    if (!Number.isFinite(priorValue) || !Number.isFinite(currentValue) || priorValue === 0) continue;
+    const pctChange = ((currentValue - priorValue) / priorValue) * 100;
+    if (pctChange <= ENROLLMENT_DECLINE_YOY_THRESHOLD_PCT) declines += 1;
   }
   return declines >= 3 ? "Yes" : "No";
 }
@@ -1337,7 +1342,7 @@ function computeSchoolWarningSummary(summary, enrollmentFlag, visibility) {
   pushMetric("loss_years", "Loss years in the last 10", visibility.hasLossYearsCard, stateIsNegative(lossYearsState(summary?.loss_years_last_10)));
   pushMetric("net_tuition", "Net tuition revenue per FTE", visibility.hasNetTuitionCard, isNetTuitionRed(summary));
   pushMetric("enrollment", "Enrollment", visibility.hasEnrollmentCard, isEnrollmentRed(summary));
-  pushMetric("enrollment_decline", "Enrollment declined in 3 of the previous 5 years", visibility.hasEnrollmentFlagCard, isEnrollmentDeclineRed(enrollmentFlag));
+  pushMetric("enrollment_decline", "Enrollment declined by at least 1% in 3 of the previous 5 years", visibility.hasEnrollmentFlagCard, isEnrollmentDeclineRed(enrollmentFlag));
   pushMetric("staff", "Staff headcount", visibility.hasStaffCard, isStaffRed(summary));
   pushMetric("state_aid", "State & local funding", visibility.hasStateAidCard, isStateAidRed(summary));
   pushMetric("endowment", "Endowment", visibility.hasEndowmentCard, isEndowmentRed(summary));
@@ -1686,14 +1691,41 @@ async function init() {
   const p = school.profile;
   updateSchoolPageMetadata(p.institution_name, unitid);
   const s = school.summary;
+  // Compatibility for the currently published 2024 payload. New exports use
+  // only the fixed-baseline names; at the 2024 endpoint these aliases are
+  // mathematically identical (2019 to 2024).
+  const legacySince2019Fields = {
+    enrollment_pct_change_since_2019: "enrollment_pct_change_5yr",
+    revenue_pct_change_since_2019: "revenue_pct_change_5yr",
+    net_tuition_per_fte_change_since_2019: "net_tuition_per_fte_change_5yr",
+    staff_total_headcount_pct_change_since_2019: "staff_total_headcount_pct_change_5yr",
+    endowment_pct_change_since_2019: "endowment_pct_change_5yr",
+    international_enrollment_pct_change_since_2019: "international_enrollment_pct_change_5yr",
+    state_local_support_pct_change_since_2019: "state_local_support_pct_change_5yr",
+    state_funding_pct_change_since_2019: "state_funding_pct_change_5yr",
+    sector_median_revenue_pct_change_since_2019: "sector_median_revenue_pct_change_5yr",
+    sector_median_net_tuition_per_fte_change_since_2019: "sector_median_net_tuition_per_fte_change_5yr",
+    sector_median_enrollment_pct_change_since_2019: "sector_median_enrollment_pct_change_5yr",
+    sector_median_staff_total_headcount_pct_change_since_2019: "sector_median_staff_total_headcount_pct_change_5yr",
+    sector_median_endowment_pct_change_since_2019: "sector_median_endowment_pct_change_5yr"
+  };
+  Object.entries(legacySince2019Fields).forEach(([currentField, legacyField]) => {
+    if (s[currentField] == null && s[legacyField] != null) s[currentField] = s[legacyField];
+  });
   const series = school.series;
   const latestDataYear = asNumber(s.latest_year) || latestYearFromSeries(series);
+  const vintages = school.vintages || {};
+  const latestEnrollmentYear = asNumber(s.latest_enrollment_year) || latestPoint(series.enrollment_headcount_total)?.year || latestDataYear;
+  const latestFinanceYear = asNumber(s.latest_finance_year) || latestPoint(series.revenue_total_adjusted)?.year || latestDataYear;
+  const latestHrYear = asNumber(s.latest_hr_year) || latestPoint(series.staff_headcount_total)?.year || latestDataYear;
+  const enrollmentRangeText = since2019RangeText(latestEnrollmentYear);
+  const financeRangeText = since2019RangeText(latestFinanceYear);
+  const hrRangeText = since2019RangeText(latestHrYear);
   const closureRecord = SHOW_CLOSURE_FLAGS ? closureLookup?.schools?.[unitid] || null : null;
   const schoolRetrievedAt = school.generated_at || null;
   const graduationRate = asNumber(s.graduation_rate_6yr);
   const medianEarnings = asNumber(s.median_earnings_10yr);
   const medianDebt = asNumber(s.median_debt_completers);
-  const fiveYearRangeText = recentFiveYearRangeText(series.revenue_total_adjusted || series.enrollment_headcount_total || []);
   const revenueSeries = toSeries(series.revenue_total_adjusted);
   const expensesSeries = toSeries(series.expenses_total_adjusted);
   const netTuitionSeries = toSeries(series.net_tuition_per_fte_adjusted);
@@ -1706,12 +1738,14 @@ async function init() {
   const latestEnrollment = latestPoint(series.enrollment_headcount_total);
   const sectorHeadlineBenchmarks = headlineBenchmarks?.[p.control_label] || null;
   const endowmentPerFteRecord = endowmentPerFteLookup?.schools?.[unitid] || null;
-  const revenueBenchmark = firstNumericValue(s.sector_median_revenue_pct_change_5yr, sectorHeadlineBenchmarks?.median_revenue_pct_change_5yr);
-  const netTuitionBenchmark = firstNumericValue(s.sector_median_net_tuition_per_fte_change_5yr, sectorHeadlineBenchmarks?.median_net_tuition_per_fte_change_5yr);
-  const enrollmentBenchmark = firstNumericValue(s.sector_median_enrollment_pct_change_5yr, sectorHeadlineBenchmarks?.median_enrollment_pct_change_5yr);
-  const staffBenchmark = firstNumericValue(s.sector_median_staff_total_headcount_pct_change_5yr, sectorHeadlineBenchmarks?.median_staff_total_headcount_pct_change_5yr);
-  const endowmentBenchmark = firstNumericValue(s.sector_median_endowment_pct_change_5yr, sectorHeadlineBenchmarks?.median_endowment_pct_change_5yr);
+  const revenueBenchmark = firstNumericValue(s.sector_median_revenue_pct_change_since_2019, sectorHeadlineBenchmarks?.median_revenue_pct_change_since_2019, sectorHeadlineBenchmarks?.median_revenue_pct_change_5yr);
+  const netTuitionBenchmark = firstNumericValue(s.sector_median_net_tuition_per_fte_change_since_2019, sectorHeadlineBenchmarks?.median_net_tuition_per_fte_change_since_2019, sectorHeadlineBenchmarks?.median_net_tuition_per_fte_change_5yr);
+  const enrollmentBenchmark = firstNumericValue(s.sector_median_enrollment_pct_change_since_2019, sectorHeadlineBenchmarks?.median_enrollment_pct_change_since_2019, sectorHeadlineBenchmarks?.median_enrollment_pct_change_5yr);
+  const staffBenchmark = firstNumericValue(s.sector_median_staff_total_headcount_pct_change_since_2019, sectorHeadlineBenchmarks?.median_staff_total_headcount_pct_change_since_2019, sectorHeadlineBenchmarks?.median_staff_total_headcount_pct_change_5yr);
+  const endowmentBenchmark = firstNumericValue(s.sector_median_endowment_pct_change_since_2019, sectorHeadlineBenchmarks?.median_endowment_pct_change_since_2019, sectorHeadlineBenchmarks?.median_endowment_pct_change_5yr);
   const stateAidBenchmark = firstNumericValue(
+    sectorHeadlineBenchmarks?.median_state_local_support_pct_change_since_2019,
+    sectorHeadlineBenchmarks?.median_state_funding_pct_change_since_2019,
     sectorHeadlineBenchmarks?.median_state_local_support_pct_change_5yr,
     sectorHeadlineBenchmarks?.median_state_funding_pct_change_5yr
   );
@@ -1820,27 +1854,33 @@ async function init() {
     setOutcomesGridLayout(visibleOutcomeCount);
   }
 
-  if (asNumber(s.revenue_pct_change_5yr) === null) {
-    applyStrip("revenue-change-card", "Revenue data are not available.", revenueChangeState(s), trendDirection(s.revenue_pct_change_5yr));
+  if (asNumber(s.revenue_pct_change_since_2019) === null) {
+    applyStrip("revenue-change-card", "Revenue data are not available.", revenueChangeState(s), trendDirection(s.revenue_pct_change_since_2019));
   } else {
     applyStripLines(
       "revenue-change-card",
       buildTrendCardLines(
         "Revenue",
-        s.revenue_pct_change_5yr,
-        fiveYearRangeText,
+        s.revenue_pct_change_since_2019,
+        financeRangeText,
         p,
         revenueBenchmark,
         { afterAdjustingForInflation: true }
       ),
       revenueChangeState(s),
-      trendDirection(s.revenue_pct_change_5yr)
+      trendDirection(s.revenue_pct_change_since_2019)
     );
   }
-  const hasRevenueCard = asNumber(s.revenue_pct_change_5yr) !== null;
+  const hasRevenueCard = asNumber(s.revenue_pct_change_since_2019) !== null;
   setHidden("revenue-change-card", !hasRevenueCard);
 
   setText("loss-latest", s.ended_year_at_loss || "No data");
+  const lossLatestQuestion = document.getElementById("loss-latest")?.closest(".metric-strip")?.querySelector(".metric-question");
+  if (lossLatestQuestion) {
+    lossLatestQuestion.textContent = Number.isFinite(latestFinanceYear)
+      ? `Did this college end ${latestFinanceYear} at a loss?`
+      : "Did this college end the latest Finance year at a loss?";
+  }
   styleAnswerCard("loss-latest", s.ended_year_at_loss);
   setClosestMetricHidden("loss-latest", !s.ended_year_at_loss);
   const hasLossRepeatCard = hasNonEmptyValue(s.losses_last_3_of_5);
@@ -1861,48 +1901,48 @@ async function init() {
   }
   setClosestMetricHidden("loss-years", !hasLossYearsCard);
 
-  if (asNumber(s.net_tuition_per_fte_change_5yr) === null) {
-    applyStrip("net-tuition-change-card", "Net tuition revenue per full-time equivalent student data are not available.", netTuitionChangeState(s), trendDirection(s.net_tuition_per_fte_change_5yr));
+  if (asNumber(s.net_tuition_per_fte_change_since_2019) === null) {
+    applyStrip("net-tuition-change-card", "Net tuition revenue per full-time equivalent student data are not available.", netTuitionChangeState(s), trendDirection(s.net_tuition_per_fte_change_since_2019));
   } else {
     applyStripLines(
       "net-tuition-change-card",
       buildTrendCardLines(
         "Net tuition revenue per full-time equivalent student",
-        s.net_tuition_per_fte_change_5yr,
-        fiveYearRangeText,
+        s.net_tuition_per_fte_change_since_2019,
+        financeRangeText,
         p,
         netTuitionBenchmark,
         { afterAdjustingForInflation: true }
       ),
       netTuitionChangeState(s),
-      trendDirection(s.net_tuition_per_fte_change_5yr)
+      trendDirection(s.net_tuition_per_fte_change_since_2019)
     );
   }
-  const hasNetTuitionCard = asNumber(s.net_tuition_per_fte_change_5yr) !== null;
+  const hasNetTuitionCard = asNumber(s.net_tuition_per_fte_change_since_2019) !== null;
   setHidden("net-tuition-change-card", !hasNetTuitionCard);
 
-  const tuitionDependenceParagraph = buildTuitionDependenceParagraph(p, s, latestDataYear);
+  const tuitionDependenceParagraph = buildTuitionDependenceParagraph(p, s, latestFinanceYear);
   const hasTuitionSentence = Array.isArray(tuitionDependenceParagraph) && tuitionDependenceParagraph.length > 0;
   setBodyCopy("tuition-sentence-copy", hasTuitionSentence ? [tuitionDependenceParagraph] : []);
 
 
-  if (asNumber(s.enrollment_pct_change_5yr) === null) {
-    applyStrip("enrollment-change-card", "Enrollment data are not available.", enrollmentChangeState(s), trendDirection(s.enrollment_pct_change_5yr));
+  if (asNumber(s.enrollment_pct_change_since_2019) === null) {
+    applyStrip("enrollment-change-card", "Enrollment data are not available.", enrollmentChangeState(s), trendDirection(s.enrollment_pct_change_since_2019));
   } else {
     applyStripLines(
       "enrollment-change-card",
       buildTrendCardLines(
         "Enrollment",
-        s.enrollment_pct_change_5yr,
-        fiveYearRangeText,
+        s.enrollment_pct_change_since_2019,
+        enrollmentRangeText,
         p,
         enrollmentBenchmark
       ),
       enrollmentChangeState(s),
-      trendDirection(s.enrollment_pct_change_5yr)
+      trendDirection(s.enrollment_pct_change_since_2019)
     );
   }
-  const hasEnrollmentCard = asNumber(s.enrollment_pct_change_5yr) !== null;
+  const hasEnrollmentCard = asNumber(s.enrollment_pct_change_since_2019) !== null;
   setHidden("enrollment-change-card", !hasEnrollmentCard);
 
   const enrollmentFlag = deriveEnrollmentFlag(s, series);
@@ -1922,19 +1962,19 @@ async function init() {
     ...intlUndergradSeries
   ].some((point) => point.value > 0);
 
-  const intlSentenceParagraph = buildIntlSentenceParagraph(s, series, latestDataYear);
+  const intlSentenceParagraph = buildIntlSentenceParagraph(s, series, latestEnrollmentYear);
   const hasIntlSentence = asNumber(s.pct_international_all) !== null || (latestPoint(series.enrollment_nonresident_total) && latestPoint(series.enrollment_headcount_total));
   setBodyCopy("intl-sentence-copy", hasIntlSentence && intlSentenceParagraph ? [intlSentenceParagraph] : []);
 
   if (hasAnyInternationalEnrollment) {
-    const intlChange = asNumber(s.international_enrollment_pct_change_5yr);
+    const intlChange = asNumber(s.international_enrollment_pct_change_since_2019);
     if (intlChange === null) {
       setBodyCopy("intl-change-copy", []);
     } else {
       setBodyCopy("intl-change-copy", [[
         "The number of international students ",
         strongSegment(`${intlChange >= 0 ? "increased" : "decreased"} ${fmtRoundedPct(Math.abs(intlChange))}`),
-        ` ${fiveYearRangeText}.`
+        ` ${enrollmentRangeText}.`
       ]]);
     }
   } else {
@@ -1946,46 +1986,46 @@ async function init() {
   setHidden("grad-loan-intro", !hasGradLoanCopy);
   setBodyCopy("loan-copy", gradLoanParagraphs);
 
-  if (asNumber(s.staff_total_headcount_pct_change_5yr) === null) {
-    applyStrip("staff-change-card", "Staffing data are not available.", staffChangeState(s), trendDirection(s.staff_total_headcount_pct_change_5yr));
+  if (asNumber(s.staff_total_headcount_pct_change_since_2019) === null) {
+    applyStrip("staff-change-card", "Staffing data are not available.", staffChangeState(s), trendDirection(s.staff_total_headcount_pct_change_since_2019));
   } else {
     applyStripLines(
       "staff-change-card",
       buildTrendCardLines(
         "Total staff headcount",
-        s.staff_total_headcount_pct_change_5yr,
-        fiveYearRangeText,
+        s.staff_total_headcount_pct_change_since_2019,
+        hrRangeText,
         p,
         staffBenchmark
       ),
       staffChangeState(s),
-      trendDirection(s.staff_total_headcount_pct_change_5yr)
+      trendDirection(s.staff_total_headcount_pct_change_since_2019)
     );
   }
-  const hasStaffCard = asNumber(s.staff_total_headcount_pct_change_5yr) !== null;
+  const hasStaffCard = asNumber(s.staff_total_headcount_pct_change_since_2019) !== null;
   setHidden("staff-change-card", !hasStaffCard);
 
-  const ratioParagraph = buildInstructionalStaffRatioParagraph(p, s, latestDataYear);
+  const ratioParagraph = buildInstructionalStaffRatioParagraph(p, s, latestHrYear);
   setBodyCopy("staff-ratio-copy", ratioParagraph ? [ratioParagraph] : []);
 
-  if (asNumber(s.endowment_pct_change_5yr) === null) {
-    applyStrip("endowment-change-card", "Endowment data are not available.", endowmentChangeState(s), trendDirection(s.endowment_pct_change_5yr));
+  if (asNumber(s.endowment_pct_change_since_2019) === null) {
+    applyStrip("endowment-change-card", "Endowment data are not available.", endowmentChangeState(s), trendDirection(s.endowment_pct_change_since_2019));
   } else {
     applyStripLines(
       "endowment-change-card",
       buildTrendCardLines(
         "The institution's endowment",
-        s.endowment_pct_change_5yr,
-        fiveYearRangeText,
+        s.endowment_pct_change_since_2019,
+        financeRangeText,
         p,
         endowmentBenchmark,
         { afterAdjustingForInflation: true }
       ),
       endowmentChangeState(s),
-      trendDirection(s.endowment_pct_change_5yr)
+      trendDirection(s.endowment_pct_change_since_2019)
     );
   }
-  const hasEndowmentCard = asNumber(s.endowment_pct_change_5yr) !== null;
+  const hasEndowmentCard = asNumber(s.endowment_pct_change_since_2019) !== null;
   setHidden("endowment-change-card", !hasEndowmentCard);
 
   const hasEndowmentValue = hasMeaningfulData(series.endowment_value_adjusted);
@@ -1994,16 +2034,16 @@ async function init() {
     s.state_local_support_pct_core_revenue,
     s.state_funding_pct_core_revenue
   );
-  const stateSupportPctChange5yr = firstNumericValue(
-    s.state_local_support_pct_change_5yr,
-    s.state_funding_pct_change_5yr
+  const stateSupportPctChangeSince2019 = firstNumericValue(
+    s.state_local_support_pct_change_since_2019,
+    s.state_funding_pct_change_since_2019
   );
   const stateSupportSeries = hasMeaningfulData(series.state_local_support_adjusted)
     ? series.state_local_support_adjusted
     : series.state_funding_adjusted;
   const hasState =
     (stateSupportPctCoreRevenue ?? 0) !== 0 ||
-    ((stateSupportPctChange5yr ?? 0) !== 0) ||
+    ((stateSupportPctChangeSince2019 ?? 0) !== 0) ||
     hasMeaningfulData(stateSupportSeries);
   const isPublic = isPublicProfile(p);
   const showPublicStateAidSection = isPublic && hasState;
@@ -2033,9 +2073,9 @@ async function init() {
     hasEnrollmentFlagCard,
     hasStaffCard,
     hasEndowmentCard,
-    hasStateAidCard: showPublicStateAidSection && stateSupportPctChange5yr !== null
+    hasStateAidCard: showPublicStateAidSection && stateSupportPctChangeSince2019 !== null
   });
-  syncSchoolWarningSummaryBadge(warningSummary, p);
+  syncSchoolWarningSummaryBadge(warningSummary, p, s);
 
   setSectionVisibility("financial-section", showFinancialSection);
   setSectionVisibility("net-tuition-section", showNetTuitionSection);
@@ -2083,14 +2123,14 @@ async function init() {
   }
 
   if (hasState) {
-    const stateChange5yr = stateSupportPctChange5yr;
+    const stateChangeSince2019 = stateSupportPctChangeSince2019;
     setText(
       "state-share-copy",
-      `${Number.isFinite(latestDataYear) ? `In ${latestDataYear}, ` : "In the latest year, "}${fmtPlainPct(stateSupportPctCoreRevenue || 0)} of this college's core revenue came from state and local appropriations, grants and contracts.`
+      `${Number.isFinite(latestFinanceYear) ? `In ${latestFinanceYear}, ` : "In the latest year, "}${fmtPlainPct(stateSupportPctCoreRevenue || 0)} of this college's core revenue came from state and local appropriations, grants and contracts.`
     );
     setHidden("state-share-copy", false);
 
-    if (stateChange5yr === null) {
+    if (stateChangeSince2019 === null) {
       applyStrip(
         "state-change-card",
         "State and local funding data are not available.",
@@ -2102,13 +2142,13 @@ async function init() {
         "state-change-card",
         buildTrendCardLines(
           "State & local funding",
-          stateChange5yr,
-          fiveYearRangeText,
+          stateChangeSince2019,
+          financeRangeText,
           p,
           stateAidBenchmark
         ),
-        sentimentClass(stateChange5yr),
-        trendDirection(stateChange5yr)
+        sentimentClass(stateChangeSince2019),
+        trendDirection(stateChangeSince2019)
       );
     }
     setHidden("state-change-card", false);
@@ -2117,9 +2157,9 @@ async function init() {
     setHidden("state-change-card", true);
   }
 
-  const financeTooltip2024Config = {
+  const financeLatestTooltipConfig = {
     showTooltip: true,
-    tooltipYear: 2024,
+    tooltipYear: latestFinanceYear,
     tooltipPointOnly: true,
     showNativePointTitle: false
   };
@@ -2127,7 +2167,7 @@ async function init() {
   renderLineChart("chart-revenue", {
     title: "Revenue compared to expenses (adjusted for inflation)",
     format: "currency",
-    ...financeTooltip2024Config,
+    ...financeLatestTooltipConfig,
     series: [
       { label: "Revenue", color: CHART_COLOR_PRIMARY, values: toSeries(series.revenue_total_adjusted) },
       { label: "Expenses", color: CHART_COLOR_SECONDARY, values: toSeries(series.expenses_total_adjusted) }
@@ -2135,13 +2175,13 @@ async function init() {
   });
   setHidden("chart-revenue", !hasRevenueChart);
   upsertSectionSourceNote("chart-revenue", hasRevenueChart ? [
-    createIpedsCitation(latestDataYear || "latest", "Finance", schoolRetrievedAt)
+    createIpedsCitation(vintages.finance || { collection_year: latestFinanceYear }, "Finance", schoolRetrievedAt)
   ] : []);
 
   renderLineChart("chart-net-tuition", {
     title: "Net tuition revenue over time (per full-time equivalent student, adjusted for inflation)",
     format: "currency",
-    ...financeTooltip2024Config,
+    ...financeLatestTooltipConfig,
     showLegend: false,
     series: [
       { label: "Net Tuition Revenue", color: CHART_COLOR_PRIMARY, values: toSeries(series.net_tuition_per_fte_adjusted) }
@@ -2149,7 +2189,7 @@ async function init() {
   });
   setHidden("chart-net-tuition", !hasNetTuitionChart);
   upsertSectionSourceNote("chart-net-tuition", hasNetTuitionChart ? [
-    createIpedsCitation(latestDataYear || "latest", "Finance", schoolRetrievedAt)
+    createIpedsCitation(vintages.finance || { collection_year: latestFinanceYear }, "Finance", schoolRetrievedAt)
   ] : []);
 
   renderLineChart("chart-enrollment", {
@@ -2164,7 +2204,7 @@ async function init() {
   });
   setHidden("chart-enrollment", !hasEnrollmentChart);
   upsertSectionSourceNote("chart-enrollment", hasEnrollmentChart ? [
-    createIpedsCitation(latestDataYear || "latest", "12-month Enrollment", schoolRetrievedAt)
+    createIpedsCitation(vintages.enrollment || { collection_year: latestEnrollmentYear }, "12-month Enrollment", schoolRetrievedAt)
   ] : []);
 
   if (hasAnyInternationalEnrollment) {
@@ -2181,7 +2221,7 @@ async function init() {
   }
   setHidden("chart-international", !hasAnyInternationalEnrollment);
   upsertSectionSourceNote("chart-international", hasAnyInternationalEnrollment ? [
-    createIpedsCitation(latestDataYear || "latest", "Fall Enrollment", schoolRetrievedAt)
+    createIpedsCitation(vintages.international_enrollment || vintages.enrollment || { collection_year: latestEnrollmentYear }, "12-month Enrollment", schoolRetrievedAt)
   ] : []);
 
   renderLineChart("chart-staffing", {
@@ -2194,23 +2234,23 @@ async function init() {
   });
   setHidden("chart-staffing", !hasStaffingChart);
   upsertSectionSourceNote("chart-staffing", hasStaffingChart ? [
-    createIpedsCitation(latestDataYear || "latest", "Human Resources", schoolRetrievedAt)
+    createIpedsCitation(vintages.human_resources || { collection_year: latestHrYear }, "Human Resources", schoolRetrievedAt)
   ] : []);
 
   renderLineChart("chart-endowment", {
     title: "Endowment value over time (adjusted for inflation)",
     format: "currency",
-    ...financeTooltip2024Config,
+    ...financeLatestTooltipConfig,
     showLegend: false,
     series: [
       { label: "Endowment Value", color: CHART_COLOR_PRIMARY, values: toSeries(series.endowment_value_adjusted) }
     ]
   });
   setHidden("chart-endowment", !hasEndowmentValue);
-  const endowmentPerFteParagraph = buildEndowmentPerFteParagraph(p, s, latestDataYear, endowmentPerFteRecord);
+  const endowmentPerFteParagraph = buildEndowmentPerFteParagraph(p, s, latestFinanceYear, endowmentPerFteRecord);
   setBodyCopy("endowment-per-fte-copy", endowmentPerFteParagraph ? [endowmentPerFteParagraph] : []);
   upsertSectionSourceNote("chart-endowment", hasEndowmentValue ? [
-    createIpedsCitation(latestDataYear || "latest", "Finance", schoolRetrievedAt)
+    createIpedsCitation(vintages.finance || { collection_year: latestFinanceYear }, "Finance", schoolRetrievedAt)
   ] : []);
 
   const endowmentSpendingShareSeries = toSeries(series.endowment_spending_current_use_pct_core_revenue)
@@ -2224,7 +2264,7 @@ async function init() {
     renderLineChart("chart-endowment-spending", {
       title: "Withdrawals from endowment to fund expenses (adjusted for inflation)",
       format: "currency",
-      ...financeTooltip2024Config,
+      ...financeLatestTooltipConfig,
       showLegend: false,
       series: [
         { label: "Spending Distribution For Current Use", color: CHART_COLOR_SECONDARY, values: endowmentSpendingSeries }
@@ -2244,14 +2284,14 @@ async function init() {
     });
   }
   upsertSectionSourceNote("chart-endowment-spending", hasEndowmentSpending ? [
-    createIpedsCitation(latestDataYear || "latest", "Finance", schoolRetrievedAt)
+    createIpedsCitation(vintages.finance || { collection_year: latestFinanceYear }, "Finance", schoolRetrievedAt)
   ] : []);
 
   if (hasState) {
     renderLineChart("chart-state", {
       title: "State & local funding over time (adjusted for inflation)",
       format: "currency",
-      ...financeTooltip2024Config,
+      ...financeLatestTooltipConfig,
       showLegend: false,
       series: [
         { label: "State & Local Funding", color: CHART_COLOR_PRIMARY, values: toSeries(stateSupportSeries) }
@@ -2259,7 +2299,7 @@ async function init() {
     });
   }
   upsertSectionSourceNote("chart-state", hasState ? [
-    createIpedsCitation(latestDataYear || "latest", "Finance", schoolRetrievedAt)
+    createIpedsCitation(vintages.finance || { collection_year: latestFinanceYear }, "Finance", schoolRetrievedAt)
   ] : []);
   moveChartNoteBelowSource("state-negative-note", "chart-state", hasState && hasNegativePoint(stateSupportSeries));
 

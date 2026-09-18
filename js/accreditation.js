@@ -533,66 +533,8 @@
     });
   }
 
-  // Per-accreditor de-duplication for institutions that appear in BOTH a
-  // by-status snapshot row and a per-institution detail row.
-  //
-  // HLC's snapshot labels are concise current-status summaries ("On
-  // Notice", "On Probation") that read better than the detail page's
-  // verbose restatement ("Placed on Probation. The institution was
-  // notified of this action on November 11, 2025. Information was
-  // posted for the public on November 12, 2025..."). When both
-  // exist, prefer the snapshot and drop the detail.
-  //
-  // MSCHE's snapshot labels are bare category strings ("Non-Compliance
-  // Probation") with no action context; the per-institution detail rows
-  // carry the actual board action sentence. When both exist, prefer
-  // the detail and drop the snapshot.
-  //
-  // For institutions that only have one shape of row, nothing is
-  // dropped -- the lone row surfaces regardless of accreditor.
-  const HLC_SNAPSHOT_LABELS = new Set([
-    "On Notice",
-    "On Probation",
-    "Removal of Sanction",
-    "Withdrawal of Accreditation"
-  ]);
-  const MSCHE_SNAPSHOT_LABELS = new Set([
-    "Non-Compliance Warning",
-    "Non-Compliance Probation",
-    "Non-Compliance Show Cause",
-    "Adverse Action"
-  ]);
-
   function getEffectiveActions(school) {
-    const actions = dedupeActions(Array.isArray(school?.actions) ? school.actions : []);
-    if (actions.length === 0) return actions;
-
-    const isHlcSnapshot = (a) =>
-      String(a.accreditor || "").toUpperCase() === "HLC" &&
-      HLC_SNAPSHOT_LABELS.has(a.action_label || a.action_label_raw);
-    const isMscheSnapshot = (a) =>
-      String(a.accreditor || "").toUpperCase() === "MSCHE" &&
-      MSCHE_SNAPSHOT_LABELS.has(a.action_label || a.action_label_raw);
-
-    const hlcHasSnapshot = actions.some(isHlcSnapshot);
-    const hlcHasDetail = actions.some((a) =>
-      String(a.accreditor || "").toUpperCase() === "HLC" && !isHlcSnapshot(a)
-    );
-    const mscheHasSnapshot = actions.some(isMscheSnapshot);
-    const mscheHasDetail = actions.some((a) =>
-      String(a.accreditor || "").toUpperCase() === "MSCHE" && !isMscheSnapshot(a)
-    );
-
-    return actions.filter((action) => {
-      const acc = String(action.accreditor || "").toUpperCase();
-      if (acc === "HLC" && hlcHasSnapshot && hlcHasDetail && !isHlcSnapshot(action)) {
-        return false;
-      }
-      if (acc === "MSCHE" && mscheHasSnapshot && mscheHasDetail && isMscheSnapshot(action)) {
-        return false;
-      }
-      return true;
-    });
+    return dedupeActions(Array.isArray(school?.actions) ? school.actions : []);
   }
 
   // ------ Table Rendering ------

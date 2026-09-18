@@ -1,14 +1,22 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E7R2SH9Q9K"></script>
+  <!-- Google tag (gtag.js) — production only -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    if (window.location.hostname === "financialtracker.hechingerreport.org") {
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () {
+        window.dataLayer.push(arguments);
+      };
 
-    gtag('config', 'G-E7R2SH9Q9K');
+      window.gtag("js", new Date());
+      window.gtag("config", "G-E7R2SH9Q9K");
+
+      const analyticsScript = document.createElement("script");
+      analyticsScript.async = true;
+      analyticsScript.src = "https://www.googletagmanager.com/gtag/js?id=G-E7R2SH9Q9K";
+      document.head.appendChild(analyticsScript);
+    }
   </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -104,7 +112,7 @@
         <li class="guide-body">Move your mouse over a <span class="guide-inline-red guide-inline-red-warning guide-inline-warning-tooltip" tabindex="0"><span class="guide-warning-icon" aria-hidden="true"></span>warning<span class="warning-sign-tooltip" role="tooltip">Here is a sample pop-up message for a warning sign.</span></span> sign to learn more about what it means.</li>
         <li class="guide-body">One or two <span class="guide-inline-red guide-inline-red-warning"><span class="guide-warning-icon" aria-hidden="true"></span>red</span> boxes do not automatically mean a school is in crisis.</li>
         <li class="guide-body">But if a college shows several <span class="guide-inline-red guide-inline-red-warning"><span class="guide-warning-icon" aria-hidden="true"></span>red</span> indicators across revenue, enrollment and losses, that may be a sign of deeper financial pressure.</li>
-        <li class="guide-body">Look for the <span class="guide-inline-red guide-inline-red-warning"><span class="guide-warning-icon" aria-hidden="true"></span>Significant enrollment declines and losses</span> indicator at the top of a profile. That means the college posted declines of at least 10% in both enrollment and net tuition revenue per student between 2019 and 2024 and had operating losses in at least three of those five years.</li>
+        <li class="guide-body">Look for the <span class="guide-inline-red guide-inline-red-warning"><span class="guide-warning-icon" aria-hidden="true"></span>Significant enrollment declines and losses</span> indicator at the top of a profile. That means the college posted declines of at least 10% in both enrollment and net tuition revenue per FTE since 2019 and had operating losses in at least three of the latest five available finance years.</li>
         <li class="guide-body">A gold <span class="guide-inline-gold guide-inline-red-warning"><span class="guide-warning-icon" aria-hidden="true"></span>At least 6 warning signs</span> badge means at least six of the visible warning indicators on that profile are flagged as concerning.</li>
       </ul>
       <div class="guide-learn-more">
@@ -228,7 +236,7 @@
             </article>
 
             <article class="metric-strip negative guide-sample-card">
-              <div class="metric-question">Did this institution see a decline in enrollment in 3 of the previous 5 years?</div>
+              <div class="metric-question">Did enrollment decline by at least 1% in 3 of the previous 5 years?</div>
               <div class="metric-answer">Yes</div>
             </article>
           </div>
@@ -239,7 +247,7 @@
             <article class="guide-callout guide-callout-left guide-callout-row-2">This chart shows enrollment falling by more than 10% over time.</article>
             <article class="guide-callout guide-callout-right guide-callout-row-2">This chart shows the endowment growing by more than 10% over time.</article>
             <article class="guide-callout guide-callout-left guide-callout-row-3">This box is red because the college ended 8 years with a loss.</article>
-            <article class="guide-callout guide-callout-right guide-callout-row-3">This box is red because the college has experienced repeated enrollment drops.</article>
+            <article class="guide-callout guide-callout-right guide-callout-row-3">This box is red because the college had enrollment drops of at least 1% in 3 of the previous 5 years.</article>
           </div>
         </div>
 
@@ -310,14 +318,14 @@
             </article>
 
             <article class="metric-strip neutral guide-sample-card guide-arrow-right">
-              <div class="metric-question">How much has state aid changed over the past 5 years?</div>
+              <div class="metric-question">How much has state aid changed since 2019?</div>
               <div class="metric-answer">+3%</div>
             </article>
           </div>
 
           <div class="guide-example-callouts" aria-label="Example State College callouts">
             <article class="guide-callout guide-callout-left guide-callout-row-1">This box is blue because revenue is up by more than 10%.</article>
-            <article class="guide-callout guide-callout-right guide-callout-row-1">This box is red because net tuition revenue per student fell by more than 10%.</article>
+            <article class="guide-callout guide-callout-right guide-callout-row-1">This box is red because net tuition revenue per FTE fell by more than 10%.</article>
             <article class="guide-callout guide-callout-left guide-callout-row-2">This chart shows enrollment staying mostly flat over time.</article>
             <article class="guide-callout guide-callout-right guide-callout-row-2">This chart shows the endowment staying basically the same over time.</article>
             <article class="guide-callout guide-callout-left guide-callout-row-3">This box is blue because the college did not end 2024 with a loss.</article>
@@ -470,7 +478,7 @@
       <div id="enrollment-change-card" class="metric-strip"></div>
       <div id="chart-enrollment" class="chart-panel"></div>
       <div class="metric-strip neutral">
-        <div class="metric-question">Did this institution see a decline in enrollment in 3 of the previous 5 years?</div>
+        <div class="metric-question">Did enrollment decline by at least 1% in 3 of the previous 5 years?</div>
         <div id="enrollment-flag" class="metric-answer"></div>
       </div>
       <p id="grad-loan-intro" class="section-copy">Congress has capped federal loans for new graduate students starting July 1, 2026. This change could hit colleges with higher rates of graduate students who borrow.</p>
