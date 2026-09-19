@@ -1,12 +1,13 @@
 {
-  "generated_at": "2026-04-21",
-  "source_version_label": "December 2024 through December 2025 HCM quarterly snapshots",
+  "generated_at": "2026-09-18",
+  "source_version_label": "December 2024 through March 2026 HCM quarterly snapshots",
   "source_files": [
     "data_pipelines/federal_hcm/raw/schools-on-hcm-dec-2024.xls",
     "data_pipelines/federal_hcm/raw/schools-on-hcm-mar-2025.xlsx",
     "data_pipelines/federal_hcm/raw/schools-on-hcm-jun-2025.xlsx",
     "data_pipelines/federal_hcm/raw/schools-on-hcm-sep-2025.xlsx",
-    "data_pipelines/federal_hcm/raw/schools-on-hcm-dec-2025.xlsx"
+    "data_pipelines/federal_hcm/raw/schools-on-hcm-dec-2025.xlsx",
+    "data_pipelines/federal_hcm/raw/schools-on-hcm-mar-2026.xlsx"
   ],
   "summary": {
     "counts_by_snapshot": [
@@ -39,11 +40,17 @@
         "snapshot_label": "December 2025",
         "hcm2_institutions": 18,
         "hcm2_institutions_in_finance_tracker": 6
+      },
+      {
+        "snapshot_date": "2026-03-01",
+        "snapshot_label": "March 2026",
+        "hcm2_institutions": 22,
+        "hcm2_institutions_in_finance_tracker": 7
       }
     ],
     "trump_administration_drop_from": 42,
-    "trump_administration_drop_to": 18,
-    "latest_snapshot_label": "December 2025",
+    "trump_administration_drop_to": 22,
+    "latest_snapshot_label": "March 2026",
     "dec2024_drop_count": 28,
     "mar2025_drop_count": 33,
     "jun2025_drop_count": 8,
@@ -65,17 +72,19 @@
         "2025-03-01",
         "2025-06-01",
         "2025-09-01",
-        "2025-12-01"
+        "2025-12-01",
+        "2026-03-01"
       ],
       "snapshot_labels_present": [
         "December 2024",
         "March 2025",
         "June 2025",
         "September 2025",
-        "December 2025"
+        "December 2025",
+        "March 2026"
       ],
       "first_snapshot_label": "December 2024",
-      "latest_snapshot_label_present": "December 2025",
+      "latest_snapshot_label_present": "March 2026",
       "on_latest_snapshot": true,
       "first_snapshot_absent_after_last_presence": "",
       "latest_reason_on_description": "Severe Program Review Findings",
@@ -121,17 +130,19 @@
         "2025-03-01",
         "2025-06-01",
         "2025-09-01",
-        "2025-12-01"
+        "2025-12-01",
+        "2026-03-01"
       ],
       "snapshot_labels_present": [
         "December 2024",
         "March 2025",
         "June 2025",
         "September 2025",
-        "December 2025"
+        "December 2025",
+        "March 2026"
       ],
       "first_snapshot_label": "December 2024",
-      "latest_snapshot_label_present": "December 2025",
+      "latest_snapshot_label_present": "March 2026",
       "on_latest_snapshot": true,
       "first_snapshot_absent_after_last_presence": "",
       "latest_reason_on_description": "Administrative Capability",
@@ -152,17 +163,19 @@
         "2025-03-01",
         "2025-06-01",
         "2025-09-01",
-        "2025-12-01"
+        "2025-12-01",
+        "2026-03-01"
       ],
       "snapshot_labels_present": [
         "December 2024",
         "March 2025",
         "June 2025",
         "September 2025",
-        "December 2025"
+        "December 2025",
+        "March 2026"
       ],
       "first_snapshot_label": "December 2024",
-      "latest_snapshot_label_present": "December 2025",
+      "latest_snapshot_label_present": "March 2026",
       "on_latest_snapshot": true,
       "first_snapshot_absent_after_last_presence": "",
       "latest_reason_on_description": "Adverse Action Taken by Accreditor/State Agency",
@@ -259,17 +272,19 @@
         "2025-03-01",
         "2025-06-01",
         "2025-09-01",
-        "2025-12-01"
+        "2025-12-01",
+        "2026-03-01"
       ],
       "snapshot_labels_present": [
         "December 2024",
         "March 2025",
         "June 2025",
         "September 2025",
-        "December 2025"
+        "December 2025",
+        "March 2026"
       ],
       "first_snapshot_label": "December 2024",
-      "latest_snapshot_label_present": "December 2025",
+      "latest_snapshot_label_present": "March 2026",
       "on_latest_snapshot": true,
       "first_snapshot_absent_after_last_presence": "",
       "latest_reason_on_description": "Administrative Capability",
@@ -465,17 +480,19 @@
         "2025-03-01",
         "2025-06-01",
         "2025-09-01",
-        "2025-12-01"
+        "2025-12-01",
+        "2026-03-01"
       ],
       "snapshot_labels_present": [
         "December 2024",
         "March 2025",
         "June 2025",
         "September 2025",
-        "December 2025"
+        "December 2025",
+        "March 2026"
       ],
       "first_snapshot_label": "December 2024",
-      "latest_snapshot_label_present": "December 2025",
+      "latest_snapshot_label_present": "March 2026",
       "on_latest_snapshot": true,
       "first_snapshot_absent_after_last_presence": "",
       "latest_reason_on_description": "Administrative Capability",
@@ -496,17 +513,19 @@
         "2025-03-01",
         "2025-06-01",
         "2025-09-01",
-        "2025-12-01"
+        "2025-12-01",
+        "2026-03-01"
       ],
       "snapshot_labels_present": [
         "December 2024",
         "March 2025",
         "June 2025",
         "September 2025",
-        "December 2025"
+        "December 2025",
+        "March 2026"
       ],
       "first_snapshot_label": "December 2024",
-      "latest_snapshot_label_present": "December 2025",
+      "latest_snapshot_label_present": "March 2026",
       "on_latest_snapshot": true,
       "first_snapshot_absent_after_last_presence": "",
       "latest_reason_on_description": "Financial Responsibility",
@@ -579,17 +598,19 @@
         "2025-03-01",
         "2025-06-01",
         "2025-09-01",
-        "2025-12-01"
+        "2025-12-01",
+        "2026-03-01"
       ],
       "snapshot_labels_present": [
         "December 2024",
         "March 2025",
         "June 2025",
         "September 2025",
-        "December 2025"
+        "December 2025",
+        "March 2026"
       ],
       "first_snapshot_label": "December 2024",
-      "latest_snapshot_label_present": "December 2025",
+      "latest_snapshot_label_present": "March 2026",
       "on_latest_snapshot": true,
       "first_snapshot_absent_after_last_presence": "",
       "latest_reason_on_description": "Financial Responsibility",
@@ -634,17 +655,19 @@
         "2025-03-01",
         "2025-06-01",
         "2025-09-01",
-        "2025-12-01"
+        "2025-12-01",
+        "2026-03-01"
       ],
       "snapshot_labels_present": [
         "December 2024",
         "March 2025",
         "June 2025",
         "September 2025",
-        "December 2025"
+        "December 2025",
+        "March 2026"
       ],
       "first_snapshot_label": "December 2024",
-      "latest_snapshot_label_present": "December 2025",
+      "latest_snapshot_label_present": "March 2026",
       "on_latest_snapshot": true,
       "first_snapshot_absent_after_last_presence": "",
       "latest_reason_on_description": "Administrative Capability",
@@ -665,17 +688,19 @@
         "2025-03-01",
         "2025-06-01",
         "2025-09-01",
-        "2025-12-01"
+        "2025-12-01",
+        "2026-03-01"
       ],
       "snapshot_labels_present": [
         "December 2024",
         "March 2025",
         "June 2025",
         "September 2025",
-        "December 2025"
+        "December 2025",
+        "March 2026"
       ],
       "first_snapshot_label": "December 2024",
-      "latest_snapshot_label_present": "December 2025",
+      "latest_snapshot_label_present": "March 2026",
       "on_latest_snapshot": true,
       "first_snapshot_absent_after_last_presence": "",
       "latest_reason_on_description": "Program Review",
@@ -719,17 +744,19 @@
         "2025-03-01",
         "2025-06-01",
         "2025-09-01",
-        "2025-12-01"
+        "2025-12-01",
+        "2026-03-01"
       ],
       "snapshot_labels_present": [
         "December 2024",
         "March 2025",
         "June 2025",
         "September 2025",
-        "December 2025"
+        "December 2025",
+        "March 2026"
       ],
       "first_snapshot_label": "December 2024",
-      "latest_snapshot_label_present": "December 2025",
+      "latest_snapshot_label_present": "March 2026",
       "on_latest_snapshot": true,
       "first_snapshot_absent_after_last_presence": "",
       "latest_reason_on_description": "Severe Program Review Findings",
@@ -1031,16 +1058,18 @@
         "2025-03-01",
         "2025-06-01",
         "2025-09-01",
-        "2025-12-01"
+        "2025-12-01",
+        "2026-03-01"
       ],
       "snapshot_labels_present": [
         "March 2025",
         "June 2025",
         "September 2025",
-        "December 2025"
+        "December 2025",
+        "March 2026"
       ],
       "first_snapshot_label": "March 2025",
-      "latest_snapshot_label_present": "December 2025",
+      "latest_snapshot_label_present": "March 2026",
       "on_latest_snapshot": true,
       "first_snapshot_absent_after_last_presence": "",
       "latest_reason_on_description": "Severe Program Review Findings",
@@ -1225,16 +1254,18 @@
         "2025-03-01",
         "2025-06-01",
         "2025-09-01",
-        "2025-12-01"
+        "2025-12-01",
+        "2026-03-01"
       ],
       "snapshot_labels_present": [
         "March 2025",
         "June 2025",
         "September 2025",
-        "December 2025"
+        "December 2025",
+        "March 2026"
       ],
       "first_snapshot_label": "March 2025",
-      "latest_snapshot_label_present": "December 2025",
+      "latest_snapshot_label_present": "March 2026",
       "on_latest_snapshot": true,
       "first_snapshot_absent_after_last_presence": "",
       "latest_reason_on_description": "Administrative Capability",
@@ -1300,15 +1331,17 @@
       "snapshots_present": [
         "2025-06-01",
         "2025-09-01",
-        "2025-12-01"
+        "2025-12-01",
+        "2026-03-01"
       ],
       "snapshot_labels_present": [
         "June 2025",
         "September 2025",
-        "December 2025"
+        "December 2025",
+        "March 2026"
       ],
       "first_snapshot_label": "June 2025",
-      "latest_snapshot_label_present": "December 2025",
+      "latest_snapshot_label_present": "March 2026",
       "on_latest_snapshot": true,
       "first_snapshot_absent_after_last_presence": "",
       "latest_reason_on_description": "Payment Method Changed",
@@ -1327,18 +1360,112 @@
       "snapshots_present": [
         "2025-06-01",
         "2025-09-01",
-        "2025-12-01"
+        "2025-12-01",
+        "2026-03-01"
       ],
       "snapshot_labels_present": [
         "June 2025",
         "September 2025",
-        "December 2025"
+        "December 2025",
+        "March 2026"
       ],
       "first_snapshot_label": "June 2025",
-      "latest_snapshot_label_present": "December 2025",
+      "latest_snapshot_label_present": "March 2026",
       "on_latest_snapshot": true,
       "first_snapshot_absent_after_last_presence": "",
       "latest_reason_on_description": "Administrative Capability",
+      "downgraded_to_hcm1_after_hcm2": false,
+      "first_hcm2_snapshot_before_downgrade_label": "",
+      "first_hcm1_snapshot_after_hcm2_label": ""
+    },
+    "107840": {
+      "unitid": "107840",
+      "institution_name": "Shorter College",
+      "sector": "Private not-for-profit",
+      "state": "AR",
+      "opeids": [
+        "00110500"
+      ],
+      "snapshots_present": [
+        "2026-03-01"
+      ],
+      "snapshot_labels_present": [
+        "March 2026"
+      ],
+      "first_snapshot_label": "March 2026",
+      "latest_snapshot_label_present": "March 2026",
+      "on_latest_snapshot": true,
+      "first_snapshot_absent_after_last_presence": "",
+      "latest_reason_on_description": "Severe Program Review Findings",
+      "downgraded_to_hcm1_after_hcm2": false,
+      "first_hcm2_snapshot_before_downgrade_label": "",
+      "first_hcm1_snapshot_after_hcm2_label": ""
+    },
+    "447698": {
+      "unitid": "447698",
+      "institution_name": "Phoenix Institute of Herbal Medicine & Acupuncture",
+      "sector": "Private for-profit",
+      "state": "AZ",
+      "opeids": [
+        "03617500"
+      ],
+      "snapshots_present": [
+        "2026-03-01"
+      ],
+      "snapshot_labels_present": [
+        "March 2026"
+      ],
+      "first_snapshot_label": "March 2026",
+      "latest_snapshot_label_present": "March 2026",
+      "on_latest_snapshot": true,
+      "first_snapshot_absent_after_last_presence": "",
+      "latest_reason_on_description": "Financial Responsibility",
+      "downgraded_to_hcm1_after_hcm2": false,
+      "first_hcm2_snapshot_before_downgrade_label": "",
+      "first_hcm1_snapshot_after_hcm2_label": ""
+    },
+    "439774": {
+      "unitid": "439774",
+      "institution_name": "New Concept Massage & Beauty School",
+      "sector": "Private for-profit",
+      "state": "FL",
+      "opeids": [
+        "03433400"
+      ],
+      "snapshots_present": [
+        "2026-03-01"
+      ],
+      "snapshot_labels_present": [
+        "March 2026"
+      ],
+      "first_snapshot_label": "March 2026",
+      "latest_snapshot_label_present": "March 2026",
+      "on_latest_snapshot": true,
+      "first_snapshot_absent_after_last_presence": "",
+      "latest_reason_on_description": "Payment Method Changed",
+      "downgraded_to_hcm1_after_hcm2": false,
+      "first_hcm2_snapshot_before_downgrade_label": "",
+      "first_hcm1_snapshot_after_hcm2_label": ""
+    },
+    "203128": {
+      "unitid": "203128",
+      "institution_name": "Hiram College",
+      "sector": "Private not-for-profit",
+      "state": "OH",
+      "opeids": [
+        "00304900"
+      ],
+      "snapshots_present": [
+        "2026-03-01"
+      ],
+      "snapshot_labels_present": [
+        "March 2026"
+      ],
+      "first_snapshot_label": "March 2026",
+      "latest_snapshot_label_present": "March 2026",
+      "on_latest_snapshot": true,
+      "first_snapshot_absent_after_last_presence": "",
+      "latest_reason_on_description": "Financial Responsibility",
       "downgraded_to_hcm1_after_hcm2": false,
       "first_hcm2_snapshot_before_downgrade_label": "",
       "first_hcm1_snapshot_after_hcm2_label": ""

@@ -163,7 +163,7 @@
     "state": "Alaska",
     "city": "Anchorage",
     "control_label": "Private not-for-profit",
-    "category": "Degree-granting, primarily baccalaureate or above",
+    "category": "Degree-granting, not primarily baccalaureate or above",
     "urbanization": "City: Large",
     "religious_affiliation": "United Methodist"
   },
@@ -456,9 +456,21 @@
     "religious_affiliation": "Not applicable"
   },
   {
+    "unitid": "461263",
+    "institution_name": "American Medical Sciences Center",
+    "institution_alias": null,
+    "institution_unique_name": "American Medical Sciences Center | Glendale | California",
+    "state": "California",
+    "city": "Glendale",
+    "control_label": "Private for-profit",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "City: Midsize",
+    "religious_affiliation": "Not applicable"
+  },
+  {
     "unitid": "131159",
     "institution_name": "American University",
-    "institution_alias": null,
+    "institution_alias": "AU",
     "institution_unique_name": "American University | Washington | District of Columbia",
     "state": "District of Columbia",
     "city": "Washington",
@@ -631,7 +643,7 @@
     "state": "West Virginia",
     "city": "Mount Hope",
     "control_label": "Private not-for-profit",
-    "category": "Degree-granting, primarily baccalaureate or above",
+    "category": "Degree-granting, not primarily baccalaureate or above",
     "urbanization": "Suburb: Small",
     "religious_affiliation": "Baptist"
   },
@@ -682,6 +694,30 @@
     "category": "Degree-granting, primarily baccalaureate or above",
     "urbanization": "Suburb: Large",
     "religious_affiliation": "Undenominational"
+  },
+  {
+    "unitid": "500290",
+    "institution_name": "Arizona College of Nursing - Chesapeake",
+    "institution_alias": null,
+    "institution_unique_name": "Arizona College of Nursing - Chesapeake | Chesapeake | Virginia",
+    "state": "Virginia",
+    "city": "Chesapeake",
+    "control_label": "Private for-profit",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "City: Large",
+    "religious_affiliation": "Not applicable"
+  },
+  {
+    "unitid": "500306",
+    "institution_name": "Arizona College of Nursing - Hartford",
+    "institution_alias": null,
+    "institution_unique_name": "Arizona College of Nursing - Hartford | East Hartford | Connecticut",
+    "state": "Connecticut",
+    "city": "East Hartford",
+    "control_label": "Private for-profit",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "City: Small",
+    "religious_affiliation": "Not applicable"
   },
   {
     "unitid": "499389",
@@ -828,6 +864,18 @@
     "religious_affiliation": "Not applicable"
   },
   {
+    "unitid": "500333",
+    "institution_name": "Arizona College of Nursing-St Louis",
+    "institution_alias": null,
+    "institution_unique_name": "Arizona College of Nursing-St Louis | Maryland Heights | Missouri",
+    "state": "Missouri",
+    "city": "Maryland Heights",
+    "control_label": "Private for-profit",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "Suburb: Large",
+    "religious_affiliation": "Not applicable"
+  },
+  {
     "unitid": "495420",
     "institution_name": "Arizona College of Nursing-Tampa",
     "institution_alias": null,
@@ -948,18 +996,6 @@
     "religious_affiliation": "Not applicable"
   },
   {
-    "unitid": "154022",
-    "institution_name": "Ashford University",
-    "institution_alias": null,
-    "institution_unique_name": "Ashford University | San Diego | California",
-    "state": "California",
-    "city": "San Diego",
-    "control_label": "Private for-profit",
-    "category": "Degree-granting, primarily baccalaureate or above",
-    "urbanization": "City: Large",
-    "religious_affiliation": "Not applicable"
-  },
-  {
     "unitid": "201104",
     "institution_name": "Ashland University",
     "institution_alias": null,
@@ -1015,7 +1051,7 @@
     "state": "Florida",
     "city": "Fort Lauderdale",
     "control_label": "Private not-for-profit",
-    "category": "Degree-granting, primarily baccalaureate or above",
+    "category": "Degree-granting, graduate with no undergraduate degrees",
     "urbanization": "City: Midsize",
     "religious_affiliation": "Not applicable"
   },
@@ -1094,7 +1130,7 @@
   {
     "unitid": "219000",
     "institution_name": "Augustana University",
-    "institution_alias": "Augie  Augustana College(SD)  Augustana University",
+    "institution_alias": "Augie, Augustana College (SD), Augustana University",
     "institution_unique_name": "Augustana University | Sioux Falls | South Dakota",
     "state": "South Dakota",
     "city": "Sioux Falls",
@@ -1233,6 +1269,18 @@
     "control_label": "Private not-for-profit",
     "category": "Degree-granting, primarily baccalaureate or above",
     "urbanization": "City: Small",
+    "religious_affiliation": "Not applicable"
+  },
+  {
+    "unitid": "495031",
+    "institution_name": "Bais Medrash of Dexter Park",
+    "institution_alias": null,
+    "institution_unique_name": "Bais Medrash of Dexter Park | Chestnut Ridge | New York",
+    "state": "New York",
+    "city": "Chestnut Ridge",
+    "control_label": "Private not-for-profit",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "Suburb: Large",
     "religious_affiliation": "Not applicable"
   },
   {
@@ -2023,7 +2071,7 @@
     "state": "Idaho",
     "city": "Boise",
     "control_label": "Private not-for-profit",
-    "category": "Degree-granting, primarily baccalaureate or above",
+    "category": "Degree-granting, not primarily baccalaureate or above",
     "urbanization": "Suburb: Large",
     "religious_affiliation": "Undenominational"
   },
@@ -2209,9 +2257,9 @@
   },
   {
     "unitid": "139205",
-    "institution_name": "Brewton-Parker College",
-    "institution_alias": "BPC",
-    "institution_unique_name": "Brewton-Parker College | Mount Vernon | Georgia",
+    "institution_name": "Brewton-Parker Christian University",
+    "institution_alias": "BPCU",
+    "institution_unique_name": "Brewton-Parker Christian University | Mount Vernon | Georgia",
     "state": "Georgia",
     "city": "Mount Vernon",
     "control_label": "Private not-for-profit",
@@ -2522,7 +2570,7 @@
   {
     "unitid": "190655",
     "institution_name": "CUNY New York City College of Technology",
-    "institution_alias": "City Tech | NYCCT | New York City College of Technology | New York Technical College",
+    "institution_alias": "City Tech | New York City College of Technology",
     "institution_unique_name": "CUNY New York City College of Technology | Brooklyn | New York",
     "state": "New York",
     "city": "Brooklyn",
@@ -2556,6 +2604,18 @@
     "religious_affiliation": "Not applicable"
   },
   {
+    "unitid": "198109",
+    "institution_name": "Cabarrus College of Health Sciences",
+    "institution_alias": null,
+    "institution_unique_name": "Cabarrus College of Health Sciences | Concord | North Carolina",
+    "state": "North Carolina",
+    "city": "Concord",
+    "control_label": "Private not-for-profit",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "City: Midsize",
+    "religious_affiliation": "Not applicable"
+  },
+  {
     "unitid": "215114",
     "institution_name": "Cairn University-Langhorne",
     "institution_alias": "Cairn",
@@ -2565,6 +2625,18 @@
     "control_label": "Private not-for-profit",
     "category": "Degree-granting, primarily baccalaureate or above",
     "urbanization": "Suburb: Large",
+    "religious_affiliation": "Not applicable"
+  },
+  {
+    "unitid": "111188",
+    "institution_name": "Cal Poly Maritime Academy",
+    "institution_alias": "Cal Poly Maritime Academy",
+    "institution_unique_name": "Cal Poly Maritime Academy | Vallejo | California",
+    "state": "California",
+    "city": "Vallejo",
+    "control_label": "Public",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "City: Midsize",
     "religious_affiliation": "Not applicable"
   },
   {
@@ -2724,6 +2796,18 @@
     "religious_affiliation": "Not applicable"
   },
   {
+    "unitid": "490045",
+    "institution_name": "California Prestige University",
+    "institution_alias": null,
+    "institution_unique_name": "California Prestige University | Santa Fe Springs | California",
+    "state": "California",
+    "city": "Santa Fe Springs",
+    "control_label": "Private not-for-profit",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "Suburb: Large",
+    "religious_affiliation": "Presbyterian Church (USA)"
+  },
+  {
     "unitid": "115755",
     "institution_name": "California State Polytechnic University-Humboldt",
     "institution_alias": "Cal Poly Humboldt",
@@ -2738,25 +2822,13 @@
   {
     "unitid": "110529",
     "institution_name": "California State Polytechnic University-Pomona",
-    "institution_alias": null,
+    "institution_alias": "Cal Poly Pomona",
     "institution_unique_name": "California State Polytechnic University-Pomona | Pomona | California",
     "state": "California",
     "city": "Pomona",
     "control_label": "Public",
     "category": "Degree-granting, primarily baccalaureate or above",
     "urbanization": "Suburb: Large",
-    "religious_affiliation": "Not applicable"
-  },
-  {
-    "unitid": "111188",
-    "institution_name": "California State University Maritime Academy",
-    "institution_alias": "California State University Maritime Academy",
-    "institution_unique_name": "California State University Maritime Academy | Vallejo | California",
-    "state": "California",
-    "city": "Vallejo",
-    "control_label": "Public",
-    "category": "Degree-granting, primarily baccalaureate or above",
-    "urbanization": "City: Midsize",
     "religious_affiliation": "Not applicable"
   },
   {
@@ -3120,6 +3192,18 @@
     "religious_affiliation": "Churches of Christ"
   },
   {
+    "unitid": "461032",
+    "institution_name": "Carolina College of Biblical Studies",
+    "institution_alias": null,
+    "institution_unique_name": "Carolina College of Biblical Studies | Fayetteville | North Carolina",
+    "state": "North Carolina",
+    "city": "Fayetteville",
+    "control_label": "Private not-for-profit",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "City: Midsize",
+    "religious_affiliation": "Not applicable"
+  },
+  {
     "unitid": "489937",
     "institution_name": "Carolina University",
     "institution_alias": null,
@@ -3375,9 +3459,9 @@
     "unitid": "488004",
     "institution_name": "Central Yeshiva Beth Joseph",
     "institution_alias": null,
-    "institution_unique_name": "Central Yeshiva Beth Joseph | Brooklyn | New York",
+    "institution_unique_name": "Central Yeshiva Beth Joseph | Airmont | New York",
     "state": "New York",
-    "city": "Brooklyn",
+    "city": "Airmont",
     "control_label": "Private not-for-profit",
     "category": "Degree-granting, primarily baccalaureate or above",
     "urbanization": "City: Large",
@@ -3458,7 +3542,7 @@
   {
     "unitid": "475732",
     "institution_name": "Chamberlain University-Georgia",
-    "institution_alias": "Chamberlain College of Nursing-Atlanta",
+    "institution_alias": "Chamberlain College of Nursing-Atlanta Chamberlain College of Nursing-Stockbridge",
     "institution_unique_name": "Chamberlain University-Georgia | Sandy Springs | Georgia",
     "state": "Georgia",
     "city": "Sandy Springs",
@@ -3566,7 +3650,7 @@
   {
     "unitid": "454236",
     "institution_name": "Chamberlain University-Ohio",
-    "institution_alias": "Chamberlain College of Nursing-Columbus Chamberlain College of Nursing-Cleveland",
+    "institution_alias": "Chamberlain College of Nursing-Columbus",
     "institution_unique_name": "Chamberlain University-Ohio | Columbus | Ohio",
     "state": "Ohio",
     "city": "Columbus",
@@ -3794,7 +3878,7 @@
   {
     "unitid": "217864",
     "institution_name": "Citadel Military College of South Carolina",
-    "institution_alias": null,
+    "institution_alias": "The Citadel",
     "institution_unique_name": "Citadel Military College of South Carolina | Charleston | South Carolina",
     "state": "South Carolina",
     "city": "Charleston",
@@ -3878,7 +3962,7 @@
   {
     "unitid": "180832",
     "institution_name": "Clarkson College",
-    "institution_alias": null,
+    "institution_alias": "Clarkson College of Health Professions",
     "institution_unique_name": "Clarkson College | Omaha | Nebraska",
     "state": "Nebraska",
     "city": "Omaha",
@@ -4135,7 +4219,7 @@
     "state": "Georgia",
     "city": "Brunswick",
     "control_label": "Public",
-    "category": "Degree-granting, primarily baccalaureate or above",
+    "category": "Degree-granting, not primarily baccalaureate or above",
     "urbanization": "City: Small",
     "religious_affiliation": "Not applicable"
   },
@@ -4255,7 +4339,7 @@
     "state": "Colorado",
     "city": "Grand Junction",
     "control_label": "Public",
-    "category": "Degree-granting, primarily baccalaureate or above",
+    "category": "Degree-granting, not primarily baccalaureate or above",
     "urbanization": "City: Small",
     "religious_affiliation": "Not applicable"
   },
@@ -4536,6 +4620,18 @@
     "religious_affiliation": "Not applicable"
   },
   {
+    "unitid": "500740",
+    "institution_name": "Congregation YMH",
+    "institution_alias": null,
+    "institution_unique_name": "Congregation YMH | Brooklyn | New York",
+    "state": "New York",
+    "city": "Brooklyn",
+    "control_label": "Private not-for-profit",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "{Not available}",
+    "religious_affiliation": "Jewish"
+  },
+  {
     "unitid": "128902",
     "institution_name": "Connecticut College",
     "institution_alias": null,
@@ -4776,6 +4872,18 @@
     "religious_affiliation": "Not applicable"
   },
   {
+    "unitid": "113616",
+    "institution_name": "DHARMA REALM BUDDHIST UNIVERSITY",
+    "institution_alias": null,
+    "institution_unique_name": "DHARMA REALM BUDDHIST UNIVERSITY | Ukiah | California",
+    "state": "California",
+    "city": "Ukiah",
+    "control_label": "Private not-for-profit",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "Town: Remote",
+    "religious_affiliation": "109"
+  },
+  {
     "unitid": "190725",
     "institution_name": "Daemen University",
     "institution_alias": null,
@@ -4906,6 +5014,18 @@
     "category": "Degree-granting, primarily baccalaureate or above",
     "urbanization": "Rural: Distant",
     "religious_affiliation": "Undenominational"
+  },
+  {
+    "unitid": "496469",
+    "institution_name": "Daybreak University",
+    "institution_alias": null,
+    "institution_unique_name": "Daybreak University | Anaheim | California",
+    "state": "California",
+    "city": "Anaheim",
+    "control_label": "Private not-for-profit",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "City: Large",
+    "religious_affiliation": "Not applicable"
   },
   {
     "unitid": "144740",
@@ -5641,9 +5761,9 @@
   },
   {
     "unitid": "238661",
-    "institution_name": "Edgewood College",
+    "institution_name": "Edgewood University",
     "institution_alias": null,
-    "institution_unique_name": "Edgewood College | Madison | Wisconsin",
+    "institution_unique_name": "Edgewood University | Madison | Wisconsin",
     "state": "Wisconsin",
     "city": "Madison",
     "control_label": "Private not-for-profit",
@@ -6621,7 +6741,7 @@
     "control_label": "Private not-for-profit",
     "category": "Degree-granting, primarily baccalaureate or above",
     "urbanization": "Town: Fringe",
-    "religious_affiliation": "Baptist"
+    "religious_affiliation": "Interdenominational"
   },
   {
     "unitid": "131496",
@@ -6732,6 +6852,18 @@
     "religious_affiliation": "Not applicable"
   },
   {
+    "unitid": "237385",
+    "institution_name": "Glenville State University",
+    "institution_alias": null,
+    "institution_unique_name": "Glenville State University | Glenville | West Virginia",
+    "state": "West Virginia",
+    "city": "Glenville",
+    "control_label": "Public",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "Rural: Remote",
+    "religious_affiliation": "Not applicable"
+  },
+  {
     "unitid": "449384",
     "institution_name": "Gnomon",
     "institution_alias": null,
@@ -6742,6 +6874,18 @@
     "category": "Degree-granting, primarily baccalaureate or above",
     "urbanization": "City: Large",
     "religious_affiliation": "Not applicable"
+  },
+  {
+    "unitid": "202903",
+    "institution_name": "Gods Bible School and College",
+    "institution_alias": null,
+    "institution_unique_name": "Gods Bible School and College | Cincinnati | Ohio",
+    "state": "Ohio",
+    "city": "Cincinnati",
+    "control_label": "Private not-for-profit",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "City: Large",
+    "religious_affiliation": "Other Protestant"
   },
   {
     "unitid": "115083",
@@ -6790,6 +6934,18 @@
     "category": "Degree-granting, primarily baccalaureate or above",
     "urbanization": "Rural: Fringe",
     "religious_affiliation": "Interdenominational"
+  },
+  {
+    "unitid": "139968",
+    "institution_name": "Gordon State College",
+    "institution_alias": "Gordon",
+    "institution_unique_name": "Gordon State College | Barnesville | Georgia",
+    "state": "Georgia",
+    "city": "Barnesville",
+    "control_label": "Public",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "Town: Distant",
+    "religious_affiliation": "Not applicable"
   },
   {
     "unitid": "150668",
@@ -6867,9 +7023,9 @@
     "unitid": "481401",
     "institution_name": "Grace School of Theology",
     "institution_alias": null,
-    "institution_unique_name": "Grace School of Theology | Conroe | Texas",
+    "institution_unique_name": "Grace School of Theology | The Woodlands | Texas",
     "state": "Texas",
-    "city": "Conroe",
+    "city": "The Woodlands",
     "control_label": "Private not-for-profit",
     "category": "Degree-granting, primarily baccalaureate or above",
     "urbanization": "City: Midsize",
@@ -6906,7 +7062,7 @@
     "institution_unique_name": "Grand Canyon University | Phoenix | Arizona",
     "state": "Arizona",
     "city": "Phoenix",
-    "control_label": "Private for-profit",
+    "control_label": "Private not-for-profit",
     "category": "Degree-granting, primarily baccalaureate or above",
     "urbanization": "City: Large",
     "religious_affiliation": "Not applicable"
@@ -6939,9 +7095,9 @@
     "unitid": "212771",
     "institution_name": "Gratz College",
     "institution_alias": null,
-    "institution_unique_name": "Gratz College | Melrose Park | Pennsylvania",
+    "institution_unique_name": "Gratz College | Jenkintown | Pennsylvania",
     "state": "Pennsylvania",
-    "city": "Melrose Park",
+    "city": "Jenkintown",
     "control_label": "Private not-for-profit",
     "category": "Degree-granting, primarily baccalaureate or above",
     "urbanization": "Suburb: Large",
@@ -7380,6 +7536,18 @@
     "religious_affiliation": "Not applicable"
   },
   {
+    "unitid": "501521",
+    "institution_name": "Herzing University-Clarksville",
+    "institution_alias": null,
+    "institution_unique_name": "Herzing University-Clarksville | Clarksville | Tennessee",
+    "state": "Tennessee",
+    "city": "Clarksville",
+    "control_label": "Private not-for-profit",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "{Not available}",
+    "religious_affiliation": "Not applicable"
+  },
+  {
     "unitid": "459842",
     "institution_name": "Herzing University-Kenosha",
     "institution_alias": null,
@@ -7478,7 +7646,7 @@
   {
     "unitid": "191630",
     "institution_name": "Hobart William Smith Colleges",
-    "institution_alias": null,
+    "institution_alias": "HWS",
     "institution_unique_name": "Hobart William Smith Colleges | Geneva | New York",
     "state": "New York",
     "city": "Geneva",
@@ -7657,9 +7825,9 @@
   },
   {
     "unitid": "115773",
-    "institution_name": "Humphreys University-Stockton and Modesto Campuses",
-    "institution_alias": null,
-    "institution_unique_name": "Humphreys University-Stockton and Modesto Campuses | Stockton | California",
+    "institution_name": "Humphreys University",
+    "institution_alias": "Humphreys University-Stockton and Modesto Campuses",
+    "institution_unique_name": "Humphreys University | Stockton | California",
     "state": "California",
     "city": "Stockton",
     "control_label": "Private not-for-profit",
@@ -7690,6 +7858,18 @@
     "category": "Degree-granting, primarily baccalaureate or above",
     "urbanization": "Town: Distant",
     "religious_affiliation": "United Brethren Church"
+  },
+  {
+    "unitid": "449348",
+    "institution_name": "Huntsville Bible College",
+    "institution_alias": null,
+    "institution_unique_name": "Huntsville Bible College | Huntsville | Alabama",
+    "state": "Alabama",
+    "city": "Huntsville",
+    "control_label": "Private not-for-profit",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "City: Midsize",
+    "religious_affiliation": "Interdenominational"
   },
   {
     "unitid": "487524",
@@ -7813,9 +7993,9 @@
   },
   {
     "unitid": "213020",
-    "institution_name": "Indiana University of Pennsylvania-Main Campus",
+    "institution_name": "Indiana University of Pennsylvania",
     "institution_alias": null,
-    "institution_unique_name": "Indiana University of Pennsylvania-Main Campus | Indiana | Pennsylvania",
+    "institution_unique_name": "Indiana University of Pennsylvania | Indiana | Pennsylvania",
     "state": "Pennsylvania",
     "city": "Indiana",
     "control_label": "Public",
@@ -8107,7 +8287,7 @@
     "state": "Indiana",
     "city": "South Bend",
     "control_label": "Private for-profit",
-    "category": "Degree-granting, primarily baccalaureate or above",
+    "category": "Degree-granting, not primarily baccalaureate or above",
     "urbanization": "City: Midsize",
     "religious_affiliation": "Not applicable"
   },
@@ -8194,6 +8374,18 @@
     "category": "Degree-granting, primarily baccalaureate or above",
     "urbanization": "Town: Distant",
     "religious_affiliation": "Not applicable"
+  },
+  {
+    "unitid": "498623",
+    "institution_name": "Justice University",
+    "institution_alias": null,
+    "institution_unique_name": "Justice University | Chandler | Arizona",
+    "state": "Arizona",
+    "city": "Chandler",
+    "control_label": "Private not-for-profit",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "City: Large",
+    "religious_affiliation": "Non-Denominational"
   },
   {
     "unitid": "219240",
@@ -8304,6 +8496,18 @@
     "religious_affiliation": "Jewish"
   },
   {
+    "unitid": "500041",
+    "institution_name": "Kennedy University of Baptist",
+    "institution_alias": null,
+    "institution_unique_name": "Kennedy University of Baptist | Miami | Florida",
+    "state": "Florida",
+    "city": "Miami",
+    "control_label": "Private not-for-profit",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "City: Large",
+    "religious_affiliation": "Baptist"
+  },
+  {
     "unitid": "486840",
     "institution_name": "Kennesaw State University",
     "institution_alias": "KSU",
@@ -8338,6 +8542,18 @@
     "category": "Degree-granting, primarily baccalaureate or above",
     "urbanization": "Town: Distant",
     "religious_affiliation": "Christian Churches and Churches of Christ"
+  },
+  {
+    "unitid": "157030",
+    "institution_name": "Kentucky Mountain Bible College",
+    "institution_alias": "KMBC",
+    "institution_unique_name": "Kentucky Mountain Bible College | Jackson | Kentucky",
+    "state": "Kentucky",
+    "city": "Jackson",
+    "control_label": "Private not-for-profit",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "Rural: Remote",
+    "religious_affiliation": "Multiple Protestant Denomination"
   },
   {
     "unitid": "157058",
@@ -9001,9 +9217,9 @@
   },
   {
     "unitid": "157216",
-    "institution_name": "Lindsey Wilson College",
+    "institution_name": "Lindsey Wilson University",
     "institution_alias": null,
-    "institution_unique_name": "Lindsey Wilson College | Columbia | Kentucky",
+    "institution_unique_name": "Lindsey Wilson University | Columbia | Kentucky",
     "state": "Kentucky",
     "city": "Columbia",
     "control_label": "Private not-for-profit",
@@ -9158,7 +9374,7 @@
   {
     "unitid": "159373",
     "institution_name": "Louisiana State University Health Sciences Center-New Orleans",
-    "institution_alias": "LSUHSCLSUHSC-NOLSUMCLSU Medical CenterLSU Health Sciences CenterLSU Health Sciences Center at New Orleans",
+    "institution_alias": "LSUHSC; LSUHSC-NO; LSUMC; LSU Medical Center; LSU Health Sciences Center; LSU Health Sciences Center at New Orleans",
     "institution_unique_name": "Louisiana State University Health Sciences Center-New Orleans | New Orleans | Louisiana",
     "state": "Louisiana",
     "city": "New Orleans",
@@ -9193,9 +9409,9 @@
   },
   {
     "unitid": "159382",
-    "institution_name": "Louisiana State University-Alexandria",
+    "institution_name": "Louisiana State University at Alexandria",
     "institution_alias": "LSUA",
-    "institution_unique_name": "Louisiana State University-Alexandria | Alexandria | Louisiana",
+    "institution_unique_name": "Louisiana State University at Alexandria | Alexandria | Louisiana",
     "state": "Louisiana",
     "city": "Alexandria",
     "control_label": "Public",
@@ -9358,18 +9574,6 @@
     "category": "Degree-granting, primarily baccalaureate or above",
     "urbanization": "Town: Remote",
     "religious_affiliation": "Presbyterian Church (USA)"
-  },
-  {
-    "unitid": "166656",
-    "institution_name": "MCPHS University",
-    "institution_alias": "MCPHS University",
-    "institution_unique_name": "MCPHS University | Boston | Massachusetts",
-    "state": "Massachusetts",
-    "city": "Boston",
-    "control_label": "Private not-for-profit",
-    "category": "Degree-granting, primarily baccalaureate or above",
-    "urbanization": "City: Large",
-    "religious_affiliation": "Not applicable"
   },
   {
     "unitid": "166869",
@@ -9535,7 +9739,7 @@
     "state": "North Carolina",
     "city": "Fayetteville",
     "control_label": "Private not-for-profit",
-    "category": "Degree-granting, primarily baccalaureate or above",
+    "category": "Degree-granting, not primarily baccalaureate or above",
     "urbanization": "City: Midsize",
     "religious_affiliation": "Other Protestant"
   },
@@ -9765,6 +9969,18 @@
     "control_label": "Public",
     "category": "Degree-granting, primarily baccalaureate or above",
     "urbanization": "Town: Fringe",
+    "religious_affiliation": "Not applicable"
+  },
+  {
+    "unitid": "166656",
+    "institution_name": "Massachusetts College of Pharmacy and Health Sciences",
+    "institution_alias": "MCPHS",
+    "institution_unique_name": "Massachusetts College of Pharmacy and Health Sciences | Boston | Massachusetts",
+    "state": "Massachusetts",
+    "city": "Boston",
+    "control_label": "Private not-for-profit",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "City: Large",
     "religious_affiliation": "Not applicable"
   },
   {
@@ -10430,7 +10646,7 @@
   {
     "unitid": "174358",
     "institution_name": "Minnesota State University Moorhead",
-    "institution_alias": "MSU Moorhead or MSUM",
+    "institution_alias": "Minnesota State Moorhead or MSUM",
     "institution_unique_name": "Minnesota State University Moorhead | Moorhead | Minnesota",
     "state": "Minnesota",
     "city": "Moorhead",
@@ -10489,9 +10705,9 @@
   },
   {
     "unitid": "176053",
-    "institution_name": "Mississippi College",
+    "institution_name": "Mississippi Christian University",
     "institution_alias": "MC",
-    "institution_unique_name": "Mississippi College | Clinton | Mississippi",
+    "institution_unique_name": "Mississippi Christian University | Clinton | Mississippi",
     "state": "Mississippi",
     "city": "Clinton",
     "control_label": "Private not-for-profit",
@@ -10593,7 +10809,7 @@
     "control_label": "Private not-for-profit",
     "category": "Degree-granting, primarily baccalaureate or above",
     "urbanization": "Town: Remote",
-    "religious_affiliation": "Presbyterian Church (USA)"
+    "religious_affiliation": "Non-Denominational"
   },
   {
     "unitid": "178387",
@@ -10701,6 +10917,18 @@
     "control_label": "Public",
     "category": "Degree-granting, primarily baccalaureate or above",
     "urbanization": "City: Midsize",
+    "religious_affiliation": "Not applicable"
+  },
+  {
+    "unitid": "180522",
+    "institution_name": "Montana State University-Northern",
+    "institution_alias": null,
+    "institution_unique_name": "Montana State University-Northern | Havre | Montana",
+    "state": "Montana",
+    "city": "Havre",
+    "control_label": "Public",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "Town: Remote",
     "religious_affiliation": "Not applicable"
   },
   {
@@ -11163,9 +11391,9 @@
     "unitid": "163532",
     "institution_name": "Ner Israel Rabbinical College",
     "institution_alias": null,
-    "institution_unique_name": "Ner Israel Rabbinical College | Baltimore | Maryland",
+    "institution_unique_name": "Ner Israel Rabbinical College | Pikesville | Maryland",
     "state": "Maryland",
-    "city": "Baltimore",
+    "city": "Pikesville",
     "control_label": "Private not-for-profit",
     "category": "Degree-granting, primarily baccalaureate or above",
     "urbanization": "Suburb: Large",
@@ -11347,7 +11575,7 @@
     "state": "New York",
     "city": "Mineola",
     "control_label": "Private not-for-profit",
-    "category": "Degree-granting, primarily baccalaureate or above",
+    "category": "Degree-granting, graduate with no undergraduate degrees",
     "urbanization": "Suburb: Large",
     "religious_affiliation": "Not applicable"
   },
@@ -11383,7 +11611,7 @@
     "state": "New York",
     "city": "New York",
     "control_label": "Private not-for-profit",
-    "category": "Degree-granting, primarily baccalaureate or above",
+    "category": "Degree-granting, not primarily baccalaureate or above",
     "urbanization": "City: Large",
     "religious_affiliation": "Not applicable"
   },
@@ -11772,6 +12000,18 @@
     "religious_affiliation": "Assemblies of God Church"
   },
   {
+    "unitid": "500829",
+    "institution_name": "Northpoint College",
+    "institution_alias": null,
+    "institution_unique_name": "Northpoint College | Wyoming | Michigan",
+    "state": "Michigan",
+    "city": "Wyoming",
+    "control_label": "Private not-for-profit",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "{Not available}",
+    "religious_affiliation": "Assemblies of God Church"
+  },
+  {
     "unitid": "377546",
     "institution_name": "Northwest College of Art & Design",
     "institution_alias": "NCAD",
@@ -12127,7 +12367,7 @@
     "state": "Ohio",
     "city": "Chillicothe",
     "control_label": "Public",
-    "category": "Degree-granting, primarily baccalaureate or above",
+    "category": "Degree-granting, not primarily baccalaureate or above",
     "urbanization": "Town: Distant",
     "religious_affiliation": "Not applicable"
   },
@@ -12163,7 +12403,7 @@
     "state": "Ohio",
     "city": "Zanesville",
     "control_label": "Public",
-    "category": "Degree-granting, primarily baccalaureate or above",
+    "category": "Degree-granting, not primarily baccalaureate or above",
     "urbanization": "Town: Distant",
     "religious_affiliation": "Not applicable"
   },
@@ -12456,6 +12696,18 @@
     "religious_affiliation": "Christian Churches and Churches of Christ"
   },
   {
+    "unitid": "136455",
+    "institution_name": "PENSACOLA CHRISTIAN COLLEGE",
+    "institution_alias": "PCC",
+    "institution_unique_name": "PENSACOLA CHRISTIAN COLLEGE | Pensacola | Florida",
+    "state": "Florida",
+    "city": "Pensacola",
+    "control_label": "Private not-for-profit",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "{Not available}",
+    "religious_affiliation": "Baptist"
+  },
+  {
     "unitid": "194310",
     "institution_name": "Pace University",
     "institution_alias": "Pace University",
@@ -12466,6 +12718,18 @@
     "category": "Degree-granting, primarily baccalaureate or above",
     "urbanization": "City: Large",
     "religious_affiliation": "Not applicable"
+  },
+  {
+    "unitid": "407610",
+    "institution_name": "Pacific Bible College",
+    "institution_alias": null,
+    "institution_unique_name": "Pacific Bible College | Medford | Oregon",
+    "state": "Oregon",
+    "city": "Medford",
+    "control_label": "Private not-for-profit",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "City: Small",
+    "religious_affiliation": "Undenominational"
   },
   {
     "unitid": "378576",
@@ -12528,6 +12792,18 @@
     "religious_affiliation": "Not applicable"
   },
   {
+    "unitid": "457484",
+    "institution_name": "Pacific Rim Christian University",
+    "institution_alias": null,
+    "institution_unique_name": "Pacific Rim Christian University | Honolulu | Hawaii",
+    "state": "Hawaii",
+    "city": "Honolulu",
+    "control_label": "Private not-for-profit",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "City: Large",
+    "religious_affiliation": "Other Protestant"
+  },
+  {
     "unitid": "120838",
     "institution_name": "Pacific States University",
     "institution_alias": null,
@@ -12547,7 +12823,7 @@
     "state": "California",
     "city": "Angwin",
     "control_label": "Private not-for-profit",
-    "category": "Degree-granting, primarily baccalaureate or above",
+    "category": "Degree-granting, not primarily baccalaureate or above",
     "urbanization": "Rural: Fringe",
     "religious_affiliation": "Seventh Day Adventist"
   },
@@ -12578,7 +12854,7 @@
   {
     "unitid": "136330",
     "institution_name": "Palm Beach Atlantic University",
-    "institution_alias": "Palm Beach Atlantic  PBA",
+    "institution_alias": "PBA",
     "institution_unique_name": "Palm Beach Atlantic University | West Palm Beach | Florida",
     "state": "Florida",
     "city": "West Palm Beach",
@@ -12780,6 +13056,18 @@
     "religious_affiliation": "Not applicable"
   },
   {
+    "unitid": "214740",
+    "institution_name": "Pennsylvania State University-Penn State DuBois",
+    "institution_alias": "Penn State",
+    "institution_unique_name": "Pennsylvania State University-Penn State DuBois | DuBois | Pennsylvania",
+    "state": "Pennsylvania",
+    "city": "DuBois",
+    "control_label": "Public",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "Town: Remote",
+    "religious_affiliation": "Not applicable"
+  },
+  {
     "unitid": "214591",
     "institution_name": "Pennsylvania State University-Penn State Erie-Behrend College",
     "institution_alias": "Behrend College",
@@ -12897,6 +13185,18 @@
     "control_label": "Public",
     "category": "Degree-granting, primarily baccalaureate or above",
     "urbanization": "Suburb: Large",
+    "religious_affiliation": "Not applicable"
+  },
+  {
+    "unitid": "214634",
+    "institution_name": "Pennsylvania State University-Penn State Shenango",
+    "institution_alias": "Penn State",
+    "institution_unique_name": "Pennsylvania State University-Penn State Shenango | Sharon | Pennsylvania",
+    "state": "Pennsylvania",
+    "city": "Sharon",
+    "control_label": "Public",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "Town: Fringe",
     "religious_affiliation": "Not applicable"
   },
   {
@@ -13080,6 +13380,18 @@
     "religious_affiliation": "Not applicable"
   },
   {
+    "unitid": "138868",
+    "institution_name": "Point University",
+    "institution_alias": "Point U",
+    "institution_unique_name": "Point University | West Point | Georgia",
+    "state": "Georgia",
+    "city": "West Point",
+    "control_label": "Private not-for-profit",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "Town: Distant",
+    "religious_affiliation": "Christian Churches and Churches of Christ"
+  },
+  {
     "unitid": "456481",
     "institution_name": "Polytechnic University of Puerto Rico-Miami",
     "institution_alias": null,
@@ -13113,6 +13425,18 @@
     "control_label": "Private not-for-profit",
     "category": "Degree-granting, primarily baccalaureate or above",
     "urbanization": "Suburb: Large",
+    "religious_affiliation": "Not applicable"
+  },
+  {
+    "unitid": "494010",
+    "institution_name": "Ponce Health Sciences University-St Louis",
+    "institution_alias": null,
+    "institution_unique_name": "Ponce Health Sciences University-St Louis | St. Louis | Missouri",
+    "state": "Missouri",
+    "city": "St. Louis",
+    "control_label": "Private for-profit",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "City: Large",
     "religious_affiliation": "Not applicable"
   },
   {
@@ -13185,18 +13509,6 @@
     "control_label": "Private not-for-profit",
     "category": "Degree-granting, primarily baccalaureate or above",
     "urbanization": "Town: Distant",
-    "religious_affiliation": "Presbyterian Church (USA)"
-  },
-  {
-    "unitid": "490045",
-    "institution_name": "Presbyterian Theological Seminary in America",
-    "institution_alias": null,
-    "institution_unique_name": "Presbyterian Theological Seminary in America | Santa Fe Springs | California",
-    "state": "California",
-    "city": "Santa Fe Springs",
-    "control_label": "Private not-for-profit",
-    "category": "Degree-granting, primarily baccalaureate or above",
-    "urbanization": "Suburb: Large",
     "religious_affiliation": "Presbyterian Church (USA)"
   },
   {
@@ -13514,7 +13826,7 @@
   {
     "unitid": "233301",
     "institution_name": "Randolph College",
-    "institution_alias": "Randolph|Randolph-Macon Woman's College|Randolph Macon Women's College|Randolph-Macon Womens College|Randolph Macon Womens College|R-MWC|RMWC|Randolf-Macon Women's College|Randolf Macon Women's College|Randolf|Randolph Lynchburg|RC|Lynchburg Randolph",
+    "institution_alias": "Randolph | Randolph-Macon Woman's College | Randolph Macon Women's College | Randolph-Macon Womens College | Randolph Macon Womens College | R-MWC | RMWC | Randolf-Macon Women's College | Randolf Macon Women's College | Randolf | Randolph Lynchburg | RC | Lynchburg Randolph",
     "institution_unique_name": "Randolph College | Lynchburg | Virginia",
     "state": "Virginia",
     "city": "Lynchburg",
@@ -13534,6 +13846,18 @@
     "category": "Degree-granting, primarily baccalaureate or above",
     "urbanization": "Suburb: Large",
     "religious_affiliation": "United Methodist"
+  },
+  {
+    "unitid": "497462",
+    "institution_name": "Redeemers University North America",
+    "institution_alias": "RUNA",
+    "institution_unique_name": "Redeemers University North America | Greenville | Texas",
+    "state": "Texas",
+    "city": "Greenville",
+    "control_label": "Private not-for-profit",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "Rural: Distant",
+    "religious_affiliation": "Pentecostal Holiness Church"
   },
   {
     "unitid": "209922",
@@ -13598,7 +13922,7 @@
   {
     "unitid": "140872",
     "institution_name": "Reinhardt University",
-    "institution_alias": null,
+    "institution_alias": "Reinhardt",
     "institution_unique_name": "Reinhardt University | Waleska | Georgia",
     "state": "Georgia",
     "city": "Waleska",
@@ -13764,6 +14088,18 @@
     "religious_affiliation": "Free Methodist"
   },
   {
+    "unitid": "170967",
+    "institution_name": "Rochester Christian University",
+    "institution_alias": null,
+    "institution_unique_name": "Rochester Christian University | Rochester Hills | Michigan",
+    "state": "Michigan",
+    "city": "Rochester Hills",
+    "control_label": "Private not-for-profit",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "Suburb: Large",
+    "religious_affiliation": "Churches of Christ"
+  },
+  {
     "unitid": "195003",
     "institution_name": "Rochester Institute of Technology",
     "institution_alias": "RIT",
@@ -13774,18 +14110,6 @@
     "category": "Degree-granting, primarily baccalaureate or above",
     "urbanization": "Suburb: Large",
     "religious_affiliation": "Not applicable"
-  },
-  {
-    "unitid": "170967",
-    "institution_name": "Rochester University",
-    "institution_alias": null,
-    "institution_unique_name": "Rochester University | Rochester Hills | Michigan",
-    "state": "Michigan",
-    "city": "Rochester Hills",
-    "control_label": "Private not-for-profit",
-    "category": "Degree-granting, primarily baccalaureate or above",
-    "urbanization": "Suburb: Large",
-    "religious_affiliation": "Churches of Christ"
   },
   {
     "unitid": "148405",
@@ -14119,7 +14443,7 @@
     "state": "New York",
     "city": "Delhi",
     "control_label": "Public",
-    "category": "Degree-granting, primarily baccalaureate or above",
+    "category": "Degree-granting, not primarily baccalaureate or above",
     "urbanization": "Rural: Remote",
     "religious_affiliation": "Not applicable"
   },
@@ -14246,7 +14570,7 @@
   {
     "unitid": "154235",
     "institution_name": "Saint Ambrose University",
-    "institution_alias": "St. Ambrose University   St Ambrose University",
+    "institution_alias": "St. Ambrose University",
     "institution_unique_name": "Saint Ambrose University | Davenport | Iowa",
     "state": "Iowa",
     "city": "Davenport",
@@ -14414,7 +14738,7 @@
   {
     "unitid": "215770",
     "institution_name": "Saint Joseph's University - Philadelphia",
-    "institution_alias": null,
+    "institution_alias": "SJU",
     "institution_unique_name": "Saint Joseph's University - Philadelphia | Philadelphia | Pennsylvania",
     "state": "Pennsylvania",
     "city": "Philadelphia",
@@ -14623,7 +14947,7 @@
     "state": "Montana",
     "city": "Pablo",
     "control_label": "Public",
-    "category": "Degree-granting, primarily baccalaureate or above",
+    "category": "Degree-granting, not primarily baccalaureate or above",
     "urbanization": "Rural: Distant",
     "religious_affiliation": "Not applicable"
   },
@@ -15048,18 +15372,6 @@
     "religious_affiliation": "Baptist"
   },
   {
-    "unitid": "195474",
-    "institution_name": "Siena College",
-    "institution_alias": null,
-    "institution_unique_name": "Siena College | Loudonville | New York",
-    "state": "New York",
-    "city": "Loudonville",
-    "control_label": "Private not-for-profit",
-    "category": "Degree-granting, primarily baccalaureate or above",
-    "urbanization": "Suburb: Large",
-    "religious_affiliation": "Roman Catholic"
-  },
-  {
     "unitid": "172264",
     "institution_name": "Siena Heights University",
     "institution_alias": null,
@@ -15072,6 +15384,18 @@
     "religious_affiliation": "Roman Catholic"
   },
   {
+    "unitid": "195474",
+    "institution_name": "Siena University",
+    "institution_alias": null,
+    "institution_unique_name": "Siena University | Loudonville | New York",
+    "state": "New York",
+    "city": "Loudonville",
+    "control_label": "Private not-for-profit",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "Suburb: Large",
+    "religious_affiliation": "Roman Catholic"
+  },
+  {
     "unitid": "461759",
     "institution_name": "Simmons College of Kentucky",
     "institution_alias": "Simmons Bible College",
@@ -15079,7 +15403,7 @@
     "state": "Kentucky",
     "city": "Louisville",
     "control_label": "Private not-for-profit",
-    "category": "Degree-granting, primarily baccalaureate or above",
+    "category": "Degree-granting, not primarily baccalaureate or above",
     "urbanization": "City: Large",
     "religious_affiliation": "American Baptist"
   },
@@ -15127,7 +15451,7 @@
     "state": "South Dakota",
     "city": "Mission",
     "control_label": "Public",
-    "category": "Degree-granting, primarily baccalaureate or above",
+    "category": "Degree-granting, not primarily baccalaureate or above",
     "urbanization": "Rural: Remote",
     "religious_affiliation": "Not applicable"
   },
@@ -15273,6 +15597,18 @@
     "control_label": "Private for-profit",
     "category": "Degree-granting, primarily baccalaureate or above",
     "urbanization": "Suburb: Large",
+    "religious_affiliation": "Not applicable"
+  },
+  {
+    "unitid": "481720",
+    "institution_name": "South University-High Point",
+    "institution_alias": "South University-High Point",
+    "institution_unique_name": "South University-High Point | High Point | North Carolina",
+    "state": "North Carolina",
+    "city": "High Point",
+    "control_label": "Private for-profit",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "City: Midsize",
     "religious_affiliation": "Not applicable"
   },
   {
@@ -15720,6 +16056,18 @@
     "religious_affiliation": "Roman Catholic"
   },
   {
+    "unitid": "141060",
+    "institution_name": "Spelman College",
+    "institution_alias": null,
+    "institution_unique_name": "Spelman College | Atlanta | Georgia",
+    "state": "Georgia",
+    "city": "Atlanta",
+    "control_label": "Private not-for-profit",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "City: Large",
+    "religious_affiliation": "Not applicable"
+  },
+  {
     "unitid": "172334",
     "institution_name": "Spring Arbor University",
     "institution_alias": "SAU | SAC | Spring Arbor College | Spring Arber Unviversity | Spring Arbor | Spring Arber | Spring Arbor Collage",
@@ -15864,6 +16212,18 @@
     "religious_affiliation": "Roman Catholic"
   },
   {
+    "unitid": "148593",
+    "institution_name": "St. John's College",
+    "institution_alias": "St Johns School of Nursing; St John's College of Nursing",
+    "institution_unique_name": "St. John's College | Springfield | Illinois",
+    "state": "Illinois",
+    "city": "Springfield",
+    "control_label": "Private not-for-profit",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "City: Midsize",
+    "religious_affiliation": "Roman Catholic"
+  },
+  {
     "unitid": "163976",
     "institution_name": "St. John's College",
     "institution_alias": "SJC",
@@ -15886,18 +16246,6 @@
     "category": "Degree-granting, primarily baccalaureate or above",
     "urbanization": "Rural: Fringe",
     "religious_affiliation": "Not applicable"
-  },
-  {
-    "unitid": "148593",
-    "institution_name": "St. John's College-Department of Nursing",
-    "institution_alias": "St Johns School of Nursing  St John's College of Nursing",
-    "institution_unique_name": "St. John's College-Department of Nursing | Springfield | Illinois",
-    "state": "Illinois",
-    "city": "Springfield",
-    "control_label": "Private not-for-profit",
-    "category": "Degree-granting, primarily baccalaureate or above",
-    "urbanization": "City: Midsize",
-    "religious_affiliation": "Roman Catholic"
   },
   {
     "unitid": "195809",
@@ -15970,6 +16318,18 @@
     "category": "Degree-granting, primarily baccalaureate or above",
     "urbanization": "Suburb: Large",
     "religious_affiliation": "Roman Catholic"
+  },
+  {
+    "unitid": "446561",
+    "institution_name": "Stanbridge University",
+    "institution_alias": null,
+    "institution_unique_name": "Stanbridge University | Irvine | California",
+    "state": "California",
+    "city": "Irvine",
+    "control_label": "Private for-profit",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "City: Large",
+    "religious_affiliation": "Not applicable"
   },
   {
     "unitid": "243744",
@@ -16101,6 +16461,18 @@
     "control_label": "Private not-for-profit",
     "category": "Degree-granting, primarily baccalaureate or above",
     "urbanization": "Suburb: Large",
+    "religious_affiliation": "Not applicable"
+  },
+  {
+    "unitid": "178767",
+    "institution_name": "Stevens-The Institute of Business & Arts",
+    "institution_alias": "Patricia Stevens College",
+    "institution_unique_name": "Stevens-The Institute of Business & Arts | Saint Louis | Missouri",
+    "state": "Missouri",
+    "city": "Saint Louis",
+    "control_label": "Private for-profit",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "City: Large",
     "religious_affiliation": "Not applicable"
   },
   {
@@ -16251,9 +16623,9 @@
     "unitid": "430184",
     "institution_name": "Strayer University-Maryland",
     "institution_alias": null,
-    "institution_unique_name": "Strayer University-Maryland | Suitland | Maryland",
+    "institution_unique_name": "Strayer University-Maryland | Baltimore | Maryland",
     "state": "Maryland",
-    "city": "Suitland",
+    "city": "Baltimore",
     "control_label": "Private for-profit",
     "category": "Degree-granting, primarily baccalaureate or above",
     "urbanization": "Suburb: Large",
@@ -16299,9 +16671,9 @@
     "unitid": "443784",
     "institution_name": "Strayer University-Pennsylvania",
     "institution_alias": null,
-    "institution_unique_name": "Strayer University-Pennsylvania | Trevose | Pennsylvania",
+    "institution_unique_name": "Strayer University-Pennsylvania | Philadelphia | Pennsylvania",
     "state": "Pennsylvania",
-    "city": "Trevose",
+    "city": "Philadelphia",
     "control_label": "Private for-profit",
     "category": "Degree-granting, primarily baccalaureate or above",
     "urbanization": "Suburb: Large",
@@ -16323,9 +16695,9 @@
     "unitid": "443766",
     "institution_name": "Strayer University-Tennessee",
     "institution_alias": null,
-    "institution_unique_name": "Strayer University-Tennessee | Memphis | Tennessee",
+    "institution_unique_name": "Strayer University-Tennessee | Nashville | Tennessee",
     "state": "Tennessee",
-    "city": "Memphis",
+    "city": "Nashville",
     "control_label": "Private for-profit",
     "category": "Degree-granting, primarily baccalaureate or above",
     "urbanization": "City: Large",
@@ -16483,7 +16855,7 @@
     "state": "New Jersey",
     "city": "Adelphia",
     "control_label": "Private not-for-profit",
-    "category": "Degree-granting, primarily baccalaureate or above",
+    "category": "Degree-granting, not primarily baccalaureate or above",
     "urbanization": "Suburb: Large",
     "religious_affiliation": "Not applicable"
   },
@@ -16704,6 +17076,18 @@
     "religious_affiliation": "Not applicable"
   },
   {
+    "unitid": "225502",
+    "institution_name": "Texas A&M University-Victoria",
+    "institution_alias": "A&M-Victoria",
+    "institution_unique_name": "Texas A&M University-Victoria | Victoria | Texas",
+    "state": "Texas",
+    "city": "Victoria",
+    "control_label": "Public",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "City: Small",
+    "religious_affiliation": "Not applicable"
+  },
+  {
     "unitid": "228875",
     "institution_name": "Texas Christian University",
     "institution_alias": "TCU",
@@ -16742,7 +17126,7 @@
   {
     "unitid": "229063",
     "institution_name": "Texas Southern University",
-    "institution_alias": "TSU",
+    "institution_alias": "Texas Southern",
     "institution_unique_name": "Texas Southern University | Houston | Texas",
     "state": "Texas",
     "city": "Houston",
@@ -16789,9 +17173,9 @@
   },
   {
     "unitid": "492689",
-    "institution_name": "Texas Tech University Health Sciences Center-El Paso",
-    "institution_alias": null,
-    "institution_unique_name": "Texas Tech University Health Sciences Center-El Paso | El Paso | Texas",
+    "institution_name": "Texas Tech University Health Scienes Center El Paso",
+    "institution_alias": "Texas Tech Health El Paso",
+    "institution_unique_name": "Texas Tech University Health Scienes Center El Paso | El Paso | Texas",
     "state": "Texas",
     "city": "El Paso",
     "control_label": "Public",
@@ -16855,7 +17239,7 @@
     "state": "Texas",
     "city": "Plano",
     "control_label": "Private not-for-profit",
-    "category": "Degree-granting, primarily baccalaureate or above",
+    "category": "Degree-granting, graduate with no undergraduate degrees",
     "urbanization": "City: Large",
     "religious_affiliation": "Not applicable"
   },
@@ -16879,7 +17263,7 @@
     "state": "California",
     "city": "San Diego",
     "control_label": "Private not-for-profit",
-    "category": "Degree-granting, primarily baccalaureate or above",
+    "category": "Degree-granting, graduate with no undergraduate degrees",
     "urbanization": "City: Large",
     "religious_affiliation": "Not applicable"
   },
@@ -16951,7 +17335,7 @@
     "state": "New York",
     "city": "White Plains",
     "control_label": "Private for-profit",
-    "category": "Degree-granting, primarily baccalaureate or above",
+    "category": "Degree-granting, not primarily baccalaureate or above",
     "urbanization": "City: Small",
     "religious_affiliation": "Not applicable"
   },
@@ -17088,6 +17472,18 @@
     "religious_affiliation": "Not applicable"
   },
   {
+    "unitid": "154022",
+    "institution_name": "The University of Arizona Global Campus",
+    "institution_alias": null,
+    "institution_unique_name": "The University of Arizona Global Campus | Chandler | Arizona",
+    "state": "Arizona",
+    "city": "Chandler",
+    "control_label": "Public",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "City: Large",
+    "religious_affiliation": "Not applicable"
+  },
+  {
     "unitid": "202763",
     "institution_name": "The University of Findlay",
     "institution_alias": null,
@@ -17126,7 +17522,7 @@
   {
     "unitid": "171599",
     "institution_name": "The University of Olivet",
-    "institution_alias": "OC Comets",
+    "institution_alias": "UO Comets",
     "institution_unique_name": "The University of Olivet | Olivet | Michigan",
     "state": "Michigan",
     "city": "Olivet",
@@ -17330,7 +17726,7 @@
   {
     "unitid": "229027",
     "institution_name": "The University of Texas at San Antonio",
-    "institution_alias": "UTSA",
+    "institution_alias": "UT San Antonio",
     "institution_unique_name": "The University of Texas at San Antonio | San Antonio | Texas",
     "state": "Texas",
     "city": "San Antonio",
@@ -17491,7 +17887,7 @@
     "state": "New York",
     "city": "Staten Island",
     "control_label": "Private not-for-profit",
-    "category": "Degree-granting, primarily baccalaureate or above",
+    "category": "Degree-granting, not primarily baccalaureate or above",
     "urbanization": "City: Large",
     "religious_affiliation": "Not applicable"
   },
@@ -17580,6 +17976,18 @@
     "religious_affiliation": "Church of the Nazarene"
   },
   {
+    "unitid": "206154",
+    "institution_name": "Tri-State Bible College",
+    "institution_alias": "TSBC",
+    "institution_unique_name": "Tri-State Bible College | South Point | Ohio",
+    "state": "Ohio",
+    "city": "South Point",
+    "control_label": "Private not-for-profit",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "Suburb: Midsize",
+    "religious_affiliation": "Undenominational"
+  },
+  {
     "unitid": "152567",
     "institution_name": "Trine University",
     "institution_alias": null,
@@ -17602,18 +18010,6 @@
     "category": "Degree-granting, primarily baccalaureate or above",
     "urbanization": "Town: Distant",
     "religious_affiliation": "Not applicable"
-  },
-  {
-    "unitid": "137953",
-    "institution_name": "Trinity Baptist College",
-    "institution_alias": null,
-    "institution_unique_name": "Trinity Baptist College | Jacksonville | Florida",
-    "state": "Florida",
-    "city": "Jacksonville",
-    "control_label": "Private not-for-profit",
-    "category": "Degree-granting, primarily baccalaureate or above",
-    "urbanization": "City: Large",
-    "religious_affiliation": "Baptist"
   },
   {
     "unitid": "200484",
@@ -17662,6 +18058,18 @@
     "category": "Degree-granting, primarily baccalaureate or above",
     "urbanization": "Suburb: Large",
     "religious_affiliation": "Interdenominational"
+  },
+  {
+    "unitid": "137953",
+    "institution_name": "Trinity College of Jacksonville",
+    "institution_alias": null,
+    "institution_unique_name": "Trinity College of Jacksonville | Jacksonville | Florida",
+    "state": "Florida",
+    "city": "Jacksonville",
+    "control_label": "Private not-for-profit",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "City: Large",
+    "religious_affiliation": "Baptist"
   },
   {
     "unitid": "146755",
@@ -17943,9 +18351,9 @@
     "unitid": "447050",
     "institution_name": "United States University",
     "institution_alias": "USU",
-    "institution_unique_name": "United States University | San Diego | California",
+    "institution_unique_name": "United States University | Sandy Springs | California",
     "state": "California",
-    "city": "San Diego",
+    "city": "Sandy Springs",
     "control_label": "Private for-profit",
     "category": "Degree-granting, primarily baccalaureate or above",
     "urbanization": "City: Large",
@@ -18540,6 +18948,18 @@
     "religious_affiliation": "United Methodist"
   },
   {
+    "unitid": "500670",
+    "institution_name": "University of Fairfax",
+    "institution_alias": null,
+    "institution_unique_name": "University of Fairfax | Salem | Virginia",
+    "state": "Virginia",
+    "city": "Salem",
+    "control_label": "Private for-profit",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "{Not available}",
+    "religious_affiliation": "Not applicable"
+  },
+  {
     "unitid": "134130",
     "institution_name": "University of Florida",
     "institution_alias": null,
@@ -18681,18 +19101,6 @@
     "control_label": "Public",
     "category": "Degree-granting, primarily baccalaureate or above",
     "urbanization": "City: Large",
-    "religious_affiliation": "Not applicable"
-  },
-  {
-    "unitid": "225502",
-    "institution_name": "University of Houston-Victoria",
-    "institution_alias": "UH-Victoria",
-    "institution_unique_name": "University of Houston-Victoria | Victoria | Texas",
-    "state": "Texas",
-    "city": "Victoria",
-    "control_label": "Public",
-    "category": "Degree-granting, primarily baccalaureate or above",
-    "urbanization": "City: Small",
     "religious_affiliation": "Not applicable"
   },
   {
@@ -18926,7 +19334,7 @@
   {
     "unitid": "437097",
     "institution_name": "University of Management and Technology",
-    "institution_alias": null,
+    "institution_alias": "UMT",
     "institution_unique_name": "University of Management and Technology | Arlington | Virginia",
     "state": "Virginia",
     "city": "Arlington",
@@ -19293,7 +19701,7 @@
     "control_label": "Private not-for-profit",
     "category": "Degree-granting, primarily baccalaureate or above",
     "urbanization": "Rural: Distant",
-    "religious_affiliation": "Original Free Will  Baptist"
+    "religious_affiliation": "Original Free Will Baptist"
   },
   {
     "unitid": "193399",
@@ -19476,6 +19884,18 @@
     "religious_affiliation": "Not applicable"
   },
   {
+    "unitid": "501460",
+    "institution_name": "University of North America",
+    "institution_alias": null,
+    "institution_unique_name": "University of North America | Fairfax | Virginia",
+    "state": "Virginia",
+    "city": "Fairfax",
+    "control_label": "Private for-profit",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "{Not available}",
+    "religious_affiliation": "Not applicable"
+  },
+  {
     "unitid": "199111",
     "institution_name": "University of North Carolina Asheville",
     "institution_alias": "UNC Asheville",
@@ -19610,7 +20030,7 @@
   {
     "unitid": "228909",
     "institution_name": "University of North Texas Health Science Center",
-    "institution_alias": "UNT Health Science Center|UNTHSC|University of North Texas Health Sciences Center at Fort Worth|UNT Health Sciences Center|Texas College of Osteopathic Medicine|TCOM",
+    "institution_alias": "UNT Health Fort Worth|UNTHSC|University of North Texas Health Science Center at Fort Worth|Texas College of Osteopathic Medicine|TCOM",
     "institution_unique_name": "University of North Texas Health Science Center | Fort Worth | Texas",
     "state": "Texas",
     "city": "Fort Worth",
@@ -20042,7 +20462,7 @@
   {
     "unitid": "218645",
     "institution_name": "University of South Carolina Aiken",
-    "institution_alias": "University of South Carolina Aiken, USC Aiken, USCA, USC Aiken, University of South Carolina at Aiken, UofSC Aiken",
+    "institution_alias": "University of South Carolina Aiken, USC Aiken, USCA, USC-Aiken, University of South Carolina at Aiken, UofSC Aiken",
     "institution_unique_name": "University of South Carolina Aiken | Aiken | South Carolina",
     "state": "South Carolina",
     "city": "Aiken",
@@ -20724,6 +21144,18 @@
     "religious_affiliation": "Jewish"
   },
   {
+    "unitid": "230728",
+    "institution_name": "Utah State University",
+    "institution_alias": null,
+    "institution_unique_name": "Utah State University | Logan | Utah",
+    "state": "Utah",
+    "city": "Logan",
+    "control_label": "Public",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "City: Small",
+    "religious_affiliation": "Not applicable"
+  },
+  {
     "unitid": "197045",
     "institution_name": "Utica University",
     "institution_alias": "Utica",
@@ -20854,6 +21286,18 @@
     "category": "Degree-granting, primarily baccalaureate or above",
     "urbanization": "Suburb: Large",
     "religious_affiliation": "Roman Catholic"
+  },
+  {
+    "unitid": "500713",
+    "institution_name": "Virginia Christian College",
+    "institution_alias": null,
+    "institution_unique_name": "Virginia Christian College | Dumfries | Virginia",
+    "state": "Virginia",
+    "city": "Dumfries",
+    "control_label": "Private not-for-profit",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "{Not available}",
+    "religious_affiliation": "Christian Church (Disciples of Christ)"
   },
   {
     "unitid": "234030",
@@ -20995,7 +21439,7 @@
     "state": "Texas",
     "city": "Dallas",
     "control_label": "Private for-profit",
-    "category": "Degree-granting, primarily baccalaureate or above",
+    "category": "Degree-granting, not primarily baccalaureate or above",
     "urbanization": "City: Large",
     "religious_affiliation": "Not applicable"
   },
@@ -21030,10 +21474,10 @@
     "institution_unique_name": "Waldorf University | Forest City | Iowa",
     "state": "Iowa",
     "city": "Forest City",
-    "control_label": "Private for-profit",
+    "control_label": "Private not-for-profit",
     "category": "Degree-granting, primarily baccalaureate or above",
     "urbanization": "Rural: Remote",
-    "religious_affiliation": "Not applicable"
+    "religious_affiliation": "Evangelical Lutheran Church"
   },
   {
     "unitid": "236896",
@@ -21408,7 +21852,19 @@
     "religious_affiliation": "Not applicable"
   },
   {
-    "unitid": "443331",
+    "unitid": "458210",
+    "institution_name": "West Coast University-Anaheim-Orange County",
+    "institution_alias": null,
+    "institution_unique_name": "West Coast University-Anaheim-Orange County | Anaheim | California",
+    "state": "California",
+    "city": "Anaheim",
+    "control_label": "Private for-profit",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "City: Large",
+    "religious_affiliation": "Not applicable"
+  },
+  {
+    "unitid": "501488",
     "institution_name": "West Coast University-Los Angeles",
     "institution_alias": null,
     "institution_unique_name": "West Coast University-Los Angeles | North Hollywood | California",
@@ -21416,7 +21872,7 @@
     "city": "North Hollywood",
     "control_label": "Private for-profit",
     "category": "Degree-granting, primarily baccalaureate or above",
-    "urbanization": "City: Large",
+    "urbanization": "{Not available}",
     "religious_affiliation": "Not applicable"
   },
   {
@@ -21444,12 +21900,12 @@
     "religious_affiliation": "Not applicable"
   },
   {
-    "unitid": "458210",
-    "institution_name": "West Coast University-Orange County",
+    "unitid": "443331",
+    "institution_name": "West Coast University-Texas",
     "institution_alias": null,
-    "institution_unique_name": "West Coast University-Orange County | Anaheim | California",
-    "state": "California",
-    "city": "Anaheim",
+    "institution_unique_name": "West Coast University-Texas | Richardson | Texas",
+    "state": "Texas",
+    "city": "Richardson",
     "control_label": "Private for-profit",
     "category": "Degree-granting, primarily baccalaureate or above",
     "urbanization": "City: Large",
@@ -22068,6 +22524,18 @@
     "religious_affiliation": "Presbyterian Church (USA)"
   },
   {
+    "unitid": "499732",
+    "institution_name": "Windsor University",
+    "institution_alias": null,
+    "institution_unique_name": "Windsor University | Washington | District of Columbia",
+    "state": "District of Columbia",
+    "city": "Washington",
+    "control_label": "Private for-profit",
+    "category": "Degree-granting, graduate with no undergraduate degrees",
+    "urbanization": "City: Large",
+    "religious_affiliation": "Not applicable"
+  },
+  {
     "unitid": "199962",
     "institution_name": "Wingate University",
     "institution_alias": null,
@@ -22351,7 +22819,7 @@
     "state": "New Jersey",
     "city": "Union",
     "control_label": "Private not-for-profit",
-    "category": "Degree-granting, primarily baccalaureate or above",
+    "category": "Degree-granting, not primarily baccalaureate or above",
     "urbanization": "Suburb: Large",
     "religious_affiliation": "Not applicable"
   },
@@ -22413,6 +22881,18 @@
     "control_label": "Private not-for-profit",
     "category": "Degree-granting, primarily baccalaureate or above",
     "urbanization": "City: Large",
+    "religious_affiliation": "Not applicable"
+  },
+  {
+    "unitid": "490504",
+    "institution_name": "Yeshiva Ohr Naftoli",
+    "institution_alias": null,
+    "institution_unique_name": "Yeshiva Ohr Naftoli | New Windsor | New York",
+    "state": "New York",
+    "city": "New Windsor",
+    "control_label": "Private not-for-profit",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "Suburb: Large",
     "religious_affiliation": "Not applicable"
   },
   {
@@ -22557,6 +23037,18 @@
     "control_label": "Private not-for-profit",
     "category": "Degree-granting, primarily baccalaureate or above",
     "urbanization": "Rural: Fringe",
+    "religious_affiliation": "Not applicable"
+  },
+  {
+    "unitid": "493594",
+    "institution_name": "Yeshiva of Ocean",
+    "institution_alias": null,
+    "institution_unique_name": "Yeshiva of Ocean | Greenfield Park | New York",
+    "state": "New York",
+    "city": "Greenfield Park",
+    "control_label": "Private not-for-profit",
+    "category": "Degree-granting, primarily baccalaureate or above",
+    "urbanization": "Rural: Distant",
     "religious_affiliation": "Not applicable"
   },
   {

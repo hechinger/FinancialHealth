@@ -1,6 +1,38 @@
 {
   "unitid": "204024",
-  "generated_at": "2026-09-16",
+  "generated_at": "2026-09-19",
+  "vintages": {
+    "enrollment": {
+      "collection_year": 2025,
+      "academic_year_label": "2024-25",
+      "release_status": "provisional",
+      "retrieved_at": "2026-09-19 11:34:25"
+    },
+    "international_enrollment": {
+      "collection_year": 2025,
+      "academic_year_label": "2024-25",
+      "release_status": "provisional",
+      "retrieved_at": "2026-09-19 11:34:25"
+    },
+    "finance": {
+      "collection_year": 2024,
+      "academic_year_label": "2023-24",
+      "release_status": "provisional",
+      "retrieved_at": "2026-09-19 11:34:25"
+    },
+    "human_resources": {
+      "collection_year": 2024,
+      "academic_year_label": "2024-25",
+      "release_status": "provisional",
+      "retrieved_at": "2026-09-19 11:34:25"
+    },
+    "outcomes": {
+      "collection_year": 2024,
+      "academic_year_label": "2024",
+      "release_status": "revised",
+      "retrieved_at": "2026-09-19 11:34:25"
+    }
+  },
   "profile": {
     "institution_name": "Miami University-Oxford",
     "institution_unique_name": "Miami University-Oxford | Oxford | Ohio",
@@ -14,64 +46,77 @@
     "all_programs_distance_education": "No"
   },
   "summary": {
-    "latest_year": 2024,
-    "enrollment_pct_change_5yr": -9.9637,
-    "sector_median_enrollment_pct_change_5yr": -4.2732,
+    "latest_year": 2025,
+    "latest_identity_year": 2025,
+    "latest_enrollment_year": 2025,
+    "latest_finance_year": 2024,
+    "latest_hr_year": 2024,
+    "latest_outcomes_year": 2024,
+    "enrollment_pct_change_since_2019": -9.0686,
+    "sector_median_enrollment_pct_change_since_2019": -1.9499,
     "enrollment_decline_last_3_of_5": "Yes",
-    "revenue_pct_change_5yr": -8.7115,
-    "sector_median_revenue_pct_change_5yr": -1.3025,
-    "net_tuition_per_fte_change_5yr": -26.5341,
-    "sector_median_net_tuition_per_fte_change_5yr": -17.7529,
-    "staff_total_headcount_pct_change_5yr": -7.9891,
-    "sector_median_staff_total_headcount_pct_change_5yr": 0.3908,
-    "staff_instructional_headcount_pct_change_5yr": -2.1311,
-    "students_per_instructional_staff_fte": 19.5507,
-    "sector_median_students_per_instructional_staff_fte": 16.7461,
+    "revenue_pct_change_since_2019": -8.7115,
+    "sector_median_revenue_pct_change_since_2019": -1.3711,
+    "net_tuition_per_fte_change_since_2019": -26.5341,
+    "sector_median_net_tuition_per_fte_change_since_2019": -17.9315,
+    "staff_total_headcount_pct_change_since_2019": -7.9891,
+    "sector_median_staff_total_headcount_pct_change_since_2019": 0.4408,
+    "staff_instructional_headcount_pct_change_since_2019": -2.1311,
+    "students_per_instructional_staff_fte": 16,
+    "sector_median_students_per_instructional_staff_fte": 16,
     "ended_year_at_loss": "No",
     "losses_last_3_of_5": "No",
     "loss_years_last_10": 0,
     "tuition_dependence_pct": 36.5492,
-    "sector_median_tuition_dependence_pct": 21.2045,
+    "sector_median_tuition_dependence_pct": 21.1918,
     "tuition_dependence_vs_sector_median_sentence": "This college got 37.0% of its revenue from net tuition in 2024, above the median of 21% for public colleges.",
-    "unfunded_discount_rate": null,
-    "unfunded_discount_pct_change_5yr": null,
-    "share_grad_students": 13.4884,
-    "sector_avg_share_grad_students": 20.9865,
+    "unfunded_discount_rate": 34.7641,
+    "unfunded_discount_pct_change_5yr": 62.1221,
+    "share_grad_students": 12.5212,
+    "sector_avg_share_grad_students": 20.7283,
     "research_expense": 21325318,
     "research_expense_per_fte": 1128.3834,
     "research_expense_pct_core_expenses": 4.4686,
-    "sector_research_spending_n": 548,
-    "sector_research_spending_positive_n": 522,
-    "sector_research_spending_reporting_share_pct": 95.3,
+    "sector_research_spending_n": 552,
+    "sector_research_spending_positive_n": 524,
+    "sector_research_spending_reporting_share_pct": 94.9,
     "sector_median_research_expense_per_fte_positive": 1080.4519,
-    "pct_international_all": 4.8544,
-    "pct_international_undergraduate": 3.8672,
-    "pct_international_graduate": 11.1859,
-    "international_student_count_change_5yr": -1885,
-    "international_enrollment_pct_change_5yr": -66.21,
-    "international_students_sentence": "In 2024, 4.9% of students were international. That includes 3.9% of undergraduates and 11.2% of graduate students.",
+    "pct_international_all": 3.8873,
+    "pct_international_undergraduate": 2.6559,
+    "pct_international_graduate": 12.49,
+    "international_student_count_change_since_2019": -2069,
+    "international_enrollment_pct_change_since_2019": -72.673,
+    "international_students_sentence": "In 2025, 3.9% of students were international. That includes 2.7% of undergraduates and 12.5% of graduate students.",
     "federal_loan_pct_most_recent": 33,
-    "sector_avg_federal_loan_pct_most_recent": 37.9232,
-    "grad_plus_recipients": 84,
-    "grad_plus_disbursements_amt": 980956,
-    "grad_plus_disbursements_per_recipient": 11678.0476,
-    "sector_median_grad_plus_disbursements_per_recipient": 8446.7298,
+    "sector_avg_federal_loan_pct_most_recent": 37.9052,
+    "grad_plus_recipients": 91,
+    "grad_plus_disbursements_amt": 2009569,
+    "grad_plus_disbursements_per_recipient": 22083.1758,
+    "sector_median_grad_plus_disbursements_per_recipient": 14138,
     "federal_grants_contracts_pell_adjusted_pct_core_revenue": 3.8634,
     "state_funding_pct_core_revenue": 12.1694,
-    "federal_grants_contracts_pell_adjusted_pct_change_5yr": 93.9555,
-    "state_funding_pct_change_5yr": -3.3233,
+    "federal_grants_contracts_pell_adjusted_pct_change_since_2019": 93.9555,
+    "state_funding_pct_change_since_2019": -3.3233,
     "endowment_assets_per_fte_adjusted": 42991.6927,
-    "sector_median_endowment_assets_per_fte_adjusted": 12637.3807,
-    "endowment_pct_change_5yr": 18.5405,
-    "sector_median_endowment_pct_change_5yr": 19.1807,
+    "sector_median_endowment_assets_per_fte_adjusted": 12743.2778,
+    "endowment_pct_change_since_2019": 18.5405,
+    "sector_median_endowment_pct_change_since_2019": 19.147,
     "endowment_spending_current_use_pct_core_revenue": 0.0145,
     "graduation_rate_6yr": 80,
     "median_earnings_10yr": 55076,
     "median_debt_completers": 23000,
-    "scorecard_data_updated": "2026-03-23",
+    "scorecard_data_updated": "2026-06-10",
     "ipeds_graduation_rate_year": 2024,
     "ipeds_graduation_rate_label": "Bachelor degree within 6 years, total",
+    "revenue_pct_change_5yr": -8.7115,
+    "net_tuition_per_fte_change_5yr": -26.5341,
+    "endowment_pct_change_5yr": 18.5405,
+    "federal_grants_contracts_pell_adjusted_pct_change_5yr": 93.9555,
+    "state_funding_pct_change_5yr": -3.3233,
+    "staff_total_headcount_pct_change_5yr": -7.9891,
+    "staff_instructional_headcount_pct_change_5yr": -2.1311,
     "state_local_support_pct_core_revenue": 14.1722,
+    "state_local_support_pct_change_since_2019": 7.1005,
     "state_local_support_pct_change_5yr": 7.1005
   },
   "series": {
@@ -253,6 +298,10 @@
       {
         "year": 2023,
         "value": 33.6353
+      },
+      {
+        "year": 2024,
+        "value": 34.7641
       }
     ],
     "enrollment_headcount_total": [
@@ -299,6 +348,10 @@
       {
         "year": 2024,
         "value": 19817
+      },
+      {
+        "year": 2025,
+        "value": 20014
       }
     ],
     "enrollment_headcount_undergrad": [
@@ -345,6 +398,10 @@
       {
         "year": 2024,
         "value": 17144
+      },
+      {
+        "year": 2025,
+        "value": 17508
       }
     ],
     "enrollment_headcount_graduate": [
@@ -391,6 +448,10 @@
       {
         "year": 2024,
         "value": 2673
+      },
+      {
+        "year": 2025,
+        "value": 2506
       }
     ],
     "enrollment_nonresident_total": [
@@ -437,6 +498,10 @@
       {
         "year": 2024,
         "value": 962
+      },
+      {
+        "year": 2025,
+        "value": 778
       }
     ],
     "enrollment_nonresident_undergrad": [
@@ -483,6 +548,10 @@
       {
         "year": 2024,
         "value": 663
+      },
+      {
+        "year": 2025,
+        "value": 465
       }
     ],
     "enrollment_nonresident_graduate": [
@@ -529,6 +598,10 @@
       {
         "year": 2024,
         "value": 299
+      },
+      {
+        "year": 2025,
+        "value": 313
       }
     ],
     "staff_headcount_total": [

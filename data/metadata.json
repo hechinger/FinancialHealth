@@ -1,10 +1,42 @@
 {
-  "generated_at": "2026-09-16",
+  "generated_at": "2026-09-19",
   "author": "The Hechinger Report, Marina Villeneuve",
-  "last_modified": "2026-09-16",
-  "built_at": "2026-09-16T13:55:32Z",
-  "institution_count": 1890,
-  "latest_year": 2024,
+  "last_modified": "2026-09-19",
+  "built_at": "2026-09-19T13:57:11Z",
+  "institution_count": 1931,
+  "latest_year": 2025,
+  "component_vintages": {
+    "enrollment": {
+      "collection_year": 2025,
+      "academic_year_label": "2024-25",
+      "release_status": "provisional",
+      "retrieved_at": "2026-09-19 11:34:25"
+    },
+    "international_enrollment": {
+      "collection_year": 2025,
+      "academic_year_label": "2024-25",
+      "release_status": "provisional",
+      "retrieved_at": "2026-09-19 11:34:25"
+    },
+    "finance": {
+      "collection_year": 2024,
+      "academic_year_label": "2023-24",
+      "release_status": "provisional",
+      "retrieved_at": "2026-09-19 11:34:25"
+    },
+    "human_resources": {
+      "collection_year": 2024,
+      "academic_year_label": "2024-25",
+      "release_status": "provisional",
+      "retrieved_at": "2026-09-19 11:34:25"
+    },
+    "outcomes": {
+      "collection_year": 2024,
+      "academic_year_label": "2024",
+      "release_status": "revised",
+      "retrieved_at": "2026-09-19 11:34:25"
+    }
+  },
   "title": "College Financial Health Tracker",
   "dataset": "IPEDS Financial Health Canonical Dataset",
   "methodology_note": "This website prototype uses the filtered public-facing canonical IPEDS dataset from the project repo.",
