@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19",
+  "generated_at": "2026-09-22",
   "covered_accreditors": ["HLC", "MSCHE", "NECHE", "NWCCU", "SACSCOC", "WSCUC"],
   "source_coverage": [
     {
@@ -493,8 +493,8 @@
       "fetch_fresh_count": 0,
       "fetch_cache_read_count": 0,
       "fetch_cache_fallback_count": 43,
-      "fetch_cache_age_min_days": 5.3898,
-      "fetch_cache_age_max_days": 5.3903,
+      "fetch_cache_age_min_days": 7.82,
+      "fetch_cache_age_max_days": 7.8206,
       "scrape_row_count": 2824
     },
     {
@@ -505,11 +505,11 @@
       "n": null,
       "resource_type": "html",
       "fetch_total_count": 1620,
-      "fetch_fresh_count": 1620,
-      "fetch_cache_read_count": 0,
+      "fetch_fresh_count": 0,
+      "fetch_cache_read_count": 1620,
       "fetch_cache_fallback_count": 0,
-      "fetch_cache_age_min_days": null,
-      "fetch_cache_age_max_days": null,
+      "fetch_cache_age_min_days": 2.4302,
+      "fetch_cache_age_max_days": 2.4447,
       "scrape_row_count": 4639
     },
     {
@@ -535,11 +535,11 @@
       "n": null,
       "resource_type": "html",
       "fetch_total_count": 25,
-      "fetch_fresh_count": 25,
-      "fetch_cache_read_count": 0,
+      "fetch_fresh_count": 0,
+      "fetch_cache_read_count": 25,
       "fetch_cache_fallback_count": 0,
-      "fetch_cache_age_min_days": null,
-      "fetch_cache_age_max_days": null,
+      "fetch_cache_age_min_days": 2.4302,
+      "fetch_cache_age_max_days": 2.4303,
       "scrape_row_count": 41
     },
     {
@@ -550,11 +550,11 @@
       "n": null,
       "resource_type": "html",
       "fetch_total_count": 135,
-      "fetch_fresh_count": 135,
-      "fetch_cache_read_count": 0,
+      "fetch_fresh_count": 0,
+      "fetch_cache_read_count": 135,
       "fetch_cache_fallback_count": 0,
-      "fetch_cache_age_min_days": null,
-      "fetch_cache_age_max_days": null,
+      "fetch_cache_age_min_days": 2.4297,
+      "fetch_cache_age_max_days": 2.4301,
       "scrape_row_count": 0
     },
     {
@@ -580,11 +580,11 @@
       "n": null,
       "resource_type": "html",
       "fetch_total_count": 13,
-      "fetch_fresh_count": 13,
-      "fetch_cache_read_count": 0,
+      "fetch_fresh_count": 0,
+      "fetch_cache_read_count": 13,
       "fetch_cache_fallback_count": 0,
-      "fetch_cache_age_min_days": null,
-      "fetch_cache_age_max_days": null,
+      "fetch_cache_age_min_days": 2.4303,
+      "fetch_cache_age_max_days": 2.4304,
       "scrape_row_count": 81
     },
     {
@@ -595,11 +595,11 @@
       "n": null,
       "resource_type": "html",
       "fetch_total_count": 26,
-      "fetch_fresh_count": 26,
-      "fetch_cache_read_count": 0,
+      "fetch_fresh_count": 0,
+      "fetch_cache_read_count": 26,
       "fetch_cache_fallback_count": 0,
-      "fetch_cache_age_min_days": null,
-      "fetch_cache_age_max_days": null,
+      "fetch_cache_age_min_days": 2.4301,
+      "fetch_cache_age_max_days": 2.4302,
       "scrape_row_count": 29
     }
   ],
