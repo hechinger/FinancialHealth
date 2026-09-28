@@ -1,6 +1,6 @@
 {
   "unitid": "216542",
-  "generated_at": "2026-09-22",
+  "generated_at": "2026-09-28",
   "vintages": {
     "enrollment": {
       "collection_year": 2025,
@@ -901,10 +901,10 @@
   "latest_status": {
     "accreditors": "MSCHE",
     "action_labels": "Approved Teach-Out Agreements; To note that the institution's accreditation will cease on September 11, 2026.; To require the institution to show cause to demonstrate why its accreditation should not be withdrawn because of insufficient evidence that the institution is in compliance with Standard VI (Planning, Resources, and Institutional Improvement) and Standard VII (Governance, Leadership, and Administration)",
-    "active_actions": null,
+    "active_actions": "adverse_action",
     "has_active_warning": false,
     "has_active_warning_or_notice": false,
-    "has_active_adverse_action": false,
+    "has_active_adverse_action": true,
     "latest_action_date": "2026-08-19",
     "latest_action_year": "2026",
     "action_count": 3
@@ -916,16 +916,16 @@
       "action_label": "To note that the institution's accreditation will cease on September 11, 2026. As of September 12, 2026, University of Valley Forge will no longer be accredited by the Middle States Commission on Higher Education. To direct the institution to implement the teach-out plan. To note the institution will maintain accreditation for the sole purpose of awarding earned academic credentials, executing any appropriate course substitutions, and processing course grades. To remind the institution of its obligation to inform the Commission immediately about any and all significant developments that may impact the institution's closure (Standard 1, formerly Standard VII).",
       "action_label_short": "To note that the institution's accreditation will cease on September 11, 2026.",
       "action_scope": null,
-      "action_status": null,
+      "action_status": "active",
       "action_date": "2026-08-19",
       "action_year": "2026",
-      "notes": null,
+      "notes": "To note that the institution's accreditation will cease on September 11, 2026. As of September 12, 2026, University of Valley Forge will no longer be accredited by the Middle States Commission on Higher Education. To direct the institution to implement the teach-out plan. To note the institution will maintain accreditation for the sole purpose of awarding earned academic credentials, executing any appropriate course substitutions, and processing course grades. To remind the institution of its obligation to inform the Commission immediately about any and all significant developments that may impact the institution's closure (Standard 1, formerly Standard VII).",
       "source_url": "https://www.msche.org/institution/0815/",
       "source_title": "MSCHE Statement of Accreditation Status - University of Valley Forge",
       "source_page_url": "https://www.msche.org/institution/0815/",
-      "source_page_modified": null,
+      "source_page_modified": "2026-09-24",
       "display_action": true,
-      "public_table_strategy": null,
+      "public_table_strategy": "scraper_backed_keep",
       "hybrid_candidate": false,
       "hybrid_reason": null,
       "has_financial_profile": true,
