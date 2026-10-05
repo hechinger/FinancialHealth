@@ -4883,6 +4883,44 @@
       }
     ]
   },
+  "167792": {
+    "unitid": "167792",
+    "financial_unitid": "167792",
+    "has_financial_profile": true,
+    "is_primary_tracker": false,
+    "institution_name": "Bard College at Simon's Rock",
+    "institution_alias": null,
+    "institution_unique_name": "Bard College at Simon's Rock | Massachusetts",
+    "state": "Massachusetts",
+    "city": null,
+    "control_label": "Private not-for-profit",
+    "category": null,
+    "latest_cut_date": "2024-11-01",
+    "latest_cut_label": "Complete campus relocation to Hudson Valley, NY. 116 employees terminated with 60-day notices.",
+    "confirmed_closure_announcement": false,
+    "confirmed_closure_badge_kind": {},
+    "confirmed_closure_announcement_date": {},
+    "confirmed_closure_source_url": {},
+    "confirmed_closure_evidence_text": {},
+    "cut_count": 1,
+    "landing_cuts": [
+      {
+        "announcement_date": "2024-11-01",
+        "announcement_year": 2024,
+        "program_name": "Institution closure",
+        "cut_type": "institution_closure",
+        "cut_label_public": "Complete campus relocation to Hudson Valley, NY. 116 employees terminated with 60-day notices.",
+        "primary_display_category": "Institution closures/absorptions",
+        "display_category": "Institution closures/absorptions",
+        "display_categories": [
+          "Institution closures/absorptions"
+        ],
+        "positions_affected": 116,
+        "faculty_affected": 116,
+        "source_url": "https://theberkshireedge.com/bard-college-at-simons-rock-to-lay-off-116-employees/"
+      }
+    ]
+  },
   "168005": {
     "unitid": "168005",
     "financial_unitid": "168005",
@@ -11914,7 +11952,7 @@
     "confirmed_closure_announcement_date": {},
     "confirmed_closure_source_url": {},
     "confirmed_closure_evidence_text": {},
-    "cut_count": 2,
+    "cut_count": 3,
     "landing_cuts": [
       {
         "announcement_date": "2024-08-28",
@@ -11945,6 +11983,21 @@
         "positions_affected": 32,
         "faculty_affected": null,
         "source_url": "https://www.wisn.com/article/uw-milwaukee-to-lay-off-32-faculty-after-regents-approve-cuts/61960130"
+      },
+      {
+        "announcement_date": "2024-03-11",
+        "announcement_year": 2024,
+        "program_name": "UWM at Waukesha campus to close after the Spring 2025 semester",
+        "cut_type": "campus_closure",
+        "cut_label_public": "UWM at Waukesha campus to close after the Spring 2025 semester",
+        "primary_display_category": "Campus closures",
+        "display_category": "Campus closures",
+        "display_categories": [
+          "Campus closures"
+        ],
+        "positions_affected": null,
+        "faculty_affected": null,
+        "source_url": "https://uwm.edu/news/uwm-at-waukesha-campus-to-close-in-2025-uwm-develops-university-center-with-wctc/"
       }
     ]
   },
@@ -12737,44 +12790,6 @@
       }
     ]
   },
-  "cut-bard-college-at-simon-s-rock--massachusetts": {
-    "unitid": "cut-bard-college-at-simon-s-rock--massachusetts",
-    "financial_unitid": null,
-    "has_financial_profile": false,
-    "is_primary_tracker": false,
-    "institution_name": "Bard College at Simon's Rock",
-    "institution_alias": null,
-    "institution_unique_name": "Bard College at Simon's Rock | Massachusetts",
-    "state": "Massachusetts",
-    "city": null,
-    "control_label": "Private not-for-profit",
-    "category": null,
-    "latest_cut_date": "2024-11-01",
-    "latest_cut_label": "Complete campus relocation to Hudson Valley, NY. 116 employees terminated with 60-day notices.",
-    "confirmed_closure_announcement": false,
-    "confirmed_closure_badge_kind": {},
-    "confirmed_closure_announcement_date": {},
-    "confirmed_closure_source_url": {},
-    "confirmed_closure_evidence_text": {},
-    "cut_count": 1,
-    "landing_cuts": [
-      {
-        "announcement_date": "2024-11-01",
-        "announcement_year": 2024,
-        "program_name": "Institution closure",
-        "cut_type": "institution_closure",
-        "cut_label_public": "Complete campus relocation to Hudson Valley, NY. 116 employees terminated with 60-day notices.",
-        "primary_display_category": "Institution closures/absorptions",
-        "display_category": "Institution closures/absorptions",
-        "display_categories": [
-          "Institution closures/absorptions"
-        ],
-        "positions_affected": 116,
-        "faculty_affected": 116,
-        "source_url": "https://theberkshireedge.com/bard-college-at-simons-rock-to-lay-off-116-employees/"
-      }
-    ]
-  },
   "cut-labour-college-of-healthcare--massachusetts": {
     "unitid": "cut-labour-college-of-healthcare--massachusetts",
     "financial_unitid": null,
@@ -12924,44 +12939,6 @@
         "positions_affected": null,
         "faculty_affected": null,
         "source_url": "https://www.startribune.com/university-of-minnesota-proposes-7-budget-cuts-and-largest-tuition-hike-in-more-than-a-decade/601367825"
-      }
-    ]
-  },
-  "cut-university-of-wisconsin--wisconsin": {
-    "unitid": "cut-university-of-wisconsin--wisconsin",
-    "financial_unitid": null,
-    "has_financial_profile": false,
-    "is_primary_tracker": false,
-    "institution_name": "University of Wisconsin",
-    "institution_alias": null,
-    "institution_unique_name": "University of Wisconsin | Wisconsin",
-    "state": "Wisconsin",
-    "city": null,
-    "control_label": "Public",
-    "category": null,
-    "latest_cut_date": "2024-03-11",
-    "latest_cut_label": "UWM at Waukesha campus to close after the Spring 2025 semester",
-    "confirmed_closure_announcement": false,
-    "confirmed_closure_badge_kind": {},
-    "confirmed_closure_announcement_date": {},
-    "confirmed_closure_source_url": {},
-    "confirmed_closure_evidence_text": {},
-    "cut_count": 1,
-    "landing_cuts": [
-      {
-        "announcement_date": "2024-03-11",
-        "announcement_year": 2024,
-        "program_name": "UWM at Waukesha campus to close after the Spring 2025 semester",
-        "cut_type": "campus_closure",
-        "cut_label_public": "UWM at Waukesha campus to close after the Spring 2025 semester",
-        "primary_display_category": "Campus closures",
-        "display_category": "Campus closures",
-        "display_categories": [
-          "Campus closures"
-        ],
-        "positions_affected": 100,
-        "faculty_affected": 100,
-        "source_url": "https://uwm.edu/news/uwm-at-waukesha-campus-to-close-in-2025-uwm-develops-university-center-with-wctc/"
       }
     ]
   },
