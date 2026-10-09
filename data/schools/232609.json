@@ -1,6 +1,6 @@
 {
   "unitid": "232609",
-  "generated_at": "2026-10-05",
+  "generated_at": "2026-10-09",
   "vintages": {
     "enrollment": {
       "collection_year": 2025,
@@ -900,16 +900,37 @@
   },
   "latest_status": {
     "accreditors": "SACSCOC",
-    "action_labels": "Continued the institution on warning for twelve months for failure to comply with Standard 8.2.a (Student outcomes: educational programs) and Standard 13.3 (Financial responsibility); Placed on warning for twelve months for failure to comply with standards concerning financial documents, administrative effectiveness, student outcomes, and financial responsibility",
-    "active_actions": "warning",
+    "action_labels": "Continued the institution on warning for twelve months for failure to comply with Standard 8.2.a (Student outcomes: educational programs) and Standard 13.3 (Financial responsibility); Denied reaffirmation of accreditation, continued accreditation, and continued the institution on Warning for twelve months for failure to comply with Standards 8.2.a (Student outcomes: educational programs) and 13.3 (Financial responsibility).; Placed on warning for twelve months for failure to comply with standards concerning financial documents, administrative effectiveness, student outcomes, and financial responsibility",
+    "active_actions": "notice; warning",
     "has_active_warning": true,
     "has_active_warning_or_notice": true,
     "has_active_adverse_action": false,
-    "latest_action_date": "2025-12-07",
-    "latest_action_year": "2025",
-    "action_count": 2
+    "latest_action_date": "2026-01-06",
+    "latest_action_year": "2026",
+    "action_count": 3
   },
   "actions": [
+    {
+      "accreditor": "SACSCOC",
+      "action_type": "notice",
+      "action_label": "Morrison-Shetlar: The following action regarding your institution was taken by the Board of Trustees of the Southern Association of Colleges and Schools Commission on Colleges (SACSCOC) during its meeting held on December 7, 2025: The SACSCOC Board of Trustees denied reaffirmation of accreditation, continued accreditation, and continued the institution on Warning. For twelve months for failure to comply with Standards 8.2.a (Student outcomes: educational programs) and 13.3 (Financial responsibility).",
+      "action_label_short": "Denied reaffirmation of accreditation, continued accreditation, and continued the institution on Warning for twelve months for failure to comply with Standards 8.2.a (Student outcomes: educational programs) and 13.3 (Financial responsibility).",
+      "action_scope": null,
+      "action_status": "active",
+      "action_date": "2026-01-06",
+      "action_year": "2026",
+      "notes": "Heightened Monitoring or Focused Review",
+      "source_url": "https://ope.ed.gov/dapip/#/institution-profile/147730",
+      "source_title": "DAPIP Institutional Accreditation Action",
+      "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/147730",
+      "source_page_modified": null,
+      "display_action": true,
+      "public_table_strategy": "dapip_backed_keep",
+      "hybrid_candidate": false,
+      "hybrid_reason": null,
+      "has_financial_profile": true,
+      "is_primary_tracker": true
+    },
     {
       "accreditor": "SACSCOC",
       "action_type": "adverse_action",
@@ -956,15 +977,15 @@
   "sources": [
     {
       "accreditor": "SACSCOC",
-      "source_title": "December 2025 Accreditation Actions and Public Disclosure Statements - SACSCOC - Public Disclosure Statement",
-      "source_url": "https://sacscoc.box.com/s/ez0994jeki97xd17r0pre0o08jywi2pt",
-      "source_page_url": "https://sacscoc.box.com/s/ez0994jeki97xd17r0pre0o08jywi2pt"
-    },
-    {
-      "accreditor": "SACSCOC",
       "source_title": "DAPIP Institutional Accreditation Action",
       "source_url": "https://ope.ed.gov/dapip/#/institution-profile/147730",
       "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/147730"
+    },
+    {
+      "accreditor": "SACSCOC",
+      "source_title": "December 2025 Accreditation Actions and Public Disclosure Statements - SACSCOC - Public Disclosure Statement",
+      "source_url": "https://sacscoc.box.com/s/ez0994jeki97xd17r0pre0o08jywi2pt",
+      "source_page_url": "https://sacscoc.box.com/s/ez0994jeki97xd17r0pre0o08jywi2pt"
     }
   ]
 }
