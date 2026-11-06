@@ -239,6 +239,7 @@ function upgradeSiteFooter() {
       "Coding, design and data analysis by <strong>Marina Villeneuve</strong>.",
       "Editing by <strong>Sarah Butrymowicz, Lawrie Mifflin and Caroline Preston</strong>.",
       "Additional contributions by <strong>William Lager</strong>.",
+      "Audience editor: <strong>Nichole Dobo</strong>.",
       "Copy editing by <strong>Matt Cella</strong>.",
       "Illustrations by <strong>Elena Lacey</strong>."
     ];
