@@ -22,7 +22,7 @@
       "accreditor": "MSCHE",
       "action_type": "other",
       "action_status": "active",
-      "n": 2663,
+      "n": 2659,
       "resource_type": null,
       "fetch_total_count": null,
       "fetch_fresh_count": null,
@@ -52,7 +52,7 @@
       "accreditor": "MSCHE",
       "action_type": "adverse_action",
       "action_status": "active",
-      "n": 709,
+      "n": 713,
       "resource_type": null,
       "fetch_total_count": null,
       "fetch_fresh_count": null,
@@ -154,6 +154,21 @@
     },
     {
       "row_type": "action_count",
+      "accreditor": "SACSCOC",
+      "action_type": "removed",
+      "action_status": "resolved",
+      "n": 42,
+      "resource_type": null,
+      "fetch_total_count": null,
+      "fetch_fresh_count": null,
+      "fetch_cache_read_count": null,
+      "fetch_cache_fallback_count": null,
+      "fetch_cache_age_min_days": null,
+      "fetch_cache_age_max_days": null,
+      "scrape_row_count": null
+    },
+    {
+      "row_type": "action_count",
       "accreditor": "NECHE",
       "action_type": "notice",
       "action_status": "active",
@@ -214,6 +229,21 @@
     },
     {
       "row_type": "action_count",
+      "accreditor": "SACSCOC",
+      "action_type": "probation",
+      "action_status": "active",
+      "n": 17,
+      "resource_type": null,
+      "fetch_total_count": null,
+      "fetch_fresh_count": null,
+      "fetch_cache_read_count": null,
+      "fetch_cache_fallback_count": null,
+      "fetch_cache_age_min_days": null,
+      "fetch_cache_age_max_days": null,
+      "scrape_row_count": null
+    },
+    {
+      "row_type": "action_count",
       "accreditor": "MSCHE",
       "action_type": "commission_action",
       "action_status": null,
@@ -259,6 +289,21 @@
     },
     {
       "row_type": "action_count",
+      "accreditor": "SACSCOC",
+      "action_type": "warning",
+      "action_status": "active",
+      "n": 9,
+      "resource_type": null,
+      "fetch_total_count": null,
+      "fetch_fresh_count": null,
+      "fetch_cache_read_count": null,
+      "fetch_cache_fallback_count": null,
+      "fetch_cache_age_min_days": null,
+      "fetch_cache_age_max_days": null,
+      "scrape_row_count": null
+    },
+    {
+      "row_type": "action_count",
       "accreditor": "WSCUC",
       "action_type": "notice",
       "action_status": "active",
@@ -278,6 +323,36 @@
       "action_type": "show_cause",
       "action_status": "active",
       "n": 6,
+      "resource_type": null,
+      "fetch_total_count": null,
+      "fetch_fresh_count": null,
+      "fetch_cache_read_count": null,
+      "fetch_cache_fallback_count": null,
+      "fetch_cache_age_min_days": null,
+      "fetch_cache_age_max_days": null,
+      "scrape_row_count": null
+    },
+    {
+      "row_type": "action_count",
+      "accreditor": "SACSCOC",
+      "action_type": "adverse_action",
+      "action_status": "active",
+      "n": 6,
+      "resource_type": null,
+      "fetch_total_count": null,
+      "fetch_fresh_count": null,
+      "fetch_cache_read_count": null,
+      "fetch_cache_fallback_count": null,
+      "fetch_cache_age_min_days": null,
+      "fetch_cache_age_max_days": null,
+      "scrape_row_count": null
+    },
+    {
+      "row_type": "action_count",
+      "accreditor": "WSCUC",
+      "action_type": "other",
+      "action_status": "active",
+      "n": 5,
       "resource_type": null,
       "fetch_total_count": null,
       "fetch_fresh_count": null,
@@ -429,8 +504,8 @@
       "action_status": null,
       "n": null,
       "resource_type": "html",
-      "fetch_total_count": 12,
-      "fetch_fresh_count": 12,
+      "fetch_total_count": 19,
+      "fetch_fresh_count": 19,
       "fetch_cache_read_count": 0,
       "fetch_cache_fallback_count": 0,
       "fetch_cache_age_min_days": null,
@@ -448,8 +523,8 @@
       "fetch_fresh_count": 0,
       "fetch_cache_read_count": 1632,
       "fetch_cache_fallback_count": 0,
-      "fetch_cache_age_min_days": 2.1793,
-      "fetch_cache_age_max_days": 2.1976,
+      "fetch_cache_age_min_days": 2.631,
+      "fetch_cache_age_max_days": 2.6496,
       "scrape_row_count": 5164
     },
     {
@@ -478,8 +553,8 @@
       "fetch_fresh_count": 0,
       "fetch_cache_read_count": 29,
       "fetch_cache_fallback_count": 0,
-      "fetch_cache_age_min_days": 2.1797,
-      "fetch_cache_age_max_days": 2.1798,
+      "fetch_cache_age_min_days": 2.632,
+      "fetch_cache_age_max_days": 2.6321,
       "scrape_row_count": 46
     },
     {
@@ -493,8 +568,8 @@
       "fetch_fresh_count": 0,
       "fetch_cache_read_count": 135,
       "fetch_cache_fallback_count": 0,
-      "fetch_cache_age_min_days": 2.1794,
-      "fetch_cache_age_max_days": 2.1796,
+      "fetch_cache_age_min_days": 2.6317,
+      "fetch_cache_age_max_days": 2.6319,
       "scrape_row_count": 0
     },
     {
@@ -503,14 +578,29 @@
       "action_type": null,
       "action_status": null,
       "n": null,
+      "resource_type": "binary",
+      "fetch_total_count": 12,
+      "fetch_fresh_count": 12,
+      "fetch_cache_read_count": 0,
+      "fetch_cache_fallback_count": 0,
+      "fetch_cache_age_min_days": null,
+      "fetch_cache_age_max_days": null,
+      "scrape_row_count": 74
+    },
+    {
+      "row_type": "fetch_summary",
+      "accreditor": "SACSCOC",
+      "action_type": null,
+      "action_status": null,
+      "n": null,
       "resource_type": "html",
-      "fetch_total_count": 1,
-      "fetch_fresh_count": 0,
+      "fetch_total_count": 16,
+      "fetch_fresh_count": 15,
       "fetch_cache_read_count": 1,
       "fetch_cache_fallback_count": 0,
-      "fetch_cache_age_min_days": 2.1798,
-      "fetch_cache_age_max_days": 2.1798,
-      "scrape_row_count": 0
+      "fetch_cache_age_min_days": 2.6319,
+      "fetch_cache_age_max_days": 2.6319,
+      "scrape_row_count": 74
     },
     {
       "row_type": "fetch_summary",
@@ -523,9 +613,9 @@
       "fetch_fresh_count": 0,
       "fetch_cache_read_count": 26,
       "fetch_cache_fallback_count": 0,
-      "fetch_cache_age_min_days": 2.1796,
-      "fetch_cache_age_max_days": 2.1797,
-      "scrape_row_count": 28
+      "fetch_cache_age_min_days": 2.6319,
+      "fetch_cache_age_max_days": 2.632,
+      "scrape_row_count": 33
     }
   ],
   "not_covered": [
@@ -3324,7 +3414,7 @@
           "display_action": true,
           "public_table_strategy": "hybrid_keep",
           "hybrid_candidate": true,
-          "hybrid_reason": null,
+          "hybrid_reason": "scraper_detail_enriches_generic_or_fileless_dapip",
           "has_financial_profile": true,
           "is_primary_tracker": true
         }
@@ -3850,18 +3940,18 @@
           "action_label": "removed from Probation",
           "action_label_short": "Removed from probation",
           "action_scope": null,
-          "action_status": null,
+          "action_status": "resolved",
           "action_date": "2022-06-01",
           "action_year": "2022",
-          "notes": null,
+          "notes": "Florida Memorial University, Miami Gardens, Florida (removed from Probation)",
           "source_url": "https://web.archive.org/web/20220703182506id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/june-2022-accreditation-actions-and-public-disclosure-statements/",
           "source_title": "June 2022 Accreditation Actions and Public Disclosure Statements - SACSCOC",
           "source_page_url": "https://web.archive.org/web/20220703182506id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/june-2022-accreditation-actions-and-public-disclosure-statements/",
-          "source_page_modified": null,
+          "source_page_modified": "2022-06-17",
           "display_action": true,
-          "public_table_strategy": null,
-          "hybrid_candidate": false,
-          "hybrid_reason": null,
+          "public_table_strategy": "hybrid_keep",
+          "hybrid_candidate": true,
+          "hybrid_reason": "scraper_detail_enriches_generic_or_fileless_dapip",
           "has_financial_profile": true,
           "is_primary_tracker": true
         },
@@ -4249,16 +4339,16 @@
           "action_label": "Accreditation Reaffirmed: Probation Removed",
           "action_label_short": "Probation removed",
           "action_scope": null,
-          "action_status": "resolved",
+          "action_status": null,
           "action_date": "2024-12-08",
           "action_year": "2024",
-          "notes": "Accreditation Reaffirmed: Probation Removed",
+          "notes": null,
           "source_url": "https://ope.ed.gov/dapip/#/institution-profile/110316",
           "source_title": "DAPIP Institutional Accreditation Action",
           "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/110316",
           "source_page_modified": null,
           "display_action": true,
-          "public_table_strategy": "dapip_backed_keep",
+          "public_table_strategy": null,
           "hybrid_candidate": false,
           "hybrid_reason": null,
           "has_financial_profile": true,
@@ -4501,18 +4591,18 @@
           "action_label": "removed from Probation",
           "action_label_short": "Removed from probation",
           "action_scope": null,
-          "action_status": null,
+          "action_status": "resolved",
           "action_date": "2021-06-01",
           "action_year": "2021",
-          "notes": null,
+          "notes": "Warner University, Lake Wales, FL (removed from Probation)",
           "source_url": "https://web.archive.org/web/20210618190638id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/june-2021-accreditation-actions-and-public-disclosure-statements/",
           "source_title": "June 2021 Accreditation Actions and Public Disclosure Statements - SACSCOC",
           "source_page_url": "https://web.archive.org/web/20210618190638id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/june-2021-accreditation-actions-and-public-disclosure-statements/",
-          "source_page_modified": null,
+          "source_page_modified": "2021-06-18",
           "display_action": true,
-          "public_table_strategy": null,
-          "hybrid_candidate": false,
-          "hybrid_reason": null,
+          "public_table_strategy": "hybrid_keep",
+          "hybrid_candidate": true,
+          "hybrid_reason": "scraper_detail_enriches_generic_or_fileless_dapip",
           "has_financial_profile": true,
           "is_primary_tracker": true
         },
@@ -4636,18 +4726,18 @@
           "action_label": "removed from Warning",
           "action_label_short": "Removed from warning",
           "action_scope": null,
-          "action_status": null,
+          "action_status": "resolved",
           "action_date": "2023-06-01",
           "action_year": "2023",
-          "notes": null,
+          "notes": "Point University, West Point, Georgia (removed from Warning)",
           "source_url": "https://web.archive.org/web/20230630122514id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/june-2023-accreditation-actions-and-public-disclosure-statements/",
           "source_title": "June 2023 Accreditation Actions and Public Disclosure Statements - SACSCOC",
           "source_page_url": "https://web.archive.org/web/20230630122514id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/june-2023-accreditation-actions-and-public-disclosure-statements/",
-          "source_page_modified": null,
+          "source_page_modified": "2023-06-23",
           "display_action": true,
-          "public_table_strategy": null,
-          "hybrid_candidate": false,
-          "hybrid_reason": null,
+          "public_table_strategy": "hybrid_keep",
+          "hybrid_candidate": true,
+          "hybrid_reason": "scraper_detail_enriches_generic_or_fileless_dapip",
           "has_financial_profile": true,
           "is_primary_tracker": true
         },
@@ -5362,18 +5452,18 @@
           "action_label": "removed from Warning",
           "action_label_short": "Removed from warning",
           "action_scope": null,
-          "action_status": null,
+          "action_status": "resolved",
           "action_date": "2021-06-01",
           "action_year": "2021",
-          "notes": null,
+          "notes": "Shorter University, Rome, Georgia (removed from Warning)",
           "source_url": "https://web.archive.org/web/20210618190638id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/june-2021-accreditation-actions-and-public-disclosure-statements/",
           "source_title": "June 2021 Accreditation Actions and Public Disclosure Statements - SACSCOC",
           "source_page_url": "https://web.archive.org/web/20210618190638id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/june-2021-accreditation-actions-and-public-disclosure-statements/",
-          "source_page_modified": null,
+          "source_page_modified": "2021-06-18",
           "display_action": true,
-          "public_table_strategy": null,
-          "hybrid_candidate": false,
-          "hybrid_reason": null,
+          "public_table_strategy": "hybrid_keep",
+          "hybrid_candidate": true,
+          "hybrid_reason": "scraper_detail_enriches_generic_or_fileless_dapip",
           "has_financial_profile": true,
           "is_primary_tracker": true
         },
@@ -6967,18 +7057,18 @@
           "action_label": "reaffirmed and removed from Warning",
           "action_label_short": "Removed from warning",
           "action_scope": null,
-          "action_status": null,
+          "action_status": "resolved",
           "action_date": "2020-12-01",
           "action_year": "2020",
-          "notes": null,
+          "notes": "Northern Kentucky University, Highland Heights, Kentucky (reaffirmed and removed from Warning)",
           "source_url": "https://web.archive.org/web/20210117150616id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2020-accreditation-actions-and-public-disclosure-statements/",
           "source_title": "December 2020 Accreditation Actions and Public Disclosure Statements - SACSCOC",
           "source_page_url": "https://web.archive.org/web/20210117150616id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2020-accreditation-actions-and-public-disclosure-statements/",
-          "source_page_modified": null,
+          "source_page_modified": "2020-12-09",
           "display_action": true,
-          "public_table_strategy": null,
-          "hybrid_candidate": false,
-          "hybrid_reason": null,
+          "public_table_strategy": "hybrid_keep",
+          "hybrid_candidate": true,
+          "hybrid_reason": "scraper_detail_enriches_generic_or_fileless_dapip",
           "has_financial_profile": true,
           "is_primary_tracker": true
         },
@@ -7888,18 +7978,18 @@
           "action_label": "removed from Probation",
           "action_label_short": "Removed from probation",
           "action_scope": null,
-          "action_status": null,
+          "action_status": "resolved",
           "action_date": "2020-09-01",
           "action_year": "2020",
-          "notes": null,
+          "notes": "Southern University at New Orleans, New Orleans, Louisiana (removed from Probation)",
           "source_url": "https://web.archive.org/web/20201026214205id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/september-2020-accreditation-actions-and-public-disclosure-statements/",
           "source_title": "September 2020 Accreditation Actions and Public Disclosure Statements - SACSCOC",
           "source_page_url": "https://web.archive.org/web/20201026214205id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/september-2020-accreditation-actions-and-public-disclosure-statements/",
-          "source_page_modified": null,
+          "source_page_modified": "2020-09-10",
           "display_action": true,
-          "public_table_strategy": null,
-          "hybrid_candidate": false,
-          "hybrid_reason": null,
+          "public_table_strategy": "hybrid_keep",
+          "hybrid_candidate": true,
+          "hybrid_reason": "scraper_detail_enriches_generic_or_fileless_dapip",
           "has_financial_profile": true,
           "is_primary_tracker": true
         },
@@ -13243,18 +13333,18 @@
           "action_label": "removed from Probation",
           "action_label_short": "Removed from probation",
           "action_scope": null,
-          "action_status": null,
+          "action_status": "resolved",
           "action_date": "2022-06-01",
           "action_year": "2022",
-          "notes": null,
+          "notes": "Pfeiffer University, Misenheimer, North Carolina (removed from Probation)",
           "source_url": "https://web.archive.org/web/20220703182506id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/june-2022-accreditation-actions-and-public-disclosure-statements/",
           "source_title": "June 2022 Accreditation Actions and Public Disclosure Statements - SACSCOC",
           "source_page_url": "https://web.archive.org/web/20220703182506id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/june-2022-accreditation-actions-and-public-disclosure-statements/",
-          "source_page_modified": null,
+          "source_page_modified": "2022-06-17",
           "display_action": true,
-          "public_table_strategy": null,
-          "hybrid_candidate": false,
-          "hybrid_reason": null,
+          "public_table_strategy": "hybrid_keep",
+          "hybrid_candidate": true,
+          "hybrid_reason": "scraper_detail_enriches_generic_or_fileless_dapip",
           "has_financial_profile": true,
           "is_primary_tracker": true
         },
@@ -16447,18 +16537,18 @@
           "action_label": "removed from Warning",
           "action_label_short": "Removed from warning",
           "action_scope": null,
-          "action_status": null,
+          "action_status": "resolved",
           "action_date": "2020-09-01",
           "action_year": "2020",
-          "notes": null,
+          "notes": "Columbia College, Columbia, South Carolina (removed from Warning)",
           "source_url": "https://web.archive.org/web/20201026214205id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/september-2020-accreditation-actions-and-public-disclosure-statements/",
           "source_title": "September 2020 Accreditation Actions and Public Disclosure Statements - SACSCOC",
           "source_page_url": "https://web.archive.org/web/20201026214205id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/september-2020-accreditation-actions-and-public-disclosure-statements/",
-          "source_page_modified": null,
+          "source_page_modified": "2020-09-10",
           "display_action": true,
-          "public_table_strategy": null,
-          "hybrid_candidate": false,
-          "hybrid_reason": null,
+          "public_table_strategy": "hybrid_keep",
+          "hybrid_candidate": true,
+          "hybrid_reason": "scraper_detail_enriches_generic_or_fileless_dapip",
           "has_financial_profile": true,
           "is_primary_tracker": true
         },
@@ -16582,16 +16672,16 @@
           "action_label": "Accreditation Reaffirmed:  Warning Removed",
           "action_label_short": "Warning removed",
           "action_scope": null,
-          "action_status": "resolved",
+          "action_status": null,
           "action_date": "2025-01-16",
           "action_year": "2025",
-          "notes": "Accreditation Reaffirmed: Warning Removed",
+          "notes": null,
           "source_url": "https://ope.ed.gov/dapip/#/institution-profile/142300",
           "source_title": "DAPIP Institutional Accreditation Action",
           "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/142300",
           "source_page_modified": null,
           "display_action": true,
-          "public_table_strategy": "dapip_backed_keep",
+          "public_table_strategy": null,
           "hybrid_candidate": false,
           "hybrid_reason": null,
           "has_financial_profile": true,
@@ -17575,18 +17665,18 @@
           "action_label": "removed from Probation",
           "action_label_short": "Removed from probation",
           "action_scope": null,
-          "action_status": null,
+          "action_status": "resolved",
           "action_date": "2020-09-01",
           "action_year": "2020",
-          "notes": null,
+          "notes": "Fisk University, Nashville, Tennessee (removed from Probation)",
           "source_url": "https://web.archive.org/web/20201026214205id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/september-2020-accreditation-actions-and-public-disclosure-statements/",
           "source_title": "September 2020 Accreditation Actions and Public Disclosure Statements - SACSCOC",
           "source_page_url": "https://web.archive.org/web/20201026214205id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/september-2020-accreditation-actions-and-public-disclosure-statements/",
-          "source_page_modified": null,
+          "source_page_modified": "2020-09-10",
           "display_action": true,
-          "public_table_strategy": null,
-          "hybrid_candidate": false,
-          "hybrid_reason": null,
+          "public_table_strategy": "hybrid_keep",
+          "hybrid_candidate": true,
+          "hybrid_reason": "scraper_detail_enriches_generic_or_fileless_dapip",
           "has_financial_profile": true,
           "is_primary_tracker": true
         },
@@ -17947,18 +18037,18 @@
           "action_label": "removed from Probation",
           "action_label_short": "Removed from probation",
           "action_scope": null,
-          "action_status": null,
+          "action_status": "resolved",
           "action_date": "2020-09-01",
           "action_year": "2020",
-          "notes": null,
+          "notes": "Tennessee State University, Nashville, Tennessee (removed from Probation)",
           "source_url": "https://web.archive.org/web/20201026214205id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/september-2020-accreditation-actions-and-public-disclosure-statements/",
           "source_title": "September 2020 Accreditation Actions and Public Disclosure Statements - SACSCOC",
           "source_page_url": "https://web.archive.org/web/20201026214205id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/september-2020-accreditation-actions-and-public-disclosure-statements/",
-          "source_page_modified": null,
+          "source_page_modified": "2020-09-10",
           "display_action": true,
-          "public_table_strategy": null,
-          "hybrid_candidate": false,
-          "hybrid_reason": null,
+          "public_table_strategy": "hybrid_keep",
+          "hybrid_candidate": true,
+          "hybrid_reason": "scraper_detail_enriches_generic_or_fileless_dapip",
           "has_financial_profile": true,
           "is_primary_tracker": true
         },
@@ -18082,18 +18172,18 @@
           "action_label": "removed from Probation",
           "action_label_short": "Removed from probation",
           "action_scope": null,
-          "action_status": null,
+          "action_status": "resolved",
           "action_date": "2020-09-01",
           "action_year": "2020",
-          "notes": null,
+          "notes": "Tusculum University, Greenville, Tennessee (removed from Probation)",
           "source_url": "https://web.archive.org/web/20201026214205id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/september-2020-accreditation-actions-and-public-disclosure-statements/",
           "source_title": "September 2020 Accreditation Actions and Public Disclosure Statements - SACSCOC",
           "source_page_url": "https://web.archive.org/web/20201026214205id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/september-2020-accreditation-actions-and-public-disclosure-statements/",
-          "source_page_modified": null,
+          "source_page_modified": "2020-09-10",
           "display_action": true,
-          "public_table_strategy": null,
-          "hybrid_candidate": false,
-          "hybrid_reason": null,
+          "public_table_strategy": "hybrid_keep",
+          "hybrid_candidate": true,
+          "hybrid_reason": "scraper_detail_enriches_generic_or_fileless_dapip",
           "has_financial_profile": true,
           "is_primary_tracker": true
         },
@@ -19078,18 +19168,18 @@
           "action_label": "removed from Warning",
           "action_label_short": "Removed from warning",
           "action_scope": null,
-          "action_status": null,
+          "action_status": "resolved",
           "action_date": "2024-06-01",
           "action_year": "2024",
-          "notes": null,
+          "notes": "LeTourneau University, Longview, Texas (removed from Warning)",
           "source_url": "https://web.archive.org/web/20240626193756id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/june-2024-accreditation-actions-and-public-disclosure-statements/",
           "source_title": "June 2024 Accreditation Actions and Public Disclosure Statements - SACSCOC",
           "source_page_url": "https://web.archive.org/web/20240626193756id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/june-2024-accreditation-actions-and-public-disclosure-statements/",
-          "source_page_modified": null,
+          "source_page_modified": "2024-06-20",
           "display_action": true,
-          "public_table_strategy": null,
-          "hybrid_candidate": false,
-          "hybrid_reason": null,
+          "public_table_strategy": "hybrid_keep",
+          "hybrid_candidate": true,
+          "hybrid_reason": "scraper_detail_enriches_generic_or_fileless_dapip",
           "has_financial_profile": true,
           "is_primary_tracker": true
         },
@@ -19858,18 +19948,18 @@
           "action_label": "removed from Warning",
           "action_label_short": "Removed from warning",
           "action_scope": null,
-          "action_status": null,
+          "action_status": "resolved",
           "action_date": "2023-12-01",
           "action_year": "2023",
-          "notes": null,
+          "notes": "The University of Texas at El Paso, El Paso, Texas (removed from Warning)",
           "source_url": "https://web.archive.org/web/20240223043409id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2023-accreditation-actions-and-public-disclosure-statements/",
           "source_title": "December 2023 Accreditation Actions and Public Disclosure Statements - SACSCOC",
           "source_page_url": "https://web.archive.org/web/20240223043409id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2023-accreditation-actions-and-public-disclosure-statements/",
-          "source_page_modified": null,
+          "source_page_modified": "2023-12-07",
           "display_action": true,
-          "public_table_strategy": null,
-          "hybrid_candidate": false,
-          "hybrid_reason": null,
+          "public_table_strategy": "hybrid_keep",
+          "hybrid_candidate": true,
+          "hybrid_reason": "scraper_detail_enriches_generic_or_fileless_dapip",
           "has_financial_profile": true,
           "is_primary_tracker": true
         },
@@ -19921,16 +20011,16 @@
           "action_label": "Accreditation Reaffirmed:  Warning Removed",
           "action_label_short": "Warning removed",
           "action_scope": null,
-          "action_status": "resolved",
+          "action_status": null,
           "action_date": "2019-06-09",
           "action_year": "2019",
-          "notes": "Accreditation Reaffirmed: Warning Removed",
+          "notes": null,
           "source_url": "https://ope.ed.gov/dapip/#/institution-profile/146320",
           "source_title": "DAPIP Institutional Accreditation Action",
           "source_page_url": "https://ope.ed.gov/dapip/#/institution-profile/146320",
           "source_page_modified": null,
           "display_action": true,
-          "public_table_strategy": "dapip_backed_keep",
+          "public_table_strategy": null,
           "hybrid_candidate": false,
           "hybrid_reason": null,
           "has_financial_profile": true,
@@ -22839,16 +22929,37 @@
       "category": null,
       "latest_status": {
         "accreditors": "MSCHE",
-        "action_labels": "To note the institution received the notification of adverse action of June 26, 2023, and a hardcopy of the action notification with delivery confirmation on June 26, 2023.",
+        "action_labels": "Did Not Close in Good Standing; To note the institution received the notification of adverse action of June 26, 2023, and a hardcopy of the action notification with delivery confirmation on June 26, 2023.",
         "active_actions": "adverse_action",
         "has_active_warning": false,
         "has_active_warning_or_notice": false,
         "has_active_adverse_action": true,
-        "latest_action_date": "2023-07-27",
-        "latest_action_year": "2023",
-        "action_count": 1
+        "latest_action_date": "2024-04-29",
+        "latest_action_year": "2024",
+        "action_count": 2
       },
       "actions": [
+        {
+          "accreditor": "MSCHE",
+          "action_type": "adverse_action",
+          "action_label": "To note the institution did not close in good standing by failing to pay its dues and site dues (Dues and Fees Policy and Procedures).",
+          "action_label_short": "Did Not Close in Good Standing",
+          "action_scope": null,
+          "action_status": "active",
+          "action_date": "2024-04-29",
+          "action_year": "2024",
+          "notes": "To note the institution did not close in good standing by failing to pay its dues and site dues (Dues and Fees Policy and Procedures).",
+          "source_url": "https://www.msche.org/institution/0363/",
+          "source_title": "MSCHE Statement of Accreditation Status - Alliance University",
+          "source_page_url": "https://www.msche.org/institution/0363/",
+          "source_page_modified": "2026-11-06",
+          "display_action": true,
+          "public_table_strategy": "scraper_backed_keep",
+          "hybrid_candidate": false,
+          "hybrid_reason": null,
+          "has_financial_profile": false,
+          "is_primary_tracker": false
+        },
         {
           "accreditor": "MSCHE",
           "action_type": "adverse_action",
@@ -23096,6 +23207,60 @@
         }
       ]
     },
+    "accred-american-university-of-puerto-rico--puerto-rico--msche": {
+      "unitid": "accred-american-university-of-puerto-rico--puerto-rico--msche",
+      "financial_unitid": null,
+      "has_financial_profile": false,
+      "is_primary_tracker": false,
+      "institution_name": "American University of Puerto Rico",
+      "institution_alias": null,
+      "city": null,
+      "state": "Puerto Rico",
+      "control_label": null,
+      "category": null,
+      "latest_status": {
+        "accreditors": "MSCHE",
+        "action_labels": "Did Not Close in Good Standing",
+        "active_actions": "adverse_action",
+        "has_active_warning": false,
+        "has_active_warning_or_notice": false,
+        "has_active_adverse_action": true,
+        "latest_action_date": "2024-04-29",
+        "latest_action_year": "2024",
+        "action_count": 1
+      },
+      "actions": [
+        {
+          "accreditor": "MSCHE",
+          "action_type": "adverse_action",
+          "action_label": "To note the institution did not close in good standing by failing to pay its dues and site dues (Dues and Fees Policy and Procedures).",
+          "action_label_short": "Did Not Close in Good Standing",
+          "action_scope": null,
+          "action_status": "active",
+          "action_date": "2024-04-29",
+          "action_year": "2024",
+          "notes": "To note the institution did not close in good standing by failing to pay its dues and site dues (Dues and Fees Policy and Procedures).",
+          "source_url": "https://www.msche.org/institution/0628/",
+          "source_title": "MSCHE Statement of Accreditation Status - American University of Puerto Rico",
+          "source_page_url": "https://www.msche.org/institution/0628/",
+          "source_page_modified": "2026-11-06",
+          "display_action": true,
+          "public_table_strategy": "scraper_backed_keep",
+          "hybrid_candidate": false,
+          "hybrid_reason": null,
+          "has_financial_profile": false,
+          "is_primary_tracker": false
+        }
+      ],
+      "sources": [
+        {
+          "accreditor": "MSCHE",
+          "source_title": "MSCHE Statement of Accreditation Status - American University of Puerto Rico",
+          "source_url": "https://www.msche.org/institution/0628/",
+          "source_page_url": "https://www.msche.org/institution/0628/"
+        }
+      ]
+    },
     "accred-amerion-college--wyoming--hlc": {
       "unitid": "accred-amerion-college--wyoming--hlc",
       "financial_unitid": null,
@@ -23201,6 +23366,141 @@
           "source_title": "MSCHE Statement of Accreditation Status - AMG College",
           "source_url": "https://www.msche.org/institution/10891/",
           "source_page_url": "https://www.msche.org/institution/10891/"
+        }
+      ]
+    },
+    "accred-art-institute-of-atlanta--ga--sacscoc": {
+      "unitid": "accred-art-institute-of-atlanta--ga--sacscoc",
+      "financial_unitid": null,
+      "has_financial_profile": false,
+      "is_primary_tracker": false,
+      "institution_name": "The Art Institute of Atlanta",
+      "institution_alias": null,
+      "city": null,
+      "state": "GA",
+      "control_label": null,
+      "category": null,
+      "latest_status": {
+        "accreditors": "SACSCOC",
+        "action_labels": "Removed from warning",
+        "active_actions": null,
+        "has_active_warning": false,
+        "has_active_warning_or_notice": false,
+        "has_active_adverse_action": false,
+        "latest_action_date": "2021-06-01",
+        "latest_action_year": "2021",
+        "action_count": 1
+      },
+      "actions": [
+        {
+          "accreditor": "SACSCOC",
+          "action_type": "removed",
+          "action_label": "removed from Warning",
+          "action_label_short": "Removed from warning",
+          "action_scope": null,
+          "action_status": "resolved",
+          "action_date": "2021-06-01",
+          "action_year": "2021",
+          "notes": "The Art Institute of Atlanta, Atlanta, GA (removed from Warning)",
+          "source_url": "https://web.archive.org/web/20210618190638id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/june-2021-accreditation-actions-and-public-disclosure-statements/",
+          "source_title": "June 2021 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_page_url": "https://web.archive.org/web/20210618190638id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/june-2021-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_modified": "2021-06-18",
+          "display_action": true,
+          "public_table_strategy": "scraper_backed_keep",
+          "hybrid_candidate": false,
+          "hybrid_reason": null,
+          "has_financial_profile": false,
+          "is_primary_tracker": false
+        }
+      ],
+      "sources": [
+        {
+          "accreditor": "SACSCOC",
+          "source_title": "June 2021 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_url": "https://web.archive.org/web/20210618190638id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/june-2021-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_url": "https://web.archive.org/web/20210618190638id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/june-2021-accreditation-actions-and-public-disclosure-statements/"
+        }
+      ]
+    },
+    "accred-art-institute-of-houston--texas--sacscoc": {
+      "unitid": "accred-art-institute-of-houston--texas--sacscoc",
+      "financial_unitid": null,
+      "has_financial_profile": false,
+      "is_primary_tracker": false,
+      "institution_name": "Art Institute of Houston",
+      "institution_alias": null,
+      "city": null,
+      "state": "Texas",
+      "control_label": null,
+      "category": null,
+      "latest_status": {
+        "accreditors": "SACSCOC",
+        "action_labels": "Continued on warning; Removed from warning",
+        "active_actions": "warning",
+        "has_active_warning": true,
+        "has_active_warning_or_notice": true,
+        "has_active_adverse_action": false,
+        "latest_action_date": "2022-12-01",
+        "latest_action_year": "2022",
+        "action_count": 2
+      },
+      "actions": [
+        {
+          "accreditor": "SACSCOC",
+          "action_type": "warning",
+          "action_label": "continued on Warning",
+          "action_label_short": "Continued on warning",
+          "action_scope": null,
+          "action_status": "active",
+          "action_date": "2022-12-01",
+          "action_year": "2022",
+          "notes": "Art Institute of Houston, Houston, Texas (continued on Warning) [PDF]",
+          "source_url": "https://web.archive.org/web/20230129125326id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2022-accreditation-actions-and-public-disclosure-statements/",
+          "source_title": "December 2022 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_page_url": "https://web.archive.org/web/20230129125326id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2022-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_modified": "2022-12-15",
+          "display_action": true,
+          "public_table_strategy": "scraper_backed_keep",
+          "hybrid_candidate": false,
+          "hybrid_reason": null,
+          "has_financial_profile": false,
+          "is_primary_tracker": false
+        },
+        {
+          "accreditor": "SACSCOC",
+          "action_type": "removed",
+          "action_label": "removed from Warning",
+          "action_label_short": "Removed from warning",
+          "action_scope": null,
+          "action_status": "resolved",
+          "action_date": "2021-06-01",
+          "action_year": "2021",
+          "notes": "The Art Institute of Houston, Houston, Texas (removed from Warning)",
+          "source_url": "https://web.archive.org/web/20210618190638id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/june-2021-accreditation-actions-and-public-disclosure-statements/",
+          "source_title": "June 2021 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_page_url": "https://web.archive.org/web/20210618190638id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/june-2021-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_modified": "2021-06-18",
+          "display_action": true,
+          "public_table_strategy": "scraper_backed_keep",
+          "hybrid_candidate": false,
+          "hybrid_reason": null,
+          "has_financial_profile": false,
+          "is_primary_tracker": false
+        }
+      ],
+      "sources": [
+        {
+          "accreditor": "SACSCOC",
+          "source_title": "December 2022 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_url": "https://web.archive.org/web/20230129125326id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2022-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_url": "https://web.archive.org/web/20230129125326id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2022-accreditation-actions-and-public-disclosure-statements/"
+        },
+        {
+          "accreditor": "SACSCOC",
+          "source_title": "June 2021 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_url": "https://web.archive.org/web/20210618190638id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/june-2021-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_url": "https://web.archive.org/web/20210618190638id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/june-2021-accreditation-actions-and-public-disclosure-statements/"
         }
       ]
     },
@@ -23417,6 +23717,60 @@
         }
       ]
     },
+    "accred-atlanta-metropolitan-state-college--georgia--sacscoc": {
+      "unitid": "accred-atlanta-metropolitan-state-college--georgia--sacscoc",
+      "financial_unitid": null,
+      "has_financial_profile": false,
+      "is_primary_tracker": false,
+      "institution_name": "Atlanta Metropolitan State College",
+      "institution_alias": null,
+      "city": null,
+      "state": "Georgia",
+      "control_label": null,
+      "category": null,
+      "latest_status": {
+        "accreditors": "SACSCOC",
+        "action_labels": "Removed from probation",
+        "active_actions": null,
+        "has_active_warning": false,
+        "has_active_warning_or_notice": false,
+        "has_active_adverse_action": false,
+        "latest_action_date": "2021-12-01",
+        "latest_action_year": "2021",
+        "action_count": 1
+      },
+      "actions": [
+        {
+          "accreditor": "SACSCOC",
+          "action_type": "removed",
+          "action_label": "removed from Probation",
+          "action_label_short": "Removed from probation",
+          "action_scope": null,
+          "action_status": "resolved",
+          "action_date": "2021-12-01",
+          "action_year": "2021",
+          "notes": "Atlanta Metropolitan State College, Atlanta, Georgia (removed from Probation)",
+          "source_url": "https://web.archive.org/web/20220124132855id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2021-accreditation-actions-and-public-disclosure-statements/",
+          "source_title": "December 2021 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_page_url": "https://web.archive.org/web/20220124132855id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2021-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_modified": "2021-12-10",
+          "display_action": true,
+          "public_table_strategy": "scraper_backed_keep",
+          "hybrid_candidate": false,
+          "hybrid_reason": null,
+          "has_financial_profile": false,
+          "is_primary_tracker": false
+        }
+      ],
+      "sources": [
+        {
+          "accreditor": "SACSCOC",
+          "source_title": "December 2021 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_url": "https://web.archive.org/web/20220124132855id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2021-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_url": "https://web.archive.org/web/20220124132855id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2021-accreditation-actions-and-public-disclosure-statements/"
+        }
+      ]
+    },
     "accred-bay-state-college--neche": {
       "unitid": "accred-bay-state-college--neche",
       "financial_unitid": null,
@@ -23471,6 +23825,114 @@
         }
       ]
     },
+    "accred-blinn-college--texas--sacscoc": {
+      "unitid": "accred-blinn-college--texas--sacscoc",
+      "financial_unitid": null,
+      "has_financial_profile": false,
+      "is_primary_tracker": false,
+      "institution_name": "Blinn College",
+      "institution_alias": null,
+      "city": null,
+      "state": "Texas",
+      "control_label": null,
+      "category": null,
+      "latest_status": {
+        "accreditors": "SACSCOC",
+        "action_labels": "Removed from warning",
+        "active_actions": null,
+        "has_active_warning": false,
+        "has_active_warning_or_notice": false,
+        "has_active_adverse_action": false,
+        "latest_action_date": "2021-12-01",
+        "latest_action_year": "2021",
+        "action_count": 1
+      },
+      "actions": [
+        {
+          "accreditor": "SACSCOC",
+          "action_type": "removed",
+          "action_label": "removed from Warning",
+          "action_label_short": "Removed from warning",
+          "action_scope": null,
+          "action_status": "resolved",
+          "action_date": "2021-12-01",
+          "action_year": "2021",
+          "notes": "Blinn College, Brenham, Texas (removed from Warning)",
+          "source_url": "https://web.archive.org/web/20220124132855id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2021-accreditation-actions-and-public-disclosure-statements/",
+          "source_title": "December 2021 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_page_url": "https://web.archive.org/web/20220124132855id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2021-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_modified": "2021-12-10",
+          "display_action": true,
+          "public_table_strategy": "scraper_backed_keep",
+          "hybrid_candidate": false,
+          "hybrid_reason": null,
+          "has_financial_profile": false,
+          "is_primary_tracker": false
+        }
+      ],
+      "sources": [
+        {
+          "accreditor": "SACSCOC",
+          "source_title": "December 2021 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_url": "https://web.archive.org/web/20220124132855id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2021-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_url": "https://web.archive.org/web/20220124132855id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2021-accreditation-actions-and-public-disclosure-statements/"
+        }
+      ]
+    },
+    "accred-bluefield-college--virginia--sacscoc": {
+      "unitid": "accred-bluefield-college--virginia--sacscoc",
+      "financial_unitid": null,
+      "has_financial_profile": false,
+      "is_primary_tracker": false,
+      "institution_name": "Bluefield College",
+      "institution_alias": null,
+      "city": null,
+      "state": "Virginia",
+      "control_label": null,
+      "category": null,
+      "latest_status": {
+        "accreditors": "SACSCOC",
+        "action_labels": "Removed from warning",
+        "active_actions": null,
+        "has_active_warning": false,
+        "has_active_warning_or_notice": false,
+        "has_active_adverse_action": false,
+        "latest_action_date": "2021-06-01",
+        "latest_action_year": "2021",
+        "action_count": 1
+      },
+      "actions": [
+        {
+          "accreditor": "SACSCOC",
+          "action_type": "removed",
+          "action_label": "removed from Warning",
+          "action_label_short": "Removed from warning",
+          "action_scope": null,
+          "action_status": "resolved",
+          "action_date": "2021-06-01",
+          "action_year": "2021",
+          "notes": "Bluefield College, Bluefield, Virginia (removed from Warning)",
+          "source_url": "https://web.archive.org/web/20210618190638id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/june-2021-accreditation-actions-and-public-disclosure-statements/",
+          "source_title": "June 2021 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_page_url": "https://web.archive.org/web/20210618190638id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/june-2021-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_modified": "2021-06-18",
+          "display_action": true,
+          "public_table_strategy": "scraper_backed_keep",
+          "hybrid_candidate": false,
+          "hybrid_reason": null,
+          "has_financial_profile": false,
+          "is_primary_tracker": false
+        }
+      ],
+      "sources": [
+        {
+          "accreditor": "SACSCOC",
+          "source_title": "June 2021 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_url": "https://web.archive.org/web/20210618190638id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/june-2021-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_url": "https://web.archive.org/web/20210618190638id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/june-2021-accreditation-actions-and-public-disclosure-statements/"
+        }
+      ]
+    },
     "accred-california-institute-of-advanced-management--wscuc": {
       "unitid": "accred-california-institute-of-advanced-management--wscuc",
       "financial_unitid": null,
@@ -23522,6 +23984,60 @@
           "source_title": "June 2025 Commission Actions - WSCUC",
           "source_url": "https://www.wscuc.org/post/june-2025-commission-actions/",
           "source_page_url": "https://www.wscuc.org/post/june-2025-commission-actions/"
+        }
+      ]
+    },
+    "accred-cape-fear-community-college--north-carolina--sacscoc": {
+      "unitid": "accred-cape-fear-community-college--north-carolina--sacscoc",
+      "financial_unitid": null,
+      "has_financial_profile": false,
+      "is_primary_tracker": false,
+      "institution_name": "Cape Fear Community College",
+      "institution_alias": null,
+      "city": null,
+      "state": "North Carolina",
+      "control_label": null,
+      "category": null,
+      "latest_status": {
+        "accreditors": "SACSCOC",
+        "action_labels": "Removed from warning",
+        "active_actions": null,
+        "has_active_warning": false,
+        "has_active_warning_or_notice": false,
+        "has_active_adverse_action": false,
+        "latest_action_date": "2024-12-01",
+        "latest_action_year": "2024",
+        "action_count": 1
+      },
+      "actions": [
+        {
+          "accreditor": "SACSCOC",
+          "action_type": "removed",
+          "action_label": "removed from Warning",
+          "action_label_short": "Removed from warning",
+          "action_scope": null,
+          "action_status": "resolved",
+          "action_date": "2024-12-01",
+          "action_year": "2024",
+          "notes": "Cape Fear Community College, Wilmington, North Carolina (removed from Warning)",
+          "source_url": "https://web.archive.org/web/20241220085302id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2024-accreditation-actions-and-public-disclosure-statements/",
+          "source_title": "December 2024 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_page_url": "https://web.archive.org/web/20241220085302id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2024-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_modified": "2024-12-19",
+          "display_action": true,
+          "public_table_strategy": "scraper_backed_keep",
+          "hybrid_candidate": false,
+          "hybrid_reason": null,
+          "has_financial_profile": false,
+          "is_primary_tracker": false
+        }
+      ],
+      "sources": [
+        {
+          "accreditor": "SACSCOC",
+          "source_title": "December 2024 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_url": "https://web.archive.org/web/20241220085302id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2024-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_url": "https://web.archive.org/web/20241220085302id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2024-accreditation-actions-and-public-disclosure-statements/"
         }
       ]
     },
@@ -23603,6 +24119,60 @@
           "source_title": "June 2025 Commission Actions - WSCUC",
           "source_url": "https://www.wscuc.org/post/june-2025-commission-actions/",
           "source_page_url": "https://www.wscuc.org/post/june-2025-commission-actions/"
+        }
+      ]
+    },
+    "accred-clarendon-college--texas--sacscoc": {
+      "unitid": "accred-clarendon-college--texas--sacscoc",
+      "financial_unitid": null,
+      "has_financial_profile": false,
+      "is_primary_tracker": false,
+      "institution_name": "Clarendon College",
+      "institution_alias": null,
+      "city": null,
+      "state": "Texas",
+      "control_label": null,
+      "category": null,
+      "latest_status": {
+        "accreditors": "SACSCOC",
+        "action_labels": "Removed from warning",
+        "active_actions": null,
+        "has_active_warning": false,
+        "has_active_warning_or_notice": false,
+        "has_active_adverse_action": false,
+        "latest_action_date": "2020-09-01",
+        "latest_action_year": "2020",
+        "action_count": 1
+      },
+      "actions": [
+        {
+          "accreditor": "SACSCOC",
+          "action_type": "removed",
+          "action_label": "removed from Warning",
+          "action_label_short": "Removed from warning",
+          "action_scope": null,
+          "action_status": "resolved",
+          "action_date": "2020-09-01",
+          "action_year": "2020",
+          "notes": "Clarendon College, Clarendon, Texas (removed from Warning)",
+          "source_url": "https://web.archive.org/web/20201026214205id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/september-2020-accreditation-actions-and-public-disclosure-statements/",
+          "source_title": "September 2020 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_page_url": "https://web.archive.org/web/20201026214205id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/september-2020-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_modified": "2020-09-10",
+          "display_action": true,
+          "public_table_strategy": "scraper_backed_keep",
+          "hybrid_candidate": false,
+          "hybrid_reason": null,
+          "has_financial_profile": false,
+          "is_primary_tracker": false
+        }
+      ],
+      "sources": [
+        {
+          "accreditor": "SACSCOC",
+          "source_title": "September 2020 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_url": "https://web.archive.org/web/20201026214205id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/september-2020-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_url": "https://web.archive.org/web/20201026214205id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/september-2020-accreditation-actions-and-public-disclosure-statements/"
         }
       ]
     },
@@ -23828,6 +24398,60 @@
           "source_title": "MSCHE Statement of Accreditation Status - College of New Rochelle, The",
           "source_url": "https://www.msche.org/institution/0295/",
           "source_page_url": "https://www.msche.org/institution/0295/"
+        }
+      ]
+    },
+    "accred-college-of-the-florida-keys--florida--sacscoc": {
+      "unitid": "accred-college-of-the-florida-keys--florida--sacscoc",
+      "financial_unitid": null,
+      "has_financial_profile": false,
+      "is_primary_tracker": false,
+      "institution_name": "College of the Florida Keys",
+      "institution_alias": null,
+      "city": null,
+      "state": "Florida",
+      "control_label": null,
+      "category": null,
+      "latest_status": {
+        "accreditors": "SACSCOC",
+        "action_labels": "Voluntary Withdrawal of accreditation.",
+        "active_actions": "adverse_action",
+        "has_active_warning": false,
+        "has_active_warning_or_notice": false,
+        "has_active_adverse_action": false,
+        "latest_action_date": "2026-06-30",
+        "latest_action_year": "2026",
+        "action_count": 1
+      },
+      "actions": [
+        {
+          "accreditor": "SACSCOC",
+          "action_type": "adverse_action",
+          "action_label": "Voluntary Withdrawal of Accreditation. voluntarily withdrew its membership from the Southern Association of Colleges and Schools Commission on Colleges (SACSCOC), effective June 30, 2026",
+          "action_label_short": "Voluntary Withdrawal of accreditation.",
+          "action_scope": null,
+          "action_status": "active",
+          "action_date": "2026-06-30",
+          "action_year": "2026",
+          "notes": "Public Disclosure Statement: College of the Florida Keys | The Commission on Colleges and Universities",
+          "source_url": "https://commissioncu.org/wp-content/uploads/2026/11/College-FL-Keys-Disclosure-Statement.pdf",
+          "source_title": "Public Disclosure Statement: College of the Florida Keys | The Commission on Colleges and Universities",
+          "source_page_url": "https://commissioncu.org/wp-content/uploads/2026/11/College-FL-Keys-Disclosure-Statement.pdf",
+          "source_page_modified": "2026-11-02",
+          "display_action": true,
+          "public_table_strategy": "scraper_backed_keep",
+          "hybrid_candidate": false,
+          "hybrid_reason": null,
+          "has_financial_profile": false,
+          "is_primary_tracker": false
+        }
+      ],
+      "sources": [
+        {
+          "accreditor": "SACSCOC",
+          "source_title": "Public Disclosure Statement: College of the Florida Keys | The Commission on Colleges and Universities",
+          "source_url": "https://commissioncu.org/wp-content/uploads/2026/11/College-FL-Keys-Disclosure-Statement.pdf",
+          "source_page_url": "https://commissioncu.org/wp-content/uploads/2026/11/College-FL-Keys-Disclosure-Statement.pdf"
         }
       ]
     },
@@ -24089,6 +24713,60 @@
         }
       ]
     },
+    "accred-demark-technical-college--south-carolina--sacscoc": {
+      "unitid": "accred-demark-technical-college--south-carolina--sacscoc",
+      "financial_unitid": null,
+      "has_financial_profile": false,
+      "is_primary_tracker": false,
+      "institution_name": "Demark Technical College",
+      "institution_alias": null,
+      "city": null,
+      "state": "South Carolina",
+      "control_label": null,
+      "category": null,
+      "latest_status": {
+        "accreditors": "SACSCOC",
+        "action_labels": "Removed from probation",
+        "active_actions": null,
+        "has_active_warning": false,
+        "has_active_warning_or_notice": false,
+        "has_active_adverse_action": false,
+        "latest_action_date": "2020-12-01",
+        "latest_action_year": "2020",
+        "action_count": 1
+      },
+      "actions": [
+        {
+          "accreditor": "SACSCOC",
+          "action_type": "removed",
+          "action_label": "removed from Probation",
+          "action_label_short": "Removed from probation",
+          "action_scope": null,
+          "action_status": "resolved",
+          "action_date": "2020-12-01",
+          "action_year": "2020",
+          "notes": "Demark Technical College, Denmark, South Carolina (removed from Probation)",
+          "source_url": "https://web.archive.org/web/20210117150616id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2020-accreditation-actions-and-public-disclosure-statements/",
+          "source_title": "December 2020 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_page_url": "https://web.archive.org/web/20210117150616id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2020-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_modified": "2020-12-09",
+          "display_action": true,
+          "public_table_strategy": "scraper_backed_keep",
+          "hybrid_candidate": false,
+          "hybrid_reason": null,
+          "has_financial_profile": false,
+          "is_primary_tracker": false
+        }
+      ],
+      "sources": [
+        {
+          "accreditor": "SACSCOC",
+          "source_title": "December 2020 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_url": "https://web.archive.org/web/20210117150616id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2020-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_url": "https://web.archive.org/web/20210117150616id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2020-accreditation-actions-and-public-disclosure-statements/"
+        }
+      ]
+    },
     "accred-east-arkansas-community-college--wyoming--hlc": {
       "unitid": "accred-east-arkansas-community-college--wyoming--hlc",
       "financial_unitid": null,
@@ -24251,6 +24929,60 @@
         }
       ]
     },
+    "accred-emmanuel-college--georgia--sacscoc": {
+      "unitid": "accred-emmanuel-college--georgia--sacscoc",
+      "financial_unitid": null,
+      "has_financial_profile": false,
+      "is_primary_tracker": false,
+      "institution_name": "Emmanuel College",
+      "institution_alias": null,
+      "city": null,
+      "state": "Georgia",
+      "control_label": null,
+      "category": null,
+      "latest_status": {
+        "accreditors": "SACSCOC",
+        "action_labels": "Removed from warning",
+        "active_actions": null,
+        "has_active_warning": false,
+        "has_active_warning_or_notice": false,
+        "has_active_adverse_action": false,
+        "latest_action_date": "2023-06-01",
+        "latest_action_year": "2023",
+        "action_count": 1
+      },
+      "actions": [
+        {
+          "accreditor": "SACSCOC",
+          "action_type": "removed",
+          "action_label": "removed from Warning",
+          "action_label_short": "Removed from warning",
+          "action_scope": null,
+          "action_status": "resolved",
+          "action_date": "2023-06-01",
+          "action_year": "2023",
+          "notes": "Emmanuel College, Franklin Springs, Georgia (removed from Warning)",
+          "source_url": "https://web.archive.org/web/20230630122514id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/june-2023-accreditation-actions-and-public-disclosure-statements/",
+          "source_title": "June 2023 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_page_url": "https://web.archive.org/web/20230630122514id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/june-2023-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_modified": "2023-06-23",
+          "display_action": true,
+          "public_table_strategy": "scraper_backed_keep",
+          "hybrid_candidate": false,
+          "hybrid_reason": null,
+          "has_financial_profile": false,
+          "is_primary_tracker": false
+        }
+      ],
+      "sources": [
+        {
+          "accreditor": "SACSCOC",
+          "source_title": "June 2023 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_url": "https://web.archive.org/web/20230630122514id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/june-2023-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_url": "https://web.archive.org/web/20230630122514id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/june-2023-accreditation-actions-and-public-disclosure-statements/"
+        }
+      ]
+    },
     "accred-erie-county-community-college--pennsylvania--msche": {
       "unitid": "accred-erie-county-community-college--pennsylvania--msche",
       "financial_unitid": null,
@@ -24302,6 +25034,60 @@
           "source_title": "MSCHE Statement of Accreditation Status - Erie County Community College",
           "source_url": "https://www.msche.org/institution/11100/",
           "source_page_url": "https://www.msche.org/institution/11100/"
+        }
+      ]
+    },
+    "accred-fielding-graduate-university--wscuc": {
+      "unitid": "accred-fielding-graduate-university--wscuc",
+      "financial_unitid": null,
+      "has_financial_profile": false,
+      "is_primary_tracker": false,
+      "institution_name": "Fielding Graduate University",
+      "institution_alias": null,
+      "city": null,
+      "state": null,
+      "control_label": null,
+      "category": null,
+      "latest_status": {
+        "accreditors": "WSCUC",
+        "action_labels": "Change of Control of Fielding Graduate University to Excelsior University",
+        "active_actions": "other",
+        "has_active_warning": false,
+        "has_active_warning_or_notice": false,
+        "has_active_adverse_action": false,
+        "latest_action_date": "2026-06-01",
+        "latest_action_year": "2026",
+        "action_count": 1
+      },
+      "actions": [
+        {
+          "accreditor": "WSCUC",
+          "action_type": "other",
+          "action_label": "Change of Control of Fielding Graduate University to Excelsior University",
+          "action_label_short": "Change of Control of Fielding Graduate University to Excelsior University",
+          "action_scope": null,
+          "action_status": "active",
+          "action_date": "2026-06-01",
+          "action_year": "2026",
+          "notes": "Change of Control of Fielding Graduate University to Excelsior University",
+          "source_url": "https://www.wscuc.org/post/june-2026-commission-actions/",
+          "source_title": "June 2026 Commission Actions - WSCUC",
+          "source_page_url": "https://www.wscuc.org/post/june-2026-commission-actions/",
+          "source_page_modified": "2026-07-14",
+          "display_action": true,
+          "public_table_strategy": "scraper_backed_keep",
+          "hybrid_candidate": false,
+          "hybrid_reason": null,
+          "has_financial_profile": false,
+          "is_primary_tracker": false
+        }
+      ],
+      "sources": [
+        {
+          "accreditor": "WSCUC",
+          "source_title": "June 2026 Commission Actions - WSCUC",
+          "source_url": "https://www.wscuc.org/post/june-2026-commission-actions/",
+          "source_page_url": "https://www.wscuc.org/post/june-2026-commission-actions/"
         }
       ]
     },
@@ -24410,6 +25196,60 @@
           "source_title": "March 2025 Actions | The Higher Learning Commission",
           "source_url": "https://www.hlcommission.org/for-students/accreditation-actions/march-2025/",
           "source_page_url": "https://www.hlcommission.org/for-students/accreditation-actions/march-2025/"
+        }
+      ]
+    },
+    "accred-fundaci-n-universidad-de-las-am-ricas-puebla--mexico--sacscoc": {
+      "unitid": "accred-fundaci-n-universidad-de-las-am-ricas-puebla--mexico--sacscoc",
+      "financial_unitid": null,
+      "has_financial_profile": false,
+      "is_primary_tracker": false,
+      "institution_name": "Fundación Universidad de las Américas Puebla",
+      "institution_alias": null,
+      "city": null,
+      "state": "Mexico",
+      "control_label": null,
+      "category": null,
+      "latest_status": {
+        "accreditors": "SACSCOC",
+        "action_labels": "Removed from warning",
+        "active_actions": null,
+        "has_active_warning": false,
+        "has_active_warning_or_notice": false,
+        "has_active_adverse_action": false,
+        "latest_action_date": "2022-12-01",
+        "latest_action_year": "2022",
+        "action_count": 1
+      },
+      "actions": [
+        {
+          "accreditor": "SACSCOC",
+          "action_type": "removed",
+          "action_label": "removed from Warning",
+          "action_label_short": "Removed from warning",
+          "action_scope": null,
+          "action_status": "resolved",
+          "action_date": "2022-12-01",
+          "action_year": "2022",
+          "notes": "Fundación Universidad de las Américas Puebla, Puebla, Mexico (removed from Warning)",
+          "source_url": "https://web.archive.org/web/20230129125326id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2022-accreditation-actions-and-public-disclosure-statements/",
+          "source_title": "December 2022 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_page_url": "https://web.archive.org/web/20230129125326id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2022-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_modified": "2022-12-15",
+          "display_action": true,
+          "public_table_strategy": "scraper_backed_keep",
+          "hybrid_candidate": false,
+          "hybrid_reason": null,
+          "has_financial_profile": false,
+          "is_primary_tracker": false
+        }
+      ],
+      "sources": [
+        {
+          "accreditor": "SACSCOC",
+          "source_title": "December 2022 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_url": "https://web.archive.org/web/20230129125326id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2022-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_url": "https://web.archive.org/web/20230129125326id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2022-accreditation-actions-and-public-disclosure-statements/"
         }
       ]
     },
@@ -24629,6 +25469,60 @@
         }
       ]
     },
+    "accred-hodges-university--florida--sacscoc": {
+      "unitid": "accred-hodges-university--florida--sacscoc",
+      "financial_unitid": null,
+      "has_financial_profile": false,
+      "is_primary_tracker": false,
+      "institution_name": "Hodges University",
+      "institution_alias": null,
+      "city": null,
+      "state": "Florida",
+      "control_label": null,
+      "category": null,
+      "latest_status": {
+        "accreditors": "SACSCOC",
+        "action_labels": "Placed on probation for good cause",
+        "active_actions": "probation",
+        "has_active_warning": false,
+        "has_active_warning_or_notice": false,
+        "has_active_adverse_action": false,
+        "latest_action_date": "2023-12-01",
+        "latest_action_year": "2023",
+        "action_count": 1
+      },
+      "actions": [
+        {
+          "accreditor": "SACSCOC",
+          "action_type": "probation",
+          "action_label": "placed on Probation for Good Cause",
+          "action_label_short": "Placed on probation for good cause",
+          "action_scope": null,
+          "action_status": "active",
+          "action_date": "2023-12-01",
+          "action_year": "2023",
+          "notes": "Hodges University, Ft. Myers, Florida (placed on Probation for Good Cause) [PDF]",
+          "source_url": "https://web.archive.org/web/20240223043409id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2023-accreditation-actions-and-public-disclosure-statements/",
+          "source_title": "December 2023 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_page_url": "https://web.archive.org/web/20240223043409id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2023-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_modified": "2023-12-07",
+          "display_action": true,
+          "public_table_strategy": "scraper_backed_keep",
+          "hybrid_candidate": false,
+          "hybrid_reason": null,
+          "has_financial_profile": false,
+          "is_primary_tracker": false
+        }
+      ],
+      "sources": [
+        {
+          "accreditor": "SACSCOC",
+          "source_title": "December 2023 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_url": "https://web.archive.org/web/20240223043409id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2023-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_url": "https://web.archive.org/web/20240223043409id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2023-accreditation-actions-and-public-disclosure-statements/"
+        }
+      ]
+    },
     "accred-huntington-junior-college--west-virginia--hlc": {
       "unitid": "accred-huntington-junior-college--west-virginia--hlc",
       "financial_unitid": null,
@@ -24734,6 +25628,87 @@
           "source_title": "February 2024 Actions | The Higher Learning Commission",
           "source_url": "https://www.hlcommission.org/for-students/accreditation-actions/february-2024/",
           "source_page_url": "https://www.hlcommission.org/for-students/accreditation-actions/february-2024/"
+        }
+      ]
+    },
+    "accred-interdenominational-theological-center--georgia--sacscoc": {
+      "unitid": "accred-interdenominational-theological-center--georgia--sacscoc",
+      "financial_unitid": null,
+      "has_financial_profile": false,
+      "is_primary_tracker": false,
+      "institution_name": "Interdenominational Theological Center",
+      "institution_alias": null,
+      "city": null,
+      "state": "Georgia",
+      "control_label": null,
+      "category": null,
+      "latest_status": {
+        "accreditors": "SACSCOC",
+        "action_labels": "Continued on warning; Placed on probation",
+        "active_actions": "probation; warning",
+        "has_active_warning": true,
+        "has_active_warning_or_notice": true,
+        "has_active_adverse_action": false,
+        "latest_action_date": "2023-12-01",
+        "latest_action_year": "2023",
+        "action_count": 2
+      },
+      "actions": [
+        {
+          "accreditor": "SACSCOC",
+          "action_type": "probation",
+          "action_label": "placed on Probation",
+          "action_label_short": "Placed on probation",
+          "action_scope": null,
+          "action_status": "active",
+          "action_date": "2023-12-01",
+          "action_year": "2023",
+          "notes": "Interdenominational Theological Center, Atlanta, Georgia (placed on Probation) [PDF]",
+          "source_url": "https://web.archive.org/web/20240223043409id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2023-accreditation-actions-and-public-disclosure-statements/",
+          "source_title": "December 2023 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_page_url": "https://web.archive.org/web/20240223043409id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2023-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_modified": "2023-12-07",
+          "display_action": true,
+          "public_table_strategy": "scraper_backed_keep",
+          "hybrid_candidate": false,
+          "hybrid_reason": null,
+          "has_financial_profile": false,
+          "is_primary_tracker": false
+        },
+        {
+          "accreditor": "SACSCOC",
+          "action_type": "warning",
+          "action_label": "continued on Warning",
+          "action_label_short": "Continued on warning",
+          "action_scope": null,
+          "action_status": "active",
+          "action_date": "2022-12-01",
+          "action_year": "2022",
+          "notes": "Interdenominational Theological Center, Atlanta, Georgia (continued on Warning) [PDF]",
+          "source_url": "https://web.archive.org/web/20230129125326id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2022-accreditation-actions-and-public-disclosure-statements/",
+          "source_title": "December 2022 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_page_url": "https://web.archive.org/web/20230129125326id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2022-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_modified": "2022-12-15",
+          "display_action": true,
+          "public_table_strategy": "scraper_backed_keep",
+          "hybrid_candidate": false,
+          "hybrid_reason": null,
+          "has_financial_profile": false,
+          "is_primary_tracker": false
+        }
+      ],
+      "sources": [
+        {
+          "accreditor": "SACSCOC",
+          "source_title": "December 2023 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_url": "https://web.archive.org/web/20240223043409id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2023-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_url": "https://web.archive.org/web/20240223043409id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2023-accreditation-actions-and-public-disclosure-statements/"
+        },
+        {
+          "accreditor": "SACSCOC",
+          "source_title": "December 2022 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_url": "https://web.archive.org/web/20230129125326id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2022-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_url": "https://web.archive.org/web/20230129125326id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2022-accreditation-actions-and-public-disclosure-statements/"
         }
       ]
     },
@@ -24899,6 +25874,60 @@
         }
       ]
     },
+    "accred-kentucky-wesleyan-university--kentucky--sacscoc": {
+      "unitid": "accred-kentucky-wesleyan-university--kentucky--sacscoc",
+      "financial_unitid": null,
+      "has_financial_profile": false,
+      "is_primary_tracker": false,
+      "institution_name": "Kentucky Wesleyan University",
+      "institution_alias": null,
+      "city": null,
+      "state": "Kentucky",
+      "control_label": null,
+      "category": null,
+      "latest_status": {
+        "accreditors": "SACSCOC",
+        "action_labels": "Removed from probation",
+        "active_actions": null,
+        "has_active_warning": false,
+        "has_active_warning_or_notice": false,
+        "has_active_adverse_action": false,
+        "latest_action_date": "2021-06-01",
+        "latest_action_year": "2021",
+        "action_count": 1
+      },
+      "actions": [
+        {
+          "accreditor": "SACSCOC",
+          "action_type": "removed",
+          "action_label": "removed from Probation",
+          "action_label_short": "Removed from probation",
+          "action_scope": null,
+          "action_status": "resolved",
+          "action_date": "2021-06-01",
+          "action_year": "2021",
+          "notes": "Kentucky Wesleyan University, Owensboro, Kentucky (removed from Probation)",
+          "source_url": "https://web.archive.org/web/20210618190638id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/june-2021-accreditation-actions-and-public-disclosure-statements/",
+          "source_title": "June 2021 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_page_url": "https://web.archive.org/web/20210618190638id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/june-2021-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_modified": "2021-06-18",
+          "display_action": true,
+          "public_table_strategy": "scraper_backed_keep",
+          "hybrid_candidate": false,
+          "hybrid_reason": null,
+          "has_financial_profile": false,
+          "is_primary_tracker": false
+        }
+      ],
+      "sources": [
+        {
+          "accreditor": "SACSCOC",
+          "source_title": "June 2021 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_url": "https://web.archive.org/web/20210618190638id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/june-2021-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_url": "https://web.archive.org/web/20210618190638id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/june-2021-accreditation-actions-and-public-disclosure-statements/"
+        }
+      ]
+    },
     "accred-king-s-college-the--new-york--msche": {
       "unitid": "accred-king-s-college-the--new-york--msche",
       "financial_unitid": null,
@@ -24912,16 +25941,37 @@
       "category": null,
       "latest_status": {
         "accreditors": "MSCHE",
-        "action_labels": "To note that despite repeated requests by the Commission, the institution failed to submit the required substantive change request for institutional closure required by Commission action of August 24, 2023.; To note that the institution failed to submit the required substantive change request for institutional closure directed by Commission action on July 27, 2023.",
+        "action_labels": "Did Not Close in Good Standing; To note that despite repeated requests by the Commission, the institution failed to submit the required substantive change request for institutional closure required by Commission action of August 24, 2023.; To note that the institution failed to submit the required substantive change request for institutional closure directed by Commission action on July 27, 2023.",
         "active_actions": "adverse_action",
         "has_active_warning": false,
         "has_active_warning_or_notice": false,
         "has_active_adverse_action": true,
-        "latest_action_date": "2023-09-25",
-        "latest_action_year": "2023",
-        "action_count": 2
+        "latest_action_date": "2024-04-29",
+        "latest_action_year": "2024",
+        "action_count": 3
       },
       "actions": [
+        {
+          "accreditor": "MSCHE",
+          "action_type": "adverse_action",
+          "action_label": "To note the institution did not close in good standing by failing to pay its dues (Dues and Fees Policy and Procedures).",
+          "action_label_short": "Did Not Close in Good Standing",
+          "action_scope": null,
+          "action_status": "active",
+          "action_date": "2024-04-29",
+          "action_year": "2024",
+          "notes": "To note the institution did not close in good standing by failing to pay its dues (Dues and Fees Policy and Procedures).",
+          "source_url": "https://www.msche.org/institution/9187/",
+          "source_title": "MSCHE Statement of Accreditation Status - King’s College, The",
+          "source_page_url": "https://www.msche.org/institution/9187/",
+          "source_page_modified": "2026-11-06",
+          "display_action": true,
+          "public_table_strategy": "scraper_backed_keep",
+          "hybrid_candidate": false,
+          "hybrid_reason": null,
+          "has_financial_profile": false,
+          "is_primary_tracker": false
+        },
         {
           "accreditor": "MSCHE",
           "action_type": "adverse_action",
@@ -25514,6 +26564,141 @@
         }
       ]
     },
+    "accred-mclennan-community-college--texas--sacscoc": {
+      "unitid": "accred-mclennan-community-college--texas--sacscoc",
+      "financial_unitid": null,
+      "has_financial_profile": false,
+      "is_primary_tracker": false,
+      "institution_name": "McLennan Community College",
+      "institution_alias": null,
+      "city": null,
+      "state": "Texas",
+      "control_label": null,
+      "category": null,
+      "latest_status": {
+        "accreditors": "SACSCOC",
+        "action_labels": "Removed from warning",
+        "active_actions": null,
+        "has_active_warning": false,
+        "has_active_warning_or_notice": false,
+        "has_active_adverse_action": false,
+        "latest_action_date": "2023-06-01",
+        "latest_action_year": "2023",
+        "action_count": 1
+      },
+      "actions": [
+        {
+          "accreditor": "SACSCOC",
+          "action_type": "removed",
+          "action_label": "removed from Warning",
+          "action_label_short": "Removed from warning",
+          "action_scope": null,
+          "action_status": "resolved",
+          "action_date": "2023-06-01",
+          "action_year": "2023",
+          "notes": "McLennan Community College, Waco, Texas (removed from Warning)",
+          "source_url": "https://web.archive.org/web/20230630122514id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/june-2023-accreditation-actions-and-public-disclosure-statements/",
+          "source_title": "June 2023 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_page_url": "https://web.archive.org/web/20230630122514id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/june-2023-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_modified": "2023-06-23",
+          "display_action": true,
+          "public_table_strategy": "scraper_backed_keep",
+          "hybrid_candidate": false,
+          "hybrid_reason": null,
+          "has_financial_profile": false,
+          "is_primary_tracker": false
+        }
+      ],
+      "sources": [
+        {
+          "accreditor": "SACSCOC",
+          "source_title": "June 2023 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_url": "https://web.archive.org/web/20230630122514id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/june-2023-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_url": "https://web.archive.org/web/20230630122514id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/june-2023-accreditation-actions-and-public-disclosure-statements/"
+        }
+      ]
+    },
+    "accred-memphis-theological-seminary--tennessee--sacscoc": {
+      "unitid": "accred-memphis-theological-seminary--tennessee--sacscoc",
+      "financial_unitid": null,
+      "has_financial_profile": false,
+      "is_primary_tracker": false,
+      "institution_name": "Memphis Theological Seminary",
+      "institution_alias": null,
+      "city": null,
+      "state": "Tennessee",
+      "control_label": null,
+      "category": null,
+      "latest_status": {
+        "accreditors": "SACSCOC",
+        "action_labels": "Approved Institutional Closure.; Removed from warning",
+        "active_actions": "adverse_action",
+        "has_active_warning": false,
+        "has_active_warning_or_notice": false,
+        "has_active_adverse_action": true,
+        "latest_action_date": "2026-07-31",
+        "latest_action_year": "2026",
+        "action_count": 2
+      },
+      "actions": [
+        {
+          "accreditor": "SACSCOC",
+          "action_type": "adverse_action",
+          "action_label": "Approved Institutional Closure. received approval for institution closure from the Commission on Colleges and Universities (CC&U), effective July 31, 2026",
+          "action_label_short": "Approved Institutional Closure.",
+          "action_scope": null,
+          "action_status": "active",
+          "action_date": "2026-07-31",
+          "action_year": "2026",
+          "notes": "Public Disclosure Statement: Memphis Theological Seminary | The Commission on Colleges and Universities",
+          "source_url": "https://commissioncu.org/wp-content/uploads/2026/11/VoluntaryResignationClosureMTS.pdf",
+          "source_title": "Public Disclosure Statement: Memphis Theological Seminary | The Commission on Colleges and Universities",
+          "source_page_url": "https://commissioncu.org/wp-content/uploads/2026/11/VoluntaryResignationClosureMTS.pdf",
+          "source_page_modified": "2026-11-02",
+          "display_action": true,
+          "public_table_strategy": "scraper_backed_keep",
+          "hybrid_candidate": false,
+          "hybrid_reason": null,
+          "has_financial_profile": false,
+          "is_primary_tracker": false
+        },
+        {
+          "accreditor": "SACSCOC",
+          "action_type": "removed",
+          "action_label": "reaffirmed and removed from Warning",
+          "action_label_short": "Removed from warning",
+          "action_scope": null,
+          "action_status": "resolved",
+          "action_date": "2020-12-01",
+          "action_year": "2020",
+          "notes": "Memphis Theological Seminary, Memphis, Tennessee (reaffirmed and removed from Warning)",
+          "source_url": "https://web.archive.org/web/20210117150616id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2020-accreditation-actions-and-public-disclosure-statements/",
+          "source_title": "December 2020 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_page_url": "https://web.archive.org/web/20210117150616id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2020-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_modified": "2020-12-09",
+          "display_action": true,
+          "public_table_strategy": "scraper_backed_keep",
+          "hybrid_candidate": false,
+          "hybrid_reason": null,
+          "has_financial_profile": false,
+          "is_primary_tracker": false
+        }
+      ],
+      "sources": [
+        {
+          "accreditor": "SACSCOC",
+          "source_title": "Public Disclosure Statement: Memphis Theological Seminary | The Commission on Colleges and Universities",
+          "source_url": "https://commissioncu.org/wp-content/uploads/2026/11/VoluntaryResignationClosureMTS.pdf",
+          "source_page_url": "https://commissioncu.org/wp-content/uploads/2026/11/VoluntaryResignationClosureMTS.pdf"
+        },
+        {
+          "accreditor": "SACSCOC",
+          "source_title": "December 2020 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_url": "https://web.archive.org/web/20210117150616id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2020-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_url": "https://web.archive.org/web/20210117150616id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2020-accreditation-actions-and-public-disclosure-statements/"
+        }
+      ]
+    },
     "accred-mesalands-community-college--wisconsin--hlc": {
       "unitid": "accred-mesalands-community-college--wisconsin--hlc",
       "financial_unitid": null,
@@ -25619,6 +26804,60 @@
           "source_title": "February 2024 Actions | The Higher Learning Commission",
           "source_url": "https://www.hlcommission.org/for-students/accreditation-actions/february-2024/",
           "source_page_url": "https://www.hlcommission.org/for-students/accreditation-actions/february-2024/"
+        }
+      ]
+    },
+    "accred-miami-international-university-of-art-and-design--florida--sacscoc": {
+      "unitid": "accred-miami-international-university-of-art-and-design--florida--sacscoc",
+      "financial_unitid": null,
+      "has_financial_profile": false,
+      "is_primary_tracker": false,
+      "institution_name": "Miami International University of Art & Design",
+      "institution_alias": null,
+      "city": null,
+      "state": "Florida",
+      "control_label": null,
+      "category": null,
+      "latest_status": {
+        "accreditors": "SACSCOC",
+        "action_labels": "Removed from warning",
+        "active_actions": null,
+        "has_active_warning": false,
+        "has_active_warning_or_notice": false,
+        "has_active_adverse_action": false,
+        "latest_action_date": "2021-06-01",
+        "latest_action_year": "2021",
+        "action_count": 1
+      },
+      "actions": [
+        {
+          "accreditor": "SACSCOC",
+          "action_type": "removed",
+          "action_label": "removed from Warning",
+          "action_label_short": "Removed from warning",
+          "action_scope": null,
+          "action_status": "resolved",
+          "action_date": "2021-06-01",
+          "action_year": "2021",
+          "notes": "Miami International University of Art & Design, Miami, Florida (removed from Warning)",
+          "source_url": "https://web.archive.org/web/20210618190638id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/june-2021-accreditation-actions-and-public-disclosure-statements/",
+          "source_title": "June 2021 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_page_url": "https://web.archive.org/web/20210618190638id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/june-2021-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_modified": "2021-06-18",
+          "display_action": true,
+          "public_table_strategy": "scraper_backed_keep",
+          "hybrid_candidate": false,
+          "hybrid_reason": null,
+          "has_financial_profile": false,
+          "is_primary_tracker": false
+        }
+      ],
+      "sources": [
+        {
+          "accreditor": "SACSCOC",
+          "source_title": "June 2021 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_url": "https://web.archive.org/web/20210618190638id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/june-2021-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_url": "https://web.archive.org/web/20210618190638id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/june-2021-accreditation-actions-and-public-disclosure-statements/"
         }
       ]
     },
@@ -25919,6 +27158,60 @@
         }
       ]
     },
+    "accred-north-carolina-wesleyan-college--north-carolina--sacscoc": {
+      "unitid": "accred-north-carolina-wesleyan-college--north-carolina--sacscoc",
+      "financial_unitid": null,
+      "has_financial_profile": false,
+      "is_primary_tracker": false,
+      "institution_name": "North Carolina Wesleyan College",
+      "institution_alias": null,
+      "city": null,
+      "state": "North Carolina",
+      "control_label": null,
+      "category": null,
+      "latest_status": {
+        "accreditors": "SACSCOC",
+        "action_labels": "Removed from warning",
+        "active_actions": null,
+        "has_active_warning": false,
+        "has_active_warning_or_notice": false,
+        "has_active_adverse_action": false,
+        "latest_action_date": "2021-12-01",
+        "latest_action_year": "2021",
+        "action_count": 1
+      },
+      "actions": [
+        {
+          "accreditor": "SACSCOC",
+          "action_type": "removed",
+          "action_label": "removed from Warning",
+          "action_label_short": "Removed from warning",
+          "action_scope": null,
+          "action_status": "resolved",
+          "action_date": "2021-12-01",
+          "action_year": "2021",
+          "notes": "North Carolina Wesleyan College, Rocky Mount, North Carolina (removed from Warning)",
+          "source_url": "https://web.archive.org/web/20220124132855id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2021-accreditation-actions-and-public-disclosure-statements/",
+          "source_title": "December 2021 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_page_url": "https://web.archive.org/web/20220124132855id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2021-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_modified": "2021-12-10",
+          "display_action": true,
+          "public_table_strategy": "scraper_backed_keep",
+          "hybrid_candidate": false,
+          "hybrid_reason": null,
+          "has_financial_profile": false,
+          "is_primary_tracker": false
+        }
+      ],
+      "sources": [
+        {
+          "accreditor": "SACSCOC",
+          "source_title": "December 2021 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_url": "https://web.archive.org/web/20220124132855id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2021-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_url": "https://web.archive.org/web/20220124132855id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2021-accreditation-actions-and-public-disclosure-statements/"
+        }
+      ]
+    },
     "accred-north-dakota-state-college-of-science--north-dakota--hlc": {
       "unitid": "accred-north-dakota-state-college-of-science--north-dakota--hlc",
       "financial_unitid": null,
@@ -25970,6 +27263,60 @@
           "source_title": "May 2026 Actions | The Higher Learning Commission",
           "source_url": "https://www.hlcommission.org/for-students/accreditation-actions/may-2026-actions/",
           "source_page_url": "https://www.hlcommission.org/for-students/accreditation-actions/may-2026-actions/"
+        }
+      ]
+    },
+    "accred-northeastern-technical-college--south-carolina--sacscoc": {
+      "unitid": "accred-northeastern-technical-college--south-carolina--sacscoc",
+      "financial_unitid": null,
+      "has_financial_profile": false,
+      "is_primary_tracker": false,
+      "institution_name": "Northeastern Technical College",
+      "institution_alias": null,
+      "city": null,
+      "state": "South Carolina",
+      "control_label": null,
+      "category": null,
+      "latest_status": {
+        "accreditors": "SACSCOC",
+        "action_labels": "Placed (s) on warning for twelve months for failure to comply with Core Requirement 6.1 (Full-time faculty) and Core Requirement 8.1 (Student achievement)",
+        "active_actions": "warning",
+        "has_active_warning": true,
+        "has_active_warning_or_notice": true,
+        "has_active_adverse_action": false,
+        "latest_action_date": "2024-12-08",
+        "latest_action_year": "2024",
+        "action_count": 1
+      },
+      "actions": [
+        {
+          "accreditor": "SACSCOC",
+          "action_type": "warning",
+          "action_label": "Placed (s) on Warning for twelve months for for failure to comply with Core Requirement 6.1 (Full-time faculty), Core Requirement 8.1 (Student achievement), Standard 5.4 (Qualified.",
+          "action_label_short": "Placed (s) on warning for twelve months for failure to comply with Core Requirement 6.1 (Full-time faculty) and Core Requirement 8.1 (Student achievement)",
+          "action_scope": null,
+          "action_status": "active",
+          "action_date": "2024-12-08",
+          "action_year": "2024",
+          "notes": "Northeastern Technical College Cheraw South Carolina",
+          "source_url": "https://web.archive.org/web/20241220085302id_/https://sacscoc.org/app/uploads/2024/12/Combined-BOT-Report-12_8_2024-FINAL.pdf",
+          "source_title": "Combined-BOT-Report-12_8_2024-FINAL.pdf",
+          "source_page_url": "https://web.archive.org/web/20241220085302id_/https://sacscoc.org/app/uploads/2024/12/Combined-BOT-Report-12_8_2024-FINAL.pdf",
+          "source_page_modified": "2024-12-19",
+          "display_action": true,
+          "public_table_strategy": "scraper_backed_keep",
+          "hybrid_candidate": false,
+          "hybrid_reason": null,
+          "has_financial_profile": false,
+          "is_primary_tracker": false
+        }
+      ],
+      "sources": [
+        {
+          "accreditor": "SACSCOC",
+          "source_title": "Combined-BOT-Report-12_8_2024-FINAL.pdf",
+          "source_url": "https://web.archive.org/web/20241220085302id_/https://sacscoc.org/app/uploads/2024/12/Combined-BOT-Report-12_8_2024-FINAL.pdf",
+          "source_page_url": "https://web.archive.org/web/20241220085302id_/https://sacscoc.org/app/uploads/2024/12/Combined-BOT-Report-12_8_2024-FINAL.pdf"
         }
       ]
     },
@@ -26169,16 +27516,37 @@
       "category": null,
       "latest_status": {
         "accreditors": "WSCUC",
-        "action_labels": "Issue a notice of concern",
-        "active_actions": "notice",
+        "action_labels": "Change of Ownership to Westcliff University; Issue a notice of concern",
+        "active_actions": "notice; other",
         "has_active_warning": false,
         "has_active_warning_or_notice": true,
         "has_active_adverse_action": false,
-        "latest_action_date": "2025-02-01",
-        "latest_action_year": "2025",
-        "action_count": 1
+        "latest_action_date": "2026-06-01",
+        "latest_action_year": "2026",
+        "action_count": 2
       },
       "actions": [
+        {
+          "accreditor": "WSCUC",
+          "action_type": "other",
+          "action_label": "Change of Ownership to Westcliff University",
+          "action_label_short": "Change of Ownership to Westcliff University",
+          "action_scope": null,
+          "action_status": "active",
+          "action_date": "2026-06-01",
+          "action_year": "2026",
+          "notes": "Change of Ownership to Westcliff University",
+          "source_url": "https://www.wscuc.org/post/june-2026-commission-actions/",
+          "source_title": "June 2026 Commission Actions - WSCUC",
+          "source_page_url": "https://www.wscuc.org/post/june-2026-commission-actions/",
+          "source_page_modified": "2026-07-14",
+          "display_action": true,
+          "public_table_strategy": "scraper_backed_keep",
+          "hybrid_candidate": false,
+          "hybrid_reason": null,
+          "has_financial_profile": false,
+          "is_primary_tracker": false
+        },
         {
           "accreditor": "WSCUC",
           "action_type": "notice",
@@ -26202,6 +27570,12 @@
         }
       ],
       "sources": [
+        {
+          "accreditor": "WSCUC",
+          "source_title": "June 2026 Commission Actions - WSCUC",
+          "source_url": "https://www.wscuc.org/post/june-2026-commission-actions/",
+          "source_page_url": "https://www.wscuc.org/post/june-2026-commission-actions/"
+        },
         {
           "accreditor": "WSCUC",
           "source_title": "February 2025 Commission Actions - WSCUC",
@@ -26426,6 +27800,114 @@
         }
       ]
     },
+    "accred-richard-bland-college--virginia--sacscoc": {
+      "unitid": "accred-richard-bland-college--virginia--sacscoc",
+      "financial_unitid": null,
+      "has_financial_profile": false,
+      "is_primary_tracker": false,
+      "institution_name": "Richard Bland College",
+      "institution_alias": null,
+      "city": null,
+      "state": "Virginia",
+      "control_label": null,
+      "category": null,
+      "latest_status": {
+        "accreditors": "SACSCOC",
+        "action_labels": "Removed from warning",
+        "active_actions": null,
+        "has_active_warning": false,
+        "has_active_warning_or_notice": false,
+        "has_active_adverse_action": false,
+        "latest_action_date": "2020-09-01",
+        "latest_action_year": "2020",
+        "action_count": 1
+      },
+      "actions": [
+        {
+          "accreditor": "SACSCOC",
+          "action_type": "removed",
+          "action_label": "removed from Warning",
+          "action_label_short": "Removed from warning",
+          "action_scope": null,
+          "action_status": "resolved",
+          "action_date": "2020-09-01",
+          "action_year": "2020",
+          "notes": "Richard Bland College, South Prince George, Virginia (removed from Warning)",
+          "source_url": "https://web.archive.org/web/20201026214205id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/september-2020-accreditation-actions-and-public-disclosure-statements/",
+          "source_title": "September 2020 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_page_url": "https://web.archive.org/web/20201026214205id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/september-2020-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_modified": "2020-09-10",
+          "display_action": true,
+          "public_table_strategy": "scraper_backed_keep",
+          "hybrid_candidate": false,
+          "hybrid_reason": null,
+          "has_financial_profile": false,
+          "is_primary_tracker": false
+        }
+      ],
+      "sources": [
+        {
+          "accreditor": "SACSCOC",
+          "source_title": "September 2020 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_url": "https://web.archive.org/web/20201026214205id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/september-2020-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_url": "https://web.archive.org/web/20201026214205id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/september-2020-accreditation-actions-and-public-disclosure-statements/"
+        }
+      ]
+    },
+    "accred-roanoke-chowan-community-college--north-carolina--sacscoc": {
+      "unitid": "accred-roanoke-chowan-community-college--north-carolina--sacscoc",
+      "financial_unitid": null,
+      "has_financial_profile": false,
+      "is_primary_tracker": false,
+      "institution_name": "Roanoke-Chowan Community College",
+      "institution_alias": null,
+      "city": null,
+      "state": "North Carolina",
+      "control_label": null,
+      "category": null,
+      "latest_status": {
+        "accreditors": "SACSCOC",
+        "action_labels": "Removed from probation",
+        "active_actions": null,
+        "has_active_warning": false,
+        "has_active_warning_or_notice": false,
+        "has_active_adverse_action": false,
+        "latest_action_date": "2020-09-01",
+        "latest_action_year": "2020",
+        "action_count": 1
+      },
+      "actions": [
+        {
+          "accreditor": "SACSCOC",
+          "action_type": "removed",
+          "action_label": "removed from Probation",
+          "action_label_short": "Removed from probation",
+          "action_scope": null,
+          "action_status": "resolved",
+          "action_date": "2020-09-01",
+          "action_year": "2020",
+          "notes": "Roanoke-Chowan Community College, Ahoskie, North Carolina (removed from Probation)",
+          "source_url": "https://web.archive.org/web/20201026214205id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/september-2020-accreditation-actions-and-public-disclosure-statements/",
+          "source_title": "September 2020 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_page_url": "https://web.archive.org/web/20201026214205id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/september-2020-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_modified": "2020-09-10",
+          "display_action": true,
+          "public_table_strategy": "scraper_backed_keep",
+          "hybrid_candidate": false,
+          "hybrid_reason": null,
+          "has_financial_profile": false,
+          "is_primary_tracker": false
+        }
+      ],
+      "sources": [
+        {
+          "accreditor": "SACSCOC",
+          "source_title": "September 2020 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_url": "https://web.archive.org/web/20201026214205id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/september-2020-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_url": "https://web.archive.org/web/20201026214205id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/september-2020-accreditation-actions-and-public-disclosure-statements/"
+        }
+      ]
+    },
     "accred-rowan-college-of-south-jersey--new-jersey--msche": {
       "unitid": "accred-rowan-college-of-south-jersey--new-jersey--msche",
       "financial_unitid": null,
@@ -26588,6 +28070,60 @@
         }
       ]
     },
+    "accred-saint-petersburg-college--florida--sacscoc": {
+      "unitid": "accred-saint-petersburg-college--florida--sacscoc",
+      "financial_unitid": null,
+      "has_financial_profile": false,
+      "is_primary_tracker": false,
+      "institution_name": "St. Petersburg College",
+      "institution_alias": null,
+      "city": null,
+      "state": "Florida",
+      "control_label": null,
+      "category": null,
+      "latest_status": {
+        "accreditors": "SACSCOC",
+        "action_labels": "Voluntary Withdrawal of accreditation.",
+        "active_actions": "adverse_action",
+        "has_active_warning": false,
+        "has_active_warning_or_notice": false,
+        "has_active_adverse_action": false,
+        "latest_action_date": "2026-10-28",
+        "latest_action_year": "2026",
+        "action_count": 1
+      },
+      "actions": [
+        {
+          "accreditor": "SACSCOC",
+          "action_type": "adverse_action",
+          "action_label": "Voluntary Withdrawal of Accreditation. voluntarily withdrew its membership from the Commission on Colleges and Universities (The Commission), effective October 28, 2026",
+          "action_label_short": "Voluntary Withdrawal of accreditation.",
+          "action_scope": null,
+          "action_status": "active",
+          "action_date": "2026-10-28",
+          "action_year": "2026",
+          "notes": "Public Information Disclosure Statement: St. Petersburg College | The Commission on Colleges and Universities",
+          "source_url": "https://commissioncu.org/wp-content/uploads/2026/11/St-Petersburg-Disclosure-Statement.pdf",
+          "source_title": "Public Information Disclosure Statement: St. Petersburg College | The Commission on Colleges and Universities",
+          "source_page_url": "https://commissioncu.org/wp-content/uploads/2026/11/St-Petersburg-Disclosure-Statement.pdf",
+          "source_page_modified": "2026-11-02",
+          "display_action": true,
+          "public_table_strategy": "scraper_backed_keep",
+          "hybrid_candidate": false,
+          "hybrid_reason": null,
+          "has_financial_profile": false,
+          "is_primary_tracker": false
+        }
+      ],
+      "sources": [
+        {
+          "accreditor": "SACSCOC",
+          "source_title": "Public Information Disclosure Statement: St. Petersburg College | The Commission on Colleges and Universities",
+          "source_url": "https://commissioncu.org/wp-content/uploads/2026/11/St-Petersburg-Disclosure-Statement.pdf",
+          "source_page_url": "https://commissioncu.org/wp-content/uploads/2026/11/St-Petersburg-Disclosure-Statement.pdf"
+        }
+      ]
+    },
     "accred-salus-university--pennsylvania--msche": {
       "unitid": "accred-salus-university--pennsylvania--msche",
       "financial_unitid": null,
@@ -26660,6 +28196,114 @@
           "source_title": "MSCHE Statement of Accreditation Status - Salus University",
           "source_url": "https://www.msche.org/institution/0543/",
           "source_page_url": "https://www.msche.org/institution/0543/"
+        }
+      ]
+    },
+    "accred-snead-state--alabama--sacscoc": {
+      "unitid": "accred-snead-state--alabama--sacscoc",
+      "financial_unitid": null,
+      "has_financial_profile": false,
+      "is_primary_tracker": false,
+      "institution_name": "Snead State",
+      "institution_alias": null,
+      "city": null,
+      "state": "Alabama",
+      "control_label": null,
+      "category": null,
+      "latest_status": {
+        "accreditors": "SACSCOC",
+        "action_labels": "Removed from probation",
+        "active_actions": null,
+        "has_active_warning": false,
+        "has_active_warning_or_notice": false,
+        "has_active_adverse_action": false,
+        "latest_action_date": "2021-12-01",
+        "latest_action_year": "2021",
+        "action_count": 1
+      },
+      "actions": [
+        {
+          "accreditor": "SACSCOC",
+          "action_type": "removed",
+          "action_label": "removed from Probation",
+          "action_label_short": "Removed from probation",
+          "action_scope": null,
+          "action_status": "resolved",
+          "action_date": "2021-12-01",
+          "action_year": "2021",
+          "notes": "Snead State, Boaz, Alabama (removed from Probation)",
+          "source_url": "https://web.archive.org/web/20220124132855id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2021-accreditation-actions-and-public-disclosure-statements/",
+          "source_title": "December 2021 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_page_url": "https://web.archive.org/web/20220124132855id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2021-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_modified": "2021-12-10",
+          "display_action": true,
+          "public_table_strategy": "scraper_backed_keep",
+          "hybrid_candidate": false,
+          "hybrid_reason": null,
+          "has_financial_profile": false,
+          "is_primary_tracker": false
+        }
+      ],
+      "sources": [
+        {
+          "accreditor": "SACSCOC",
+          "source_title": "December 2021 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_url": "https://web.archive.org/web/20220124132855id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2021-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_url": "https://web.archive.org/web/20220124132855id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2021-accreditation-actions-and-public-disclosure-statements/"
+        }
+      ]
+    },
+    "accred-south-louisiana-community-college--louisiana--sacscoc": {
+      "unitid": "accred-south-louisiana-community-college--louisiana--sacscoc",
+      "financial_unitid": null,
+      "has_financial_profile": false,
+      "is_primary_tracker": false,
+      "institution_name": "South Louisiana Community College",
+      "institution_alias": null,
+      "city": null,
+      "state": "Louisiana",
+      "control_label": null,
+      "category": null,
+      "latest_status": {
+        "accreditors": "SACSCOC",
+        "action_labels": "Removed from probation",
+        "active_actions": null,
+        "has_active_warning": false,
+        "has_active_warning_or_notice": false,
+        "has_active_adverse_action": false,
+        "latest_action_date": "2022-06-01",
+        "latest_action_year": "2022",
+        "action_count": 1
+      },
+      "actions": [
+        {
+          "accreditor": "SACSCOC",
+          "action_type": "removed",
+          "action_label": "removed from Probation",
+          "action_label_short": "Removed from probation",
+          "action_scope": null,
+          "action_status": "resolved",
+          "action_date": "2022-06-01",
+          "action_year": "2022",
+          "notes": "South Louisiana Community College, LaFayette, Louisiana (removed from Probation)",
+          "source_url": "https://web.archive.org/web/20220703182506id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/june-2022-accreditation-actions-and-public-disclosure-statements/",
+          "source_title": "June 2022 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_page_url": "https://web.archive.org/web/20220703182506id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/june-2022-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_modified": "2022-06-17",
+          "display_action": true,
+          "public_table_strategy": "scraper_backed_keep",
+          "hybrid_candidate": false,
+          "hybrid_reason": null,
+          "has_financial_profile": false,
+          "is_primary_tracker": false
+        }
+      ],
+      "sources": [
+        {
+          "accreditor": "SACSCOC",
+          "source_title": "June 2022 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_url": "https://web.archive.org/web/20220703182506id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/june-2022-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_url": "https://web.archive.org/web/20220703182506id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/june-2022-accreditation-actions-and-public-disclosure-statements/"
         }
       ]
     },
@@ -27038,6 +28682,60 @@
           "source_title": "December 2023 Actions | The Higher Learning Commission",
           "source_url": "https://www.hlcommission.org/for-students/accreditation-actions/december-2023/",
           "source_page_url": "https://www.hlcommission.org/for-students/accreditation-actions/december-2023/"
+        }
+      ]
+    },
+    "accred-southwest-christian-college--texas--sacscoc": {
+      "unitid": "accred-southwest-christian-college--texas--sacscoc",
+      "financial_unitid": null,
+      "has_financial_profile": false,
+      "is_primary_tracker": false,
+      "institution_name": "Southwest Christian College",
+      "institution_alias": null,
+      "city": null,
+      "state": "Texas",
+      "control_label": null,
+      "category": null,
+      "latest_status": {
+        "accreditors": "SACSCOC",
+        "action_labels": "Removed from probation",
+        "active_actions": null,
+        "has_active_warning": false,
+        "has_active_warning_or_notice": false,
+        "has_active_adverse_action": false,
+        "latest_action_date": "2022-06-01",
+        "latest_action_year": "2022",
+        "action_count": 1
+      },
+      "actions": [
+        {
+          "accreditor": "SACSCOC",
+          "action_type": "removed",
+          "action_label": "removed from Probation",
+          "action_label_short": "Removed from probation",
+          "action_scope": null,
+          "action_status": "resolved",
+          "action_date": "2022-06-01",
+          "action_year": "2022",
+          "notes": "Southwest Christian College, Terrell, Texas (removed from Probation)",
+          "source_url": "https://web.archive.org/web/20220703182506id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/june-2022-accreditation-actions-and-public-disclosure-statements/",
+          "source_title": "June 2022 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_page_url": "https://web.archive.org/web/20220703182506id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/june-2022-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_modified": "2022-06-17",
+          "display_action": true,
+          "public_table_strategy": "scraper_backed_keep",
+          "hybrid_candidate": false,
+          "hybrid_reason": null,
+          "has_financial_profile": false,
+          "is_primary_tracker": false
+        }
+      ],
+      "sources": [
+        {
+          "accreditor": "SACSCOC",
+          "source_title": "June 2022 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_url": "https://web.archive.org/web/20220703182506id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/june-2022-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_url": "https://web.archive.org/web/20220703182506id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/june-2022-accreditation-actions-and-public-disclosure-statements/"
         }
       ]
     },
@@ -28187,6 +29885,60 @@
           "source_title": "MSCHE Statement of Accreditation Status - Wells College",
           "source_url": "https://www.msche.org/institution/0427/",
           "source_page_url": "https://www.msche.org/institution/0427/"
+        }
+      ]
+    },
+    "accred-wiley-college--texas--sacscoc": {
+      "unitid": "accred-wiley-college--texas--sacscoc",
+      "financial_unitid": null,
+      "has_financial_profile": false,
+      "is_primary_tracker": false,
+      "institution_name": "Wiley College",
+      "institution_alias": null,
+      "city": null,
+      "state": "Texas",
+      "control_label": null,
+      "category": null,
+      "latest_status": {
+        "accreditors": "SACSCOC",
+        "action_labels": "Removed from warning",
+        "active_actions": null,
+        "has_active_warning": false,
+        "has_active_warning_or_notice": false,
+        "has_active_adverse_action": false,
+        "latest_action_date": "2021-12-01",
+        "latest_action_year": "2021",
+        "action_count": 1
+      },
+      "actions": [
+        {
+          "accreditor": "SACSCOC",
+          "action_type": "removed",
+          "action_label": "removed from Warning",
+          "action_label_short": "Removed from warning",
+          "action_scope": null,
+          "action_status": "resolved",
+          "action_date": "2021-12-01",
+          "action_year": "2021",
+          "notes": "Wiley College, Marshall, Texas (removed from Warning)",
+          "source_url": "https://web.archive.org/web/20220124132855id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2021-accreditation-actions-and-public-disclosure-statements/",
+          "source_title": "December 2021 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_page_url": "https://web.archive.org/web/20220124132855id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2021-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_modified": "2021-12-10",
+          "display_action": true,
+          "public_table_strategy": "scraper_backed_keep",
+          "hybrid_candidate": false,
+          "hybrid_reason": null,
+          "has_financial_profile": false,
+          "is_primary_tracker": false
+        }
+      ],
+      "sources": [
+        {
+          "accreditor": "SACSCOC",
+          "source_title": "December 2021 Accreditation Actions and Public Disclosure Statements - SACSCOC",
+          "source_url": "https://web.archive.org/web/20220124132855id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2021-accreditation-actions-and-public-disclosure-statements/",
+          "source_page_url": "https://web.archive.org/web/20220124132855id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/december-2021-accreditation-actions-and-public-disclosure-statements/"
         }
       ]
     },

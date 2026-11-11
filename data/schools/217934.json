@@ -6,31 +6,31 @@
       "collection_year": 2025,
       "academic_year_label": "2024-25",
       "release_status": "provisional",
-      "retrieved_at": "2026-11-11 09:07:39"
+      "retrieved_at": "2026-11-11 20:14:25"
     },
     "international_enrollment": {
       "collection_year": 2025,
       "academic_year_label": "2024-25",
       "release_status": "provisional",
-      "retrieved_at": "2026-11-11 09:07:39"
+      "retrieved_at": "2026-11-11 20:14:25"
     },
     "finance": {
       "collection_year": 2024,
       "academic_year_label": "2023-24",
       "release_status": "provisional",
-      "retrieved_at": "2026-11-11 09:07:39"
+      "retrieved_at": "2026-11-11 20:14:25"
     },
     "human_resources": {
       "collection_year": 2024,
       "academic_year_label": "2024-25",
       "release_status": "provisional",
-      "retrieved_at": "2026-11-11 09:07:39"
+      "retrieved_at": "2026-11-11 20:14:25"
     },
     "outcomes": {
       "collection_year": 2024,
       "academic_year_label": "2024",
       "release_status": "revised",
-      "retrieved_at": "2026-11-11 09:07:39"
+      "retrieved_at": "2026-11-11 20:14:25"
     }
   },
   "profile": {
@@ -916,18 +916,18 @@
       "action_label": "removed from Warning",
       "action_label_short": "Removed from warning",
       "action_scope": null,
-      "action_status": null,
+      "action_status": "resolved",
       "action_date": "2020-09-01",
       "action_year": "2020",
-      "notes": null,
+      "notes": "Columbia College, Columbia, South Carolina (removed from Warning)",
       "source_url": "https://web.archive.org/web/20201026214205id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/september-2020-accreditation-actions-and-public-disclosure-statements/",
       "source_title": "September 2020 Accreditation Actions and Public Disclosure Statements - SACSCOC",
       "source_page_url": "https://web.archive.org/web/20201026214205id_/https://sacscoc.org/institutions/accreditation-actions-and-disclosures/september-2020-accreditation-actions-and-public-disclosure-statements/",
-      "source_page_modified": null,
+      "source_page_modified": "2020-09-10",
       "display_action": true,
-      "public_table_strategy": null,
-      "hybrid_candidate": false,
-      "hybrid_reason": null,
+      "public_table_strategy": "hybrid_keep",
+      "hybrid_candidate": true,
+      "hybrid_reason": "scraper_detail_enriches_generic_or_fileless_dapip",
       "has_financial_profile": true,
       "is_primary_tracker": true
     },
