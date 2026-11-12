@@ -448,7 +448,7 @@
     const excludedPattern = /substantive change|program addition/;
     if (excludedPattern.test(haystack) && !TRUSTED_ACTION_TYPES.has(type)) return false;
 
-    const statusActionPattern = /warning|probation|formal notice of concern|notice of concern|\bmonitoring\b|removed from (warning|probation|formal notice of concern|notice of concern|notice|monitoring)|removed from membership|placed on probation|issue a notice of concern|continue a warning|continued on warning|continued on probation|denied reaffirmation/;
+    const statusActionPattern = /warning|probation|formal notice of concern|notice of concern|\bmonitoring\b|removed from (warning|probation|formal notice of concern|notice of concern|notice|monitoring)|removed from membership|placed on probation|issue a notice of concern|continue a warning|continued on warning|continued on probation|denied reaffirmation|institutional designation|financial issue designation|governmental investigation designation/;
     const closureActionPattern = /accepted notification of institutional closure|voluntarily surrendered accreditation|voluntar(?:ily|y)\s+surrender(?:ed)? accreditation|accept(?:ed)? [^.]{0,160}?voluntar(?:ily|y)\s+surrender|voluntar(?:ily|y)\s+resign(?:ed)? (?:(?:its|their)\s+)?accreditation|voluntary resignation of accreditation|accept(?:ed)? teach-?out plan|approve(?:d)? (?:the )?(?:updated )?teach-?out (?:plan|agreement|agreements)|teach out plan|teach-out plan|removed from membership|will transfer from .* to /;
     const requiredReportPattern = /require (?:the institution to provide )?(?:an )?(?:interim|progress|follow-?up|monitoring) report/;
     const standaloneLowSignalPattern = /^(special visit|interim report|progress report|accepted progress report|accepted interim report|follow-?up report|monitoring report|second monitoring report|third monitoring report)$/;
@@ -466,7 +466,7 @@
     // ("Loss of accreditation or Preaccreditation: Denial") match none of
     // the keyword patterns above and were silently dropped when only the
     // milder types were allowlisted here.
-    return ["warning", "probation", "monitoring", "notice", "show_cause", "adverse_action"].includes(type) ||
+    return ["warning", "probation", "monitoring", "notice", "show_cause", "adverse_action", "removed"].includes(type) ||
       /removed from membership|teach-?out|institutional closure/.test(haystack);
   }
 

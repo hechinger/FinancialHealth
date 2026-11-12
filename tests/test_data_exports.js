@@ -54,6 +54,7 @@ function cutComparableRow(cut = {}) {
     announcement_date: cut.announcement_date ?? null,
     announcement_year: cut.announcement_year ?? null,
     program_name: cut.program_name ?? null,
+    cut_type: cut.cut_type ?? null,
     cut_label_public: cut.cut_label_public ?? null,
     primary_display_category: cut.primary_display_category ?? cut.display_category ?? null,
     display_category: cut.display_category ?? cut.primary_display_category ?? null,
@@ -76,6 +77,17 @@ run("school index exports IPEDS aliases for known nickname-heavy institutions", 
     const aliasText = String(school.institution_alias || "");
     assert(pattern.test(aliasText), `School index alias for ${unitid} does not match ${pattern}: ${aliasText}`);
   }
+});
+
+run("durable 2024 cohort keeps Cornish discoverable after its merger", () => {
+  const cornish = SCHOOLS_INDEX.find((entry) => String(entry.unitid || "") === "235024");
+  assert(cornish, "Finance search index is missing Cornish College of the Arts (235024)");
+  assert(cornish.institution_name === "Cornish College of the Arts", `Unexpected Cornish name: ${cornish.institution_name}`);
+  assert(
+    cornish.category === "Degree-granting, primarily baccalaureate or above",
+    `Cornish should retain its historical tracker category, got: ${cornish.category}`
+  );
+  assert(fs.existsSync(path.join(SCHOOLS_DIR, "235024.json")), "Cornish school profile JSON is missing");
 });
 
 run("school JSON files match the frozen shape contract", () => {
@@ -162,13 +174,13 @@ run("school JSON files match the frozen shape contract", () => {
   );
 });
 
-run("school JSON files keep multi-year revenue series when five-year summaries exist", () => {
+run("school JSON files keep multi-year revenue series when since-2019 summaries exist", () => {
   const files = fs.readdirSync(SCHOOLS_DIR).filter((file) => file.endsWith(".json"));
   const staleFiles = [];
 
   for (const file of files) {
     const school = JSON.parse(fs.readFileSync(path.join(SCHOOLS_DIR, file), "utf8"));
-    if (school.summary?.revenue_pct_change_5yr == null) continue;
+    if ((school.summary?.revenue_pct_change_since_2019 ?? school.summary?.revenue_pct_change_5yr) == null) continue;
     const revenueSeries = numericSeries(school, "revenue_total_adjusted");
     if (revenueSeries.length < 2) {
       staleFiles.push(`${file} (${school.profile?.institution_name || school.unitid})`);
@@ -238,10 +250,111 @@ run("college cuts full export and index stay in sync", () => {
   );
 });
 
+run("college cuts export keeps display_categories array-shaped for every cut row", () => {
+  const invalid = [];
+
+  for (const [unitid, school] of Object.entries(COLLEGE_CUTS.schools || {})) {
+    for (const [index, cut] of (school.cuts || []).entries()) {
+      if (!Array.isArray(cut.display_categories)) {
+        invalid.push(`school ${unitid} row ${index}: ${JSON.stringify(cut.display_categories)}`);
+      }
+    }
+  }
+
+  for (const [index, cut] of (COLLEGE_CUTS.recent || []).entries()) {
+    if (!Array.isArray(cut.display_categories)) {
+      invalid.push(`recent row ${index}: ${JSON.stringify(cut.display_categories)}`);
+    }
+  }
+
+  assert(
+    invalid.length === 0,
+    `college_cuts.json has non-array display_categories in ${invalid.length} row(s). First 10: ${invalid.slice(0, 10).join("; ")}`
+  );
+});
+
+run("college cuts index keeps a cut_type for every landing cut", () => {
+  const missing = [];
+
+  for (const [unitid, school] of Object.entries(COLLEGE_CUTS_INDEX)) {
+    for (const [index, cut] of (school.landing_cuts || []).entries()) {
+      if (!String(cut.cut_type || "").trim()) {
+        missing.push(`${unitid} row ${index}`);
+      }
+    }
+  }
+
+  assert(
+    missing.length === 0,
+    `college cuts index has landing cuts without a cut_type: ${missing.slice(0, 10).join(", ")}`
+  );
+});
+
+run("matched college cuts schools retain canonical tracker metadata", () => {
+  const canonicalByUnitid = new Map(
+    SCHOOLS_INDEX.map((school) => [String(school.unitid || ""), school])
+  );
+  const mismatches = [];
+
+  for (const [unitid, school] of Object.entries(COLLEGE_CUTS_INDEX)) {
+    const canonical = canonicalByUnitid.get(String(school.financial_unitid || unitid));
+    if (!canonical) continue;
+
+    if (school.has_financial_profile !== true) {
+      mismatches.push(`${unitid} ${school.institution_name || ""}: has_financial_profile is not true`);
+    }
+    if (school.is_primary_tracker !== true) {
+      mismatches.push(`${unitid} ${school.institution_name || ""}: is_primary_tracker is not true`);
+    }
+    if (school.control_label !== canonical.control_label) {
+      mismatches.push(
+        `${unitid} ${school.institution_name || ""}: control_label=${school.control_label} canonical=${canonical.control_label}`
+      );
+    }
+    if (school.category !== canonical.category) {
+      mismatches.push(
+        `${unitid} ${school.institution_name || ""}: category=${school.category} canonical=${canonical.category}`
+      );
+    }
+  }
+
+  assert(
+    mismatches.length === 0,
+    `matched college cuts schools lost canonical tracker metadata. First 10: ${mismatches.slice(0, 10).join("; ")}`
+  );
+});
+
+run("college cuts confirmation gate stays in sync and fails closed for unconfirmed schools", () => {
+  const expectations = [
+    ["210146", "Southern Oregon University", false],
+    ["218238", "Limestone University", true],
+    ["235024", "Cornish College of the Arts", true]
+  ];
+
+  for (const [unitid, name, expectedConfirmed] of expectations) {
+    const fullSchool = COLLEGE_CUTS.schools?.[unitid];
+    const indexSchool = COLLEGE_CUTS_INDEX[unitid];
+    assert(fullSchool, `college cuts full export missing ${name} (${unitid})`);
+    assert(indexSchool, `college cuts index missing ${name} (${unitid})`);
+    assert(
+      fullSchool.confirmed_closure_announcement === expectedConfirmed,
+      `${name} (${unitid}) expected full confirmed_closure_announcement=${expectedConfirmed}, got ${fullSchool.confirmed_closure_announcement}`
+    );
+    assert(
+      indexSchool.confirmed_closure_announcement === expectedConfirmed,
+      `${name} (${unitid}) expected index confirmed_closure_announcement=${expectedConfirmed}, got ${indexSchool.confirmed_closure_announcement}`
+    );
+  }
+});
+
 run("sample school chart series spans the committed IPEDS range", () => {
   const sample = JSON.parse(fs.readFileSync(path.join(SCHOOLS_DIR, "101709.json"), "utf8"));
   const years = numericSeries(sample, "revenue_total_adjusted").map((point) => point.year);
-  const latestYear = Number(METADATA.latest_year || years[years.length - 1]);
+  const latestYear = Number(
+    sample.summary?.latest_finance_year
+      ?? METADATA.component_vintages?.finance?.collection_year
+      ?? years[years.length - 1]
+  );
   assert(years.length >= 10, `Expected at least 10 revenue years, got ${years.length}`);
   assert(years[0] < latestYear, `Expected first revenue year to predate latest year ${latestYear}, got ${years[0]}`);
   assert(years[years.length - 1] === latestYear, `Expected latest revenue year to be ${latestYear}, got ${years[years.length - 1]}`);
@@ -361,6 +474,19 @@ run("University of Hawai'i at Hilo accreditation actions match the primary track
     .map((school) => school.institution_name)
     .filter((name) => /Hawai.i.*Hilo|Hawaii.*Hilo/i.test(name || ""));
   assert(unmatchedHilo.length === 0, `Hilo accreditation aliases should not appear in "other institutions": ${unmatchedHilo.join(", ")}`);
+});
+
+run("Cornish remains in the primary accreditation tracker after its post-2024 merger", () => {
+  const cornish = ACCREDITATION.schools?.["235024"];
+  assert(cornish, "Accreditation export is missing Cornish College of the Arts (235024)");
+  assert(cornish.is_primary_tracker === true, "Cornish should remain in the primary tracker after merging into Seattle University");
+  assert(cornish.has_financial_profile === true, "Cornish should retain its historical financial-profile link");
+  assert(cornish.financial_unitid === "235024", "Cornish should retain financial_unitid 235024");
+  assert(
+    cornish.category === "Degree-granting, primarily baccalaureate or above",
+    `Cornish should retain its historical tracker category, got: ${cornish.category}`
+  );
+  assert((cornish.actions || []).length > 0, "Cornish accreditation actions should remain available after retention");
 });
 
 run("trailing-The accreditation aliases do not leak into accreditation other-institutions exports", () => {
@@ -560,6 +686,140 @@ run("research export totals match exported grant rows", () => {
     assert(Math.abs(exportedTotal - grantTotal) < 0.01, `${school.institution_name || unitid} total ${exportedTotal} does not match displayed rows ${grantTotal}`);
     assert(indexCount === grantCount, `${school.institution_name || unitid} index grant count ${indexCount} does not match displayed rows ${grantCount}`);
     assert(Math.abs(indexTotal - grantTotal) < 0.01, `${school.institution_name || unitid} index total ${indexTotal} does not match displayed rows ${grantTotal}`);
+  }
+});
+
+
+run("University of Valley Forge publishes exactly its three approved accreditation actions", () => {
+  // Regression: getEffectiveActions() previously suppressed any action whose
+  // action_label matched MSCHE_SNAPSHOT_LABELS when detail rows also existed.
+  // The Jun 29, 2026 show-cause had label "Non-Compliance Show Cause" and was
+  // silently dropped. This test locks the export layer so the upstream data
+  // contract does not drift.
+  const vf = ACCREDITATION.schools?.["216542"];
+  assert(vf, "Accreditation export is missing University of Valley Forge (216542)");
+
+  const jun29 = (vf.actions || []).find((a) =>
+    String(a.action_date || "").startsWith("2026-06-29")
+  );
+  assert(
+    jun29,
+    "Valley Forge should have a Jun 29, 2026 MSCHE action in the export"
+  );
+  assert(
+    jun29.display_action === true,
+    "Valley Forge Jun 29, 2026 action should have display_action: true"
+  );
+  assert(
+    jun29.action_type === "show_cause",
+    `Valley Forge Jun 29, 2026 action should be classified show_cause, got: ${jun29.action_type}`
+  );
+
+  // The public export must match the three approved editorial rows exactly.
+  const eligible = (vf.actions || []).filter((a) => a.display_action === true);
+  assert(
+    eligible.length === 3,
+    `Valley Forge should have exactly 3 approved actions, found ${eligible.length}`
+  );
+  const publicKeys = new Set(eligible.map((a) => [
+    String(a.action_date || ""),
+    String(a.action_label_short || a.action_label || "")
+  ].join("||")));
+  [
+    ["2026-08-19", "To note that the institution's accreditation will cease on September 11, 2026."],
+    ["2026-08-19", "Approved Teach-Out Agreements"],
+    ["2026-06-29", "To require the institution to show cause to demonstrate why its accreditation should not be withdrawn because of insufficient evidence that the institution is in compliance with Standard VI (Planning, Resources, and Institutional Improvement) and Standard VII (Governance, Leadership, and Administration)"]
+  ].forEach(([date, label]) => {
+    assert(publicKeys.has(`${date}||${label}`), `Missing approved Valley Forge action: ${date} ${label}`);
+  });
+  ["2026-08-11", "2026-08-04", "2026-06-25"].forEach((date) => {
+    assert(
+      !eligible.some((a) => String(a.action_date || "").startsWith(date)),
+      `Rejected Valley Forge action should not be public: ${date}`
+    );
+  });
+});
+
+run("Saint Mary-of-the-Woods College export includes both HLC actions on different dates", () => {
+  // Regression: the HLC filter previously dropped detail rows when a snapshot
+  // row ("On Notice") also existed for the same accreditor. The Jun 26, 2025
+  // warning was suppressed; the fix makes both rows visible.
+  const smwc = ACCREDITATION.schools?.["152381"];
+  assert(smwc, "Accreditation export is missing Saint Mary-of-the-Woods College (152381)");
+
+  const may28 = (smwc.actions || []).find((a) =>
+    String(a.action_date || "").startsWith("2026-05-28")
+  );
+  const jun26 = (smwc.actions || []).find((a) =>
+    String(a.action_date || "").startsWith("2025-06-26")
+  );
+  assert(may28, "Saint Mary-of-the-Woods should have a May 28, 2026 HLC action");
+  assert(may28?.display_action === true, "May 28, 2026 action should have display_action: true");
+  assert(jun26, "Saint Mary-of-the-Woods should have a Jun 26, 2025 HLC action");
+  assert(jun26?.display_action === true, "Jun 26, 2025 action should have display_action: true");
+  assert(jun26?.action_type === "warning", `Jun 26, 2025 HLC action should be type warning, got: ${jun26?.action_type}`);
+});
+
+run("accreditation index action_count matches display_action=true count in actions", () => {
+  // Invariant: the index's action_count should equal the number of actions
+  // in the full export that have display_action: true. Drift between the two
+  // indicates a pipeline inconsistency where the index and full export diverge.
+  const INDEX = JSON.parse(
+    require("fs").readFileSync(require("path").join(__dirname, "..", "data", "accreditation_index.json"), "utf8")
+  );
+  const mismatches = [];
+  for (const [unitid, indexEntry] of Object.entries(INDEX)) {
+    const school = ACCREDITATION.schools?.[unitid];
+    if (!school) continue;
+    const eligibleCount = (school.actions || []).filter((a) => a.display_action === true).length;
+    const indexCount = Number(indexEntry.action_count || 0);
+    if (eligibleCount !== indexCount) {
+      mismatches.push(
+        `${school.institution_name || unitid}: index says ${indexCount}, actions has ${eligibleCount}`
+      );
+    }
+  }
+  assert(
+    mismatches.length === 0,
+    `action_count in index does not match eligible action count for ${mismatches.length} institution(s): ${mismatches.slice(0, 5).join("; ")}`
+  );
+});
+
+run("Valley Forge and SMWC landing_actions in index include all eligible actions", () => {
+  // Narrow regression lock: the index landing_actions for these specific
+  // institutions must include every action present in the full export with
+  // display_action: true. Both institutions have historically had actions
+  // silently absent from the index due to snapshot/detail suppression bugs.
+  //
+  // Key uses (accreditor, date, source_url) — not label — because the index
+  // stores action_label_short while the full export stores action_label.
+  const INDEX = JSON.parse(
+    require("fs").readFileSync(require("path").join(__dirname, "..", "data", "accreditation_index.json"), "utf8")
+  );
+  const actionKey = (a) => [
+    String(a.accreditor || ""),
+    String(a.action_date || ""),
+    String(a.action_label_short || a.action_label || a.action_label_raw || a.action_type || "")
+  ].join("||");
+
+  const institutions = [
+    ["216542", "University of Valley Forge"],
+    ["152381", "Saint Mary-of-the-Woods College"]
+  ];
+  for (const [unitid, name] of institutions) {
+    const school = ACCREDITATION.schools?.[unitid];
+    const indexEntry = INDEX[unitid];
+    assert(school, `Full export is missing ${name} (${unitid})`);
+    assert(indexEntry, `Index is missing ${name} (${unitid})`);
+
+    const landingKeys = new Set((indexEntry.landing_actions || []).map(actionKey));
+    const missing = (school.actions || [])
+      .filter((a) => a.display_action === true)
+      .filter((a) => !landingKeys.has(actionKey(a)));
+    assert(
+      missing.length === 0,
+      `${name}: ${missing.length} eligible action(s) from full export are absent from index landing_actions: ${missing.map((a) => `${a.action_date} ${a.action_label || a.action_type}`).join("; ")}`
+    );
   }
 });
 
