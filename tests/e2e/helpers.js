@@ -127,50 +127,91 @@ function isYes(value) {
   return value === true || value === 1 || String(value || '').trim().toLowerCase() === 'yes' || String(value || '').trim() === '1';
 }
 
-function schoolWithPatternAndWideWarningBadges() {
+function schoolWarningBadgeState(school) {
+  const summary = school.summary || {};
+  const control = String(school.profile?.control_label || '').trim().toLowerCase();
+  const isPublic = control === 'public';
+
+  const revenueChange = summary.revenue_pct_change_since_2019 ?? summary.revenue_pct_change_5yr;
+  const netTuitionChange = summary.net_tuition_per_fte_change_since_2019 ?? summary.net_tuition_per_fte_change_5yr;
+  const enrollmentChange = summary.enrollment_pct_change_since_2019 ?? summary.enrollment_pct_change_5yr;
+  const staffChange = summary.staff_total_headcount_pct_change_since_2019 ?? summary.staff_total_headcount_pct_change_5yr;
+  const endowmentChange = summary.endowment_pct_change_since_2019 ?? summary.endowment_pct_change_5yr;
+  const stateAidChange = summary.state_local_support_pct_change_since_2019 ?? summary.state_funding_pct_change_since_2019;
+  const hasRevenue = asFiniteNumber(revenueChange) !== null;
+  const hasLossPattern = summary.losses_last_3_of_5 !== null && summary.losses_last_3_of_5 !== undefined && summary.losses_last_3_of_5 !== '';
+  const hasLossYears = summary.loss_years_last_10 !== null && summary.loss_years_last_10 !== undefined && summary.loss_years_last_10 !== '';
+  const hasNetTuition = asFiniteNumber(netTuitionChange) !== null;
+  const hasEnrollment = asFiniteNumber(enrollmentChange) !== null;
+  const hasEnrollmentPattern = summary.enrollment_decline_last_3_of_5 !== null && summary.enrollment_decline_last_3_of_5 !== undefined && summary.enrollment_decline_last_3_of_5 !== '';
+  const hasStaff = asFiniteNumber(staffChange) !== null;
+  const hasEndowment = asFiniteNumber(endowmentChange) !== null;
+  const hasStateAid = isPublic && asFiniteNumber(stateAidChange) !== null;
+  const stateAidIsRed = hasStateAid && isNegativeFiveYearTrend(stateAidChange);
+
+  const redCount = [
+    hasRevenue && isNegativeFiveYearTrend(revenueChange),
+    hasLossPattern && isYes(summary.losses_last_3_of_5),
+    hasLossYears && asFiniteNumber(summary.loss_years_last_10) >= 5,
+    hasNetTuition && isNegativeFiveYearTrend(netTuitionChange),
+    hasEnrollment && isNegativeFiveYearTrend(enrollmentChange),
+    hasEnrollmentPattern && isYes(summary.enrollment_decline_last_3_of_5),
+    hasStaff && isNegativeFiveYearTrend(staffChange),
+    stateAidIsRed,
+    hasEndowment && isNegativeFiveYearTrend(endowmentChange)
+  ].filter(Boolean).length;
+
+  return {
+    isPublic,
+    redCount,
+    redCountWithoutStateAid: redCount - (stateAidIsRed ? 1 : 0),
+    stateAidIsRed,
+    hasPattern:
+      isNegativeFiveYearTrend(enrollmentChange) &&
+      isNegativeFiveYearTrend(netTuitionChange) &&
+      isYes(summary.losses_last_3_of_5)
+  };
+}
+
+function schoolMatchingWarningBadges(predicate, failureMessage) {
   const schoolsDir = path.join(ROOT, 'data', 'schools');
   const files = fs.readdirSync(schoolsDir).filter((file) => file.endsWith('.json')).sort();
 
   for (const file of files) {
     const school = JSON.parse(fs.readFileSync(path.join(schoolsDir, file), 'utf8'));
-    const summary = school.summary || {};
-    const control = String(school.profile?.control_label || '').trim().toLowerCase();
-
-    // This test only needs private schools, avoiding the public-only state-aid
-    // card while matching the same visible-card rules used on school.html.
-    if (control === 'public') continue;
-
-    const hasRevenue = asFiniteNumber(summary.revenue_pct_change_5yr) !== null;
-    const hasLossPattern = summary.losses_last_3_of_5 !== null && summary.losses_last_3_of_5 !== undefined && summary.losses_last_3_of_5 !== '';
-    const hasLossYears = summary.loss_years_last_10 !== null && summary.loss_years_last_10 !== undefined && summary.loss_years_last_10 !== '';
-    const hasNetTuition = asFiniteNumber(summary.net_tuition_per_fte_change_5yr) !== null;
-    const hasEnrollment = asFiniteNumber(summary.enrollment_pct_change_5yr) !== null;
-    const hasEnrollmentPattern = summary.enrollment_decline_last_3_of_5 !== null && summary.enrollment_decline_last_3_of_5 !== undefined && summary.enrollment_decline_last_3_of_5 !== '';
-    const hasStaff = asFiniteNumber(summary.staff_total_headcount_pct_change_5yr) !== null;
-    const hasEndowment = asFiniteNumber(summary.endowment_pct_change_5yr) !== null;
-
-    const redCount = [
-      hasRevenue && isNegativeFiveYearTrend(summary.revenue_pct_change_5yr),
-      hasLossPattern && isYes(summary.losses_last_3_of_5),
-      hasLossYears && asFiniteNumber(summary.loss_years_last_10) >= 5,
-      hasNetTuition && isNegativeFiveYearTrend(summary.net_tuition_per_fte_change_5yr),
-      hasEnrollment && isNegativeFiveYearTrend(summary.enrollment_pct_change_5yr),
-      hasEnrollmentPattern && isYes(summary.enrollment_decline_last_3_of_5),
-      hasStaff && isNegativeFiveYearTrend(summary.staff_total_headcount_pct_change_5yr),
-      hasEndowment && isNegativeFiveYearTrend(summary.endowment_pct_change_5yr)
-    ].filter(Boolean).length;
-
-    if (
-      isNegativeFiveYearTrend(summary.enrollment_pct_change_5yr) &&
-      isNegativeFiveYearTrend(summary.net_tuition_per_fte_change_5yr) &&
-      isYes(summary.losses_last_3_of_5) &&
-      redCount >= 6
-    ) {
+    const state = schoolWarningBadgeState(school);
+    if (state && predicate(state)) {
       return school.unitid || path.basename(file, '.json');
     }
   }
 
-  throw new Error('No private school currently qualifies for both warning-summary badges');
+  throw new Error(failureMessage);
+}
+
+function schoolWithPatternAndWideWarningBadges() {
+  return schoolMatchingWarningBadges(
+    (state) => !state.isPublic && state.hasPattern && state.redCount >= 6,
+    'No private school currently qualifies for both warning-summary badges'
+  );
+}
+
+function schoolWithWideOnlyWarningBadge() {
+  return schoolMatchingWarningBadges(
+    (state) => !state.isPublic && !state.hasPattern && state.redCount >= 6,
+    'No private school currently qualifies for only the widespread-warning badge'
+  );
+}
+
+function schoolWithStateAidWideOnlyWarningBadge() {
+  return schoolMatchingWarningBadges(
+    (state) =>
+      state.isPublic &&
+      state.stateAidIsRed &&
+      state.redCount >= 6 &&
+      state.redCountWithoutStateAid < 6 &&
+      !state.hasPattern,
+    'No public school currently reaches the widespread-warning threshold through state aid'
+  );
 }
 
 function latestEnrollmentText(unitid) {
@@ -435,7 +476,7 @@ function isVisibleAccreditationAction(action) {
     return false;
   }
 
-  const statusActionPattern = /warning|probation|formal notice of concern|notice of concern|\bmonitoring\b|removed from (warning|probation|formal notice of concern|notice of concern|notice|monitoring)|removed from membership|placed on probation|issue a notice of concern|continue a warning|continued on warning|continued on probation|denied reaffirmation/;
+  const statusActionPattern = /warning|probation|formal notice of concern|notice of concern|\bmonitoring\b|removed from (warning|probation|formal notice of concern|notice of concern|notice|monitoring)|removed from membership|placed on probation|issue a notice of concern|continue a warning|continued on probation|continued on warning|denied reaffirmation|institutional designation|financial issue designation|governmental investigation designation/;
   const closureActionPattern = /accepted notification of institutional closure|accept(?:ed)? teach-?out plan|teach out plan|teach-?out plan|removed from membership/;
   const requiredReportPattern = /require (?:the institution to provide )?(?:an )?(?:interim|progress|follow-?up|monitoring) report/;
   const standaloneLowSignalPattern = /^(special visit|interim report|progress report|accepted progress report|accepted interim report|follow-?up report|monitoring report|second monitoring report|third monitoring report)$/;
@@ -550,6 +591,8 @@ module.exports = {
   schoolWithoutEndowment,
   schoolWithTuitionDependenceAtDisplayedMedian,
   schoolWithPatternAndWideWarningBadges,
+  schoolWithWideOnlyWarningBadge,
+  schoolWithStateAidWideOnlyWarningBadge,
   latestEnrollmentText,
   schoolWithClosureStatus,
   schoolWithRelatedPages,

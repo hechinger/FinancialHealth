@@ -14,6 +14,8 @@ const {
   schoolWithoutEndowment,
   schoolWithTuitionDependenceAtDisplayedMedian,
   schoolWithPatternAndWideWarningBadges,
+  schoolWithWideOnlyWarningBadge,
+  schoolWithStateAidWideOnlyWarningBadge,
   schoolWithClosureStatus,
   relatedPagesForSchool,
   unmatchedCutSchool,
@@ -32,8 +34,8 @@ const unmatchedResearchUnitid = unmatchedResearchSchool();
 const unmatchedAccreditationUnitid = unmatchedAccreditationSchool();
 const patternOnlyWarningBadgeUnitid = '119173'; // Mount Saint Mary's University: pattern badge (enr -19.7%, ntr -30.7%, losses 3/5) with only 3 reds total
 const patternAndWideWarningBadgeUnitid = schoolWithPatternAndWideWarningBadges();
-const wideOnlyWarningBadgeUnitid = '144281'; // Columbia College Chicago: 6 reds, no pattern badge (enr -8.2% not below -10%)
-const stateAidWideBadgeUnitid = '185129'; // NJCU (public): 6th red is the state & local funding indicator (-14.9%); net tuition -8.1% stays neutral
+const wideOnlyWarningBadgeUnitid = schoolWithWideOnlyWarningBadge();
+const stateAidWideBadgeUnitid = schoolWithStateAidWideOnlyWarningBadge();
 const noWarningBadgeUnitid = '104586';
 const southernOregonNoClosureUnitid = '210146';
 const limestoneClosureUnitid = '218238';
